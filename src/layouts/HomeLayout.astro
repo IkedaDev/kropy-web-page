@@ -1,0 +1,25 @@
+---
+// src/layouts/Layout.astro
+import SeoHead from '../components/SeoHead.astro';
+import GoogleAnalitycs from '../components/GoogleAnalitycs.astro';
+import "../styles/global.css";
+const { title, description } = Astro.props;
+
+// const navLinks = [
+//     { text: "Nosotros", href: "/#nosotros" },
+//     { text: "Misión", href: "/#mision" },
+//     { text: "Precios", href: "/#precios" },
+//     { text: "Contacto", href: "/#contacto" },
+// ];
+---
+
+<!doctype html>
+<html lang="es">
+	<head>
+        <GoogleAnalitycs />
+        <SeoHead title={title} description={description} />
+	</head>
+	<body>
+        <slot />
+    </body>
+</html>

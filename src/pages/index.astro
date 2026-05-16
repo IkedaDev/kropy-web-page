@@ -1,11 +1,236 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import HomeLayout from '../layouts/HomeLayout.astro';
+
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<HomeLayout>
+	<!-- Header Flotante V1 Pro -->
+    <header class="fixed top-0 left-0 w-full z-50 py-5 transition-all duration-300" id="main-header">
+        <div class="max-w-6xl mx-auto px-4">
+            <nav class="glass border border-white/20 rounded-full px-6 py-3 flex justify-between items-center shadow-sm">
+                <a href="#" class="flex items-center gap-2 font-extrabold text-xl tracking-tighter">
+                    <div class="w-6 h-6 bg-emerald-600 rounded-md shadow-[0_4px_10px_rgba(5,150,105,0.3)]"></div>
+                    KROPY
+                </a>
+                
+                <ul class="hidden md:flex gap-8 list-none">
+                    <li><a href="#nosotros" class="text-xs font-bold uppercase tracking-widest text-slate-500 hover:text-emerald-600 transition-colors">Nosotros</a></li>
+                    <li><a href="#mv" class="text-xs font-bold uppercase tracking-widest text-slate-500 hover:text-emerald-600 transition-colors">Misión</a></li>
+                    <li><a href="#pricing" class="text-xs font-bold uppercase tracking-widest text-slate-500 hover:text-emerald-600 transition-colors">Precios</a></li>
+                    <li><a href="#contacto" class="text-xs font-bold uppercase tracking-widest text-slate-500 hover:text-emerald-600 transition-colors">Contacto</a></li>
+                </ul>
+
+                <div class="flex gap-4 items-center">
+                    <a href="#" class="text-xs font-bold text-slate-500 hover:text-slate-900">Log in</a>
+                    <a href="#" class="bg-emerald-600 text-white text-xs font-bold px-5 py-2.5 rounded-full hover:bg-emerald-700 transition-all shadow-lg shadow-emerald-600/20">Empezar</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="pt-32 pb-20 px-4 text-center bg-[radial-gradient(circle_at_top,_#ecfdf5_0%,_transparent_50%)]">
+            <div class="max-w-4xl mx-auto">
+                <span class="inline-flex items-center gap-2 px-3 py-1 bg-white border border-slate-200 rounded-full text-[10px] font-bold text-emerald-600 uppercase tracking-widest mb-8">
+                    <span class="w-1.5 h-1.5 bg-emerald-600 rounded-full animate-pulse"></span>
+                    v2.4.0: Infraestructura Lista
+                </span>
+                <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight mb-6 leading-tight">
+                    Tu presencia digital, <br><span class="text-emerald-600 italic">sin complicaciones.</span>
+                </h1>
+                <p class="text-lg text-slate-500 max-w-2xl mx-auto mb-10">
+                    Kropy es el motor de tu negocio. Desplegamos sitios de alta gama con infraestructura orquestada manualmente para que tú solo te preocupes de vender.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="#pricing" class="bg-emerald-600 text-white font-bold px-8 py-4 rounded-full hover:scale-105 transition-transform shadow-xl shadow-emerald-600/20">Ver Planes</a>
+                    <a href="#contacto" class="bg-white text-slate-900 border border-slate-200 font-bold px-8 py-4 rounded-full hover:bg-slate-50 transition-colors">Agendar Llamada</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Nosotros (About Us) -->
+        <section id="nosotros" class="py-24 bg-white">
+            <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-16 items-center">
+                <div>
+                    <span class="text-emerald-600 font-bold uppercase tracking-widest text-xs mb-4 block">Sobre Nosotros</span>
+                    <h2 class="text-4xl font-extrabold mb-6 tracking-tight">Cultura de ingeniería, <br>pasión por el diseño.</h2>
+                    <p class="text-slate-500 mb-6 text-lg">
+                        En Kropy, nacimos de la necesidad de cerrar la brecha entre el hosting genérico y el desarrollo de software de alta calidad. No somos una agencia tradicional; somos tu socio tecnológico.
+                    </p>
+                    <p class="text-slate-500 mb-8">
+                        Nuestro equipo combina años de experiencia en infraestructura de nube (ikedadev-infra) con un ojo obsesivo por el detalle visual. Creemos que cada suscripción es un compromiso de crecimiento mutuo.
+                    </p>
+                    <div class="grid grid-cols-2 gap-8">
+                        <div>
+                            <h4 class="text-2xl font-bold text-emerald-600">+150</h4>
+                            <p class="text-xs text-slate-400 uppercase font-bold tracking-wider">Sitios Desplegados</p>
+                        </div>
+                        <div>
+                            <h4 class="text-2xl font-bold text-emerald-600">99.9%</h4>
+                            <p class="text-xs text-slate-400 uppercase font-bold tracking-wider">Uptime Garantizado</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="w-full aspect-square bg-slate-100 rounded-3xl overflow-hidden shadow-2xl">
+                        <!-- Imagen de placeholder para representación visual -->
+                        <div class="w-full h-full flex items-center justify-center text-slate-300">
+                             [Imagen de Equipo Trabajando]
+                        </div>
+                    </div>
+                    <div class="absolute -bottom-6 -left-6 bg-emerald-600 text-white p-8 rounded-2xl shadow-xl max-w-xs">
+                        <p class="italic text-sm font-medium">"Nuestra meta es que nunca más tengas que preocuparte por una actualización de servidor."</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Misión y Visión (MV) -->
+        <section id="mv" class="py-24 bg-slate-50">
+            <div class="max-w-6xl mx-auto px-4">
+                <div class="grid md:grid-cols-2 gap-12">
+                    <div class="p-10 bg-white rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
+                        <div class="w-12 h-12 bg-emerald-100 text-emerald-600 rounded-2xl flex items-center justify-center mb-6 text-xl">🎯</div>
+                        <h3 class="text-2xl font-bold mb-4">Nuestra Misión</h3>
+                        <p class="text-slate-500 leading-relaxed">
+                            Democratizar el acceso a software de alta gama mediante un modelo de suscripción justo. Queremos que emprendedores y empresas tengan sitios que respiren calidad técnica sin la carga de gestionar infraestructura.
+                        </p>
+                    </div>
+                    <div class="p-10 bg-white rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
+                        <div class="w-12 h-12 bg-emerald-100 text-emerald-600 rounded-2xl flex items-center justify-center mb-6 text-xl">👁️</div>
+                        <h3 class="text-2xl font-bold mb-4">Nuestra Visión</h3>
+                        <p class="text-slate-500 leading-relaxed">
+                            Convertirnos en el estándar global de "Web-as-a-Service", siendo reconocidos por nuestra arquitectura invisible y potente que permite a las marcas florecer en un ecosistema digital en constante cambio.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Características (Breve repaso) -->
+        <section class="py-24 bg-white">
+            <div class="max-w-6xl mx-auto px-4 text-center">
+                <span class="text-emerald-600 font-bold uppercase tracking-widest text-xs mb-4 block">Capacidades</span>
+                <h2 class="text-4xl font-extrabold mb-16 tracking-tight">Software que trabaja por ti.</h2>
+                <div class="grid md:grid-cols-3 gap-12">
+                    <div>
+                        <div class="text-4xl mb-4">⚡</div>
+                        <h4 class="text-xl font-bold mb-2">Velocidad Extrema</h4>
+                        <p class="text-slate-500 text-sm">Optimización de activos y CDN global para cargas instantáneas.</p>
+                    </div>
+                    <div>
+                        <div class="text-4xl mb-4">🛡️</div>
+                        <h4 class="text-xl font-bold mb-2">Seguridad Core</h4>
+                        <p class="text-slate-500 text-sm">Aislamiento por contenedor y SSL automático de grado bancario.</p>
+                    </div>
+                    <div>
+                        <div class="text-4xl mb-4">🔄</div>
+                        <h4 class="text-xl font-bold mb-2">Evolución Diaria</h4>
+                        <p class="text-slate-500 text-sm">Tu web nunca envejece. Actualizamos código y dependencias mensualmente.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Precios (V1) -->
+        <section id="pricing" class="py-24 bg-slate-50">
+            <div class="max-w-6xl mx-auto px-4 text-center">
+                <h2 class="text-4xl font-extrabold mb-16 tracking-tight">Inversión transparente.</h2>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="bg-white p-10 rounded-3xl border border-slate-200">
+                        <h4 class="text-slate-400 font-bold uppercase text-xs tracking-widest mb-4">Starter</h4>
+                        <div class="text-5xl font-extrabold mb-6">$39<span class="text-sm text-slate-400 font-medium">/mes</span></div>
+                        <ul class="text-sm text-slate-500 space-y-4 mb-10 text-left">
+                            <li class="flex gap-2">✅ 1 Sitio de alto tráfico</li>
+                            <li class="flex gap-2">✅ SSL Automatizado</li>
+                            <li class="flex gap-2">✅ Soporte 24/7</li>
+                        </ul>
+                        <a href="#" class="block w-full py-3 rounded-full border border-slate-200 font-bold hover:bg-slate-50 transition-colors">Elegir Plan</a>
+                    </div>
+                    <div class="bg-white p-10 rounded-3xl border-2 border-emerald-600 relative transform scale-105 shadow-2xl shadow-emerald-600/10">
+                        <span class="absolute -top-4 left-1/2 -translate-x-1/2 bg-emerald-600 text-white text-[10px] font-bold px-4 py-1 rounded-full uppercase tracking-widest">Recomendado</span>
+                        <h4 class="text-slate-400 font-bold uppercase text-xs tracking-widest mb-4">Professional</h4>
+                        <div class="text-5xl font-extrabold mb-6">$99<span class="text-sm text-slate-400 font-medium">/mes</span></div>
+                        <ul class="text-sm text-slate-500 space-y-4 mb-10 text-left">
+                            <li class="flex gap-2">✅ 5 Instancias dedicadas</li>
+                            <li class="flex gap-2">✅ Base de datos Postgres</li>
+                            <li class="flex gap-2">✅ Backups automáticos</li>
+                        </ul>
+                        <a href="#" class="block w-full py-3 rounded-full bg-emerald-600 text-white font-bold hover:bg-emerald-700 transition-colors">Elegir Pro</a>
+                    </div>
+                    <div class="bg-white p-10 rounded-3xl border border-slate-200">
+                        <h4 class="text-slate-400 font-bold uppercase text-xs tracking-widest mb-4">Enterprise</h4>
+                        <div class="text-5xl font-extrabold mb-6">Custom</div>
+                        <ul class="text-sm text-slate-500 space-y-4 mb-10 text-left">
+                            <li class="flex gap-2">✅ Nodos de cómputo dedicados</li>
+                            <li class="flex gap-2">✅ SLA garantizado</li>
+                            <li class="flex gap-2">✅ Manager de cuenta</li>
+                        </ul>
+                        <a href="#" class="block w-full py-3 rounded-full border border-slate-200 font-bold hover:bg-slate-50 transition-colors">Contactar</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contacto -->
+        <section id="contacto" class="py-24 bg-white">
+            <div class="max-w-4xl mx-auto px-4">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-extrabold mb-4 tracking-tight">Hablemos de tu proyecto.</h2>
+                    <p class="text-slate-500">Completa el formulario y un arquitecto de Kropy te contactará en menos de 24 horas.</p>
+                </div>
+                <form class="space-y-6">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">Nombre Completo</label>
+                            <input type="text" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 focus:outline-none focus:border-emerald-600 transition-colors" placeholder="Ej: Juan Pérez">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">Email Corporativo</label>
+                            <input type="email" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 focus:outline-none focus:border-emerald-600 transition-colors" placeholder="juan@empresa.com">
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">¿Cómo podemos ayudarte?</label>
+                        <textarea rows="4" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 focus:outline-none focus:border-emerald-600 transition-colors" placeholder="Cuéntanos brevemente sobre tu negocio..."></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-emerald-600 text-white font-bold py-4 rounded-xl hover:bg-emerald-700 transition-all shadow-xl shadow-emerald-600/20">Enviar Solicitud</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="py-12 bg-slate-50 border-t border-slate-200">
+        <div class="max-w-6xl mx-auto px-4 flex flex-col md:row justify-between items-center gap-8">
+            <div class="logo font-extrabold text-xl tracking-tighter flex items-center gap-2 grayscale opacity-50">
+                <div class="w-5 h-5 bg-slate-900 rounded-sm"></div>
+                KROPY
+            </div>
+            <div class="flex gap-8 text-xs font-bold text-slate-400 uppercase tracking-widest">
+                <a href="#" class="hover:text-emerald-600">Privacidad</a>
+                <a href="#" class="hover:text-emerald-600">Términos</a>
+                <a href="#" class="hover:text-emerald-600">Status</a>
+            </div>
+            <p class="text-xs text-slate-400 font-medium">© 2024 Kropy Labs. Potenciado por ikedadev-infra.</p>
+        </div>
+    </footer>
+
+    
+</HomeLayout>
+
+<script>
+	// Animación de compactación del header al hacer scroll
+	const header = document.getElementById('main-header');
+	window.addEventListener('scroll', () => {
+		if(!header) return;
+		if (window.scrollY > 50) {
+			header.classList.remove('py-5');
+			header.classList.add('py-2');
+		} else {
+			header.classList.remove('py-2');
+			header.classList.add('py-5');
+		}
+	});
+</script>
