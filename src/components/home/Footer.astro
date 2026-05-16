@@ -1,20 +1,22 @@
 ---
-
-    const currentYear = new Date().getFullYear() || 2026
-
+const currentYear = new Date().getFullYear() || 2026;
 ---
 
-<footer class="py-12 bg-slate-50 border-t border-slate-200">
-    <div class="max-w-6xl mx-auto px-4 flex flex-col md:row justify-between items-center gap-8">
-        <div class="logo font-extrabold text-xl tracking-tighter flex items-center gap-2 grayscale opacity-50">
-            <div class="w-5 h-5 bg-slate-900 rounded-sm"></div>
-            KROPY
-        </div>
-        <div class="flex gap-8 text-xs font-bold text-slate-400 uppercase tracking-widest">
-            <a href="#" class="hover:text-emerald-600">Privacidad</a>
-            <a href="#" class="hover:text-emerald-600">Términos</a>
-            <a href="#" class="hover:text-emerald-600">Status</a>
-        </div>
-        <p id="copyrigth" class="text-xs text-slate-400 font-medium">© {currentYear} Kropy Labs. Potenciado por kropy-infra.</p>
+<footer class="border-t border-slate-200 bg-slate-50 py-12">
+  <div class="md:row mx-auto flex max-w-6xl flex-col items-center justify-between gap-8 px-4">
+    <div
+      class="logo flex items-center gap-2 text-xl font-extrabold tracking-tighter opacity-50 grayscale"
+    >
+      <div class="h-5 w-5 rounded-sm bg-slate-900"></div>
+      KROPY
     </div>
+    <div class="flex gap-8 text-xs font-bold tracking-widest text-slate-400 uppercase">
+      <a href="/legal/terms" class="hover:text-emerald-600">Privacidad</a>
+      <a href="/legal/services" class="hover:text-emerald-600">Términos</a>
+      <a href="#" class="hover:text-emerald-600">Status</a>
+    </div>
+    <p id="copyrigth" class="text-xs font-medium text-slate-400">
+      © {currentYear} Kropy Labs. Potenciado por kropy-infra.
+    </p>
+  </div>
 </footer>

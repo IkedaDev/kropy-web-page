@@ -1,21 +1,19 @@
 ---
-
 const gaId = import.meta.env.PUBLIC_GA_ID;
 ---
 
 <script async src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}></script>
 <script is:inline define:vars={{ gaId }}>
-    
-function loadGA() {
+  function loadGA() {
     window.dataLayer = window.dataLayer || [];
     function gtag() {
-    dataLayer.push(arguments);
+      dataLayer.push(arguments);
     }
-    gtag('js', new Date());
-    gtag('config', gaId);
-}
+    gtag("js", new Date());
+    gtag("config", gaId);
+  }
 
-loadGA();
+  loadGA();
 
-document.addEventListener('astro:page-load', loadGA);
+  document.addEventListener("astro:page-load", loadGA);
 </script>

@@ -2,30 +2,64 @@
 
 ---
 
-<header class="fixed top-0 left-0 w-full z-50 py-5 transition-all duration-300" id="main-header">
-        <div class="max-w-6xl mx-auto px-4">
-            <nav class="glass border border-white/20 rounded-full px-6 py-3 flex justify-between items-center shadow-sm">
-                <a href="#" class="flex items-center gap-2 font-extrabold text-xl tracking-tighter">
-                    <div class="w-6 h-6 bg-emerald-600 rounded-md shadow-[0_4px_10px_rgba(5,150,105,0.3)]"></div>
-                    KROPY
-                </a>
-                
-                <ul class="hidden md:flex gap-8 list-none">
-                    <li><a href="#nosotros" class="text-xs font-bold uppercase tracking-widest text-slate-500 hover:text-emerald-600 transition-colors">Nosotros</a></li>
-                    <li><a href="#mv" class="text-xs font-bold uppercase tracking-widest text-slate-500 hover:text-emerald-600 transition-colors">Misión</a></li>
-                    <li><a href="#pricing" class="text-xs font-bold uppercase tracking-widest text-slate-500 hover:text-emerald-600 transition-colors">Precios</a></li>
-                    <li><a href="#contacto" class="text-xs font-bold uppercase tracking-widest text-slate-500 hover:text-emerald-600 transition-colors">Contacto</a></li>
-                </ul>
-
-                <div class="flex gap-4 items-center">
-                    <a href="#" class="text-xs font-bold text-slate-500 hover:text-slate-900">Log in</a>
-                    <a href="#" class="bg-emerald-600 text-white text-xs font-bold px-5 py-2.5 rounded-full hover:bg-emerald-700 transition-all shadow-lg shadow-emerald-600/20">Empezar</a>
-                </div>
-            </nav>
+<header class="fixed top-0 left-0 z-50 w-full py-5 transition-all duration-300" id="main-header">
+  <div class="mx-auto max-w-6xl px-4">
+    <nav
+      class="glass flex items-center justify-between rounded-full border border-white/20 px-6 py-3 shadow-sm"
+    >
+      <a href="#" class="flex items-center gap-2 text-xl font-extrabold tracking-tighter">
+        <div class="h-6 w-6 rounded-md bg-emerald-600 shadow-[0_4px_10px_rgba(5,150,105,0.3)]">
         </div>
-    </header>
+        KROPY
+      </a>
 
-    <style scoped>
-                .glass { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+      <ul class="hidden list-none gap-8 md:flex">
+        <li>
+          <a
+            href="#nosotros"
+            class="text-xs font-bold tracking-widest text-slate-500 uppercase transition-colors hover:text-emerald-600"
+            >Nosotros</a
+          >
+        </li>
+        <li>
+          <a
+            href="#mv"
+            class="text-xs font-bold tracking-widest text-slate-500 uppercase transition-colors hover:text-emerald-600"
+            >Misión</a
+          >
+        </li>
+        <li>
+          <a
+            href="#pricing"
+            class="text-xs font-bold tracking-widest text-slate-500 uppercase transition-colors hover:text-emerald-600"
+            >Precios</a
+          >
+        </li>
+        <li>
+          <a
+            href="#contacto"
+            class="text-xs font-bold tracking-widest text-slate-500 uppercase transition-colors hover:text-emerald-600"
+            >Contacto</a
+          >
+        </li>
+      </ul>
 
-    </style>
+      <div class="flex items-center gap-4">
+        <a href="#" class="text-xs font-bold text-slate-500 hover:text-slate-900">Log in</a>
+        <a
+          href="#"
+          class="rounded-full bg-emerald-600 px-5 py-2.5 text-xs font-bold text-white shadow-lg shadow-emerald-600/20 transition-all hover:bg-emerald-700"
+          >Empezar</a
+        >
+      </div>
+    </nav>
+  </div>
+</header>
+
+<style scoped>
+  .glass {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+</style>

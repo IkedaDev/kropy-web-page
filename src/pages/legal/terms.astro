@@ -1,0 +1,69 @@
+---
+import InfoLayout from "../../layouts/InfoLayout.astro";
+---
+
+<InfoLayout>
+  <div class="mx-auto max-w-3xl">
+    <span class="mb-4 block text-[10px] font-bold tracking-widest text-emerald-600 uppercase"
+      >Legal // v1.2</span
+    >
+    <h1 class="mb-8 text-4xl font-extrabold tracking-tight md:text-5xl">Política de Privacidad</h1>
+
+    <div class="prose prose-slate prose-lg space-y-6 leading-relaxed text-slate-600">
+      <p>
+        En <strong>Kropy Labs</strong>, la privacidad de nuestros clientes y de sus usuarios finales
+        es nuestra prioridad fundamental. Esta política detalla cómo recolectamos, utilizamos y
+        protegemos la información en nuestra infraestructura "Web-as-a-Service".
+      </p>
+
+      <h2 class="pt-4 text-2xl font-bold text-slate-900">1. Recolección de Información</h2>
+      <p>
+        Recopilamos información necesaria para la prestación de servicios de infraestructura y
+        desarrollo, incluyendo:
+      </p>
+      <ul class="list-disc space-y-2 pl-6">
+        <li>Datos de identidad: Nombre y correo electrónico corporativo.</li>
+        <li>
+          Datos de facturación: Procesados de forma segura a través de nuestros proveedores
+          (Stripe), Kropy no almacena números de tarjetas de crédito.
+        </li>
+        <li>
+          Datos técnicos: Registros de acceso a nodos, direcciones IP de origen y métricas de
+          rendimiento del sitio para optimización de clusters.
+        </li>
+      </ul>
+
+      <h2 class="pt-4 text-2xl font-bold text-slate-900">2. Uso de la Información</h2>
+      <p>La información recolectada se utiliza exclusivamente para:</p>
+      <ul class="list-disc space-y-2 pl-6">
+        <li>Gestionar y escalar los recursos de Kubernetes asignados a su suscripción.</li>
+        <li>Automatizar procesos de cobro y renovación de servicios.</li>
+        <li>
+          Enviar notificaciones críticas sobre el estado de sus nodos o actualizaciones de
+          seguridad.
+        </li>
+      </ul>
+
+      <h2 class="pt-4 text-2xl font-bold text-slate-900">3. Aislamiento de Datos</h2>
+      <p>
+        Fieles a nuestra arquitectura de microservicios, los datos de cada cliente se mantienen en
+        namespaces lógicamente aislados dentro de ikedadev-infra, garantizando que su información
+        nunca se cruce con la de otros suscriptores.
+      </p>
+
+      <h2 class="pt-4 text-2xl font-bold text-slate-900">4. Sus derechos</h2>
+      <p>
+        Usted tiene derecho a acceder, rectificar o eliminar sus datos personales en cualquier
+        momento a través de su panel de control o contactando directamente a nuestro soporte de
+        ingeniería en <strong>privacidad@kropy.io</strong>.
+      </p>
+    </div>
+
+    <div class="mt-20 rounded-3xl border border-emerald-100 bg-emerald-50 p-8">
+      <p class="text-sm font-medium text-emerald-800 italic">
+        "Privacidad por diseño: Construimos herramientas que protegen tu identidad tanto como
+        protegen tu código."
+      </p>
+    </div>
+  </div>
+</InfoLayout>

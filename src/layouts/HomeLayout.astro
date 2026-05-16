@@ -1,9 +1,12 @@
 ---
 // src/layouts/Layout.astro
-import SeoHead from '../components/SeoHead.astro';
-import GoogleAnalitycs from '../components/GoogleAnalitycs.astro';
-import "../styles/global.css";
+import SeoHead from "../components/SeoHead.astro";
+import GoogleAnalitycs from "../components/GoogleAnalitycs.astro";
+import Header from "../components/home/Header.astro";
+import Footer from "../components/home/Footer.astro";
 const { title, description } = Astro.props;
+
+import "../styles/global.css";
 
 // const navLinks = [
 //     { text: "Nosotros", href: "/#nosotros" },
@@ -15,11 +18,15 @@ const { title, description } = Astro.props;
 
 <!doctype html>
 <html lang="es">
-	<head>
-        <GoogleAnalitycs />
-        <SeoHead title={title} description={description} />
-	</head>
-	<body>
-        <slot />
-    </body>
+  <head>
+    <GoogleAnalitycs />
+    <SeoHead title={title} description={description} />
+  </head>
+
+  <body>
+    <Header />
+    <main>
+      <slot />
+    </main>
+  </body><Footer />
 </html>

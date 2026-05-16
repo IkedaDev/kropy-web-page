@@ -1,0 +1,72 @@
+---
+import InfoLayout from "../../layouts/InfoLayout.astro";
+---
+
+<InfoLayout>
+  <div class="mx-auto max-w-3xl">
+    <span class="mb-4 block text-[10px] font-bold tracking-widest text-emerald-600 uppercase"
+      >Servicio // v1.0</span
+    >
+    <h1 class="mb-8 text-4xl font-extrabold tracking-tight md:text-5xl">Términos de Servicio</h1>
+
+    <div class="prose prose-slate prose-lg space-y-6 leading-relaxed text-slate-600">
+      <p>
+        Al suscribirse a los servicios de <strong>Kropy Labs</strong>, usted acepta los siguientes
+        términos que rigen nuestra relación comercial y el uso de nuestra infraestructura técnica.
+      </p>
+
+      <h2 class="pt-4 text-2xl font-bold text-slate-900">1. Naturaleza del Servicio</h2>
+      <p>
+        Kropy proporciona una solución de "Web-as-a-Service". Esto incluye el diseño manual,
+        despliegue y mantenimiento continuo de activos digitales sobre clusters orquestados. El
+        servicio es de carácter mensual y recurrente.
+      </p>
+
+      <h2 class="pt-4 text-2xl font-bold text-slate-900">2. Pagos y Suscripción</h2>
+      <p>
+        El acceso a su sitio web y panel de control está condicionado al pago puntual de la
+        suscripción elegida. Los pagos se procesan de forma anticipada. Si el pago falla, nuestro
+        sistema iniciará automáticamente el protocolo de gracia detallado en la sección de
+        suspensión.
+      </p>
+
+      <h2 class="pt-4 text-2xl font-bold text-slate-900">3. Protocolo de Suspensión</h2>
+      <p>Kropy implementa una política de validación diaria de suscripciones:</p>
+      <ul class="list-disc space-y-2 pl-6">
+        <li>
+          En caso de impago, el Ingress de su nodo será redirigido a una página de suspensión
+          global.
+        </li>
+        <li>
+          Sus datos y contenedores permanecerán intactos durante 30 días posteriores a la
+          suspensión.
+        </li>
+        <li>
+          La reconexión del servicio es automática una vez regularizado el estado financiero a
+          través de la API de Pagos.
+        </li>
+      </ul>
+
+      <h2 class="pt-4 text-2xl font-bold text-slate-900">4. Propiedad Intelectual</h2>
+      <p>
+        El cliente es dueño absoluto del contenido y la marca. Kropy mantiene la propiedad
+        intelectual de la lógica de orquestación y el código base de la infraestructura utilizado
+        para servir el proyecto.
+      </p>
+
+      <h2 class="pt-4 text-2xl font-bold text-slate-900">5. Límites de Responsabilidad</h2>
+      <p>
+        Aunque garantizamos un uptime del 99.9%, Kropy no se hace responsable por pérdidas
+        económicas derivadas de interrupciones de terceros o mal uso de las credenciales de acceso
+        por parte del cliente.
+      </p>
+    </div>
+
+    <div class="mt-20 border-t border-slate-200 pt-10">
+      <p class="text-xs text-slate-400">
+        Última actualización: Mayo 2026. Estos términos pueden ser actualizados para reflejar
+        mejoras en nuestros clusters de Kubernetes.
+      </p>
+    </div>
+  </div>
+</InfoLayout>

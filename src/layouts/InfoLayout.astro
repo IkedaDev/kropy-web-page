@@ -1,0 +1,25 @@
+---
+import GoogleAnalitycs from "../components/GoogleAnalitycs.astro";
+import Footer from "../components/info/Footer.astro";
+import Header from "../components/info/Header.astro";
+import SeoHead from "../components/SeoHead.astro";
+
+const { title, description } = Astro.props;
+
+import "../styles/global.css";
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <GoogleAnalitycs />
+    <SeoHead title={title} description={description} />
+  </head>
+  <body>
+    <Header />
+    <main class="px-4 pt-32 pb-20">
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>
