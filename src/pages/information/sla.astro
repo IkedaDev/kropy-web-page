@@ -1,0 +1,91 @@
+---
+import InfoLayout from "../../layouts/InfoLayout.astro";
+---
+
+<InfoLayout>
+  <div class="mx-auto max-w-3xl">
+    <span class="mb-4 block text-[10px] font-bold tracking-widest text-emerald-600 uppercase"
+      >Garantía de Servicio // v1.0</span
+    >
+    <h1 class="mb-8 text-4xl font-extrabold tracking-tight text-slate-900 md:text-5xl">
+      Acuerdo de Nivel de Servicio (SLA)
+    </h1>
+
+    <div class="prose prose-slate prose-lg space-y-8 leading-relaxed text-slate-600">
+      <p>
+        Este Acuerdo de Nivel de Servicio ("SLA") describe el compromiso de <strong
+          >Kropy Labs</strong
+        > respecto a la disponibilidad y el rendimiento de nuestra infraestructura de suscripción.
+      </p>
+
+      <section>
+        <h2 class="mb-4 text-2xl font-bold text-slate-900">1. Compromiso de Disponibilidad</h2>
+        <p>
+          Kropy garantiza una disponibilidad mensual (uptime) del <strong>99.9%</strong> para todos los
+          sitios web alojados en nuestros planes <em>Professional</em> y <em>Enterprise</em>.
+        </p>
+        <div class="mt-4 rounded-2xl border border-slate-200 bg-white p-6">
+          <p class="text-sm font-medium text-slate-700">
+            El tiempo de inactividad se define como el periodo en el que el Ingress del clúster no
+            responde a peticiones HTTP externas, verificado por nuestros sistemas de monitoreo
+            global.
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="mb-4 text-2xl font-bold text-slate-900">2. Ventanas de Mantenimiento</h2>
+        <p>
+          Para asegurar la salud de los nodos y la actualización de los pods de Kubernetes, Kropy
+          realiza mantenimientos programados:
+        </p>
+        <ul class="list-disc space-y-2 pl-6">
+          <li>
+            <strong>Mantenimiento Preventivo:</strong> Se realiza en horarios de bajo tráfico (02:00 -
+            05:00 UTC) y se notifica con 48 horas de antelación.
+          </li>
+          <li>
+            <strong>Parches Críticos:</strong> En caso de vulnerabilidades de día cero, Kropy se reserva
+            el derecho de intervenir inmediatamente para proteger la red.
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <h2 class="mb-4 text-2xl font-bold text-slate-900">3. Créditos de Servicio</h2>
+        <p>
+          Si no cumplimos con el compromiso de disponibilidad, los clientes podrán solicitar
+          créditos aplicables a su próxima factura:
+        </p>
+        <table class="w-full border-collapse text-sm">
+          <thead>
+            <tr class="bg-slate-100">
+              <th class="border border-slate-200 p-3 text-left">Uptime Mensual</th>
+              <th class="border border-slate-200 p-3 text-left">Crédito</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="border border-slate-200 p-3">< 99.9%</td>
+              <td class="border border-slate-200 p-3">10% del cargo mensual</td>
+            </tr>
+            <tr>
+              <td class="border border-slate-200 p-3">< 99.0%</td>
+              <td class="border border-slate-200 p-3">25% del cargo mensual</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section>
+        <h2 class="mb-4 text-2xl font-bold text-slate-900">4. Exclusiones</h2>
+        <p>Esta garantía no aplica a problemas derivados de:</p>
+        <ul class="list-disc space-y-2 pl-6">
+          <li>Errores en el código proporcionado por el cliente o integraciones externas.</li>
+          <li>Fallas en el registro de dominios gestionados por terceros.</li>
+          <li>Eventos de fuerza mayor fuera del control de ikedadev-infra.</li>
+        </ul>
+      </section>
+    </div>
+  </div>
+</InfoLayout>

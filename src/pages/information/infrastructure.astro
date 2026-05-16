@@ -1,0 +1,87 @@
+---
+import InfoLayout from "../../layouts/InfoLayout.astro";
+---
+
+<InfoLayout>
+  <div class="mx-auto max-w-3xl">
+    <span class="mb-4 block text-[10px] font-bold tracking-widest text-emerald-600 uppercase"
+      >Stack Tecnológico // ikedadev-infra</span
+    >
+    <h1 class="mb-8 text-4xl font-extrabold tracking-tight text-slate-900 md:text-5xl">
+      Nuestra Arquitectura
+    </h1>
+
+    <div class="prose prose-slate prose-lg space-y-12 leading-relaxed text-slate-600">
+      <p>
+        Kropy no utiliza servidores compartidos. Cada proyecto se despliega como una unidad de
+        computación independiente, aislada y escalable, utilizando estándares de industria de nivel
+        militar.
+      </p>
+
+      <section class="space-y-4">
+        <div class="flex items-center gap-4">
+          <div
+            class="flex h-10 w-10 items-center justify-center rounded-xl bg-emerald-100 font-bold text-emerald-600"
+          >
+            01
+          </div>
+          <h2 class="m-0 text-2xl font-bold text-slate-900">Orquestación con Kubernetes</h2>
+        </div>
+        <p>
+          Utilizamos <strong>Kubernetes (K8s)</strong> para la orquestación de contenedores. Esto nos
+          permite garantizar que si un nodo falla, tu sitio se reubica automáticamente en otro nodo disponible
+          en milisegundos, manteniendo el servicio ininterrumpido.
+        </p>
+      </section>
+
+      <section class="space-y-4">
+        <div class="flex items-center gap-4">
+          <div
+            class="flex h-10 w-10 items-center justify-center rounded-xl bg-emerald-100 font-bold text-emerald-600"
+          >
+            02
+          </div>
+          <h2 class="m-0 text-2xl font-bold text-slate-900">Seguridad Atómica</h2>
+          <p>Implementamos una arquitectura de <strong>Zero Trust</strong>:</p>
+          <ul class="list-disc space-y-2 pl-6">
+            <li>
+              <strong>Namespaces Aislados:</strong> Cada cliente tiene su propio espacio de red lógico.
+            </li>
+            <li>
+              <strong>SSL Automático:</strong> Gestión dinámica de certificados TLS vía Cert-Manager.
+            </li>
+            <li>
+              <strong>DDoS Mitigation:</strong> Capa de filtrado de tráfico en el borde de nuestra red.
+            </li>
+          </ul>
+        </div>
+
+        <section class="space-y-4">
+          <div class="flex items-center gap-4">
+            <div
+              class="flex h-10 w-10 items-center justify-center rounded-xl bg-emerald-100 font-bold text-emerald-600"
+            >
+              03
+            </div>
+            <h2 class="m-0 text-2xl font-bold text-slate-900">Red de Entrega Global (Edge)</h2>
+            <p>
+              Nuestra infraestructura se apoya en una red de <strong>Anycast IP</strong>. Esto
+              significa que el contenido estático de tu web se sirve desde el centro de datos
+              geográficamente más cercano a tu usuario final, minimizando la latencia.
+            </p>
+          </div>
+
+          <div class="rounded-[2.5rem] bg-slate-900 p-8 text-white">
+            <h3 class="mono mb-4 text-sm font-bold text-emerald-400">SYSTEM_LOG // STATUS_OK</h3>
+            <div class="mono space-y-2 text-xs leading-loose opacity-80">
+              <p>> Initializing Kropy Node Cluster...</p>
+              <p>> Auto-scaling policies: ENABLED</p>
+              <p>> Container Isolation: ACTIVE</p>
+              <p>> Global Traffic Manager: ROUTING_OPTIMAL</p>
+            </div>
+          </div>
+        </section>
+      </section>
+    </div>
+  </div></InfoLayout
+>
