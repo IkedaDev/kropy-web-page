@@ -1,33 +1,16 @@
 ---
 
 import HomeLayout from '../layouts/HomeLayout.astro';
+import Header from '../components/home/Header.astro';
+import Footer from '../components/home/Footer.astro';
+import Pricings from '../components/home/Pricings.astro';
+import Contact from '../components/home/Contact.astro';
 
 ---
 
 <HomeLayout>
 	<!-- Header Flotante V1 Pro -->
-    <header class="fixed top-0 left-0 w-full z-50 py-5 transition-all duration-300" id="main-header">
-        <div class="max-w-6xl mx-auto px-4">
-            <nav class="glass border border-white/20 rounded-full px-6 py-3 flex justify-between items-center shadow-sm">
-                <a href="#" class="flex items-center gap-2 font-extrabold text-xl tracking-tighter">
-                    <div class="w-6 h-6 bg-emerald-600 rounded-md shadow-[0_4px_10px_rgba(5,150,105,0.3)]"></div>
-                    KROPY
-                </a>
-                
-                <ul class="hidden md:flex gap-8 list-none">
-                    <li><a href="#nosotros" class="text-xs font-bold uppercase tracking-widest text-slate-500 hover:text-emerald-600 transition-colors">Nosotros</a></li>
-                    <li><a href="#mv" class="text-xs font-bold uppercase tracking-widest text-slate-500 hover:text-emerald-600 transition-colors">Misión</a></li>
-                    <li><a href="#pricing" class="text-xs font-bold uppercase tracking-widest text-slate-500 hover:text-emerald-600 transition-colors">Precios</a></li>
-                    <li><a href="#contacto" class="text-xs font-bold uppercase tracking-widest text-slate-500 hover:text-emerald-600 transition-colors">Contacto</a></li>
-                </ul>
-
-                <div class="flex gap-4 items-center">
-                    <a href="#" class="text-xs font-bold text-slate-500 hover:text-slate-900">Log in</a>
-                    <a href="#" class="bg-emerald-600 text-white text-xs font-bold px-5 py-2.5 rounded-full hover:bg-emerald-700 transition-all shadow-lg shadow-emerald-600/20">Empezar</a>
-                </div>
-            </nav>
-        </div>
-    </header>
+    <Header />
 
     <main>
         <!-- Hero Section -->
@@ -133,94 +116,15 @@ import HomeLayout from '../layouts/HomeLayout.astro';
                 </div>
             </div>
         </section>
-
-        <!-- Precios (V1) -->
-        <section id="pricing" class="py-24 bg-slate-50">
-            <div class="max-w-6xl mx-auto px-4 text-center">
-                <h2 class="text-4xl font-extrabold mb-16 tracking-tight">Inversión transparente.</h2>
-                <div class="grid md:grid-cols-3 gap-8">
-                    <div class="bg-white p-10 rounded-3xl border border-slate-200">
-                        <h4 class="text-slate-400 font-bold uppercase text-xs tracking-widest mb-4">Starter</h4>
-                        <div class="text-5xl font-extrabold mb-6">$39<span class="text-sm text-slate-400 font-medium">/mes</span></div>
-                        <ul class="text-sm text-slate-500 space-y-4 mb-10 text-left">
-                            <li class="flex gap-2">✅ 1 Sitio de alto tráfico</li>
-                            <li class="flex gap-2">✅ SSL Automatizado</li>
-                            <li class="flex gap-2">✅ Soporte 24/7</li>
-                        </ul>
-                        <a href="#" class="block w-full py-3 rounded-full border border-slate-200 font-bold hover:bg-slate-50 transition-colors">Elegir Plan</a>
-                    </div>
-                    <div class="bg-white p-10 rounded-3xl border-2 border-emerald-600 relative transform scale-105 shadow-2xl shadow-emerald-600/10">
-                        <span class="absolute -top-4 left-1/2 -translate-x-1/2 bg-emerald-600 text-white text-[10px] font-bold px-4 py-1 rounded-full uppercase tracking-widest">Recomendado</span>
-                        <h4 class="text-slate-400 font-bold uppercase text-xs tracking-widest mb-4">Professional</h4>
-                        <div class="text-5xl font-extrabold mb-6">$99<span class="text-sm text-slate-400 font-medium">/mes</span></div>
-                        <ul class="text-sm text-slate-500 space-y-4 mb-10 text-left">
-                            <li class="flex gap-2">✅ 5 Instancias dedicadas</li>
-                            <li class="flex gap-2">✅ Base de datos Postgres</li>
-                            <li class="flex gap-2">✅ Backups automáticos</li>
-                        </ul>
-                        <a href="#" class="block w-full py-3 rounded-full bg-emerald-600 text-white font-bold hover:bg-emerald-700 transition-colors">Elegir Pro</a>
-                    </div>
-                    <div class="bg-white p-10 rounded-3xl border border-slate-200">
-                        <h4 class="text-slate-400 font-bold uppercase text-xs tracking-widest mb-4">Enterprise</h4>
-                        <div class="text-5xl font-extrabold mb-6">Custom</div>
-                        <ul class="text-sm text-slate-500 space-y-4 mb-10 text-left">
-                            <li class="flex gap-2">✅ Nodos de cómputo dedicados</li>
-                            <li class="flex gap-2">✅ SLA garantizado</li>
-                            <li class="flex gap-2">✅ Manager de cuenta</li>
-                        </ul>
-                        <a href="#" class="block w-full py-3 rounded-full border border-slate-200 font-bold hover:bg-slate-50 transition-colors">Contactar</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contacto -->
-        <section id="contacto" class="py-24 bg-white">
-            <div class="max-w-4xl mx-auto px-4">
-                <div class="text-center mb-16">
-                    <h2 class="text-4xl font-extrabold mb-4 tracking-tight">Hablemos de tu proyecto.</h2>
-                    <p class="text-slate-500">Completa el formulario y un arquitecto de Kropy te contactará en menos de 24 horas.</p>
-                </div>
-                <form class="space-y-6">
-                    <div class="grid md:grid-cols-2 gap-6">
-                        <div>
-                            <label class="block text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">Nombre Completo</label>
-                            <input type="text" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 focus:outline-none focus:border-emerald-600 transition-colors" placeholder="Ej: Juan Pérez">
-                        </div>
-                        <div>
-                            <label class="block text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">Email Corporativo</label>
-                            <input type="email" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 focus:outline-none focus:border-emerald-600 transition-colors" placeholder="juan@empresa.com">
-                        </div>
-                    </div>
-                    <div>
-                        <label class="block text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">¿Cómo podemos ayudarte?</label>
-                        <textarea rows="4" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 focus:outline-none focus:border-emerald-600 transition-colors" placeholder="Cuéntanos brevemente sobre tu negocio..."></textarea>
-                    </div>
-                    <button type="submit" class="w-full bg-emerald-600 text-white font-bold py-4 rounded-xl hover:bg-emerald-700 transition-all shadow-xl shadow-emerald-600/20">Enviar Solicitud</button>
-                </form>
-            </div>
-        </section>
+        <Pricings />
+        <Contact />
+        
     </main>
-
-    <footer class="py-12 bg-slate-50 border-t border-slate-200">
-        <div class="max-w-6xl mx-auto px-4 flex flex-col md:row justify-between items-center gap-8">
-            <div class="logo font-extrabold text-xl tracking-tighter flex items-center gap-2 grayscale opacity-50">
-                <div class="w-5 h-5 bg-slate-900 rounded-sm"></div>
-                KROPY
-            </div>
-            <div class="flex gap-8 text-xs font-bold text-slate-400 uppercase tracking-widest">
-                <a href="#" class="hover:text-emerald-600">Privacidad</a>
-                <a href="#" class="hover:text-emerald-600">Términos</a>
-                <a href="#" class="hover:text-emerald-600">Status</a>
-            </div>
-            <p class="text-xs text-slate-400 font-medium">© 2024 Kropy Labs. Potenciado por ikedadev-infra.</p>
-        </div>
-    </footer>
-
-    
+    <Footer />
 </HomeLayout>
 
 <script>
+
 	// Animación de compactación del header al hacer scroll
 	const header = document.getElementById('main-header');
 	window.addEventListener('scroll', () => {
