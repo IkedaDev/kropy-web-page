@@ -1,0 +1,1324 @@
+<!doctype html>
+<html lang="es" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SOLUM | Peluquería Botánica & Herbolario Capilar</title>
+
+    <!-- Google Fonts: Cormorant Garamond (Elegancia clásica botánica) & Inter (Lectura limpia) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      @import "tailwindcss";
+      /* Paleta de colores botánica y de invernadero orgánico - CSS Puro sin alterar Tailwind */
+      :root {
+        --solum-forest: #1a2e26; /* Verde bosque profundo alpino */
+        --solum-sage: #8da189; /* Verde salvia suave */
+        --solum-cream: #faf8f5; /* Blanco alabastro cálido */
+        --solum-gold: #c2a26a; /* Latón/Oro cepillado orgánico */
+        --solum-moss: #3e544a; /* Verde musgo intermedio */
+        --solum-charcoal: #262e2a; /* Texto oscuro profundo */
+        --solum-sand: #f1ece3; /* Arena de río suave */
+      }
+
+      body {
+        background-color: var(--solum-cream);
+        color: var(--solum-charcoal);
+        font-family: "Inter", sans-serif;
+      }
+
+      .font-serif-botanical {
+        font-family: "Cormorant Garamond", serif;
+      }
+
+      /* Formas arquitectónicas orgánicas: Arcos de invernadero */
+      .greenhouse-arch {
+        border-top-left-radius: 120px;
+        border-top-right-radius: 120px;
+      }
+
+      .leaf-shape-right {
+        border-top-right-radius: 100px;
+        border-bottom-left-radius: 100px;
+      }
+
+      .leaf-shape-left {
+        border-top-left-radius: 100px;
+        border-bottom-right-radius: 100px;
+      }
+
+      /* Transiciones lentas inspiradas en la naturaleza */
+      .organic-transition {
+        transition: all 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+      }
+
+      /* Textura orgánica sutil en el fondo */
+      .organic-overlay {
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='organicNoise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23organicNoise)' opacity='0.015'/%3E%3C/svg%3E");
+      }
+
+      /* Animación suave de pulso para elementos activos */
+      @keyframes soft-pulse {
+        0%,
+        100% {
+          opacity: 0.6;
+          transform: scale(1);
+        }
+        50% {
+          opacity: 1;
+          transform: scale(1.05);
+        }
+      }
+
+      .pulse-soft {
+        animation: soft-pulse 4s infinite ease-in-out;
+      }
+    </style>
+  </head>
+  <body class="organic-overlay relative overflow-x-hidden antialiased">
+    <!-- Encabezado Flotante Botánico -->
+    <header
+      class="sticky top-0 z-50 border-b border-[#1A2E26]/5 bg-[#FAF8F5]/90 py-5 backdrop-blur-md"
+    >
+      <div class="mx-auto flex max-w-7xl items-center justify-between px-6 sm:px-8 lg:px-12">
+        <!-- Logo Solum -->
+        <a href="#" class="group flex items-center gap-3">
+          <div
+            class="organic-transition flex h-8 w-8 items-center justify-center rounded-full border border-[#1A2E26]/20 text-[#8DA189] group-hover:border-[#C2A26A]"
+          >
+            <span class="font-serif-botanical text-xs">🌿</span>
+          </div>
+          <div>
+            <span
+              class="font-serif-botanical block text-2xl font-medium tracking-[0.15em] text-[#1A2E26] uppercase"
+              >SOLUM</span
+            >
+            <span
+              class="-mt-1 block text-[8px] font-semibold tracking-[0.3em] text-[#8DA189] uppercase"
+              >Herbolario Capilar</span
+            >
+          </div>
+        </a>
+
+        <!-- Navegación Orgánica -->
+        <nav
+          class="hidden items-center space-x-10 text-[11px] font-medium tracking-[0.2em] text-[#262E2A]/85 uppercase md:flex"
+        >
+          <a href="#filosofia" class="organic-transition hover:text-[#C2A26A]">El Oasis</a>
+          <a href="#alquimista" class="organic-transition hover:text-[#C2A26A]">El Alquimista</a>
+          <a href="#herbolario" class="organic-transition hover:text-[#C2A26A]">Herbolario</a>
+          <a href="#rituales" class="organic-transition hover:text-[#C2A26A]">Rituales</a>
+          <a href="#acustica" class="organic-transition hover:text-[#C2A26A]">Sonidos</a>
+        </nav>
+
+        <!-- CTA Directo -->
+        <div class="flex items-center gap-4">
+          <a
+            href="https://wa.me/34600000000"
+            target="_blank"
+            class="organic-transition hidden rounded-full bg-[#1A2E26] px-6 py-3 text-[10px] font-medium tracking-[0.2em] text-[#FAF8F5] uppercase hover:bg-[#C2A26A] sm:inline-flex"
+          >
+            Consultar Alquimia
+          </a>
+
+          <!-- Toggle Menú Móvil -->
+          <button id="mobile-toggle" class="p-1 text-[#1A2E26] focus:outline-none md:hidden">
+            <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path
+                id="nav-burger"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.5"
+                d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Menú Desplegable Móvil -->
+      <div
+        id="mobile-menu"
+        class="absolute left-0 hidden w-full border-t border-[#1A2E26]/5 bg-[#FAF8F5] px-6 py-8 shadow-md md:hidden"
+      >
+        <div
+          class="flex flex-col space-y-5 text-[11px] font-medium tracking-[0.2em] text-[#262E2A]/90 uppercase"
+        >
+          <a href="#filosofia" class="hover:text-[#C2A26A]">El Oasis</a>
+          <a href="#alquimista" class="hover:text-[#C2A26A]">El Alquimista</a>
+          <a href="#herbolario" class="hover:text-[#C2A26A]">Herbolario</a>
+          <a href="#rituales" class="hover:text-[#C2A26A]">Rituales</a>
+          <a href="#acustica" class="hover:text-[#C2A26A]">Sonidos</a>
+          <a
+            href="https://wa.me/34600000000"
+            target="_blank"
+            class="rounded-full bg-[#1A2E26] py-3.5 text-center text-[10px] tracking-[0.2em] text-[#FAF8F5] uppercase"
+          >
+            Consultar por WhatsApp
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Section: Un Invernadero de Luz y Plantas -->
+    <section class="mx-auto max-w-7xl px-6 py-12 sm:px-8 md:py-24 lg:px-12">
+      <div class="grid grid-cols-1 items-center gap-12 lg:grid-cols-12">
+        <!-- Copy Poético y Natural -->
+        <div class="space-y-8 lg:col-span-6">
+          <div
+            class="inline-flex items-center gap-2 text-[9px] font-semibold tracking-[0.25em] text-[#8DA189] uppercase"
+          >
+            <span class="pulse-soft h-2 w-2 rounded-full bg-[#C2A26A]"></span>
+            Tu cabello sanado por el poder de la tierra
+          </div>
+
+          <h1
+            class="font-serif-botanical text-5xl leading-[1.05] font-light text-[#1A2E26] sm:text-6xl lg:text-7xl"
+          >
+            La belleza <br />
+            nace de una <br />
+            <span class="text-[#8DA189] italic">raíz en calma.</span>
+          </h1>
+
+          <p class="md:text-md max-w-lg text-sm leading-relaxed font-light text-[#262E2A]/85">
+            En SOLUM no camuflamos el daño con siliconas. Curamos el cuero cabelludo y la fibra con
+            infusiones frescas de plantas, aceites prensados en frío y barros alquímicos formulados
+            a tu medida en nuestro herbolario de autor.
+          </p>
+
+          <!-- Acciones directas -->
+          <div class="flex flex-col items-stretch gap-4 pt-4 sm:flex-row sm:items-center">
+            <a
+              href="#alquimista"
+              class="organic-transition rounded-full bg-[#1A2E26] px-8 py-4.5 text-center text-[10px] tracking-[0.2em] text-[#FAF8F5] uppercase hover:bg-[#C2A26A]"
+            >
+              Diseñar mi Tratamiento
+            </a>
+            <a
+              href="#rituales"
+              class="organic-transition rounded-full border border-[#1A2E26]/20 px-8 py-4.5 text-center text-[10px] tracking-[0.2em] text-[#1A2E26] uppercase hover:border-[#1A2E26]"
+            >
+              Explorar Rituales
+            </a>
+          </div>
+        </div>
+
+        <!-- Imagen Conceptual Invernadero / Arco -->
+        <div class="relative grid grid-cols-12 gap-4 lg:col-span-6">
+          <!-- Arco de Invernadero Principal -->
+          <div
+            class="greenhouse-arch col-span-8 aspect-[3/4.5] overflow-hidden border border-[#1A2E26]/5 bg-[#F1ECE3] shadow-sm"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1545249390-6bdfa286032f?auto=format&fit=crop&w=600&q=80"
+              alt="Interior del salón con plantas colgantes y luz natural"
+              class="h-full w-full object-cover brightness-[0.95] saturate-[0.85]"
+              onerror="this.onerror=null;this.src='https://placehold.co/400x600/1A2E26/FAF8F5?text=Solum+Greenhouse'"
+            />
+          </div>
+
+          <!-- Segunda imagen: Forma de Hoja de Planta -->
+          <div
+            class="leaf-shape-right col-span-4 aspect-[1/1.6] translate-y-8 transform self-end overflow-hidden border border-[#1A2E26]/5 bg-[#FAF8F5] shadow-sm"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?auto=format&fit=crop&w=400&q=80"
+              alt="Ingredientes botánicos, romero y lavanda"
+              class="h-full w-full object-cover brightness-[0.95] saturate-[0.85]"
+              onerror="this.onerror=null;this.src='https://placehold.co/300x480/8DA189/FAF8F5?text=Botanicals'"
+            />
+          </div>
+
+          <!-- Sello de Autenticidad Flotante -->
+          <div
+            class="font-serif-botanical absolute -top-4 right-12 flex h-20 w-20 items-center justify-center rounded-full border border-[#1A2E26]/10 bg-[#8DA189]/20 p-3 text-center text-[8px] tracking-widest text-[#1A2E26] uppercase italic backdrop-blur-md"
+          >
+            Agua de Lluvia Filtrada
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Filosofía del Oasis Sostenible -->
+    <section id="filosofia" class="border-y border-[#1A2E26]/5 bg-[#F1ECE3]/40 py-24">
+      <div class="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12">
+        <div class="mx-auto mb-20 max-w-2xl space-y-6 text-center">
+          <span class="block text-[10px] font-bold tracking-[0.3em] text-[#C2A26A] uppercase"
+            >Un Templo Sensorial</span
+          >
+          <h2 class="font-serif-botanical text-4xl text-[#1A2E26] sm:text-5xl">
+            El arte del cuidado lento e infundido
+          </h2>
+          <div class="mx-auto h-[1px] w-16 bg-[#C2A26A]"></div>
+          <p class="text-xs leading-relaxed font-light text-[#262E2A]/80 sm:text-sm">
+            Diseñamos un salón libre de vapores tóxicos, ruidos de secadores estridentes y productos
+            plásticos. Aquí, el lavado es un ritual curativo bajo una bóveda de plantas, escuchando
+            el correr del agua y respirando esencias florales.
+          </p>
+        </div>
+
+        <!-- Pilares del Cuidado Botánico -->
+        <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
+          <!-- Pilar 1 -->
+          <div
+            class="leaf-shape-left space-y-5 rounded-[2rem] border border-[#1A2E26]/5 bg-[#FAF8F5] p-10 text-center shadow-sm"
+          >
+            <div
+              class="mx-auto flex h-10 w-10 items-center justify-center rounded-full bg-[#8DA189]/15 text-xs font-semibold text-[#1A2E26]"
+            >
+              01
+            </div>
+            <h3 class="font-serif-botanical text-xl tracking-wider text-[#1A2E26] uppercase">
+              Alquimia Fresca
+            </h3>
+            <p class="text-xs leading-relaxed font-light text-[#262E2A]/75">
+              Moleremos e infundiremos las hojas de salvia, romero y arcillas en el mismo instante
+              de tu visita. La botánica viva conserva su máxima potencia antioxidante.
+            </p>
+          </div>
+
+          <!-- Pilar 2 -->
+          <div
+            class="space-y-5 rounded-[2rem] border border-[#1A2E26]/5 bg-[#FAF8F5] p-10 text-center shadow-sm"
+          >
+            <div
+              class="mx-auto flex h-10 w-10 items-center justify-center rounded-full bg-[#C2A26A]/15 text-xs font-semibold text-[#1A2E26]"
+            >
+              02
+            </div>
+            <h3 class="font-serif-botanical text-xl tracking-wider text-[#1A2E26] uppercase">
+              Masaje Capilar Profundo
+            </h3>
+            <p class="text-xs leading-relaxed font-light text-[#262E2A]/75">
+              Creemos que el estrés debilita la raíz. Todos nuestros servicios se inician con un
+              masaje de tejido profundo en hombros y cráneo con aceites florales calientes.
+            </p>
+          </div>
+
+          <!-- Pilar 3 -->
+          <div
+            class="leaf-shape-right space-y-5 rounded-[2rem] border border-[#1A2E26]/5 bg-[#FAF8F5] p-10 text-center shadow-sm"
+          >
+            <div
+              class="mx-auto flex h-10 w-10 items-center justify-center rounded-full bg-[#8DA189]/15 text-xs font-semibold text-[#1A2E26]"
+            >
+              03
+            </div>
+            <h3 class="font-serif-botanical text-xl tracking-wider text-[#1A2E26] uppercase">
+              Filtrado H2O Osmotizado
+            </h3>
+            <p class="text-xs leading-relaxed font-light text-[#262E2A]/75">
+              Eliminamos el cloro, metales pesados y cal del agua del grifo. Lavamos tu cabello con
+              agua pura osmotizada que simula la suavidad del agua de lluvia natural.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mezclador Botánico Interactivo: El Alquimista -->
+    <section id="alquimista" class="mx-auto max-w-4xl px-6 py-24 sm:px-8">
+      <div
+        class="relative overflow-hidden rounded-[3rem] border border-[#1A2E26]/10 bg-[#FAF8F5] p-8 shadow-sm sm:p-14"
+      >
+        <div class="mx-auto mb-10 max-w-xl space-y-4 text-center">
+          <span class="block text-[9px] font-bold tracking-[0.3em] text-[#C2A26A] uppercase"
+            >Prueba de Autodiagnóstico</span
+          >
+          <h2 class="font-serif-botanical text-3xl text-[#1A2E26] sm:text-4xl">
+            El Alquimista Botánico
+          </h2>
+          <p class="text-xs font-light text-[#262E2A]/80">
+            Selecciona la condición principal de tu cuero cabelludo y el estado de tu fibra capilar.
+            Diseñaremos tu infusión botánica ideal para tu ritual.
+          </p>
+        </div>
+
+        <!-- Interfaz del Alquimista -->
+        <div class="space-y-8">
+          <!-- Paso 1: Cuero Cabelludo -->
+          <div class="space-y-3">
+            <label
+              class="block text-center text-[10px] font-semibold tracking-[0.2em] text-[#8DA189] uppercase sm:text-left"
+              >1. Estado de tu Cuero Cabelludo</label
+            >
+            <div class="grid grid-cols-1 gap-3 sm:grid-cols-3">
+              <button
+                onclick="selectScalp('graso', this)"
+                class="scalp-btn organic-transition rounded-2xl border border-[#1A2E26]/10 bg-[#FAF8F5] p-4 text-center text-xs tracking-widest text-[#262E2A] uppercase hover:border-[#1A2E26]"
+              >
+                Exceso de Grasa / Pesado
+              </button>
+              <button
+                onclick="selectScalp('seco', this)"
+                class="scalp-btn organic-transition rounded-2xl border border-[#1A2E26]/10 bg-[#FAF8F5] p-4 text-center text-xs tracking-widest text-[#262E2A] uppercase hover:border-[#1A2E26]"
+              >
+                Sensible / Seco / Descamación
+              </button>
+              <button
+                onclick="selectScalp('debil', this)"
+                class="scalp-btn organic-transition rounded-2xl border border-[#1A2E26]/10 bg-[#FAF8F5] p-4 text-center text-xs tracking-widest text-[#262E2A] uppercase hover:border-[#1A2E26]"
+              >
+                Frágil / Tendencia a Caída
+              </button>
+            </div>
+          </div>
+
+          <!-- Paso 2: Estado de la Fibra -->
+          <div class="space-y-3">
+            <label
+              class="block text-center text-[10px] font-semibold tracking-[0.2em] text-[#8DA189] uppercase sm:text-left"
+              >2. Estado de la Fibra Capilar</label
+            >
+            <div class="grid grid-cols-1 gap-3 sm:grid-cols-3">
+              <button
+                onclick="selectFiber('quebradizo', this)"
+                class="fiber-btn organic-transition rounded-2xl border border-[#1A2E26]/10 bg-[#FAF8F5] p-4 text-center text-xs tracking-widest text-[#262E2A] uppercase hover:border-[#1A2E26]"
+              >
+                Muy Dañado / Quebradizo
+              </button>
+              <button
+                onclick="selectFiber('deshidratado', this)"
+                class="fiber-btn organic-transition rounded-2xl border border-[#1A2E26]/10 bg-[#FAF8F5] p-4 text-center text-xs tracking-widest text-[#262E2A] uppercase hover:border-[#1A2E26]"
+              >
+                Falta de Brillo / Opaco
+              </button>
+              <button
+                onclick="selectFiber('sinvolumen', this)"
+                class="fiber-btn organic-transition rounded-2xl border border-[#1A2E26]/10 bg-[#FAF8F5] p-4 text-center text-xs tracking-widest text-[#262E2A] uppercase hover:border-[#1A2E26]"
+              >
+                Fino / Sin Volumen
+              </button>
+            </div>
+          </div>
+
+          <!-- Contenedor del Destilador de Pociones -->
+          <div class="flex flex-col items-center border-t border-[#1A2E26]/5 pt-6">
+            <button
+              id="brew-btn"
+              onclick="brewPotion()"
+              class="organic-transition cursor-not-allowed rounded-full bg-[#1A2E26] px-10 py-4 text-[10px] font-medium tracking-[0.25em] text-[#FAF8F5] uppercase opacity-50 hover:bg-[#C2A26A]"
+              disabled
+            >
+              Destilar Mi Infusión Botánica
+            </button>
+          </div>
+
+          <!-- Resultado de la Poción (Oculto al inicio) -->
+          <div
+            id="potion-result"
+            class="animate-fade-in mt-8 hidden space-y-6 rounded-[2rem] border border-[#1A2E26]/10 bg-[#F1ECE3]/60 p-6 text-center sm:p-8"
+          >
+            <!-- Animación Simbólica de Vasija/Planta -->
+            <div
+              class="relative mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-[#1A2E26] text-2xl text-[#C2A26A]"
+            >
+              🏺
+              <span class="pulse-soft absolute -top-1 -right-1 text-xs">✨</span>
+            </div>
+
+            <div class="space-y-2">
+              <span class="text-[9px] font-bold tracking-[0.25em] text-[#C2A26A] uppercase"
+                >Fórmula Fresca Destilada</span
+              >
+              <h3 id="potion-name" class="font-serif-botanical text-2xl text-[#1A2E26]">
+                Elixir Purificante de Lavanda & Romero
+              </h3>
+              <p
+                id="potion-desc"
+                class="mx-auto max-w-lg text-xs leading-relaxed font-light text-[#262E2A]/85"
+              >
+                Una base calmante enriquecida con arcilla blanca pura para exfoliar suavemente las
+                células muertas del cuero cabelludo, combinada con un baño tibio de ortiga para
+                vigorizar la longitud.
+              </p>
+            </div>
+
+            <!-- Ingredientes de la Poción Activos -->
+            <div class="flex flex-wrap justify-center gap-3 py-2">
+              <span
+                id="ing-1"
+                class="rounded-full border border-[#1A2E26]/5 bg-[#FAF8F5] px-4 py-2 text-[9px] tracking-wider text-[#1A2E26] uppercase"
+                >Aceite de Romero</span
+              >
+              <span
+                id="ing-2"
+                class="rounded-full border border-[#1A2E26]/5 bg-[#FAF8F5] px-4 py-2 text-[9px] tracking-wider text-[#1A2E26] uppercase"
+                >Arcilla Caolín</span
+              >
+              <span
+                id="ing-3"
+                class="rounded-full border border-[#1A2E26]/5 bg-[#FAF8F5] px-4 py-2 text-[9px] tracking-wider text-[#1A2E26] uppercase"
+                >Salvia Fresca</span
+              >
+            </div>
+
+            <div class="flex flex-col justify-center gap-4 pt-4 sm:flex-row">
+              <button
+                onclick="resetAlchemist()"
+                class="organic-transition rounded-full border border-[#1A2E26]/20 px-6 py-3.5 text-[10px] tracking-[0.2em] text-[#1A2E26] uppercase hover:border-[#1A2E26]"
+              >
+                Reiniciar Mezclador
+              </button>
+              <a
+                id="potion-whatsapp-link"
+                href="https://wa.me/34600000000"
+                target="_blank"
+                class="organic-transition flex items-center justify-center gap-2 rounded-full bg-[#1A2E26] px-8 py-3.5 text-[10px] font-medium tracking-[0.2em] text-[#FAF8F5] uppercase hover:bg-[#8DA189]"
+              >
+                <span>Solicitar este ritual</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- El Herbolario: Biblioteca Orgánica Interactiva -->
+    <section id="herbolario" class="border-t border-[#1A2E26]/5 bg-[#FAF8F5] py-24">
+      <div class="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12">
+        <div class="mx-auto mb-16 max-w-xl space-y-4 text-center">
+          <span class="block text-[10px] font-bold tracking-[0.3em] text-[#C2A26A] uppercase"
+            >Nuestro Almacén Natural</span
+          >
+          <h2 class="font-serif-botanical text-3xl text-[#1A2E26] sm:text-4xl">
+            El Herbolario Capilar
+          </h2>
+          <p class="text-xs font-light text-[#262E2A]/75">
+            Explora la pureza de los ingredientes crudos que guardamos en frascos de vidrio ámbar y
+            que vertemos en cada infusión capilar.
+          </p>
+        </div>
+
+        <!-- Grid de Ingredientes del Herbolario con efectos interactivos -->
+        <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <!-- Ingrediente 1 -->
+          <div
+            class="group organic-transition flex flex-col justify-between rounded-[2rem] border border-[#1A2E26]/10 bg-[#FAF8F5] p-6 shadow-sm hover:border-[#8DA189] hover:shadow-md"
+          >
+            <div class="space-y-4">
+              <div
+                class="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#8DA189]/15 text-xl text-[#1A2E26]"
+              >
+                🌿
+              </div>
+              <div>
+                <span class="text-[9px] font-bold tracking-widest text-[#C2A26A] uppercase"
+                  >Vigorizante Natural</span
+                >
+                <h4 class="font-serif-botanical text-lg text-[#1A2E26]">Romero de la Costa</h4>
+              </div>
+              <p class="text-[11px] leading-relaxed font-light text-[#262E2A]/80">
+                Activa la microcirculación capilar de la raíz. Ideal para revitalizar cabellos finos
+                y acelerar el crecimiento natural y fuerte de la hebra.
+              </p>
+            </div>
+            <div
+              class="mt-4 flex items-center justify-between border-t border-[#1A2E26]/5 pt-4 text-[10px] tracking-wider text-[#8DA189] uppercase"
+            >
+              <span>Infusión Caliente</span>
+              <span>100% Puro</span>
+            </div>
+          </div>
+
+          <!-- Ingrediente 2 -->
+          <div
+            class="group organic-transition flex flex-col justify-between rounded-[2rem] border border-[#1A2E26]/10 bg-[#FAF8F5] p-6 shadow-sm hover:border-[#8DA189] hover:shadow-md"
+          >
+            <div class="space-y-4">
+              <div
+                class="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#C2A26A]/15 text-xl text-[#1A2E26]"
+              >
+                🌼
+              </div>
+              <div>
+                <span class="text-[9px] font-bold tracking-widest text-[#C2A26A] uppercase"
+                  >Bálsamo Calmante</span
+                >
+                <h4 class="font-serif-botanical text-lg text-[#1A2E26]">Flores de Caléndula</h4>
+              </div>
+              <p class="text-[11px] leading-relaxed font-light text-[#262E2A]/80">
+                Rica en mucílagos calmantes. Sana, hidrata y descongestiona los cueros cabelludos
+                más sensibles y con tendencia a rojeces o irritaciones.
+              </p>
+            </div>
+            <div
+              class="mt-4 flex items-center justify-between border-t border-[#1A2E26]/5 pt-4 text-[10px] tracking-wider text-[#8DA189] uppercase"
+            >
+              <span>Macerado en Frío</span>
+              <span>Orgánico</span>
+            </div>
+          </div>
+
+          <!-- Ingrediente 3 -->
+          <div
+            class="group organic-transition flex flex-col justify-between rounded-[2rem] border border-[#1A2E26]/10 bg-[#FAF8F5] p-6 shadow-sm hover:border-[#8DA189] hover:shadow-md"
+          >
+            <div class="space-y-4">
+              <div
+                class="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#8DA189]/15 text-xl text-[#1A2E26]"
+              >
+                🍃
+              </div>
+              <div>
+                <span class="text-[9px] font-bold tracking-widest text-[#C2A26A] uppercase"
+                  >Seborregulador</span
+                >
+                <h4 class="font-serif-botanical text-lg text-[#1A2E26]">Hojas de Ortiga Verde</h4>
+              </div>
+              <p class="text-[11px] leading-relaxed font-light text-[#262E2A]/80">
+                Una de las mejores hierbas astringentes y rica en minerales de silicio y hierro.
+                Limpia en profundidad y equilibra el exceso de grasa cutánea.
+              </p>
+            </div>
+            <div
+              class="mt-4 flex items-center justify-between border-t border-[#1A2E26]/5 pt-4 text-[10px] tracking-wider text-[#8DA189] uppercase"
+            >
+              <span>Polvo Botánico</span>
+              <span>Silvestre</span>
+            </div>
+          </div>
+
+          <!-- Ingrediente 4 -->
+          <div
+            class="group organic-transition flex flex-col justify-between rounded-[2rem] border border-[#1A2E26]/10 bg-[#FAF8F5] p-6 shadow-sm hover:border-[#8DA189] hover:shadow-md"
+          >
+            <div class="space-y-4">
+              <div
+                class="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#C2A26A]/15 text-xl text-[#1A2E26]"
+              >
+                🌰
+              </div>
+              <div>
+                <span class="text-[9px] font-bold tracking-widest text-[#C2A26A] uppercase"
+                  >Nutrición Extrema</span
+                >
+                <h4 class="font-serif-botanical text-lg text-[#1A2E26]">Aceite Puro de Coco</h4>
+              </div>
+              <p class="text-[11px] leading-relaxed font-light text-[#262E2A]/80">
+                El único lípido vegetal capaz de penetrar profundamente en la cutícula de la fibra
+                capilar, recuperando proteínas perdidas y protegiendo de la rotura.
+              </p>
+            </div>
+            <div
+              class="mt-4 flex items-center justify-between border-t border-[#1A2E26]/5 pt-4 text-[10px] tracking-wider text-[#8DA189] uppercase"
+            >
+              <span>Prensado en Frío</span>
+              <span>Sin Aditivos</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Rituales (Servicios Transparentes) -->
+    <section id="rituales" class="mx-auto max-w-4xl px-6 py-24 sm:px-8">
+      <div class="mx-auto mb-16 max-w-xl space-y-4 text-center">
+        <span class="block text-[10px] font-bold tracking-[0.3em] text-[#C2A26A] uppercase"
+          >Nuestras Ofrendas</span
+        >
+        <h2 class="font-serif-botanical text-3xl text-[#1A2E26] sm:text-4xl">
+          Rituales del Herbolario
+        </h2>
+        <p class="text-xs font-light text-[#262E2A]/75">
+          Cada ritual es una sesión individual y pausada. Todos incluyen diagnóstico herbario
+          previo, lavado sensorial y secado suave al aire templado.
+        </p>
+      </div>
+
+      <div
+        class="space-y-12 rounded-[2.5rem] border border-[#1A2E26]/10 bg-[#FAF8F5] p-8 shadow-sm sm:p-14"
+      >
+        <!-- Grupo 1: Cortes de Caída Natural -->
+        <div class="space-y-5">
+          <h3
+            class="font-serif-botanical flex items-center justify-between border-b border-[#1A2E26]/10 pb-3 text-2xl text-[#1A2E26]"
+          >
+            <span>Corte & Movimiento en Seco</span>
+            <span class="text-xs tracking-wider text-[#8DA189] uppercase">Escultura Capilar</span>
+          </h3>
+          <div class="divide-y divide-[#1A2E26]/5 text-xs">
+            <div
+              class="organic-transition flex items-start justify-between gap-4 py-5 hover:bg-[#FAF8F5]"
+            >
+              <div>
+                <h4 class="text-sm font-semibold tracking-wider text-[#1A2E26] uppercase">
+                  Corte Escultural Botánico
+                </h4>
+                <p class="mt-1 max-w-lg text-[11px] font-light text-[#262E2A]/70">
+                  Corte en seco adaptado a la dirección natural de tus espirales o caída de fibra.
+                  Incluye el masaje craneal con esencia de flores.
+                </p>
+              </div>
+              <div class="text-right">
+                <span class="font-serif-botanical block text-lg font-semibold text-[#1A2E26]"
+                  >38000 clp</span
+                >
+                <a
+                  href="https://wa.me/34600000000?text=Hola%20Solum%2C%20me%20gustaría%20saber%20más%20sobre%20el%20Corte%20Escultural%20Botánico"
+                  target="_blank"
+                  class="mt-1 block text-[9px] tracking-wider text-[#C2A26A] uppercase hover:underline"
+                  >Consultar</a
+                >
+              </div>
+            </div>
+
+            <div class="flex items-start justify-between gap-4 py-5">
+              <div>
+                <h4 class="text-sm font-semibold tracking-wider text-[#1A2E26] uppercase">
+                  Mantenimiento de Silueta & Puntas
+                </h4>
+                <p class="mt-1 max-w-lg text-[11px] font-light text-[#262E2A]/70">
+                  Diseñado para melenas largas que solo buscan limpiar y refrescar el ángulo sin
+                  alterar la longitud total de la silueta.
+                </p>
+              </div>
+              <div class="text-right">
+                <span class="font-serif-botanical block text-lg font-semibold text-[#1A2E26]"
+                  >30000 clp</span
+                >
+                <a
+                  href="https://wa.me/34600000000?text=Hola%20Solum%2C%20me%20gustaría%20saber%20más%20sobre%20el%20Mantenimiento%20de%20Silueta"
+                  target="_blank"
+                  class="mt-1 block text-[9px] tracking-wider text-[#C2A26A] uppercase hover:underline"
+                  >Consultar</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Grupo 2: Coloración de Barros -->
+        <div class="space-y-5">
+          <h3
+            class="font-serif-botanical flex items-center justify-between border-b border-[#1A2E26]/10 pb-3 text-2xl text-[#1A2E26]"
+          >
+            <span>Fusión de Barros & Tierras</span>
+            <span class="text-xs tracking-wider text-[#8DA189] uppercase">Tinte Vegetal Puro</span>
+          </h3>
+          <div class="divide-y divide-[#1A2E26]/5 text-xs">
+            <div class="flex items-start justify-between gap-4 py-5">
+              <div>
+                <h4 class="text-sm font-semibold tracking-wider text-[#1A2E26] uppercase">
+                  Terapia de Barros Cobertura Orgánica
+                </h4>
+                <p class="mt-1 max-w-lg text-[11px] font-light text-[#262E2A]/70">
+                  Mezcla tibia de plantas tintóreas deshidratadas con agua termal. Aporta reflejos
+                  profundos, fortalece el bulbo y cubre canas de forma translúcida.
+                </p>
+              </div>
+              <div class="text-right">
+                <span class="font-serif-botanical block text-lg font-semibold text-[#1A2E26]"
+                  >48000 clp</span
+                >
+                <a
+                  href="https://wa.me/34600000000?text=Hola%20Solum%2C%20me%20gustaría%20saber%20más%20sobre%20la%20Terapia%20de%20Barros"
+                  target="_blank"
+                  class="mt-1 block text-[9px] tracking-wider text-[#C2A26A] uppercase hover:underline"
+                  >Consultar</a
+                >
+              </div>
+            </div>
+
+            <div class="flex items-start justify-between gap-4 py-5">
+              <div>
+                <h4 class="text-sm font-semibold tracking-wider text-[#1A2E26] uppercase">
+                  Aclarado Manual Infundido en Aceites
+                </h4>
+                <p class="mt-1 max-w-lg text-[11px] font-light text-[#262E2A]/70">
+                  Efectos de sol degradados con pincel a mano alzada. Protegemos la fibra usando una
+                  infusión oleosa suavizante de argán durante la aclaración.
+                </p>
+              </div>
+              <div class="text-right">
+                <span class="font-serif-botanical block text-lg font-semibold text-[#1A2E26]"
+                  >26000 clp</span
+                >
+                <a
+                  href="https://wa.me/34600000000?text=Hola%20Solum%2C%20me%20gustaría%20saber%20más%20sobre%20el%20Aclarado%20Manual"
+                  target="_blank"
+                  class="mt-1 block text-[9px] tracking-wider text-[#C2A26A] uppercase hover:underline"
+                  >Consultar</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Grupo 3: Fitoterapia Reparadora -->
+        <div class="space-y-5">
+          <h3
+            class="font-serif-botanical flex items-center justify-between border-b border-[#1A2E26]/10 pb-3 text-2xl text-[#1A2E26]"
+          >
+            <span>Apothecary Spa Capilar</span>
+            <span class="text-xs tracking-wider text-[#8DA189] uppercase">Tratamiento de Cura</span>
+          </h3>
+          <div class="divide-y divide-[#1A2E26]/5 text-xs">
+            <div class="flex items-start justify-between gap-4 py-5">
+              <div>
+                <h4 class="text-sm font-semibold tracking-wider text-[#1A2E26] uppercase">
+                  Cataplasma de Nutrientes de Arcilla & Esencias
+                </h4>
+                <p class="mt-1 max-w-lg text-[11px] font-light text-[#262E2A]/70">
+                  Mascarilla de lodos marinos, ortiga molida y vaporizador tibio para nutrir la
+                  cutícula dañada y desintoxicar los folículos capilares.
+                </p>
+              </div>
+              <div class="text-right">
+                <span class="font-serif-botanical block text-lg font-semibold text-[#1A2E26]"
+                  >30000 clp</span
+                >
+                <a
+                  href="https://wa.me/34600000000?text=Hola%20Solum%2C%20me%20gustaría%20saber%20más%20sobre%20la%20Cataplasma%20de%20Nutrientes"
+                  target="_blank"
+                  class="mt-1 block text-[9px] tracking-wider text-[#C2A26A] uppercase hover:underline"
+                  >Consultar</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- El Invernadero de Sonidos: Experiencia Acústica Interactiva -->
+    <section id="acustica" class="border-y border-[#1A2E26]/5 bg-[#F1ECE3]/40 py-24">
+      <div class="mx-auto max-w-3xl space-y-8 px-6 text-center">
+        <div class="space-y-3">
+          <span class="text-[9px] font-bold tracking-[0.3em] text-[#C2A26A] uppercase"
+            >Experiencia de Inmersión</span
+          >
+          <h2 class="font-serif-botanical text-3xl text-[#1A2E26] sm:text-4xl">
+            El Invernadero Acústico
+          </h2>
+          <p class="mx-auto max-w-md text-xs font-light text-[#262E2A]/80">
+            En SOLUM cuidamos la contaminación acústica. Activa nuestro sintetizador de sonido
+            ambiente botánico para escuchar la atmósfera de paz de nuestro local desde donde estés.
+          </p>
+        </div>
+
+        <!-- Caja de Control del Sonido -->
+        <div
+          class="inline-flex w-full max-w-sm flex-col items-center space-y-6 rounded-[2rem] border border-[#1A2E26]/10 bg-[#FAF8F5] p-8 shadow-sm"
+        >
+          <!-- Ilustración Dinámica del Sonido -->
+          <div class="flex h-10 w-24 items-end justify-center gap-1">
+            <div id="wave-1" class="organic-transition h-3 w-1.5 rounded-full bg-[#8DA189]"></div>
+            <div id="wave-2" class="organic-transition h-6 w-1.5 rounded-full bg-[#1A2E26]"></div>
+            <div id="wave-3" class="organic-transition h-8 w-1.5 rounded-full bg-[#C2A26A]"></div>
+            <div id="wave-4" class="organic-transition h-4 w-1.5 rounded-full bg-[#8DA189]"></div>
+            <div id="wave-5" class="organic-transition h-2 w-1.5 rounded-full bg-[#1A2E26]"></div>
+          </div>
+
+          <div class="space-y-1">
+            <h4
+              id="sound-status"
+              class="text-xs font-semibold tracking-widest text-[#1A2E26] uppercase"
+            >
+              Sonido Apagado
+            </h4>
+            <p class="text-[10px] font-light text-[#262E2A]/70">
+              Viento en los helechos & Frecuencia Zen de 432Hz
+            </p>
+          </div>
+
+          <button
+            id="sound-btn"
+            onclick="toggleSoundscape()"
+            class="organic-transition flex items-center gap-3 rounded-full bg-[#1A2E26] px-8 py-3.5 text-[10px] font-medium tracking-[0.2em] text-[#FAF8F5] uppercase hover:bg-[#C2A26A]"
+          >
+            <span id="sound-btn-icon">🔊</span>
+            <span id="sound-btn-text">Activar Sonido</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Preguntas Frecuentes Botánicas -->
+    <section class="mx-auto max-w-3xl px-6 py-24">
+      <div class="mb-16 space-y-4 text-center">
+        <span class="block text-[10px] font-bold tracking-[0.3em] text-[#C2A26A] uppercase"
+          >Despeja tus dudas</span
+        >
+        <h2 class="font-serif-botanical text-3xl text-[#1A2E26]">Preguntas Frecuentes</h2>
+      </div>
+
+      <div class="space-y-4">
+        <!-- FAQ 1 -->
+        <div class="border-b border-[#1A2E26]/10 pb-5">
+          <button
+            onclick="toggleFAQ(1)"
+            class="organic-transition flex w-full items-center justify-between py-2 text-left text-[#1A2E26] hover:text-[#C2A26A] focus:outline-none"
+          >
+            <span class="text-sm font-medium tracking-wider uppercase"
+              >¿Vuestros tintes de barros cubren las canas al 100%?</span
+            >
+            <span id="faq-icon-1" class="text-lg font-light text-[#8DA189]">+</span>
+          </button>
+          <div
+            id="faq-content-1"
+            class="hidden pt-3 text-xs leading-relaxed font-light text-[#262E2A]/80"
+          >
+            Nuestra cobertura con barros botánicos es de tipo translúcido. No genera un efecto
+            "casco" o línea dura de raíz, sino que maquilla las canas aportando un reflejo dorado,
+            cobre o marrón suave, simulando una mecha fina de forma muy elegante y natural sin dañar
+            la raíz.
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="border-b border-[#1A2E26]/10 pb-5">
+          <button
+            onclick="toggleFAQ(2)"
+            class="organic-transition flex w-full items-center justify-between py-2 text-left text-[#1A2E26] hover:text-[#C2A26A] focus:outline-none"
+          >
+            <span class="text-sm font-medium tracking-wider uppercase"
+              >¿Qué significa que laváis el cabello con agua pura osmotizada?</span
+            >
+            <span id="faq-icon-2" class="text-lg font-light text-[#8DA189]">+</span>
+          </button>
+          <div
+            id="faq-content-2"
+            class="hidden pt-3 text-xs leading-relaxed font-light text-[#262E2A]/80"
+          >
+            El agua del grifo suele estar muy cargada de cloro y cal, lo que reseca la cutícula y
+            apaga el color. Nuestro sistema de triple filtración elimina estas partículas pesadas,
+            consiguiendo un agua extra suave. Sentirás el cabello más liviano, blando y con un
+            brillo natural desde la primera sesión.
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="border-b border-[#1A2E26]/10 pb-5">
+          <button
+            onclick="toggleFAQ(3)"
+            class="organic-transition flex w-full items-center justify-between py-2 text-left text-[#1A2E26] hover:text-[#C2A26A] focus:outline-none"
+          >
+            <span class="text-sm font-medium tracking-wider uppercase"
+              >¿Tengo que reservar cita previa con semanas de antelación?</span
+            >
+            <span id="faq-icon-3" class="text-lg font-light text-[#8DA189]">+</span>
+          </button>
+          <div
+            id="faq-content-3"
+            class="hidden pt-3 text-xs leading-relaxed font-light text-[#262E2A]/80"
+          >
+            Al ofrecer un servicio personalizado y de "ritmo lento" (atendiendo solo a una persona a
+            la vez en cada camilla de lavado), nuestra agenda suele reservarse rápidamente.
+            Recomendamos escribirnos por WhatsApp con 3 o 4 días de margen para asegurar tu franja
+            ideal de paz.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Ubicación y Oasis Físico -->
+    <section
+      class="mx-auto grid max-w-7xl grid-cols-1 items-center gap-12 px-6 py-24 sm:px-8 lg:grid-cols-12 lg:px-12"
+    >
+      <!-- Datos de contacto e invernadero -->
+      <div class="space-y-8 lg:col-span-5">
+        <div class="space-y-4">
+          <span class="block text-[10px] font-bold tracking-[0.3em] text-[#C2A26A] uppercase"
+            >Descubre el Refugio</span
+          >
+          <h2 class="font-serif-botanical text-3xl text-[#1A2E26] sm:text-4xl">
+            El invernadero capilar en la ciudad.
+          </h2>
+          <p class="text-xs leading-relaxed font-light text-[#262E2A]/80 sm:text-sm">
+            Nos encontrarás en una antigua floristería restaurada de techos altos de cristal y vigas
+            de hierro, repleta de luz cenital e hiedras vivas. Un espacio de silencio absoluto.
+          </p>
+        </div>
+
+        <div class="space-y-4 text-[10px] font-semibold tracking-widest text-[#1A2E26] uppercase">
+          <div class="flex items-start gap-4">
+            <span class="text-xl">🌿</span>
+            <div>
+              <p
+                class="font-serif-botanical text-xs font-semibold tracking-wider text-[#1A2E26] capitalize"
+              >
+                La Dirección
+              </p>
+              <p class="mt-1 text-[10px] font-light tracking-widest text-[#262E2A]/70">
+                Calle de los Helechos, Nº 8, Madrid, España
+              </p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-4">
+            <span class="text-xl">🕰️</span>
+            <div>
+              <p
+                class="font-serif-botanical text-xs font-semibold tracking-wider text-[#1A2E26] capitalize"
+              >
+                Horario de Cultivo
+              </p>
+              <p class="mt-1 text-[10px] font-light tracking-widest text-[#262E2A]/70">
+                Martes a Viernes: 09:30 - 19:00
+              </p>
+              <p class="mt-0.5 text-[10px] font-light tracking-widest text-[#262E2A]/70">
+                Sábados: 09:00 - 15:00
+              </p>
+              <p class="mt-0.5 text-[10px] font-light tracking-widest text-[#262E2A]/70">
+                Domingos y Lunes: Cerrado (Abonamos el suelo)
+              </p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-4">
+            <span class="text-xl">🌱</span>
+            <div>
+              <p
+                class="font-serif-botanical text-xs font-semibold tracking-wider text-[#1A2E26] capitalize"
+              >
+                Contacto Consciente
+              </p>
+              <p class="mt-1 text-[10px] font-light tracking-widest text-[#262E2A]/70">
+                Llamadas: +34 911 123 456
+              </p>
+              <p class="mt-0.5 text-[10px] font-light tracking-widest text-[#262E2A]/70">
+                WhatsApp: +34 600 000 000
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="pt-4">
+          <a
+            href="https://wa.me/34600000000"
+            target="_blank"
+            class="organic-transition inline-flex items-center gap-3 rounded-full bg-[#1A2E26] px-8 py-4.5 text-[10px] font-medium tracking-[0.2em] text-[#FAF8F5] uppercase hover:bg-[#C2A26A]"
+          >
+            <span>Escríbenos por WhatsApp</span>
+            <span>🌿</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Imagen del Invernadero Sensorial -->
+      <div
+        class="greenhouse-arch aspect-[16/10] overflow-hidden border border-[#1A2E26]/5 bg-[#FAF8F5] shadow-sm lg:col-span-7"
+      >
+        <img
+          src="https://images.unsplash.com/photo-1463936575829-25148e1db1b8?auto=format&fit=crop&w=800&q=80"
+          alt="Diseño de interior moderno con muchas plantas y luz del sol"
+          class="h-full w-full object-cover brightness-[0.95] saturate-[0.8]"
+          onerror="this.onerror=null;this.src='https://placehold.co/800x500/1A2E26/FAF8F5?text=Solum+Greenhouse'"
+        />
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#1A2E26] py-20 text-[#FAF8F5]">
+      <div class="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12">
+        <div
+          class="flex flex-col items-center justify-between gap-12 border-b border-[#FAF8F5]/10 pb-12 md:flex-row"
+        >
+          <div class="space-y-2 text-center md:text-left">
+            <span class="font-serif-botanical block text-3xl tracking-[0.2em] uppercase">SOLUM</span
+            >
+            <span
+              class="-mt-1 block text-[9px] font-semibold tracking-[0.3em] text-[#8DA189] uppercase"
+              >Peluquería Botánica Sensorial</span
+            >
+          </div>
+
+          <!-- Enlaces del Footer -->
+          <div
+            class="flex flex-wrap justify-center gap-8 text-[10px] font-medium tracking-widest text-[#FAF8F5]/80 uppercase"
+          >
+            <a href="#filosofia" class="organic-transition hover:text-[#C2A26A]">El Oasis</a>
+            <a href="#alquimista" class="organic-transition hover:text-[#C2A26A]">El Alquimista</a>
+            <a href="#herbolario" class="organic-transition hover:text-[#C2A26A]">El Herbolario</a>
+            <a href="#rituales" class="organic-transition hover:text-[#C2A26A]">Los Rituales</a>
+          </div>
+        </div>
+
+        <!-- Legales & Copyright -->
+        <div
+          class="flex flex-col items-center justify-between gap-4 pt-12 text-[9px] font-light tracking-widest text-[#FAF8F5]/40 uppercase sm:flex-row"
+        >
+          <p>
+            &copy; 2026 SOLUM Capilar. Cultivando la salud del cabello con respeto botánico
+            absoluto.
+          </p>
+          <div class="flex gap-6">
+            <a href="#" class="hover:text-[#C2A26A]">Términos de la Tierra</a>
+            <a href="#" class="hover:text-[#C2A26A]">Política de Respeto Orgánico</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      /* --- Menú Desplegable de Smartphone --- */
+      const mobileToggle = document.getElementById("mobile-toggle");
+      const mobileMenu = document.getElementById("mobile-menu");
+      const navBurger = document.getElementById("nav-burger");
+
+      mobileToggle.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+        if (mobileMenu.classList.contains("hidden")) {
+          navBurger.setAttribute("d", "M4 6h16M4 12h16M4 18h16");
+        } else {
+          navBurger.setAttribute("d", "M6 18L18 6M6 6l12 12");
+        }
+      });
+
+      // Cerrar menú al presionar un enlace
+      const mobileLinks = mobileMenu.querySelectorAll("a");
+      mobileLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+          mobileMenu.classList.add("hidden");
+          navBurger.setAttribute("d", "M4 6h16M4 12h16M4 18h16");
+        });
+      });
+
+      /* --- El Alquimista Botánico Interactivo --- */
+      let selectedScalpVal = "";
+      let selectedFiberVal = "";
+
+      function selectScalp(value, element) {
+        // Deseleccionar botones anteriores de la sección cuero cabelludo
+        const scalpButtons = document.querySelectorAll(".scalp-btn");
+        scalpButtons.forEach((btn) => {
+          btn.classList.remove("bg-[#1A2E26]", "text-[#FAF8F5]", "border-[#1A2E26]");
+          btn.classList.add("bg-[#FAF8F5]", "text-[#262E2A]", "border-[#1A2E26]/10");
+        });
+
+        // Seleccionar el actual
+        element.classList.remove("bg-[#FAF8F5]", "text-[#262E2A]", "border-[#1A2E26]/10");
+        element.classList.add("bg-[#1A2E26]", "text-[#FAF8F5]", "border-[#1A2E26]");
+        selectedScalpVal = value;
+
+        checkAlchemistReady();
+      }
+
+      function selectFiber(value, element) {
+        // Deseleccionar botones de fibra
+        const fiberButtons = document.querySelectorAll(".fiber-btn");
+        fiberButtons.forEach((btn) => {
+          btn.classList.remove("bg-[#1A2E26]", "text-[#FAF8F5]", "border-[#1A2E26]");
+          btn.classList.add("bg-[#FAF8F5]", "text-[#262E2A]", "border-[#1A2E26]/10");
+        });
+
+        // Seleccionar actual
+        element.classList.remove("bg-[#FAF8F5]", "text-[#262E2A]", "border-[#1A2E26]/10");
+        element.classList.add("bg-[#1A2E26]", "text-[#FAF8F5]", "border-[#1A2E26]");
+        selectedFiberVal = value;
+
+        checkAlchemistReady();
+      }
+
+      function checkAlchemistReady() {
+        const brewBtn = document.getElementById("brew-btn");
+        if (selectedScalpVal !== "" && selectedFiberVal !== "") {
+          brewBtn.classList.remove("opacity-50", "cursor-not-allowed");
+          brewBtn.removeAttribute("disabled");
+        }
+      }
+
+      function brewPotion() {
+        const resultSection = document.getElementById("potion-result");
+        resultSection.classList.remove("hidden");
+
+        const title = document.getElementById("potion-name");
+        const desc = document.getElementById("potion-desc");
+        const waLink = document.getElementById("potion-whatsapp-link");
+
+        const i1 = document.getElementById("ing-1");
+        const i2 = document.getElementById("ing-2");
+        const i3 = document.getElementById("ing-3");
+
+        let potionName = "Infundido Calmante de Lavanda";
+        let potionDesc =
+          "Fórmula diseñada para apaciguar el cuero cabelludo, sellando la cutícula con un brillo suave y sin peso.";
+        let ing1 = "Lavanda";
+        let ing2 = "Agua de Rosas";
+        let ing3 = "Aceite de Caléndula";
+
+        // Combinatoria de poción según selección
+        if (selectedScalpVal === "graso" && selectedFiberVal === "quebradizo") {
+          potionName = "Arcilla Caolín & Tratamiento de Ortiga Reparadora";
+          potionDesc =
+            "Una arcilla purificadora de caolín absorbe los aceites de la raíz mientras envolvemos tus puntas en una cataplasma tibia de romero y ortiga para estructurar la fibra rota.";
+          ing1 = "Arcilla Caolín";
+          ing2 = "Infusión de Ortiga";
+          ing3 = "Hojas de Romero";
+        } else if (selectedScalpVal === "graso") {
+          potionName = "Elixir Astringente de Ortiga & Salvia Salvaje";
+          potionDesc =
+            "Diseñado para limpiar profundamente los bulbos pilosos, regulando el sebo. Tu melena recuperará ligereza, movimiento y brillo cristalino.";
+          ing1 = "Ortiga Verde";
+          ing2 = "Salvia Salvaje";
+          ing3 = "Té de Árbol";
+        } else if (selectedScalpVal === "seco" && selectedFiberVal === "deshidratado") {
+          potionName = "Ritual de Caléndula Cruda & Néctar de Coco Caliente";
+          potionDesc =
+            "El tratamiento de nutrición por excelencia de SOLUM. El cuero cabelludo descamado se sana con caléndula, mientras las longitudes secas beben lípidos puros de coco tibio.";
+          ing1 = "Aceite de Coco";
+          ing2 = "Flores de Caléndula";
+          ing3 = "Agua de Rosas";
+        } else if (selectedScalpVal === "debil") {
+          potionName = "Infusión Capilar Fortificante de Romero & Cola de Caballo";
+          potionDesc =
+            "Ritual de estimulación térmica. Usamos romero infundido en agua de lluvia para irrigar el folículo, aportando sílice vegetal orgánico para engrosar el cabello.";
+          ing1 = "Romero Estimulante";
+          ing2 = "Cola de Caballo";
+          ing3 = "Lodo Marino";
+        }
+
+        title.textContent = potionName;
+        desc.textContent = potionDesc;
+        i1.textContent = ing1;
+        i2.textContent = ing2;
+        i3.textContent = ing3;
+
+        // Enlace personalizado de WhatsApp
+        const message = `Hola SOLUM, he usado el Mezclador de su web y mi fórmula fresca recomendada es: *${potionName}*. ¿Tienen disponibilidad para un ritual esta semana?`;
+        waLink.href = `https://wa.me/34600000000?text=${encodeURIComponent(message)}`;
+
+        // Hacer scroll suave hacia el resultado
+        setTimeout(() => {
+          resultSection.scrollIntoView({ behavior: "smooth", block: "nearest" });
+        }, 100);
+      }
+
+      function resetAlchemist() {
+        selectedScalpVal = "";
+        selectedFiberVal = "";
+
+        // Reiniciar botones
+        const allButtons = document.querySelectorAll(".scalp-btn, .fiber-btn");
+        allButtons.forEach((btn) => {
+          btn.classList.remove("bg-[#1A2E26]", "text-[#FAF8F5]", "border-[#1A2E26]");
+          btn.classList.add("bg-[#FAF8F5]", "text-[#262E2A]", "border-[#1A2E26]/10");
+        });
+
+        const brewBtn = document.getElementById("brew-btn");
+        brewBtn.classList.add("opacity-50", "cursor-not-allowed");
+        brewBtn.setAttribute("disabled", "true");
+
+        document.getElementById("potion-result").classList.add("hidden");
+      }
+
+      /* --- El Invernadero Acústico (Web Audio API) --- */
+      let audioContext = null;
+      let ambientOscillator = null;
+      let ambientGain = null;
+      let isSoundPlaying = false;
+      let waveInterval = null;
+
+      function toggleSoundscape() {
+        const btnText = document.getElementById("sound-btn-text");
+        const btnIcon = document.getElementById("sound-btn-icon");
+        const statusText = document.getElementById("sound-status");
+
+        if (!isSoundPlaying) {
+          // Crear contexto de audio si no existe
+          if (!audioContext) {
+            audioContext = new (window.AudioContext || window.webkitAudioContext)();
+          }
+
+          // Iniciar sintetizador de ruido/viento meditativo
+          ambientOscillator = audioContext.createOscillator();
+          ambientGain = audioContext.createGain();
+
+          // Frecuencia baja de relajación (solenoide zen)
+          ambientOscillator.type = "sine";
+          ambientOscillator.frequency.setValueAtTime(120, audioContext.currentTime); // 120Hz profundo
+
+          // LFO de modulación de volumen para emular viento
+          const lfo = audioContext.createOscillator();
+          const lfoGain = audioContext.createGain();
+          lfo.frequency.setValueAtTime(0.2, audioContext.currentTime); // 0.2Hz oscilación lenta (5 segundos)
+          lfoGain.gain.setValueAtTime(0.02, audioContext.currentTime);
+
+          lfo.connect(lfoGain);
+          lfoGain.connect(ambientGain.gain);
+
+          ambientOscillator.connect(ambientGain);
+          ambientGain.connect(audioContext.destination);
+
+          // Configurar volumen maestro muy sutil
+          ambientGain.gain.setValueAtTime(0.015, audioContext.currentTime);
+
+          lfo.start();
+          ambientOscillator.start();
+
+          isSoundPlaying = true;
+          btnText.textContent = "Apagar Sonido";
+          btnIcon.textContent = "🔇";
+          statusText.textContent = "Sonido Activo";
+
+          // Animación visual de ondas
+          startWaveAnimation();
+        } else {
+          // Detener audio de forma segura
+          if (ambientOscillator) {
+            ambientOscillator.stop();
+            ambientOscillator.disconnect();
+          }
+          isSoundPlaying = false;
+          btnText.textContent = "Activar Sonido";
+          btnIcon.textContent = "🔊";
+          statusText.textContent = "Sonido Apagado";
+          stopWaveAnimation();
+        }
+      }
+
+      function startWaveAnimation() {
+        const waves = [
+          document.getElementById("wave-1"),
+          document.getElementById("wave-2"),
+          document.getElementById("wave-3"),
+          document.getElementById("wave-4"),
+          document.getElementById("wave-5"),
+        ];
+
+        waveInterval = setInterval(() => {
+          waves.forEach((wave) => {
+            const randomHeight = Math.floor(Math.random() * 30) + 8;
+            wave.style.height = `${randomHeight}px`;
+          });
+        }, 300);
+      }
+
+      function stopWaveAnimation() {
+        clearInterval(waveInterval);
+        const waves = [
+          document.getElementById("wave-1"),
+          document.getElementById("wave-2"),
+          document.getElementById("wave-3"),
+          document.getElementById("wave-4"),
+          document.getElementById("wave-5"),
+        ];
+        // Altura por defecto
+        waves[0].style.height = "12px";
+        waves[1].style.height = "24px";
+        waves[2].style.height = "32px";
+        waves[3].style.height = "16px";
+        waves[4].style.height = "8px";
+      }
+
+      /* --- Acordeón de Preguntas Frecuentes --- */
+      function toggleFAQ(index) {
+        const content = document.getElementById(`faq-content-${index}`);
+        const icon = document.getElementById(`faq-icon-${index}`);
+
+        if (content.classList.contains("hidden")) {
+          content.classList.remove("hidden");
+          icon.textContent = "−";
+        } else {
+          content.classList.add("hidden");
+          icon.textContent = "+";
+        }
+      }
+    </script>
+  </body>
+</html>
