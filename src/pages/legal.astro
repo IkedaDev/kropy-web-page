@@ -1,0 +1,43 @@
+---
+import HomeLayout from "../layouts/HomeLayout.astro";
+---
+
+<HomeLayout
+  title="Términos y Condiciones Legales"
+  description="Acuerdo de nivel de servicio y políticas"
+>
+  <section class="bg-white py-20 transition-colors dark:bg-neutral-950">
+    <div class="mx-auto max-w-3xl px-4">
+      <span
+        class="mb-4 block font-mono text-[10px] font-bold tracking-widest text-emerald-600 uppercase dark:text-emerald-400"
+        >Servicio // v1.0</span
+      >
+      <h1 class="mb-8 text-4xl font-extrabold tracking-tight md:text-5xl">Términos de Servicio</h1>
+
+      <div
+        class="prose prose-slate dark:prose-invert space-y-6 leading-relaxed text-slate-600 dark:text-neutral-400"
+      >
+        <p>
+          Al suscribirse a los servicios de <strong>Kropy</strong>, usted acepta los siguientes
+          términos que rigen nuestra relación comercial y el uso de nuestra infraestructura técnica.
+        </p>
+
+        <h2 class="pt-4 text-2xl font-bold text-slate-900 dark:text-white">
+          1. Naturaleza del Servicio
+        </h2>
+        <p>
+          Kropy proporciona una solución de desarrollo integral. Esto incluye el diseño manual,
+          despliegue y mantenimiento continuo de activos digitales sobre clusters dedicados.
+        </p>
+
+        <h2 class="pt-4 text-2xl font-bold text-slate-900 dark:text-white">
+          2. Propiedad Intelectual
+        </h2>
+        <p>
+          El cliente es dueño absoluto del contenido, dominio y marca. Una vez completados los
+          pagos, el cliente mantendrá todos los derechos sobre el producto final entregado.
+        </p>
+      </div>
+    </div>
+  </section>
+</HomeLayout>

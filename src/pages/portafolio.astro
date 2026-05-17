@@ -1,0 +1,152 @@
+---
+import HomeLayout from "../layouts/HomeLayout.astro";
+---
+
+<HomeLayout
+  title="Portafolio"
+  description="Descubre los proyectos que hemos diseñado y desarrollado"
+>
+  <section class="bg-white py-20 transition-colors dark:bg-neutral-950">
+    <div class="mx-auto max-w-6xl px-4">
+      <div class="mb-16 text-center">
+        <span
+          class="mb-4 block text-xs font-bold tracking-widest text-emerald-600 uppercase dark:text-emerald-400"
+          >Trabajos</span
+        >
+        <h1 class="text-4xl font-extrabold tracking-tight">Proyectos Realizados</h1>
+      </div>
+
+      <!-- Filtros interactivos -->
+      <div class="mb-12 flex flex-wrap justify-center gap-4">
+        <button
+          id="filter-todos"
+          class="filter-btn rounded-full bg-emerald-600 px-5 py-2.5 text-xs font-bold tracking-widest text-white uppercase shadow-md transition-all"
+          >Todos</button
+        >
+        <button
+          id="filter-landings"
+          class="filter-btn rounded-full bg-slate-100 px-5 py-2.5 text-xs font-bold tracking-widest text-slate-600 uppercase transition-all hover:bg-slate-200 dark:bg-neutral-900 dark:text-neutral-400"
+          >Landings</button
+        >
+        <button
+          id="filter-apps"
+          class="filter-btn rounded-full bg-slate-100 px-5 py-2.5 text-xs font-bold tracking-widest text-slate-600 uppercase transition-all hover:bg-slate-200 dark:bg-neutral-900 dark:text-neutral-400"
+          >Apps Móviles</button
+        >
+        <button
+          id="filter-saas"
+          class="filter-btn rounded-full bg-slate-100 px-5 py-2.5 text-xs font-bold tracking-widest text-slate-600 uppercase transition-all hover:bg-slate-200 dark:bg-neutral-900 dark:text-neutral-400"
+          >SaaS</button
+        >
+      </div>
+
+      <!-- Grilla de Portafolio -->
+      <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3" id="portfolio-grid">
+        <!-- Proyecto 1 -->
+        <div
+          class="portfolio-item overflow-hidden rounded-3xl border border-slate-200 bg-white transition-all dark:border-neutral-800 dark:bg-neutral-950"
+          data-category="landings"
+        >
+          <div
+            class="flex aspect-video w-full items-center justify-center bg-slate-100 p-4 dark:bg-neutral-900"
+          >
+            <span
+              class="text-xs font-bold tracking-widest text-slate-400 uppercase dark:text-neutral-500"
+              >[Preview Landing SaaS]</span
+            >
+          </div>
+          <div class="p-8">
+            <span
+              class="text-[10px] font-bold tracking-widest text-emerald-600 uppercase dark:text-emerald-400"
+              >Landing Page</span
+            >
+            <h4 class="mt-2 text-xl font-bold">Plataforma de Pagos</h4>
+          </div>
+        </div>
+        <!-- Proyecto 2 -->
+        <div
+          class="portfolio-item overflow-hidden rounded-3xl border border-slate-200 bg-white transition-all dark:border-neutral-800 dark:bg-neutral-950"
+          data-category="apps"
+        >
+          <div
+            class="flex aspect-video w-full items-center justify-center bg-slate-100 p-4 dark:bg-neutral-900"
+          >
+            <span
+              class="text-xs font-bold tracking-widest text-slate-400 uppercase dark:text-neutral-500"
+              >[Preview App iOS/Android]</span
+            >
+          </div>
+          <div class="p-8">
+            <span
+              class="text-[10px] font-bold tracking-widest text-emerald-600 uppercase dark:text-emerald-400"
+              >App Móvil</span
+            >
+            <h4 class="mt-2 text-xl font-bold">Delivery Express</h4>
+          </div>
+        </div>
+        <!-- Proyecto 3 -->
+        <div
+          class="portfolio-item overflow-hidden rounded-3xl border border-slate-200 bg-white transition-all dark:border-neutral-800 dark:bg-neutral-950"
+          data-category="saas"
+        >
+          <div
+            class="flex aspect-video w-full items-center justify-center bg-slate-100 p-4 dark:bg-neutral-900"
+          >
+            <span
+              class="text-xs font-bold tracking-widest text-slate-400 uppercase dark:text-neutral-500"
+              >[Preview SaaS Dashboard]</span
+            >
+          </div>
+          <div class="p-8">
+            <span
+              class="text-[10px] font-bold tracking-widest text-emerald-600 uppercase dark:text-emerald-400"
+              >SaaS</span
+            >
+            <h4 class="mt-2 text-xl font-bold">Sistema ERP Automotriz</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</HomeLayout>
+
+<script>
+  // Lógica de filtrado en cliente
+  const filterBtns = document.querySelectorAll(".filter-btn");
+  const items = document.querySelectorAll(".portfolio-item");
+
+  filterBtns.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      // Remover clase activa de todos
+      filterBtns.forEach((b) => {
+        b.classList.remove("bg-emerald-600", "text-white", "shadow-md");
+        b.classList.add(
+          "bg-slate-100",
+          "dark:bg-neutral-900",
+          "text-slate-600",
+          "dark:text-neutral-400"
+        );
+      });
+
+      // Añadir clase activa al seleccionado
+      btn.classList.add("bg-emerald-600", "text-white", "shadow-md");
+      btn.classList.remove(
+        "bg-slate-100",
+        "dark:bg-neutral-900",
+        "text-slate-600",
+        "dark:text-neutral-400"
+      );
+
+      const category = btn.id.replace("filter-", "");
+
+      items.forEach((item) => {
+        const itemCategory = item.getAttribute("data-category");
+        if (category === "todos" || itemCategory === category) {
+          (item as HTMLElement).style.display = "block";
+        } else {
+          (item as HTMLElement).style.display = "none";
+        }
+      });
+    });
+  });
+</script>

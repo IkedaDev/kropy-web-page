@@ -1,4 +1,10 @@
 @import "tailwindcss";
+
+/* Configuración obligatoria para Tailwind CSS v4 para habilitar 
+  el modo oscuro basado en la clase (.dark) en lugar de la preferencia del sistema.
+*/
+@variant dark (&:where(.dark, .dark *));
+
 *,
 *::after,
 *::before {
@@ -6,4 +12,9 @@
 }
 body {
   font-family: "Plus Jakarta Sans", sans-serif;
+}
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none !important;
+  mix-blend-mode: normal !important;
 }

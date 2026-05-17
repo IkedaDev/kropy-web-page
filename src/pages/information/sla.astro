@@ -2,90 +2,71 @@
 import InfoLayout from "../../layouts/InfoLayout.astro";
 ---
 
-<InfoLayout>
-  <div class="mx-auto max-w-3xl">
-    <span class="mb-4 block text-[10px] font-bold tracking-widest text-emerald-600 uppercase"
-      >Garantía de Servicio // v1.0</span
+<InfoLayout
+  title="Acuerdo de Nivel de Servicio (SLA)"
+  description="Garantías de rendimiento, soporte y mantención técnica de Kropy"
+>
+  <div class="space-y-4">
+    <span
+      class="mb-4 block text-xs font-bold tracking-widest text-emerald-600 uppercase dark:text-emerald-400"
+      >Uptime & Soporte Técnico</span
     >
-    <h1 class="mb-8 text-4xl font-extrabold tracking-tight text-slate-900 md:text-5xl">
-      Acuerdo de Nivel de Servicio (SLA)
+    <h1 class="mb-6 text-4xl font-extrabold tracking-tight md:text-5xl">
+      Acuerdo de Nivel de Servicio
     </h1>
+  </div>
 
-    <div class="prose prose-slate prose-lg space-y-8 leading-relaxed text-slate-600">
-      <p>
-        Este Acuerdo de Nivel de Servicio ("SLA") describe el compromiso de <strong
-          >Kropy Labs</strong
-        > respecto a la disponibilidad y el rendimiento de nuestra infraestructura de suscripción.
-      </p>
+  <div
+    class="mt-8 space-y-6 text-sm leading-relaxed font-light text-slate-600 dark:text-neutral-400"
+  >
+    <p>
+      Este Acuerdo de Nivel de Servicio (SLA) define el compromiso técnico y el esquema de garantías
+      que <strong>Kropy</strong> ofrece a los clientes que contratan sus soluciones web activas.
+    </p>
 
-      <section>
-        <h2 class="mb-4 text-2xl font-bold text-slate-900">1. Compromiso de Disponibilidad</h2>
-        <p>
-          Kropy garantiza una disponibilidad mensual (uptime) del <strong>99.9%</strong> para todos los
-          sitios web alojados en nuestros planes <em>Professional</em> y <em>Enterprise</em>.
-        </p>
-        <div class="mt-4 rounded-2xl border border-slate-200 bg-white p-6">
-          <p class="text-sm font-medium text-slate-700">
-            El tiempo de inactividad se define como el periodo en el que el Ingress del clúster no
-            responde a peticiones HTTP externas, verificado por nuestros sistemas de monitoreo
-            global.
-          </p>
-        </div>
-      </section>
+    <h2 class="mt-8 text-2xl font-bold text-slate-900 dark:text-white">
+      1. Disponibilidad del Servidor (Uptime)
+    </h2>
+    <p>
+      Garantizamos un <strong>99.9% de disponibilidad (uptime)</strong> en los servicios web cuya infraestructura
+      sea aprovisionada de manera nativa por nuestros contenedores. En caso de fallos masivos críticos,
+      nuestro equipo se compromete a restablecer el funcionamiento en plazos mínimos según la severidad.
+    </p>
 
-      <section>
-        <h2 class="mb-4 text-2xl font-bold text-slate-900">2. Ventanas de Mantenimiento</h2>
-        <p>
-          Para asegurar la salud de los nodos y la actualización de los pods de Kubernetes, Kropy
-          realiza mantenimientos programados:
-        </p>
-        <ul class="list-disc space-y-2 pl-6">
-          <li>
-            <strong>Mantenimiento Preventivo:</strong> Se realiza en horarios de bajo tráfico (02:00 -
-            05:00 UTC) y se notifica con 48 horas de antelación.
-          </li>
-          <li>
-            <strong>Parches Críticos:</strong> En caso de vulnerabilidades de día cero, Kropy se reserva
-            el derecho de intervenir inmediatamente para proteger la red.
-          </li>
-        </ul>
-      </section>
+    <h2 class="mt-8 text-2xl font-bold text-slate-900 dark:text-white">
+      2. Garantía Post-Lanzamiento
+    </h2>
+    <p>
+      Todos nuestros proyectos web cuentan con una <strong
+        >garantía técnica gratuita de 30 días</strong
+      > posterior al despliegue en producción. Esta garantía cubre:
+    </p>
+    <ul class="list-disc space-y-2 pl-6">
+      <li>Corrección de fallos o "bugs" imprevistos en el código de programación entregado.</li>
+      <li>Errores de visualización o desajustes responsivos en navegadores modernos oficiales.</li>
+      <li>Desconexiones en las APIs internas creadas por el equipo de Kropy.</li>
+    </ul>
+    <p class="text-xs text-slate-400 italic">
+      *Nota: La garantía quedará inmediatamente anulada si el código es intervenido directamente por
+      el Cliente o por agencias terceras no autorizadas.
+    </p>
 
-      <section>
-        <h2 class="mb-4 text-2xl font-bold text-slate-900">3. Créditos de Servicio</h2>
-        <p>
-          Si no cumplimos con el compromiso de disponibilidad, los clientes podrán solicitar
-          créditos aplicables a su próxima factura:
-        </p>
-        <table class="w-full border-collapse text-sm">
-          <thead>
-            <tr class="bg-slate-100">
-              <th class="border border-slate-200 p-3 text-left">Uptime Mensual</th>
-              <th class="border border-slate-200 p-3 text-left">Crédito</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="border border-slate-200 p-3">< 99.9%</td>
-              <td class="border border-slate-200 p-3">10% del cargo mensual</td>
-            </tr>
-            <tr>
-              <td class="border border-slate-200 p-3">< 99.0%</td>
-              <td class="border border-slate-200 p-3">25% del cargo mensual</td>
-            </tr>
-          </tbody>
-        </table>
-      </section>
-
-      <section>
-        <h2 class="mb-4 text-2xl font-bold text-slate-900">4. Exclusiones</h2>
-        <p>Esta garantía no aplica a problemas derivados de:</p>
-        <ul class="list-disc space-y-2 pl-6">
-          <li>Errores en el código proporcionado por el cliente o integraciones externas.</li>
-          <li>Fallas en el registro de dominios gestionados por terceros.</li>
-          <li>Eventos de fuerza mayor fuera del control de ikedadev-infra.</li>
-        </ul>
-      </section>
-    </div>
+    <h2 class="mt-8 text-2xl font-bold text-slate-900 dark:text-white">
+      3. Tiempos de Respuesta de Soporte
+    </h2>
+    <p>
+      Para reportes de incidencias y soporte, contamos con una bandeja de entrada prioritaria.
+      Nuestros tiempos estimados de respuesta son:
+    </p>
+    <ul class="list-disc space-y-2 pl-6">
+      <li>
+        <strong>Incidencias Críticas</strong> (Web caída, pasarela de pago inactiva): Menos de 4 horas
+        hábiles.
+      </li>
+      <li>
+        <strong>Consultas Generales</strong> (Dudas de configuración, cambios estéticos): Menos de 24
+        horas hábiles.
+      </li>
+    </ul>
   </div>
 </InfoLayout>

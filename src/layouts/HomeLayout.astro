@@ -1,5 +1,4 @@
 ---
-// src/layouts/Layout.astro
 import SeoHead from "../components/SeoHead.astro";
 import GoogleAnalitycs from "../components/GoogleAnalitycs.astro";
 import Header from "../components/home/Header.astro";
@@ -7,26 +6,39 @@ import Footer from "../components/home/Footer.astro";
 const { title, description } = Astro.props;
 
 import "../styles/global.css";
-
-// const navLinks = [
-//     { text: "Nosotros", href: "/#nosotros" },
-//     { text: "Misión", href: "/#mision" },
-//     { text: "Precios", href: "/#precios" },
-//     { text: "Contacto", href: "/#contacto" },
-// ];
 ---
 
 <!doctype html>
-<html lang="es">
+<html lang="es" class="light">
   <head>
     <GoogleAnalitycs />
     <SeoHead title={title} description={description} />
+
+    <!-- Script de bloqueo en HEAD para evitar el flash blanco/oscuro -->
+    <script is:inline>
+      const getTheme = () => {
+        if (typeof localStorage !== "undefined" && localStorage.getItem("theme")) {
+          return localStorage.getItem("theme");
+        }
+        return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      };
+
+      const theme = getTheme();
+      if (theme === "dark") {
+        document.documentElement.classList.add("dark");
+      } else {
+        document.documentElement.classList.remove("dark");
+      }
+    </script>
   </head>
 
-  <body>
+  <body
+    class="flex min-h-screen flex-col bg-white text-slate-950 selection:bg-emerald-100 selection:text-emerald-700 dark:bg-neutral-950 dark:text-neutral-100 dark:selection:bg-emerald-950/50"
+  >
     <Header />
-    <main>
+    <main class="flex-grow pt-28">
       <slot />
     </main>
-  </body><Footer />
+    <Footer />
+  </body>
 </html>

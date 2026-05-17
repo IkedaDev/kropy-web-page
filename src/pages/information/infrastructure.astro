@@ -2,86 +2,67 @@
 import InfoLayout from "../../layouts/InfoLayout.astro";
 ---
 
-<InfoLayout>
-  <div class="mx-auto max-w-3xl">
-    <span class="mb-4 block text-[10px] font-bold tracking-widest text-emerald-600 uppercase"
-      >Stack Tecnológico // ikedadev-infra</span
-    >
-    <h1 class="mb-8 text-4xl font-extrabold tracking-tight text-slate-900 md:text-5xl">
-      Nuestra Arquitectura
-    </h1>
-
-    <div class="prose prose-slate prose-lg space-y-12 leading-relaxed text-slate-600">
-      <p>
-        Kropy no utiliza servidores compartidos. Cada proyecto se despliega como una unidad de
-        computación independiente, aislada y escalable, utilizando estándares de industria de nivel
-        militar.
-      </p>
-
-      <section class="space-y-4">
-        <div class="flex items-center gap-4">
-          <div
-            class="flex h-10 w-10 items-center justify-center rounded-xl bg-emerald-100 font-bold text-emerald-600"
-          >
-            01
-          </div>
-          <h2 class="m-0 text-2xl font-bold text-slate-900">Orquestación con Kubernetes</h2>
-        </div>
-        <p>
-          Utilizamos <strong>Kubernetes (K8s)</strong> para la orquestación de contenedores. Esto nos
-          permite garantizar que si un nodo falla, tu sitio se reubica automáticamente en otro nodo disponible
-          en milisegundos, manteniendo el servicio ininterrumpido.
-        </p>
-      </section>
-
-      <section class="space-y-4">
-        <div class="flex items-center gap-4">
-          <div
-            class="flex h-10 w-10 items-center justify-center rounded-xl bg-emerald-100 font-bold text-emerald-600"
-          >
-            02
-          </div>
-          <h2 class="m-0 text-2xl font-bold text-slate-900">Seguridad Atómica</h2>
-          <p>Implementamos una arquitectura de <strong>Zero Trust</strong>:</p>
-          <ul class="list-disc space-y-2 pl-6">
-            <li>
-              <strong>Namespaces Aislados:</strong> Cada cliente tiene su propio espacio de red lógico.
-            </li>
-            <li>
-              <strong>SSL Automático:</strong> Gestión dinámica de certificados TLS vía Cert-Manager.
-            </li>
-            <li>
-              <strong>DDoS Mitigation:</strong> Capa de filtrado de tráfico en el borde de nuestra red.
-            </li>
-          </ul>
-        </div>
-
-        <section class="space-y-4">
-          <div class="flex items-center gap-4">
-            <div
-              class="flex h-10 w-10 items-center justify-center rounded-xl bg-emerald-100 font-bold text-emerald-600"
-            >
-              03
-            </div>
-            <h2 class="m-0 text-2xl font-bold text-slate-900">Red de Entrega Global (Edge)</h2>
-            <p>
-              Nuestra infraestructura se apoya en una red de <strong>Anycast IP</strong>. Esto
-              significa que el contenido estático de tu web se sirve desde el centro de datos
-              geográficamente más cercano a tu usuario final, minimizando la latencia.
-            </p>
-          </div>
-
-          <div class="rounded-[2.5rem] bg-slate-900 p-8 text-white">
-            <h3 class="mono mb-4 text-sm font-bold text-emerald-400">SYSTEM_LOG // STATUS_OK</h3>
-            <div class="mono space-y-2 text-xs leading-loose opacity-80">
-              <p>> Initializing Kropy Node Cluster...</p>
-              <p>> Auto-scaling policies: ENABLED</p>
-              <p>> Container Isolation: ACTIVE</p>
-              <p>> Global Traffic Manager: ROUTING_OPTIMAL</p>
-            </div>
-          </div>
-        </section>
-      </section>
-    </div>
-  </div></InfoLayout
+<InfoLayout
+  title="Arquitectura e Infraestructura"
+  description="Tecnología de última generación utilizada para construir tu sitio web"
 >
+  <div class="space-y-4">
+    <span
+      class="mb-4 block text-xs font-bold tracking-widest text-emerald-600 uppercase dark:text-emerald-400"
+      >Orquestación de alto rendimiento</span
+    >
+    <h1 class="mb-6 text-4xl font-extrabold tracking-tight md:text-5xl">
+      Infraestructura Tecnológica
+    </h1>
+  </div>
+
+  <div
+    class="mt-8 space-y-6 text-sm leading-relaxed font-light text-slate-600 dark:text-neutral-400"
+  >
+    <p>
+      Creemos que una web exitosa no solo debe verse bien, sino comportarse de forma excelente bajo
+      presión. Por ello, en <strong>Kropy</strong> desechamos los servidores compartidos lentos y construimos
+      sobre arquitecturas modulares modernas.
+    </p>
+
+    <h2 class="mt-8 text-2xl font-bold text-slate-900 dark:text-white">
+      1. Framework e Ingeniería Frontend
+    </h2>
+    <p>
+      Construimos principalmente sobre <strong>Astro</strong> y <strong>Tailwind CSS</strong>. Esto
+      nos permite generar sitios web estáticos (SSG) de peso pluma que despachan código HTML
+      pre-compilado puro al navegador, reduciendo el javascript dañino a cero. El resultado: tiempos
+      de carga de menos de un segundo y una experiencia móvil perfecta.
+    </p>
+
+    <h2 class="mt-8 text-2xl font-bold text-slate-900 dark:text-white">
+      2. Entrega Global a través de CDN (Edge Delivery)
+    </h2>
+    <p>
+      Tu página web no reside en un solo ordenador físico. Distribuimos los archivos compilados a lo
+      largo de una red CDN global en el "Edge". Esto significa que un usuario en Santiago de Chile
+      accederá al servidor más cercano geográficamente, asegurando latencias mínimas y un
+      comportamiento robusto ante picos masivos de tráfico.
+    </p>
+
+    <!-- Caja estética destacando rendimiento -->
+    <div class="my-8 rounded-2xl border border-emerald-500/20 bg-emerald-500/5 p-6 transition-all">
+      <h3 class="mb-2 text-lg font-bold text-emerald-600 dark:text-emerald-400">
+        Google Lighthouse: 100/100
+      </h3>
+      <p class="text-xs leading-relaxed font-light text-slate-500 dark:text-neutral-400">
+        Nuestras metodologías de carga nos permiten optimizar recursos para obtener puntuaciones
+        perfectas en las herramientas de medición de rendimiento de Google, impulsando de forma
+        orgánica el posicionamiento SEO de tu negocio.
+      </p>
+    </div>
+
+    <h2 class="mt-8 text-2xl font-bold text-slate-900 dark:text-white">3. Seguridad Integrada</h2>
+    <p>
+      Todos nuestros despliegues integran de forma automática certificados de seguridad SSL de
+      última generación y protección activa contra ataques distribuidos de denegación de servicio
+      (DDoS), permitiendo que tanto el Cliente como sus usuarios transaccionen con total
+      tranquilidad.
+    </p>
+  </div>
+</InfoLayout>

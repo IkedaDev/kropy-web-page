@@ -1,0 +1,178 @@
+---
+import HomeLayout from "../layouts/HomeLayout.astro";
+---
+
+<HomeLayout
+  title="Servicios & Precios"
+  description="Nuestras tarifas y soluciones web transparentes"
+>
+  <section class="bg-slate-50 py-20 transition-colors dark:bg-neutral-900/50">
+    <div class="mx-auto max-w-6xl px-4 text-center">
+      <span
+        class="mb-4 block text-xs font-bold tracking-widest text-emerald-600 uppercase dark:text-emerald-400"
+        >Nuestros Productos</span
+      >
+      <h1 class="mb-16 text-4xl font-extrabold tracking-tight md:text-5xl">
+        Tarifas Transparentes
+      </h1>
+
+      <!-- Grid de Productos Principales -->
+      <div class="grid gap-8 md:grid-cols-3">
+        <!-- Landing Pages -->
+        <div
+          class="flex flex-col justify-between rounded-3xl border border-slate-200 bg-white p-10 shadow-sm transition-colors dark:border-neutral-800 dark:bg-neutral-950"
+        >
+          <div>
+            <h3 class="mb-4 text-xs font-bold tracking-widest text-slate-400 uppercase">
+              Landing Pages
+            </h3>
+            <div class="mb-6 text-4xl font-extrabold text-slate-900 dark:text-white">
+              120.000 <span class="text-sm font-medium text-slate-400">CLP</span>
+            </div>
+            <ul class="mb-10 space-y-4 text-left text-sm text-slate-500 dark:text-neutral-400">
+              <li class="flex gap-2">✅ Landing page de alto impacto</li>
+              <li class="flex gap-2">✅ Optimización de conversión (CRO)</li>
+              <li class="flex gap-2">✅ Autogestionable y ligera</li>
+            </ul>
+          </div>
+          <a
+            href="/contacto"
+            class="block w-full rounded-full bg-slate-900 py-3 font-bold text-white transition-colors hover:bg-slate-800 dark:bg-neutral-800 dark:hover:bg-neutral-700"
+            >Adquirir Plan</a
+          >
+        </div>
+
+        <!-- Ecommerces -->
+        <div
+          class="relative flex scale-105 transform flex-col justify-between rounded-3xl border-2 border-emerald-600 bg-white p-10 shadow-2xl shadow-emerald-600/10 transition-colors dark:bg-neutral-950"
+        >
+          <span
+            class="absolute -top-4 left-1/2 -translate-x-1/2 rounded-full bg-emerald-600 px-4 py-1 text-[10px] font-bold tracking-widest text-white uppercase"
+            >Recomendado</span
+          >
+          <div>
+            <h3 class="mb-4 text-xs font-bold tracking-widest text-slate-400 uppercase">
+              E-commerces
+            </h3>
+            <div class="mb-6 text-4xl font-extrabold text-slate-900 dark:text-white">
+              400.000 <span class="text-sm font-medium text-slate-400">CLP</span>
+            </div>
+            <ul class="mb-10 space-y-4 text-left text-sm text-slate-500 dark:text-neutral-400">
+              <li class="flex gap-2">✅ Catálogo completo e interactivo</li>
+              <li class="flex gap-2">✅ Carrito y pasarela de pago</li>
+              <li class="flex gap-2">✅ Panel para control de stock</li>
+            </ul>
+          </div>
+          <a
+            href="/contacto"
+            class="block w-full rounded-full bg-emerald-600 py-3 font-bold text-white transition-colors hover:bg-emerald-700"
+            >Comenzar</a
+          >
+        </div>
+
+        <!-- Customs -->
+        <div
+          class="flex flex-col justify-between rounded-3xl border border-slate-200 bg-white p-10 shadow-sm transition-colors dark:border-neutral-800 dark:bg-neutral-950"
+        >
+          <div>
+            <h3 class="mb-4 text-xs font-bold tracking-widest text-slate-400 uppercase">Customs</h3>
+            <div class="mb-6 text-4xl font-extrabold text-slate-900 dark:text-white">
+              Desde 100.000 <span class="text-sm font-medium text-slate-400">CLP</span>
+            </div>
+            <ul class="mb-10 space-y-4 text-left text-sm text-slate-500 dark:text-neutral-400">
+              <li class="flex gap-2">✅ Estructuras y funcionalidades a medida</li>
+              <li class="flex gap-2">✅ Integraciones avanzadas</li>
+              <li class="flex gap-2">✅ Arquitectura e infraestructura potente</li>
+            </ul>
+          </div>
+          <a
+            href="/contacto"
+            class="block w-full rounded-full border border-slate-200 py-3 font-bold text-slate-900 transition-colors hover:bg-slate-50 dark:border-neutral-800 dark:text-neutral-200 dark:hover:bg-neutral-800"
+            >Cotizar</a
+          >
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Soluciones Especiales -->
+  <section class="bg-white py-24 transition-colors dark:bg-neutral-950">
+    <div class="mx-auto max-w-6xl px-4">
+      <div class="mb-16 text-center">
+        <span
+          class="mb-4 block text-[10px] font-bold tracking-widest text-emerald-600 uppercase dark:text-emerald-400"
+          >Especialidades</span
+        >
+        <h2 class="text-4xl font-extrabold tracking-tight">Otras Soluciones Tecnológicas</h2>
+      </div>
+
+      <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <!-- Menús para restaurantes -->
+        <div
+          class="rounded-3xl border border-slate-100 bg-slate-50 p-8 dark:border-neutral-900 dark:bg-neutral-900/50"
+        >
+          <span
+            class="mb-2 block text-xs font-bold tracking-wider text-emerald-600 dark:text-emerald-400"
+            >40.000 CLP</span
+          >
+          <h4 class="mb-3 text-lg font-bold">Menús para Restaurantes</h4>
+          <p class="text-sm leading-relaxed text-slate-500 dark:text-neutral-400">
+            Cartas interactivas con lectura QR para móviles y alta velocidad.
+          </p>
+        </div>
+        <!-- Servicios de Consultoría -->
+        <div
+          class="rounded-3xl border border-slate-100 bg-slate-50 p-8 dark:border-neutral-900 dark:bg-neutral-900/50"
+        >
+          <span
+            class="mb-2 block text-xs font-bold tracking-wider text-emerald-600 dark:text-emerald-400"
+            >Consultorías</span
+          >
+          <h4 class="mb-3 text-lg font-bold">Servicios de Consultoría</h4>
+          <p class="text-sm leading-relaxed text-slate-500 dark:text-neutral-400">
+            Asesorías avanzadas de optimización y reestructuración de software.
+          </p>
+        </div>
+        <!-- Aplicaciones Móviles -->
+        <div
+          class="rounded-3xl border border-slate-100 bg-slate-50 p-8 dark:border-neutral-900 dark:bg-neutral-900/50"
+        >
+          <span
+            class="mb-2 block text-xs font-bold tracking-wider text-emerald-600 dark:text-emerald-400"
+            >Híbridas & Nativas</span
+          >
+          <h4 class="mb-3 text-lg font-bold">Aplicaciones Móviles</h4>
+          <p class="text-sm leading-relaxed text-slate-500 dark:text-neutral-400">
+            Desarrollo especializado de apps fluidas para iOS y Android.
+          </p>
+        </div>
+        <!-- Diseños Web -->
+        <div
+          class="rounded-3xl border border-slate-100 bg-slate-50 p-8 dark:border-neutral-900 dark:bg-neutral-900/50"
+        >
+          <span
+            class="mb-2 block text-xs font-bold tracking-wider text-emerald-600 dark:text-emerald-400"
+            >Figma UI/UX</span
+          >
+          <h4 class="mb-3 text-lg font-bold">Diseños Web</h4>
+          <p class="text-sm leading-relaxed text-slate-500 dark:text-neutral-400">
+            Estudios de interfaz de usuario de alta fidelidad, interactivos y limpios.
+          </p>
+        </div>
+        <!-- APIs y microservicios -->
+        <div
+          class="rounded-3xl border border-slate-100 bg-slate-50 p-8 dark:border-neutral-900 dark:bg-neutral-900/50"
+        >
+          <span
+            class="mb-2 block text-xs font-bold tracking-wider text-emerald-600 dark:text-emerald-400"
+            >Arquitectura backend</span
+          >
+          <h4 class="mb-3 text-lg font-bold">Creación de APIs y Microservicios</h4>
+          <p class="text-sm leading-relaxed text-slate-500 dark:text-neutral-400">
+            Creación de microservicios robustos y bases de datos integradas.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</HomeLayout>

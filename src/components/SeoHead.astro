@@ -1,4 +1,6 @@
 ---
+import { ClientRouter } from "astro:transitions";
+
 interface Props {
   title: string;
   description: string;
@@ -39,12 +41,15 @@ const siteName = "Sitio Web";
 <meta property="twitter:description" content={description} />
 <meta property="twitter:image" content={new URL(image, Astro.url)} />
 
-<script src="https://cdn.tailwindcss.com"></script>
+<!-- 
+  Eliminado el script de CDN duplicado de Tailwind para evitar conflictos 
+  con el compilador local de Vite.
+-->
 <link
   href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
   rel="stylesheet"
 />
-
+<ClientRouter />
 <script type="application/ld+json">
   {
     "@context": "https://schema.org",

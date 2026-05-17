@@ -2,71 +2,98 @@
 import InfoLayout from "../../layouts/InfoLayout.astro";
 ---
 
-<InfoLayout>
-  <div class="mx-auto max-w-3xl">
-    <span class="mb-4 block text-[10px] font-bold tracking-widest text-emerald-600 uppercase"
-      >Servicio // v1.0</span
+<InfoLayout
+  title="Acuerdo de Servicios y Precios"
+  description="Especificaciones de precios, entregables y metodologías de pago"
+>
+  <div class="space-y-4">
+    <span
+      class="mb-4 block text-xs font-bold tracking-widest text-emerald-600 uppercase dark:text-emerald-400"
+      >Tarifario de Servicios // Chile</span
     >
-    <h1 class="mb-8 text-4xl font-extrabold tracking-tight md:text-5xl">Términos de Servicio</h1>
+    <h1 class="mb-6 text-4xl font-extrabold tracking-tight md:text-5xl">
+      Acuerdo de Servicios y Precios
+    </h1>
+  </div>
 
-    <div class="prose prose-slate prose-lg space-y-6 leading-relaxed text-slate-600">
-      <p>
-        Al suscribirse a los servicios de <strong>Kropy Labs</strong>, usted acepta los siguientes
-        términos que rigen nuestra relación comercial y el uso de nuestra infraestructura técnica.
-      </p>
+  <div
+    class="mt-8 space-y-6 text-sm leading-relaxed font-light text-slate-600 dark:text-neutral-400"
+  >
+    <p>
+      Este acuerdo complementario regula las tarifas, plazos y condiciones comerciales aplicables a
+      cada uno de los productos de software comercializados de manera estándar por <strong
+        >Kropy</strong
+      >.
+    </p>
 
-      <h2 class="pt-4 text-2xl font-bold text-slate-900">1. Naturaleza del Servicio</h2>
-      <p>
-        Kropy proporciona una solución de "Web-as-a-Service". Esto incluye el diseño manual,
-        despliegue y mantenimiento continuo de activos digitales sobre clusters orquestados. El
-        servicio es de carácter mensual y recurrente.
-      </p>
-
-      <h2 class="pt-4 text-2xl font-bold text-slate-900">2. Pagos y Suscripción</h2>
-      <p>
-        El acceso a su sitio web y panel de control está condicionado al pago puntual de la
-        suscripción elegida. Los pagos se procesan de forma anticipada. Si el pago falla, nuestro
-        sistema iniciará automáticamente el protocolo de gracia detallado en la sección de
-        suspensión.
-      </p>
-
-      <h2 class="pt-4 text-2xl font-bold text-slate-900">3. Protocolo de Suspensión</h2>
-      <p>Kropy implementa una política de validación diaria de suscripciones:</p>
-      <ul class="list-disc space-y-2 pl-6">
-        <li>
-          En caso de impago, el Ingress de su nodo será redirigido a una página de suspensión
-          global.
-        </li>
-        <li>
-          Sus datos y contenedores permanecerán intactos durante 30 días posteriores a la
-          suspensión.
-        </li>
-        <li>
-          La reconexión del servicio es automática una vez regularizado el estado financiero a
-          través de la API de Pagos.
-        </li>
-      </ul>
-
-      <h2 class="pt-4 text-2xl font-bold text-slate-900">4. Propiedad Intelectual</h2>
-      <p>
-        El cliente es dueño absoluto del contenido y la marca. Kropy mantiene la propiedad
-        intelectual de la lógica de orquestación y el código base de la infraestructura utilizado
-        para servir el proyecto.
-      </p>
-
-      <h2 class="pt-4 text-2xl font-bold text-slate-900">5. Límites de Responsabilidad</h2>
-      <p>
-        Aunque garantizamos un uptime del 99.9%, Kropy no se hace responsable por pérdidas
-        económicas derivadas de interrupciones de terceros o mal uso de las credenciales de acceso
-        por parte del cliente.
-      </p>
+    <h2 class="mt-8 text-2xl font-bold text-slate-900 dark:text-white">
+      1. Tarifas y Estructura de Precios
+    </h2>
+    <div class="my-6 overflow-x-auto rounded-2xl border border-slate-200 dark:border-neutral-800">
+      <table class="w-full text-left text-sm">
+        <thead
+          class="border-b border-slate-200 bg-slate-50 text-slate-800 dark:border-neutral-800 dark:bg-neutral-900 dark:text-white"
+        >
+          <tr>
+            <th class="p-4 font-bold">Producto / Servicio</th>
+            <th class="p-4 font-bold">Inversión (CLP)</th>
+            <th class="p-4 font-bold">Plazo de Entrega</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-slate-100 dark:divide-neutral-800">
+          <tr>
+            <td class="p-4 font-semibold">Landing Page</td>
+            <td class="p-4 font-bold text-emerald-600 dark:text-emerald-400">120.000 CLP</td>
+            <td class="p-4">5 a 7 días hábiles</td>
+          </tr>
+          <tr>
+            <td class="p-4 font-semibold">E-commerce</td>
+            <td class="p-4 font-bold text-emerald-600 dark:text-emerald-400">400.000 CLP</td>
+            <td class="p-4">15 a 20 días hábiles</td>
+          </tr>
+          <tr>
+            <td class="p-4 font-semibold">Customs (Sistemas a Medida)</td>
+            <td class="p-4 font-bold text-emerald-600 dark:text-emerald-400">Desde 100.000 CLP</td>
+            <td class="p-4">Sujeto a requerimientos</td>
+          </tr>
+          <tr>
+            <td class="p-4 font-semibold">Menús QR para Restaurantes</td>
+            <td class="p-4 font-bold text-emerald-600 dark:text-emerald-400">40.000 CLP</td>
+            <td class="p-4">3 a 5 días hábiles</td>
+          </tr>
+          <tr>
+            <td class="p-4 font-semibold">Apps Móviles / APIs / Consultorías</td>
+            <td class="p-4 font-bold text-slate-500">Cotización Personalizada</td>
+            <td class="p-4">Variable</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
 
-    <div class="mt-20 border-t border-slate-200 pt-10">
-      <p class="text-xs text-slate-400">
-        Última actualización: Mayo 2026. Estos términos pueden ser actualizados para reflejar
-        mejoras en nuestros clusters de Kubernetes.
-      </p>
-    </div>
+    <h2 class="mt-8 text-2xl font-bold text-slate-900 dark:text-white">2. Condiciones de Pago</h2>
+    <p>
+      Salvo acuerdo comercial por escrito que indique lo contrario, la modalidad estándar de pago
+      para el desarrollo de sitios web será:
+    </p>
+    <ul class="list-disc space-y-2 pl-6">
+      <li>
+        <strong>50% por concepto de anticipo</strong>, requerido para dar inicio a las etapas de
+        diseño estructural y prototipado.
+      </li>
+      <li>
+        <strong>50% contra entrega definitiva</strong>, pagadero una vez que el sitio haya sido
+        aprobado por el Cliente y previo al despliegue en el dominio final.
+      </li>
+    </ul>
+
+    <h2 class="mt-8 text-2xl font-bold text-slate-900 dark:text-white">
+      3. Modificaciones y Alcance
+    </h2>
+    <p>
+      Cada plan incluye hasta un número determinado de revisiones iterativas en la etapa de diseño.
+      Cualquier solicitud de cambio estructural que exceda el documento de requerimientos aprobado
+      inicialmente será cotizada como un requerimiento adicional bajo tarifas de desarrollo a
+      medida.
+    </p>
   </div>
 </InfoLayout>
