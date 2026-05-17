@@ -3,8 +3,10 @@
 import { templates } from "../../data/templates";
 ---
 
-<section class="bg-white py-24 text-slate-950 dark:bg-neutral-950 dark:text-neutral-100">
-  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+<section
+  class="bg-white px-4 py-24 text-slate-950 sm:px-6 lg:px-8 dark:bg-neutral-950 dark:text-neutral-100"
+>
+  <div class="mx-auto max-w-7xl">
     <div class="mx-auto mb-16 max-w-3xl text-center">
       <span
         class="mb-3 block text-xs font-bold tracking-[0.25em] text-emerald-600 uppercase dark:text-emerald-400"
@@ -17,9 +19,8 @@ import { templates } from "../../data/templates";
         Ideas vivas para tu próximo proyecto
       </h2>
       <p class="mt-4 text-base leading-relaxed font-light text-slate-500 dark:text-neutral-400">
-        No hacemos páginas genéricas. Explora conceptos reales en funcionamiento, diseñados bajo
-        estándares de rendimiento extremo. Puedes elegir uno como base o usarlo de inspiración para
-        un desarrollo 100% personalizado.
+        Explora maquetas interactivas en tiempo real. Selecciona una para abrir el simulador
+        inmersivo y analizar la arquitectura del código.
       </p>
     </div>
 
@@ -34,7 +35,7 @@ import { templates } from "../../data/templates";
                 />
                 <img
                   src={template.image}
-                  alt={`Previsualización del concepto ${template.name}`}
+                  alt={template.name}
                   class="h-full w-full object-cover opacity-80 contrast-[1.05] saturate-[0.4] filter transition-all duration-500 group-hover:scale-105 group-hover:opacity-100 group-hover:saturate-100"
                   loading="lazy"
                 />
@@ -62,12 +63,14 @@ import { templates } from "../../data/templates";
                 ))}
               </div>
 
-              <a
-                href={`/templates/${template.slug}`}
-                data-astro-reload
-                class="inline-flex w-full items-center justify-center gap-2 rounded-xl border border-slate-300 bg-white px-4 py-3 text-xs font-bold tracking-wider text-slate-700 uppercase transition-all hover:border-transparent hover:bg-emerald-600 hover:text-white dark:border-neutral-800 dark:bg-neutral-950 dark:text-neutral-300 dark:hover:bg-emerald-500 dark:hover:text-neutral-950"
+              <button
+                data-slug={template.slug}
+                data-name={template.name}
+                data-industry={template.industry}
+                data-desc={template.description}
+                class="open-preview-modal-btn inline-flex w-full items-center justify-center gap-2 rounded-xl border border-slate-300 bg-white px-4 py-3 text-xs font-bold tracking-wider text-slate-700 uppercase transition-all hover:border-transparent hover:bg-emerald-600 hover:text-white dark:border-neutral-800 dark:bg-neutral-950 dark:text-neutral-300 dark:hover:bg-emerald-500 dark:hover:text-neutral-950"
               >
-                <span>Explorar Concepto en Vivo</span>
+                <span>Simular Sitio Vivo</span>
                 <svg
                   class="h-3.5 w-3.5 transition-transform group-hover:translate-x-1"
                   fill="none"
@@ -81,7 +84,7 @@ import { templates } from "../../data/templates";
                     d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
                   />
                 </svg>
-              </a>
+              </button>
             </div>
           </div>
         ))
@@ -89,3 +92,207 @@ import { templates } from "../../data/templates";
     </div>
   </div>
 </section>
+
+<div
+  id="preview-showcase-modal"
+  class="pointer-events-none fixed inset-0 z-[100] flex items-center justify-center bg-slate-950/0 p-2 opacity-0 backdrop-blur-none transition-all duration-300 ease-out sm:p-4 md:p-6"
+>
+  <div
+    id="modal-content-box"
+    class="relative flex h-[92vh] w-full max-w-7xl scale-95 flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white opacity-0 shadow-2xl transition-all duration-300 ease-out dark:border-neutral-800 dark:bg-neutral-950"
+  >
+    <div
+      class="flex h-auto flex-col justify-between gap-4 border-b border-slate-200 bg-slate-50 p-4 md:flex-row md:items-center dark:border-neutral-800 dark:bg-neutral-900/40"
+    >
+      <div class="max-w-2xl text-left">
+        <div class="flex items-center gap-3">
+          <span
+            id="modal-industry-display"
+            class="rounded border border-emerald-500/10 bg-emerald-100 px-2 py-0.5 text-[9px] font-extrabold tracking-widest text-emerald-800 uppercase dark:bg-emerald-950/50 dark:text-emerald-400"
+          >
+            Cargando...
+          </span>
+          <h4
+            id="modal-title-display"
+            class="font-sans text-lg font-bold text-slate-900 dark:text-white"
+          >
+            Nombre de la Plantilla
+          </h4>
+        </div>
+        <p
+          id="modal-desc-display"
+          class="mt-1 text-xs leading-relaxed font-light text-slate-500 dark:text-neutral-400"
+        >
+          Descripción detallada del concepto técnico...
+        </p>
+      </div>
+
+      <div class="flex items-center gap-2.5 self-end md:self-center">
+        <a
+          id="modal-external-tab-link"
+          href="#"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-1.5 rounded-xl border border-slate-300 bg-white px-4 py-2.5 text-xs font-bold text-slate-700 uppercase transition-all hover:bg-slate-100 dark:border-neutral-800 dark:bg-neutral-950 dark:text-neutral-300 dark:hover:bg-neutral-900"
+        >
+          <span>Nueva Pestaña</span>
+          <svg
+            class="h-3.5 w-3.5"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+            ></path>
+          </svg>
+        </a>
+
+        <button
+          id="modal-close-trigger"
+          class="rounded-xl bg-slate-900 px-4 py-2.5 text-xs font-bold text-white uppercase transition-all hover:bg-slate-800 dark:bg-neutral-100 dark:text-neutral-950 dark:hover:bg-neutral-200"
+        >
+          Cerrar
+        </button>
+      </div>
+    </div>
+
+    <div class="relative h-full w-full flex-grow bg-white">
+      <div
+        id="modal-iframe-loader"
+        class="absolute inset-0 z-10 flex items-center justify-center bg-slate-50 transition-opacity duration-300 dark:bg-neutral-950"
+      >
+        <div class="flex flex-col items-center gap-3">
+          <div
+            class="h-6 w-6 animate-spin rounded-full border-2 border-slate-300 border-t-emerald-500 dark:border-neutral-700 dark:border-t-emerald-400"
+          >
+          </div>
+          <span class="text-[10px] font-bold tracking-widest text-slate-400 uppercase"
+            >Compilando Demo Viviente...</span
+          >
+        </div>
+      </div>
+
+      <iframe
+        id="modal-viewport-iframe"
+        src="about:blank"
+        class="absolute inset-0 h-full w-full border-0 opacity-0 transition-opacity duration-300"
+        title="Simulador de Experiencia de Usuario - Kropy"></iframe>
+    </div>
+  </div>
+</div>
+<script>
+  function setupPreviewModalEngine() {
+    const modal = document.getElementById("preview-showcase-modal");
+    const contentBox = document.getElementById("modal-content-box"); // Capturamos la caja interna
+    const iframe = document.getElementById("modal-viewport-iframe") as HTMLIFrameElement | null;
+    const loader = document.getElementById("modal-iframe-loader");
+    const displayTitle = document.getElementById("modal-title-display");
+    const displayIndustry = document.getElementById("modal-industry-display");
+    const displayDesc = document.getElementById("modal-desc-display");
+    const externalTabLink = document.getElementById(
+      "modal-external-tab-link"
+    ) as HTMLAnchorElement | null;
+    const closeTrigger = document.getElementById("modal-close-trigger");
+
+    if (!modal || !contentBox || !iframe || !closeTrigger) return;
+
+    // Escuchador de clics en las tarjetas
+    document.querySelectorAll(".open-preview-modal-btn").forEach((button) => {
+      button.addEventListener("click", () => {
+        const slug = button.getAttribute("data-slug");
+        const name = button.getAttribute("data-name");
+        const industry = button.getAttribute("data-industry");
+        const desc = button.getAttribute("data-desc");
+
+        const targetUrl = `/templates/${slug}`;
+
+        // Inyectar datos comerciales al vuelo
+        if (displayTitle) displayTitle.textContent = name;
+        if (displayIndustry) displayIndustry.textContent = industry;
+        if (displayDesc) displayDesc.textContent = desc;
+        if (externalTabLink) externalTabLink.href = targetUrl;
+
+        // Resetear loader y apuntar el viewport al sub-sitio aislado
+        if (loader) {
+          loader.style.opacity = "1";
+          loader.classList.remove("pointer-events-none"); // Activamos clicks en loader mientras carga
+        }
+        iframe.style.opacity = "0";
+        iframe.src = targetUrl;
+
+        // Revelar fondo difuminado del Modal con transiciones CSS
+        modal.classList.remove(
+          "pointer-events-none",
+          "opacity-0",
+          "bg-slate-950/0",
+          "backdrop-blur-none"
+        );
+        modal.classList.add("bg-slate-950/40", "backdrop-blur-md", "opacity-100");
+
+        // Animación de entrada de la caja: escala desde el fondo y se vuelve sólida
+        contentBox.classList.remove("scale-95", "opacity-0");
+        contentBox.classList.add("scale-100", "opacity-100");
+
+        // Congelar scroll del portafolio base
+        document.body.style.overflow = "hidden";
+      });
+    });
+
+    // Desvanecer el loader cuando el DOM interno de la plantilla termine de renderizarse
+    iframe.addEventListener("load", () => {
+      if (iframe.src === "about:blank") return;
+      if (loader) {
+        loader.style.opacity = "0";
+        loader.classList.add("pointer-events-none"); // 👈 CRÍTICO: Desbloquea la interacción del mouse con el iframe
+      }
+      iframe.style.opacity = "1";
+    });
+
+    // Función de cierre y liberación de recursos de memoria
+    const terminateModalSession = () => {
+      // Ocultar fondo del Modal con animación de salida
+      modal.classList.remove("bg-slate-950/40", "backdrop-blur-md", "opacity-100");
+      modal.classList.add(
+        "pointer-events-none",
+        "opacity-0",
+        "bg-slate-950/0",
+        "backdrop-blur-none"
+      );
+
+      // Animación de salida de la caja interna
+      contentBox.classList.remove("scale-100", "opacity-100");
+      contentBox.classList.add("scale-95", "opacity-0");
+
+      document.body.style.overflow = "";
+
+      // Esperamos que termine la animación (300ms) antes de limpiar el iframe para evitar parpadeos blancos
+      setTimeout(() => {
+        if (modal.classList.contains("opacity-0")) {
+          iframe.style.opacity = "0";
+          iframe.src = "about:blank";
+        }
+      }, 300);
+    };
+
+    closeTrigger.addEventListener("click", terminateModalSession);
+
+    // Cerrar si hace clic fuera del marco contenedor
+    modal.addEventListener("click", (e) => {
+      if (e.target === modal) terminateModalSession();
+    });
+
+    // Control por teclado (Escape) por accesibilidad premium
+    window.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && !modal.classList.contains("pointer-events-none")) {
+        terminateModalSession();
+      }
+    });
+  }
+
+  // Asegura la inicialización en cargas frías y navegación SPA
+  document.addEventListener("astro:page-load", setupPreviewModalEngine);
+</script>
