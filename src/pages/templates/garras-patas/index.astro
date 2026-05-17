@@ -1,29 +1,17 @@
+---
+import SeoHead from "../../../components/SeoHead.astro";
+
+const title = "Garras & Patas | Alimentos y Accesorios para Mascotas en Temuco";
+const description =
+  "La mejor tienda de mascotas online en Temuco. Alimentos premium, juguetes y accesorios para perros y gatos con despacho a domicilio rápido en la Araucanía.";
+const ogImage =
+  "https://images.unsplash.com/photo-1540497077202-7c8a3999166f?auto=format&fit=crop&w=600&q=80";
+---
+
 <!doctype html>
 <html lang="es" class="scroll-smooth">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!-- SEO Local y de Nicho E-commerce -->
-    <title>Garras & Patas | Alimentos y Accesorios para Mascotas en Temuco</title>
-    <meta
-      name="description"
-      content="La mejor tienda de mascotas online en Temuco. Alimentos premium, juguetes y accesorios para perros y gatos con despacho a domicilio rápido en la Araucanía."
-    />
-    <meta
-      name="keywords"
-      content="tienda de mascotas temuco, alimentos para perros temuco, accesorios gatos temuco, pet shop temuco, comida mascotas padre las casas, rascadores gatos temuco, garras y patas"
-    />
-    <meta name="robots" content="index, follow" />
-
-    <!-- Open Graph para Redes / Compartir por WhatsApp -->
-    <meta property="og:title" content="Garras & Patas | Todo para tus Mascotas en Temuco" />
-    <meta
-      property="og:description"
-      content="Alimentos premium, snacks y los mejores accesorios con envío a todo Temuco y alrededores. ¡Consiente a tu peludo!"
-    />
-    <meta property="og:type" content="website" />
-    <meta property="og:locale" content="es_CL" />
+    <SeoHead title={title} description={description} image={ogImage} />
 
     <!-- Importación obligatoria de Tailwind CSS -->
     <script is:inline src="https://cdn.tailwindcss.com"></script>

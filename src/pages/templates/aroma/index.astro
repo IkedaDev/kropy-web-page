@@ -1,10 +1,16 @@
+---
+import SeoHead from "../../../components/SeoHead.astro";
+
+const title = "Aroma | Kinetic & Thermal Lab • Temuco";
+const description = "Aroma | Kinetic & Thermal Lab • Temuco";
+const ogImage =
+  "https://images.unsplash.com/photo-1540497077202-7c8a3999166f?auto=format&fit=crop&w=600&q=80";
+---
+
 <!doctype html>
 <html lang="es" class="scroll-smooth">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Aroma | Kinetic & Thermal Lab • Temuco</title>
-
+    <SeoHead title={title} description={description} image={ogImage} />
     <!-- Tailwind CSS (Default CDN) -->
     <script is:inline src="https://cdn.tailwindcss.com"></script>
 

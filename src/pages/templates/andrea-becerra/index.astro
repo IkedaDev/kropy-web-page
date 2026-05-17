@@ -1,31 +1,17 @@
+---
+import SeoHead from "../../../components/SeoHead.astro";
+
+const title = "Andrea Becerra | Abogada & Mediadora Familiar en Temuco Araucanía";
+const description =
+  "¿Buscas una abogada en Temuco con trato humano y resolutivo? Andrea Becerra es especialista en Derecho de Familia, Civil y Mediación en la Araucanía. Agenda tu videollamada o cita presencial hoy.";
+const ogImage =
+  "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&h=750&q=80";
+---
+
 <!doctype html>
 <html lang="es" class="scroll-smooth">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Andrea Becerra | Abogada & Mediadora Familiar en Temuco Araucanía</title>
-    <meta
-      name="description"
-      content="¿Buscas una abogada en Temuco con trato humano y resolutivo? Andrea Becerra es especialista en Derecho de Familia, Civil y Mediación en la Araucanía. Agenda tu videollamada o cita presencial hoy."
-    />
-    <meta
-      name="keywords"
-      content="andrea becerra abogada, abogada familia temuco, divorcio mutuo acuerdo temuco, pension alimentos temuco, abogado civil temuco, posesion efectiva araucania, mediacion familiar temuco"
-    />
-    <link rel="canonical" href="https://www.andreabecerra.cl/" />
-
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Andrea Becerra | Abogada & Mediadora en Temuco" />
-    <meta
-      property="og:description"
-      content="Defensa jurídica empática, transparente y eficiente en la Región de la Araucanía. Especialista en Derecho de Familia y Civil."
-    />
-    <meta
-      property="og:image"
-      content="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=1200&h=630&q=80"
-    />
-    <meta property="og:url" content="https://www.andreabecerra.cl/" />
+    <SeoHead title={title} description={description} image={ogImage} />
 
     <!-- Tailwind CSS Engine -->
     <script is:inline src="https://cdn.tailwindcss.com"></script>

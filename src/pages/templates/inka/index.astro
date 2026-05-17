@@ -1,9 +1,14 @@
+---
+import SeoHead from "../../../components/SeoHead.astro";
+
+const title = "Inka | Kinetic & Thermal Lab • Temuco";
+const description = "Inka | Kinetic & Thermal Lab • Temuco";
+---
+
 <!doctype html>
 <html lang="es" class="scroll-smooth">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Inka | Kinetic & Thermal Lab • Temuco</title>
+    <SeoHead title={title} description={description} />
 
     <!-- Tailwind CSS (Default CDN) -->
     <script is:inline src="https://cdn.tailwindcss.com"></script>

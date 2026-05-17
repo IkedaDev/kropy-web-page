@@ -1,36 +1,15 @@
+---
+import SeoHead from "../../../components/SeoHead.astro";
+
+const title = "Ñielol Express | Los Mejores Completos y Chorrillanas de Temuco";
+const description = "Ñielol Express | Los Mejores Completos y Chorrillanas de Temuco";
+---
+
 <!doctype html>
 <html lang="es" class="scroll-smooth">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <SeoHead title={title} description={description} />
 
-    <!-- SEO Local y Técnico -->
-    <title>Ñielol Express | Los Mejores Completos y Chorrillanas de Temuco</title>
-    <meta
-      name="description"
-      content="¿Hambre en el centro de Temuco? En Ñielol Express te salvamos con los mejores completos italianos, chorrillanas XL y sándwiches al paso. ¡Rápido, contundente y al mejor precio!"
-    />
-    <meta
-      name="keywords"
-      content="completos temuco, chorrillanas temuco, fuente de soda temuco, sándwiches temuco, comida rapida temuco centro, bajon temuco chileno"
-    />
-    <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://www.nielolexpress.cl" />
-
-    <!-- Open Graph para Redes Sociales -->
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Ñielol Express | Bajón y Comida Al Paso en Temuco" />
-    <meta
-      property="og:description"
-      content="La picá preferida de la Araucanía. Completos gigantes con mucha palta, papas fritas cargadas y el mejor ambiente al paso."
-    />
-    <meta
-      property="og:image"
-      content="https://images.unsplash.com/photo-1626074353765-517a681e40be?q=80&w=800&auto=format&fit=crop"
-    />
-    <meta property="og:url" content="https://www.nielolexpress.cl" />
-
-    <!-- Importación de Tailwind CSS solicitada -->
     <script is:inline src="https://cdn.tailwindcss.com"></script>
 
     <!-- Google Fonts: Tipografía con personalidad para comida rápida -->
@@ -180,7 +159,8 @@
                 </p>
                 <p class="font-brand text-4xl text-yellow-400">
                   $4.990 <span class="font-sans text-xs font-normal text-red-200 line-through"
-                    >$6.200</span>
+                    >$6.200</span
+                  >
                 </p>
               </div>
               <a
@@ -214,7 +194,8 @@
                 </p>
                 <p class="font-brand text-4xl text-yellow-400">
                   $6.500 <span class="font-sans text-xs font-normal text-zinc-500 line-through"
-                    >$7.800</span>
+                    >$7.800</span
+                  >
                 </p>
               </div>
               <a

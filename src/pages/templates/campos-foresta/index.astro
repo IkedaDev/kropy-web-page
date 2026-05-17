@@ -1,34 +1,17 @@
+---
+import SeoHead from "../../../components/SeoHead.astro";
+
+const title = "Campos de La Frontera | Distribuidora de Productos Agrícolas en Temuco";
+const description =
+  "Productos agrícolas seleccionados directo del campo a tu mesa o negocio en Temuco. Papas de Carahue, hortalizas frescas, miel multifloral y harinas artesanales de la Araucanía. Despacho mayorista y detalle.";
+const ogImage =
+  "https://images.unsplash.com/photo-1540497077202-7c8a3999166f?auto=format&fit=crop&w=600&q=80";
+---
+
 <!doctype html>
 <html lang="es" class="scroll-smooth">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!-- SEO de Alta Relevancia Agropecuaria Regional -->
-    <title>Campos de La Frontera | Distribuidora de Productos Agrícolas en Temuco</title>
-    <meta
-      name="description"
-      content="Productos agrícolas seleccionados directo del campo a tu mesa o negocio en Temuco. Papas de Carahue, hortalizas frescas, miel multifloral y harinas artesanales de la Araucanía. Despacho mayorista y detalle."
-    />
-    <meta
-      name="keywords"
-      content="productos agrícolas temuco, venta de papas temuco, hortalizas por mayor la araucania, verduras a domicilio temuco, sacos de harina temuco, productor agricola temuco, feria pinto delivery"
-    />
-    <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://www.camposdelafrontera.cl" />
-
-    <!-- Open Graph / Redes Sociales -->
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Campos de La Frontera | Frutos y Verduras de la Araucanía" />
-    <meta
-      property="og:description"
-      content="Trazabilidad, frescura y precios justos directo del productor local. Despachos programados en Temuco y Padre Las Casas."
-    />
-    <meta
-      property="og:image"
-      content="https://images.unsplash.com/photo-1592417817098-8f3d6eb18865?q=80&w=800&auto=format&fit=crop"
-    />
-    <meta property="og:url" content="https://www.camposdelafrontera.cl" />
+    <SeoHead title={title} description={description} image={ogImage} />
 
     <!-- Importación de Tailwind CSS solicitada -->
     <script is:inline src="https://cdn.tailwindcss.com"></script>
@@ -141,7 +124,7 @@
               <!-- Círculo decorativo natural de fondo -->
               <div class="absolute inset-0 rounded-full bg-emerald-800/5 blur-2xl filter"></div>
               <img
-                src="https://images.unsplash.com/photo-1592417817098-8f3d6eb18865?q=80&w=600&auto=format&fit=crop"
+                src="https://images.unsplash.com/photo-1518977676601-b53f82aba655?q=80&w=500&auto=format&fit=crop"
                 alt="Cajón rústico de madera lleno de vegetales frescos y orgánicos cosechados del campo"
                 class="relative z-10 h-80 w-full rounded-3xl border border-stone-200 object-cover shadow-xl lg:h-96"
               />

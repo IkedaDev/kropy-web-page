@@ -6,11 +6,16 @@ interface Props {
   description: string;
   image?: string;
   canonicalURL?: string;
+  siteName?: string; // Hacemos el nombre del sitio opcional y dinámico
 }
 
-const { title, description, image = "", canonicalURL = Astro.url.href } = Astro.props;
-
-const siteName = "Sitio Web";
+const {
+  title,
+  description,
+  image = "",
+  canonicalURL = Astro.url.href,
+  siteName = "Kropy", // Por defecto será Kropy si no se envía uno personalizado
+} = Astro.props;
 ---
 
 <!-- Global Metadata -->

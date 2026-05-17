@@ -1,34 +1,14 @@
+---
+import SeoHead from "../../../components/SeoHead.astro";
+
+const title = "Propiedades Ñielol | Corredor de Propiedades en Temuco y La Araucanía";
+const description = "Propiedades Ñielol | Corredor de Propiedades en Temuco y La Araucanía";
+---
+
 <!doctype html>
 <html lang="es" class="scroll-smooth">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!-- SEO Básico -->
-    <title>Propiedades Ñielol | Corredor de Propiedades en Temuco y La Araucanía</title>
-    <meta
-      name="description"
-      content="¿Buscas comprar, vender o arrendar en Temuco? En Propiedades Ñielol te ayudamos a encontrar tu hogar ideal en Portal de la Frontera, Av. Alemania y parcelas en la Araucanía. Asesoría experta en UF."
-    />
-    <meta
-      name="keywords"
-      content="propiedades temuco, corredor de propiedades temuco, casas en venta temuco, parcelas araucania, portal de la frontera, avenida alemania, gestion inmobiliaria chile"
-    />
-    <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://www.propiedadesnielol.cl" />
-
-    <!-- Open Graph / Facebook (Para compartir en RRSS) -->
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Propiedades Ñielol | Gestión Inmobiliaria en Temuco" />
-    <meta
-      property="og:description"
-      content="Encuentra las mejores casas, departamentos y parcelas en Temuco y alrededores. Asesoría profesional y transparente."
-    />
-    <meta
-      property="og:image"
-      content="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1200&q=80"
-    />
-    <meta property="og:url" content="https://www.propiedadesnielol.cl" />
+    <SeoHead title={title} description={description} />
 
     <!-- Importación de Tailwind Exigida -->
     <script is:inline src="https://cdn.tailwindcss.com"></script>

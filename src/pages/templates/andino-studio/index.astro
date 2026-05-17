@@ -1,40 +1,24 @@
+---
+import SeoHead from "../../../components/SeoHead.astro";
+
+const title = "Andino Estudio | Producción Audiovisual & Arriendo de Estudio en Temuco";
+const description =
+  "Estudio fotográfico profesional en Temuco. Producción audiovisual, fotografía publicitaria, catálogos e-commerce y arriendo de estudio equipado en la Araucanía.";
+const ogImage =
+  "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=1200&h=630&q=80";
+---
+
 <!doctype html>
 <html lang="es" class="scroll-smooth">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Andino Estudio | Producción Audiovisual & Arriendo de Estudio en Temuco</title>
-    <meta
-      name="description"
-      content="Estudio fotográfico profesional en Temuco. Producción audiovisual, fotografía publicitaria, catálogos e-commerce y arriendo de estudio equipado en la Araucanía."
-    />
-    <meta
-      name="keywords"
-      content="estudio fotografico temuco, arriendo estudio fotografia araucania, fotos de productos temuco, retratos corporativos temuco, produccion audiovisual temuco, estudio con ciclorama chile"
-    />
-    <link rel="canonical" href="https://www.andinoestudio.cl/" />
+    <SeoHead title={title} description={description} image={ogImage} />
 
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Andino Estudio | Espacio de Creación Visual en Temuco" />
-    <meta
-      property="og:description"
-      content="Estudio de fotografía publicitaria, retratos corporativos y arriendo de set equipado con tecnología de punta en Temuco, Araucanía."
-    />
-    <meta
-      property="og:image"
-      content="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=1200&h=630&q=80"
-    />
-    <meta property="og:url" content="https://www.andinoestudio.cl/" />
-
-    <!-- Tailwind CSS Engine -->
     <script is:inline src="https://cdn.tailwindcss.com"></script>
 
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
 
@@ -1225,19 +1209,23 @@
             <ul class="space-y-2">
               <li>
                 <a href="#espacios" class="hover:text-electric-400 transition-colors"
-                  >Infraestructura</a>
+                  >Infraestructura</a
+                >
               </li>
               <li>
                 <a href="#portafolio" class="hover:text-electric-400 transition-colors"
-                  >Portafolio</a>
+                  >Portafolio</a
+                >
               </li>
               <li>
                 <a href="#calculador" class="hover:text-electric-400 transition-colors"
-                  >Cotizador de Horas</a>
+                  >Cotizador de Horas</a
+                >
               </li>
               <li>
                 <a href="#contacto" class="hover:text-electric-400 transition-colors"
-                  >Contacto Directo</a>
+                  >Contacto Directo</a
+                >
               </li>
             </ul>
           </div>

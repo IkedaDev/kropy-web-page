@@ -1,34 +1,15 @@
+---
+import SeoHead from "../../../components/SeoHead.astro";
+
+const title = "Clínica Veterinaria Ñielol | Urgencias y Hospitalización en Temuco";
+const description = "Clínica Veterinaria Ñielol | Urgencias y Hospitalización en Temuco";
+---
+
 <!doctype html>
 <html lang="es" class="scroll-smooth">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <SeoHead title={title} description={description} />
 
-    <!-- SEO Local Médico/Veterinario -->
-    <title>Clínica Veterinaria Ñielol | Urgencias y Hospitalización en Temuco</title>
-    <meta
-      name="description"
-      content="Clínica Veterinaria en Temuco altamente equipada. Ofrecemos urgencias, cirugías, laboratorio clínico, ecografías y consultas especializadas en la Región de la Araucanía."
-    />
-    <meta
-      name="keywords"
-      content="veterinaria temuco, urgencias veterinarias temuco, clinica veterinaria temuco, cirugia veterinaria temuco, veterinario 24 horas temuco, hospitalizacion mascotas temuco, ecografia veterinaria la araucania"
-    />
-    <meta name="robots" content="index, follow" />
-
-    <!-- Open Graph -->
-    <meta
-      property="og:title"
-      content="Clínica Veterinaria Ñielol - Cuidado Médico Avanzado en Temuco"
-    />
-    <meta
-      property="og:description"
-      content="Infraestructura médica avanzada para el diagnóstico, cirugía y bienestar de tu mascota en la Araucanía."
-    />
-    <meta property="og:type" content="website" />
-    <meta property="og:locale" content="es_CL" />
-
-    <!-- Importación obligatoria de Tailwind CSS -->
     <script is:inline src="https://cdn.tailwindcss.com"></script>
 
     <!-- Google Fonts: Look Corporativo, Clínico y Limpio -->

@@ -1,33 +1,15 @@
+---
+import SeoHead from "../../../components/SeoHead.astro";
+
+const title = "Nativo Ahumador | Carnes Ahumadas, Brasa & Cervecería en Temuco";
+const description = "Nativo Ahumador | Carnes Ahumadas, Brasa & Cervecería en Temuco";
+---
+
 <!doctype html>
 <html lang="es" class="scroll-smooth">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Nativo Ahumador | Carnes Ahumadas, Brasa & Cervecería en Temuco</title>
-    <meta
-      name="description"
-      content="Sabor a leña y bosque en Temuco. Nativo Ahumador ofrece las mejores carnes ahumadas lentamente con maderas nativas, sándwiches de autor y cerveza artesanal en la Araucanía."
-    />
-    <meta
-      name="keywords"
-      content="restaurante temuco, carnes ahumadas temuco, donde comer en temuco, asados temuco, av alemania restaurante, sándwiches de autor chile, comida tipica araucania, nativo ahumador"
-    />
-    <link rel="canonical" href="https://www.nativoahumador.cl/" />
+    <SeoHead title={title} description={description} />
 
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="restaurant.restaurant" />
-    <meta property="og:title" content="Nativo Ahumador | Humo, Brasa & Sabores del Sur en Temuco" />
-    <meta
-      property="og:description"
-      content="Ahumados lentos de 12 horas con madera de roble y cerezo. Ven a disfrutar de una experiencia única en pleno Barrio Poniente de Temuco."
-    />
-    <meta
-      property="og:image"
-      content="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1200&h=630&q=80"
-    />
-    <meta property="og:url" content="https://www.nativoahumador.cl/" />
-
-    <!-- Tailwind CSS Engine -->
     <script is:inline src="https://cdn.tailwindcss.com"></script>
 
     <!-- Google Fonts -->
@@ -1232,15 +1214,18 @@
             <ul class="space-y-2">
               <li>
                 <a href="#experiencia" class="transition-colors hover:text-amber-500"
-                  >La Experiencia</a>
+                  >La Experiencia</a
+                >
               </li>
               <li>
                 <a href="#carta" class="transition-colors hover:text-amber-500"
-                  >Ver Carta Gastronómica</a>
+                  >Ver Carta Gastronómica</a
+                >
               </li>
               <li>
                 <a href="#banquetes" class="transition-colors hover:text-amber-500"
-                  >Cotizador de Banquetes</a>
+                  >Cotizador de Banquetes</a
+                >
               </li>
               <li>
                 <a href="#reserva" class="transition-colors hover:text-amber-500">Reservar Mesa</a>

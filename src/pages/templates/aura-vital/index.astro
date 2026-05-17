@@ -1,29 +1,15 @@
+---
+import SeoHead from "../../../components/SeoHead.astro";
+
+const title = "Aura Vital | Masoterapia y Masajes en Temuco, Araucanía";
+const description =
+  "¿Buscas aliviar el estrés o dolores musculares? En Aura Vital ofrecemos masajes descontracturantes, de relajación y drenaje linfático en Temuco. ¡Reserva tu hora hoy!";
+---
+
 <!doctype html>
 <html lang="es" class="scroll-smooth">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!-- SEO Local Avanzado -->
-    <title>Aura Vital | Masoterapia y Masajes en Temuco, Araucanía</title>
-    <meta
-      name="description"
-      content="¿Buscas aliviar el estrés o dolores musculares? En Aura Vital ofrecemos masajes descontracturantes, de relajación y drenaje linfático en Temuco. ¡Reserva tu hora hoy!"
-    />
-    <meta
-      name="keywords"
-      content="masajes temuco, masoterapeuta temuco, masaje descontracturante temuco, masaje relajacion temuco, drenaje linfatico temuco, masajes araucania, bienestar temuco"
-    />
-    <meta name="robots" content="index, follow" />
-
-    <!-- Open Graph para Redes Sociales (Redes/WhatsApp) -->
-    <meta property="og:title" content="Aura Vital | Masoterapia y Masajes en Temuco" />
-    <meta
-      property="og:description"
-      content="Espacio de sanación y bienestar en el corazón de Temuco. Masajes profesionales para tu salud física y mental."
-    />
-    <meta property="og:type" content="website" />
-    <meta property="og:locale" content="es_CL" />
+    <SeoHead title={title} description={description} />
 
     <!-- Importación de Tailwind CSS solicitada -->
     <script is:inline src="https://cdn.tailwindcss.com"></script>

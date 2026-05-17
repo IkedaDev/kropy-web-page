@@ -1,36 +1,15 @@
+---
+import SeoHead from "../../../components/SeoHead.astro";
+
+const title = "Volcán Burger & Bajón | Las Mejores Hamburguesas al Paso en Temuco";
+const description = "Volcán Burger & Bajón | Las Mejores Hamburguesas al Paso en Temuco";
+---
+
 <!doctype html>
 <html lang="es" class="scroll-smooth">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <SeoHead title={title} description={description} />
 
-    <!-- SEO Básico y Local -->
-    <title>Volcán Burger & Bajón | Las Mejores Hamburguesas al Paso en Temuco</title>
-    <meta
-      name="description"
-      content="¿Buscando el mejor bajón de Temuco? En Volcán Burger te ofrecemos hamburguesas premium, completos gigantes y las papas fritas más crujientes de la Araucanía. ¡Pide al paso o con delivery!"
-    />
-    <meta
-      name="keywords"
-      content="comida rapida temuco, hamburguesas temuco, bajon temuco, completos temuco, papas fritas temuco, comida al paso araucania"
-    />
-    <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://www.volcanburger.cl" />
-
-    <!-- Open Graph / Facebook (Para compartir en Redes Sociales) -->
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Volcán Burger & Bajón | Comida Rápida en Temuco" />
-    <meta
-      property="og:description"
-      content="El verdadero sabor del bajón temucano. Ingredientes frescos, porciones generosas y atención rápida en Av. Alemania."
-    />
-    <meta
-      property="og:image"
-      content="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=800&auto=format&fit=crop"
-    />
-    <meta property="og:url" content="https://www.volcanburger.cl" />
-
-    <!-- Importación de Tailwind CSS solicitada -->
     <script is:inline src="https://cdn.tailwindcss.com"></script>
 
     <!-- Configuración de Fuentes y Estilos Extra -->

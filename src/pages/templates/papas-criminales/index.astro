@@ -1,36 +1,15 @@
+---
+import SeoHead from "../../../components/SeoHead.astro";
+
+const title = "Papas Criminales | Pollo Frito y Papas Cargadas en Temuco";
+const description = "Papas Criminales | Pollo Frito y Papas Cargadas en Temuco";
+---
+
 <!doctype html>
 <html lang="es" class="scroll-smooth">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <SeoHead title={title} description={description} />
 
-    <!-- SEO Local de Alto Impacto -->
-    <title>Papas Criminales | Pollo Frito y Papas Cargadas en Temuco</title>
-    <meta
-      name="description"
-      content="¿El mejor bajón callejero de Temuco? Ven a Papas Criminales. Descubre nuestros baldes de pollo frito crujiente, papas fritas cargadas con cheddar y las mejores salsas de la Araucanía."
-    />
-    <meta
-      name="keywords"
-      content="papas fritas temuco, pollo frito temuco, papas cargadas temuco, bajon universitario temuco, comida al paso san martin temuco, food truck temuco"
-    />
-    <meta name="robots" content="index, follow" />
-    <link class="canonical" href="https://www.papascriminales.cl" />
-
-    <!-- Open Graph para Redes -->
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Papas Criminales | Street Food & Bajón en Temuco" />
-    <meta
-      property="og:description"
-      content="Formas brutales de calmar el hambre. Pollo crujiente estilo americano y papas fritas monstruosas en el mejor ambiente de Temuco."
-    />
-    <meta
-      property="og:image"
-      content="https://images.unsplash.com/photo-1573080496219-bb080dd4f877?q=80&w=800&auto=format&fit=crop"
-    />
-    <meta property="og:url" content="https://www.papascriminales.cl" />
-
-    <!-- Importación de Tailwind CSS solicitada -->
     <script is:inline src="https://cdn.tailwindcss.com"></script>
 
     <!-- Google Fonts: Estilo chunky / cómic urbano -->

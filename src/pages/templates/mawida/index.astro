@@ -1,80 +1,15 @@
-<!-- Material Design --><!doctype html>
+---
+import SeoHead from "../../../components/SeoHead.astro";
+
+const title = "MAWIDA | Constructora & Ingeniería Bioclimática • Temuco Araucanía";
+const description = "MAWIDA | Constructora & Ingeniería Bioclimática • Temuco Araucanía";
+---
+
+<!doctype html>
 <html lang="es" class="scroll-smooth">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <SeoHead title={title} description={description} />
 
-    <!-- SEO DE EXCELENCIA: Metadatos y Posicionamiento Local Google Chile -->
-    <title>MAWIDA | Constructora & Ingeniería Bioclimática • Temuco Araucanía</title>
-    <meta
-      name="description"
-      content="MAWIDA es la constructora líder en Temuco. Especialistas en edificación bioclimática, estructuras de hormigón armado, madera nativa e ingeniería sustentable en la Araucanía."
-    />
-    <meta
-      name="keywords"
-      content="constructora Temuco, construccion bioclimatica Chile, ingenieria civil Araucania, constructora de casas Temuco, obras civiles Temuco, arquitectura sustentable"
-    />
-    <meta name="author" content="MAWIDA Ingeniería y Construcción" />
-    <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://www.mawidaconstructora.cl" />
-
-    <!-- Open Graph (Facebook / LinkedIn) -->
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="MAWIDA | Constructora & Ingeniería Bioclimática en Temuco" />
-    <meta
-      property="og:description"
-      content="Diseño y construcción de alta resistencia térmica para el clima del sur de Chile. Proyectos residenciales, comerciales e industriales en Temuco, Pucón y Villarrica."
-    />
-    <meta property="og:url" content="https://www.mawidaconstructora.cl" />
-    <meta property="og:site_name" content="MAWIDA Constructora" />
-    <meta property="og:locale" content="es_CL" />
-
-    <!-- Twitter Cards -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="MAWIDA | Constructora Bioclimática • Temuco" />
-    <meta
-      name="twitter:description"
-      content="Proyectamos obras sustentables de hormigón, acero y maderas nativas preparadas para el invierno de la Araucanía."
-    />
-
-    <!-- SCHEMA.ORG DATA: Marcado de Datos Estructurados para SEO Local -->
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "LocalBusiness",
-        "name": "MAWIDA | Ingeniería, Diseño & Construcción",
-        "image": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80",
-        "@id": "https://www.mawidaconstructora.cl/#localbusiness",
-        "url": "https://www.mawidaconstructora.cl",
-        "telephone": "+56912345678",
-        "priceRange": "$$$$",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "Avenida Alemania 01450",
-          "addressLocality": "Temuco",
-          "addressRegion": "Araucanía",
-          "postalCode": "4780000",
-          "addressCountry": "CL"
-        },
-        "geo": {
-          "@type": "GeoCoordinates",
-          "latitude": -38.740278,
-          "longitude": -72.615278
-        },
-        "openingHoursSpecification": {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-          "opens": "08:30",
-          "closes": "18:30"
-        },
-        "sameAs": [
-          "https://www.facebook.com/mawidaconstructora",
-          "https://www.instagram.com/mawidaconstructora"
-        ]
-      }
-    </script>
-
-    <!-- Tailwind CSS (Default CDN) con etiqueta is:inline solicitada -->
     <script is:inline src="https://cdn.tailwindcss.com"></script>
 
     <!-- Google Fonts: Plus Jakarta Sans (Limpia y moderna) & Playfair Display (Serif de lujo orgánico) -->
@@ -1395,7 +1330,8 @@
               <span class="text-neutral-300">|</span>
               <p class="text-[--md-sys-color-text]">
                 Desarrollado por <a href="#" class="font-bold hover:text-[--md-sys-color-primary]"
-                  >Kropy</a>
+                  >Kropy</a
+                >
               </p>
             </div>
           </div>
