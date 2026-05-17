@@ -1,0 +1,585 @@
+<!doctype html>
+<html lang="es" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO Básico -->
+    <title>Mercado Ñielol | Almacén y Abarrotes a Domicilio en Temuco</title>
+    <meta
+      name="description"
+      content="Tu almacén de confianza en Temuco. Encuentra abarrotes, productos frescos y ofertas del día con despacho rápido a todo Temuco y Padre Las Casas. ¡Haz tu pedido por WhatsApp!"
+    />
+    <meta
+      name="keywords"
+      content="abarrotes temuco, almacen temuco, supermercado domicilio temuco, verduras frescas temuco, ofertas abarrotes araucania"
+    />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://www.mercadonielol.cl" />
+
+    <!-- SEO Open Graph (Para compartir en Facebook, WhatsApp, etc.) -->
+    <meta property="og:locale" content="es_CL" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Mercado Ñielol | Almacén y Abarrotes en Temuco" />
+    <meta
+      property="og:description"
+      content="Productos de primera necesidad directos a tu hogar en Temuco y Padre Las Casas. Calidad, buen precio y rapidez."
+    />
+    <meta property="og:url" content="https://www.mercadonielol.cl" />
+    <meta property="og:site_name" content="Mercado Ñielol" />
+
+    <!-- Tailwind CSS -->
+    <script is:inline src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Configuración de Fuentes (Opcional para mejorar diseño) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+      }
+    </style>
+  </head>
+  <body class="bg-slate-50 text-slate-800 antialiased">
+    <!-- NAVEGACIÓN -->
+    <header class="sticky top-0 z-50 bg-white shadow-sm">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="flex h-16 items-center justify-between">
+          <!-- Logo -->
+          <div class="flex flex-shrink-0 items-center">
+            <a href="#" class="flex items-center gap-2 text-2xl font-bold text-emerald-600">
+              <span class="rounded-lg bg-emerald-100 p-2">🛒</span>
+              <span>Mercado<span class="text-amber-500">Ñielol</span></span>
+            </a>
+          </div>
+
+          <!-- Desktop Nav -->
+          <nav class="hidden items-center space-x-8 md:flex">
+            <a href="#ofertas" class="font-medium text-slate-600 transition hover:text-emerald-600"
+              >Ofertas</a
+            >
+            <a
+              href="#categorias"
+              class="font-medium text-slate-600 transition hover:text-emerald-600">Categorías</a
+            >
+            <a href="#nosotros" class="font-medium text-slate-600 transition hover:text-emerald-600"
+              >Sobre Nosotros</a
+            >
+            <a
+              href="#ubicacion"
+              class="font-medium text-slate-600 transition hover:text-emerald-600">Ubicación</a
+            >
+            <a
+              href="https://wa.me/56912345678?text=Hola%20Mercado%20Ñielol,%20quiero%20hacer%20un%20pedido"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="flex items-center gap-2 rounded-full bg-emerald-600 px-5 py-2 font-semibold text-white shadow-md transition hover:bg-emerald-700"
+            >
+              Pedir por WhatsApp
+            </a>
+          </nav>
+
+          <!-- Mobile Menu Button -->
+          <div class="flex items-center md:hidden">
+            <button
+              id="btn-menu"
+              type="button"
+              class="text-slate-600 hover:text-emerald-600 focus:outline-none"
+              aria-label="Abrir menú"
+            >
+              <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile Menu (Hidden by default) -->
+      <div
+        id="menu-movil"
+        class="hidden space-y-1 border-t border-slate-100 bg-white px-4 pt-2 pb-4 md:hidden"
+      >
+        <a
+          href="#ofertas"
+          class="block rounded-md px-3 py-2 text-base font-medium text-slate-600 hover:bg-emerald-50 hover:text-emerald-600"
+          >Ofertas</a
+        >
+        <a
+          href="#categorias"
+          class="block rounded-md px-3 py-2 text-base font-medium text-slate-600 hover:bg-emerald-50 hover:text-emerald-600"
+          >Categorías</a
+        >
+        <a
+          href="#nosotros"
+          class="block rounded-md px-3 py-2 text-base font-medium text-slate-600 hover:bg-emerald-50 hover:text-emerald-600"
+          >Sobre Nosotros</a
+        >
+        <a
+          href="#ubicacion"
+          class="block rounded-md px-3 py-2 text-base font-medium text-slate-600 hover:bg-emerald-50 hover:text-emerald-600"
+          >Ubicación</a
+        >
+        <a
+          href="https://wa.me/56912345678?text=Hola%20Mercado%20Ñielol,%20quiero%20hacer%20un%20pedido"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="mt-4 block rounded-md bg-emerald-600 px-4 py-2 text-center font-semibold text-white transition hover:bg-emerald-700"
+        >
+          Pedir por WhatsApp
+        </a>
+      </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="bg-gradient-to-br from-emerald-50 to-amber-50 py-12 md:py-20">
+      <div class="mx-auto grid max-w-7xl items-center gap-12 px-4 sm:px-6 md:grid-cols-2 lg:px-8">
+        <div>
+          <span
+            class="mb-4 inline-block rounded-full bg-emerald-100 px-3 py-1 text-xs font-semibold tracking-wider text-emerald-800 uppercase"
+          >
+            Despacho en Temuco y Padre Las Casas
+          </span>
+          <h1 class="mb-6 text-4xl leading-tight font-bold text-slate-900 md:text-5xl">
+            El almacén de tu barrio, ahora con <span class="text-emerald-600">pedido online</span>
+          </h1>
+          <p class="mb-8 text-lg text-slate-600">
+            Ahorra tiempo y dinero. Encuentra todo en abarrotes, lácteos, útiles de aseo y más, con
+            la calidez de siempre y directo a la puerta de tu casa en Temuco.
+          </p>
+          <div class="flex flex-col gap-4 sm:flex-row">
+            <a
+              href="#ofertas"
+              class="rounded-lg bg-emerald-600 px-8 py-3 text-center font-bold text-white shadow-lg shadow-emerald-600/20 transition hover:bg-emerald-700"
+            >
+              Ver Ofertas del Día
+            </a>
+            <a
+              href="#categorias"
+              class="rounded-lg border border-slate-200 bg-white px-8 py-3 text-center font-bold text-slate-700 transition hover:bg-slate-50"
+            >
+              Explorar Categorías
+            </a>
+          </div>
+        </div>
+        <div class="relative flex justify-center">
+          <!-- Círculo decorativo de fondo -->
+          <div
+            class="absolute inset-0 m-auto h-72 w-72 rounded-full bg-amber-400/20 blur-3xl filter"
+          >
+          </div>
+          <!-- Imagen representativa usando Unsplash (Abarrotes/Almacen) -->
+          <img
+            src="https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=600&q=80"
+            alt="Abarrotes y frutas frescas de Mercado Ñielol Temuco"
+            class="relative z-10 h-80 w-full rounded-2xl object-cover shadow-2xl sm:h-96"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- VENTAJAS / BENEFICIOS -->
+    <section class="bg-white py-12">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="grid gap-8 text-center sm:grid-cols-3">
+          <div class="rounded-xl bg-slate-50 p-6">
+            <div class="mb-3 text-3xl">⚡</div>
+            <h3 class="mb-2 text-lg font-bold text-slate-900">Despacho Rápido</h3>
+            <p class="text-sm text-slate-600">
+              Entregamos tu pedido el mismo día en todo Temuco urbano.
+            </p>
+          </div>
+          <div class="rounded-xl bg-slate-50 p-6">
+            <div class="mb-3 text-3xl">💰</div>
+            <h3 class="mb-2 text-lg font-bold text-slate-900">Precios de Mayorista</h3>
+            <p class="text-sm text-slate-600">
+              Cuidamos tu bolsillo con las mejores ofertas de la Araucanía.
+            </p>
+          </div>
+          <div class="rounded-xl bg-slate-50 p-6">
+            <div class="mb-3 text-3xl">🤝</div>
+            <h3 class="mb-2 text-lg font-bold text-slate-900">Atención Sureña</h3>
+            <p class="text-sm text-slate-600">
+              Armamos tu pedido con el mismo amor y cuidado que tú lo harías.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN OFERTAS -->
+    <section id="ofertas" class="bg-slate-50 py-16">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="mb-12 text-center">
+          <h2 class="text-3xl font-bold text-slate-900">Ofertas Destacadas de la Semana</h2>
+          <p class="mt-2 text-slate-600">
+            Productos esenciales a precios imperdibles. ¡Hasta agotar stock!
+          </p>
+        </div>
+
+        <!-- Grid de Productos -->
+        <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <!-- Producto 1 -->
+          <div
+            class="flex flex-col justify-between overflow-hidden rounded-xl border border-slate-100 bg-white shadow-sm"
+          >
+            <div>
+              <div class="relative">
+                <img
+                  src="https://images.unsplash.com/photo-1621841957884-1210fe19d66d?auto=format&fit=crop&w=400&q=80"
+                  alt="Aceite vegetal de cocina"
+                  class="h-48 w-full object-cover"
+                />
+                <span
+                  class="absolute top-2 right-2 rounded bg-red-500 px-2 py-1 text-xs font-bold text-white"
+                  >¡Oferta!</span
+                >
+              </div>
+              <div class="p-4">
+                <span class="mb-1 block text-xs text-slate-400">Despensa</span>
+                <h3 class="mb-2 text-base font-bold text-slate-800">Aceite Vegetal Premium 1L</h3>
+                <div class="mb-2 flex items-center gap-2">
+                  <span class="text-xl font-bold text-emerald-600">$2.490</span>
+                  <span class="text-sm text-slate-400 line-through">$3.100</span>
+                </div>
+              </div>
+            </div>
+            <div class="p-4 pt-0">
+              <a
+                href="https://wa.me/56912345678?text=Hola%20Mercado%20Ñielol,%20me%20gustaría%20pedir%20el%20Aceite%20Vegetal%20Premium%20en%20oferta"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="block w-full rounded-lg bg-emerald-600 py-2 text-center text-sm font-semibold text-white transition hover:bg-emerald-700"
+              >
+                Pedir por WhatsApp
+              </a>
+            </div>
+          </div>
+
+          <!-- Producto 2 -->
+          <div
+            class="flex flex-col justify-between overflow-hidden rounded-xl border border-slate-100 bg-white shadow-sm"
+          >
+            <div>
+              <div class="relative">
+                <img
+                  src="https://images.unsplash.com/photo-1553456558-aff63285bdd1?auto=format&fit=crop&w=400&q=80"
+                  alt="Arroz Grado 1"
+                  class="h-48 w-full object-cover"
+                />
+                <span
+                  class="absolute top-2 right-2 rounded bg-red-500 px-2 py-1 text-xs font-bold text-white"
+                  >Oferta</span
+                >
+              </div>
+              <div class="p-4">
+                <span class="mb-1 block text-xs text-slate-400">Abarrotes</span>
+                <h3 class="mb-2 text-base font-bold text-slate-800">Arroz Grado 1 Extra 1kg</h3>
+                <div class="mb-2 flex items-center gap-2">
+                  <span class="text-xl font-bold text-emerald-600">$1.150</span>
+                  <span class="text-sm text-slate-400 line-through">$1.450</span>
+                </div>
+              </div>
+            </div>
+            <div class="p-4 pt-0">
+              <a
+                href="https://wa.me/56912345678?text=Hola%20Mercado%20Ñielol,%20me%20gustaría%20pedir%20el%20Arroz%20Grado%201%20en%20oferta"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="block w-full rounded-lg bg-emerald-600 py-2 text-center text-sm font-semibold text-white transition hover:bg-emerald-700"
+              >
+                Pedir por WhatsApp
+              </a>
+            </div>
+          </div>
+
+          <!-- Producto 3 -->
+          <div
+            class="flex flex-col justify-between overflow-hidden rounded-xl border border-slate-100 bg-white shadow-sm"
+          >
+            <div>
+              <div class="relative">
+                <img
+                  src="https://images.unsplash.com/photo-1628088062854-d1870b4553da?auto=format&fit=crop&w=400&q=80"
+                  alt="Detergente Líquido"
+                  class="h-48 w-full object-cover"
+                />
+              </div>
+              <div class="p-4">
+                <span class="mb-1 block text-xs text-slate-400">Limpieza</span>
+                <h3 class="mb-2 text-base font-bold text-slate-800">
+                  Detergente Líquido Concentrado 3L
+                </h3>
+                <div class="mb-2 flex items-center gap-2">
+                  <span class="text-xl font-bold text-emerald-600">$5.990</span>
+                  <span class="text-sm text-slate-400">Precio Normal</span>
+                </div>
+              </div>
+            </div>
+            <div class="p-4 pt-0">
+              <a
+                href="https://wa.me/56912345678?text=Hola%20Mercado%20Ñielol,%20me%20gustaría%20pedir%20el%20Detergente%20Líquido%20Concentrado"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="block w-full rounded-lg bg-emerald-600 py-2 text-center text-sm font-semibold text-white transition hover:bg-emerald-700"
+              >
+                Pedir por WhatsApp
+              </a>
+            </div>
+          </div>
+
+          <!-- Producto 4 -->
+          <div
+            class="flex flex-col justify-between overflow-hidden rounded-xl border border-slate-100 bg-white shadow-sm"
+          >
+            <div>
+              <div class="relative">
+                <img
+                  src="https://images.unsplash.com/photo-1563636619-e9143da7973b?auto=format&fit=crop&w=400&q=80"
+                  alt="Leche Entera Pack"
+                  class="h-48 w-full object-cover"
+                />
+                <span
+                  class="absolute top-2 right-2 rounded bg-emerald-500 px-2 py-1 text-xs font-bold text-white"
+                  >Más Vendido</span
+                >
+              </div>
+              <div class="p-4">
+                <span class="mb-1 block text-xs text-slate-400">Lácteos</span>
+                <h3 class="mb-2 text-base font-bold text-slate-800">
+                  Leche Entera Caja 1L (Pack 6 ud)
+                </h3>
+                <div class="mb-2 flex items-center gap-2">
+                  <span class="text-xl font-bold text-emerald-600">$6.200</span>
+                  <span class="text-sm text-slate-400 line-through">$6.900</span>
+                </div>
+              </div>
+            </div>
+            <div class="p-4 pt-0">
+              <a
+                href="https://wa.me/56912345678?text=Hola%20Mercado%20Ñielol,%20me%20gustaría%20pedir%20el%20Pack%20de%20Leche%20Entera"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="block w-full rounded-lg bg-emerald-600 py-2 text-center text-sm font-semibold text-white transition hover:bg-emerald-700"
+              >
+                Pedir por WhatsApp
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CATEGORÍAS -->
+    <section id="categorias" class="bg-white py-16">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="mb-12 text-center">
+          <h2 class="text-3xl font-bold text-slate-900">Explora Nuestras Categorías</h2>
+          <p class="mt-2 text-slate-600">Todo lo que necesitas para tu hogar sin salir de casa.</p>
+        </div>
+
+        <div class="grid grid-cols-2 gap-6 md:grid-cols-4">
+          <div
+            class="rounded-xl border border-slate-100 bg-slate-50 p-6 text-center transition hover:shadow-md"
+          >
+            <span class="mb-3 block text-4xl">🍝</span>
+            <h3 class="font-bold text-slate-800">Despensa y Pastas</h3>
+          </div>
+          <div
+            class="rounded-xl border border-slate-100 bg-slate-50 p-6 text-center transition hover:shadow-md"
+          >
+            <span class="mb-3 block text-4xl">🥛</span>
+            <h3 class="font-bold text-slate-800">Lácteos y Huevos</h3>
+          </div>
+          <div
+            class="rounded-xl border border-slate-100 bg-slate-50 p-6 text-center transition hover:shadow-md"
+          >
+            <span class="mb-3 block text-4xl">🧼</span>
+            <h3 class="font-bold text-slate-800">Limpieza y Aseo</h3>
+          </div>
+          <div
+            class="rounded-xl border border-slate-100 bg-slate-50 p-6 text-center transition hover:shadow-md"
+          >
+            <span class="mb-3 block text-4xl">🍪</span>
+            <h3 class="font-bold text-slate-800">Snacks y Galletas</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOBRE NOSOTROS / CONFIANZA -->
+    <section id="nosotros" class="bg-gradient-to-br from-emerald-900 to-slate-900 py-16 text-white">
+      <div
+        class="mx-auto grid max-w-7xl items-center gap-12 px-4 text-center sm:px-6 md:grid-cols-2 md:text-left lg:px-8"
+      >
+        <div>
+          <h2 class="mb-6 text-3xl font-bold">Desde el corazón de Temuco a tu mesa</h2>
+          <p class="mb-6 text-lg leading-relaxed text-emerald-100">
+            Nacimos en la capital de la Araucanía con el firme propósito de digitalizar el almacén
+            tradicional. Queremos facilitar tu día a día llevándote productos de calidad con la
+            rapidez que el ritmo moderno exige, pero conservando la honestidad y buenos precios de
+            siempre.
+          </p>
+          <div class="flex flex-wrap justify-center gap-6 md:justify-start">
+            <div>
+              <span class="block text-3xl font-bold text-amber-400">100%</span>
+              <span class="text-sm text-emerald-200">Local de Temuco</span>
+            </div>
+            <div>
+              <span class="block text-3xl font-bold text-amber-400">+500</span>
+              <span class="text-sm text-emerald-200">Familias Felices</span>
+            </div>
+          </div>
+        </div>
+        <div class="rounded-2xl bg-white/10 p-8 backdrop-blur-sm">
+          <h3 class="mb-4 text-xl font-bold text-amber-400">¿Cómo hacer tu pedido?</h3>
+          <ul class="space-y-4 text-left text-sm">
+            <li class="flex items-start gap-3">
+              <span
+                class="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-amber-400 font-bold text-slate-900"
+                >1</span
+              >
+              <p>
+                Haz clic en el botón de WhatsApp del producto que necesitas o en el botón general.
+              </p>
+            </li>
+            <li class="flex items-start gap-3">
+              <span
+                class="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-amber-400 font-bold text-slate-900"
+                >2</span
+              >
+              <p>
+                Escríbenos tu lista de compras completa o añade productos adicionales en el chat.
+              </p>
+            </li>
+            <li class="flex items-start gap-3">
+              <span
+                class="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-amber-400 font-bold text-slate-900"
+                >3</span
+              >
+              <p>Te confirmamos el total y coordinamos el despacho a tu casa. ¡Pagas al recibir!</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- UBICACIÓN Y CONTACTO -->
+    <section id="ubicacion" class="bg-slate-50 py-16">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="grid items-center gap-12 md:grid-cols-2">
+          <div>
+            <h2 class="mb-6 text-3xl font-bold text-slate-900">Nuestra Ubicación y Horarios</h2>
+            <p class="mb-6 text-slate-600">
+              Aunque somos principalmente digitales con despacho a domicilio, nuestra bodega central
+              está ubicada en un punto estratégico de Temuco para garantizar entregas en tiempo
+              récord.
+            </p>
+
+            <div class="space-y-4">
+              <div class="flex items-center gap-3">
+                <span class="text-xl">📍</span>
+                <div>
+                  <h4 class="font-bold text-slate-800">Dirección</h4>
+                  <p class="text-sm text-slate-600">
+                    Av. Alemania (Sector Centro-Poniente), Temuco, Chile
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-center gap-3">
+                <span class="text-xl">🕒</span>
+                <div>
+                  <h4 class="font-bold text-slate-800">Horario de Atención</h4>
+                  <p class="text-sm text-slate-600">
+                    Lunes a Sábado: 09:00 a 20:00 hrs. | Domingos: Cerrado
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-center gap-3">
+                <span class="text-xl">🛵</span>
+                <div>
+                  <h4 class="font-bold text-slate-800">Zonas de Reparto</h4>
+                  <p class="text-sm text-slate-600">
+                    Todo Temuco urbano, Labranza y Padre Las Casas.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Mapa Falso / Ilustración de Cobertura Confiable -->
+          <div class="rounded-2xl border border-slate-100 bg-white p-4 shadow-md">
+            <div
+              class="flex h-64 flex-col items-center justify-center rounded-xl border-2 border-dashed border-emerald-200 bg-emerald-50 p-6 text-center"
+            >
+              <span class="mb-2 text-4xl">🗺️</span>
+              <h4 class="mb-1 font-bold text-emerald-900">Mapa de Cobertura</h4>
+              <p class="max-w-xs text-xs text-emerald-700">
+                Ofrecemos envío gratuito en el cuadrante principal de Temuco por compras superiores
+                a $15.000.
+              </p>
+              <!-- Botón de acción real simulando ir a Google Maps -->
+              <a
+                href="https://maps.google.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="mt-4 rounded-lg bg-emerald-600 px-4 py-2 text-xs font-bold text-white transition hover:bg-emerald-700"
+              >
+                Ver mapa completo
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-slate-800 bg-slate-900 py-12 text-slate-400">
+      <div
+        class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 px-4 sm:px-6 md:flex-row lg:px-8"
+      >
+        <div>
+          <a href="#" class="flex items-center gap-2 text-xl font-bold text-white">
+            <span>Mercado<span class="text-amber-400">Ñielol</span></span>
+          </a>
+          <p class="mt-2 text-xs text-slate-500">
+            © 2026 Mercado Ñielol. Todos los derechos reservados. Temuco, IX Región, Chile.
+          </p>
+        </div>
+        <div class="flex gap-6 text-sm">
+          <a href="#ofertas" class="transition hover:text-white">Ofertas</a>
+          <a href="#categorias" class="transition hover:text-white">Categorías</a>
+          <a href="#ubicacion" class="transition hover:text-white">Ubicación</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- SCRIPT INTERACTIVO NATIVO -->
+    <script>
+      // Lógica del Menú Móvil
+      const btnMenu = document.getElementById("btn-menu");
+      const menuMovil = document.getElementById("menu-movil");
+
+      btnMenu.addEventListener("click", () => {
+        menuMovil.classList.toggle("hidden");
+      });
+
+      // Cerrar menú móvil al hacer clic en un enlace
+      const enlacesMenu = menuMovil.querySelectorAll("a");
+      enlacesMenu.forEach((enlace) => {
+        enlace.addEventListener("click", () => {
+          menuMovil.classList.add("hidden");
+        });
+      });
+    </script>
+  </body>
+</html>

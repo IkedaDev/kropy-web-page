@@ -1,0 +1,577 @@
+<!doctype html>
+<html lang="es" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO Básico -->
+    <title>Propiedades Ñielol | Corredor de Propiedades en Temuco y La Araucanía</title>
+    <meta
+      name="description"
+      content="¿Buscas comprar, vender o arrendar en Temuco? En Propiedades Ñielol te ayudamos a encontrar tu hogar ideal en Portal de la Frontera, Av. Alemania y parcelas en la Araucanía. Asesoría experta en UF."
+    />
+    <meta
+      name="keywords"
+      content="propiedades temuco, corredor de propiedades temuco, casas en venta temuco, parcelas araucania, portal de la frontera, avenida alemania, gestion inmobiliaria chile"
+    />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://www.propiedadesnielol.cl" />
+
+    <!-- Open Graph / Facebook (Para compartir en RRSS) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Propiedades Ñielol | Gestión Inmobiliaria en Temuco" />
+    <meta
+      property="og:description"
+      content="Encuentra las mejores casas, departamentos y parcelas en Temuco y alrededores. Asesoría profesional y transparente."
+    />
+    <meta
+      property="og:image"
+      content="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1200&q=80"
+    />
+    <meta property="og:url" content="https://www.propiedadesnielol.cl" />
+
+    <!-- Importación de Tailwind Exigida -->
+    <script is:inline src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Configuración de estilos personalizados -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                navy: "#0f172a",
+                gold: "#b45309",
+                accent: "#0284c7",
+                light: "#f8fafc",
+              },
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-brand-light font-sans text-slate-800 antialiased">
+    <!-- HEADER / NAV -->
+    <header class="sticky top-0 z-50 border-b border-slate-100 bg-white/95 shadow-sm backdrop-blur">
+      <div class="mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+        <a href="#" class="flex items-center space-x-2">
+          <span class="text-brand-navy text-2xl font-bold tracking-tight"
+            >Ñielol<span class="text-brand-gold">Propiedades</span></span
+          >
+        </a>
+
+        <!-- Desktop Nav -->
+        <nav class="hidden items-center space-x-8 font-medium text-slate-600 md:flex">
+          <a href="#inicio" class="hover:text-brand-gold transition-colors">Inicio</a>
+          <a href="#destacadas" class="hover:text-brand-gold transition-colors">Propiedades</a>
+          <a href="#servicios" class="hover:text-brand-gold transition-colors">Servicios</a>
+          <a href="#nosotros" class="hover:text-brand-gold transition-colors">Nosotros</a>
+          <a
+            href="#contacto"
+            class="bg-brand-navy hover:bg-brand-gold inline-flex items-center justify-center rounded-lg px-5 py-2.5 text-white shadow-md transition-all hover:shadow-lg"
+            >Agendar Asesoría</a
+          >
+        </nav>
+
+        <!-- Mobile Menu Button -->
+        <button
+          id="menu-btn"
+          class="hover:text-brand-navy p-2 text-slate-600 focus:outline-none md:hidden"
+          aria-label="Abrir menú"
+        >
+          <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+            ><path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"></path></svg
+          >
+        </button>
+      </div>
+
+      <!-- Mobile Nav Menu -->
+      <div
+        id="mobile-menu"
+        class="hidden space-y-3 border-b border-slate-200 bg-white px-4 pt-2 pb-6 shadow-inner md:hidden"
+      >
+        <a href="#inicio" class="block py-2 font-medium text-slate-600">Inicio</a>
+        <a href="#destacadas" class="block py-2 font-medium text-slate-600">Propiedades</a>
+        <a href="#servicios" class="block py-2 font-medium text-slate-600">Servicios</a>
+        <a href="#nosotros" class="block py-2 font-medium text-slate-600">Nosotros</a>
+        <a
+          href="#contacto"
+          class="bg-brand-navy block w-full rounded-lg px-4 py-3 text-center font-medium text-white"
+          >Agendar Asesoría</a
+        >
+      </div>
+    </header>
+
+    <main>
+      <!-- HERO SECTION -->
+      <section id="inicio" class="bg-brand-navy relative overflow-hidden py-20 text-white lg:py-32">
+        <div class="absolute inset-0 opacity-20 mix-blend-overlay">
+          <img
+            src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1920&q=80"
+            alt="Casas exclusivas en Temuco"
+            class="h-full w-full object-cover"
+          />
+        </div>
+        <div
+          class="relative mx-auto grid max-w-7xl items-center gap-12 px-4 sm:px-6 md:grid-cols-2 lg:px-8"
+        >
+          <div class="space-y-6">
+            <span
+              class="bg-brand-gold inline-block rounded-full px-3 py-1 text-xs font-semibold tracking-wider text-white uppercase"
+              >Corretaje Exclusivo en la Araucanía</span
+            >
+            <h1
+              class="text-4xl leading-tight font-extrabold tracking-tight sm:text-5xl lg:text-6xl"
+            >
+              Tu próximo hogar en <span class="text-brand-gold">Temuco</span> está aquí
+            </h1>
+            <p class="max-w-lg text-lg text-slate-300">
+              Casas, departamentos y parcelas en las mejores ubicaciones de la región. Te asesoramos
+              en todo el proceso legal y comercial evaluado en UF.
+            </p>
+            <div class="flex flex-col gap-4 pt-2 sm:flex-row">
+              <a
+                href="#destacadas"
+                class="bg-brand-gold rounded-lg px-6 py-3 text-center font-semibold text-white shadow-lg transition-colors hover:bg-amber-700"
+                >Ver Propiedades</a
+              >
+              <a
+                href="#contacto"
+                class="rounded-lg border border-white/20 bg-white/10 px-6 py-3 text-center font-semibold text-white transition-colors hover:bg-white/20"
+                >Evaluar mi Propiedad</a
+              >
+            </div>
+          </div>
+
+          <!-- Buscador Rápido del Hero -->
+          <div class="rounded-2xl bg-white p-6 text-slate-800 shadow-2xl sm:p-8">
+            <h3 class="text-brand-navy mb-4 text-xl font-bold">¿Qué estás buscando?</h3>
+            <form action="#destacadas" method="GET" class="space-y-4">
+              <div>
+                <label class="mb-1 block text-xs font-bold text-slate-500 uppercase"
+                  >Tipo de Propiedad</label
+                >
+                <select
+                  class="focus:border-brand-gold w-full rounded-lg border border-slate-200 bg-slate-50 p-3 focus:outline-none"
+                >
+                  <option>Casas de campo / Parcelas</option>
+                  <option>Casas Urbanas (Portal de la Frontera)</option>
+                  <option>Departamentos (Av. Alemania)</option>
+                </select>
+              </div>
+              <div>
+                <label class="mb-1 block text-xs font-bold text-slate-500 uppercase"
+                  >Operación</label
+                >
+                <div class="grid grid-cols-2 gap-2">
+                  <button
+                    type="button"
+                    class="border-brand-navy bg-brand-navy rounded-lg border-2 px-4 py-2.5 text-sm font-medium text-white"
+                    >Venta</button
+                  >
+                  <button
+                    type="button"
+                    class="hover:border-brand-navy rounded-lg border-2 border-slate-200 px-4 py-2.5 text-sm font-medium text-slate-700 transition-colors"
+                    >Arriendo</button
+                  >
+                </div>
+              </div>
+              <a
+                href="#destacadas"
+                class="bg-brand-navy hover:bg-brand-gold block w-full rounded-lg py-3 pt-4 text-center font-bold text-white transition-colors"
+                >Buscar Ahora</a
+              >
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECCIÓN PROPIEDADES DESTACADAS -->
+      <section id="destacadas" class="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
+        <div class="mx-auto mb-16 max-w-3xl text-center">
+          <h2 class="text-brand-navy text-3xl font-bold tracking-tight sm:text-4xl">
+            Propiedades Exclusivas en Cartera
+          </h2>
+          <p class="mt-4 text-lg text-slate-600">
+            Explora nuestra selección de terrenos, casas de alto estándar y departamentos
+            estratégicos en Temuco.
+          </p>
+        </div>
+
+        <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          <!-- Tarjeta 1 -->
+          <div
+            class="flex flex-col overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-md transition-shadow hover:shadow-xl"
+          >
+            <div class="relative h-64 bg-slate-200">
+              <img
+                src="https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?auto=format&fit=crop&w=600&q=80"
+                alt="Casa en Portal de la Frontera Temuco"
+                class="h-full w-full object-cover"
+              />
+              <span
+                class="absolute top-4 left-4 rounded-full bg-emerald-500 px-3 py-1 text-xs font-bold text-white uppercase"
+                >Venta</span
+              >
+            </div>
+            <div class="flex flex-1 flex-col justify-between p-6">
+              <div>
+                <span class="text-brand-gold text-sm font-bold tracking-wider uppercase"
+                  >Portal de la Frontera, Temuco</span
+                >
+                <h3 class="text-brand-navy mt-1 mb-2 text-xl font-bold">
+                  Moderna Casa Mediterránea
+                </h3>
+                <p class="line-clamp-2 text-sm text-slate-600">
+                  Exclusiva propiedad en sector residencial consolidado. Amplio jardín, seguridad
+                  permanente y conectividad.
+                </p>
+              </div>
+              <div class="mt-6 flex items-center justify-between border-t border-slate-100 pt-4">
+                <div>
+                  <span class="block text-xs font-bold text-slate-400 uppercase">Precio desde</span>
+                  <span class="text-brand-navy text-2xl font-black">9.450 UF</span>
+                </div>
+                <a
+                  href="#contacto"
+                  class="hover:bg-brand-navy text-brand-navy rounded-lg bg-slate-100 px-4 py-2 text-sm font-bold transition-colors hover:text-white"
+                  >Detalles</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Tarjeta 2 -->
+          <div
+            class="flex flex-col overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-md transition-shadow hover:shadow-xl"
+          >
+            <div class="relative h-64 bg-slate-200">
+              <img
+                src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=600&q=80"
+                alt="Departamento Avenida Alemania"
+                class="h-full w-full object-cover"
+              />
+              <span
+                class="absolute top-4 left-4 rounded-full bg-emerald-500 px-3 py-1 text-xs font-bold text-white uppercase"
+                >Venta</span
+              >
+            </div>
+            <div class="flex flex-1 flex-col justify-between p-6">
+              <div>
+                <span class="text-brand-gold text-sm font-bold tracking-wider uppercase"
+                  >Avenida Alemania, Temuco</span
+                >
+                <h3 class="text-brand-navy mt-1 mb-2 text-xl font-bold">
+                  Departamento Studio Inversionista
+                </h3>
+                <p class="line-clamp-2 text-sm text-slate-600">
+                  Ideal para inversión o estudiantes. A pasos de universidades, centros comerciales
+                  y excelente locomoción.
+                </p>
+              </div>
+              <div class="mt-6 flex items-center justify-between border-t border-slate-100 pt-4">
+                <div>
+                  <span class="block text-xs font-bold text-slate-400 uppercase">Precio desde</span>
+                  <span class="text-brand-navy text-2xl font-black">3.100 UF</span>
+                </div>
+                <a
+                  href="#contacto"
+                  class="hover:bg-brand-navy text-brand-navy rounded-lg bg-slate-100 px-4 py-2 text-sm font-bold transition-colors hover:text-white"
+                  >Detalles</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Tarjeta 3 -->
+          <div
+            class="flex flex-col overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-md transition-shadow hover:shadow-xl"
+          >
+            <div class="relative h-64 bg-slate-200">
+              <img
+                src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=600&q=80"
+                alt="Parcela en Villarrica Araucania"
+                class="h-full w-full object-cover"
+              />
+              <span
+                class="absolute top-4 left-4 rounded-full bg-emerald-500 px-3 py-1 text-xs font-bold text-white uppercase"
+                >Venta</span
+              >
+            </div>
+            <div class="flex flex-1 flex-col justify-between p-6">
+              <div>
+                <span class="text-brand-gold text-sm font-bold tracking-wider uppercase"
+                  >Camino Villarrica - Pucón</span
+                >
+                <h3 class="text-brand-navy mt-1 mb-2 text-xl font-bold">
+                  Parcela con Vista al Volcán
+                </h3>
+                <p class="line-clamp-2 text-sm text-slate-600">
+                  Terreno de 5.000 m² con rol propio, luz soterrada y agua potable lista para
+                  empalme. Entorno natural nativo.
+                </p>
+              </div>
+              <div class="mt-6 flex items-center justify-between border-t border-slate-100 pt-4">
+                <div>
+                  <span class="block text-xs font-bold text-slate-400 uppercase">Precio desde</span>
+                  <span class="text-brand-navy text-2xl font-black">4.800 UF</span>
+                </div>
+                <a
+                  href="#contacto"
+                  class="hover:bg-brand-navy text-brand-navy rounded-lg bg-slate-100 px-4 py-2 text-sm font-bold transition-colors hover:text-white"
+                  >Detalles</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECCIÓN SERVICIOS -->
+      <section id="servicios" class="bg-slate-900 py-20 text-white">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div class="mx-auto mb-16 max-w-3xl text-center">
+            <h2 class="text-3xl font-bold tracking-tight sm:text-4xl">
+              ¿Cómo te ayudamos en el Mercado Chileno?
+            </h2>
+            <p class="mt-4 text-lg text-slate-400">
+              Hacemos que la compra o venta de tu propiedad sea transparente, ágil y segura.
+            </p>
+          </div>
+
+          <div class="grid gap-8 md:grid-cols-3">
+            <div class="rounded-2xl border border-slate-700 bg-slate-800 p-8">
+              <div
+                class="bg-brand-gold mb-6 flex h-12 w-12 items-center justify-center rounded-xl text-xl font-bold"
+              >
+                01
+              </div>
+              <h3 class="mb-3 text-xl font-bold">Tasación Comercial Real</h3>
+              <p class="text-sm leading-relaxed text-slate-400">
+                Analizamos el mercado local actual en Temuco para valorar tu propiedad correctamente
+                en UF, maximizando tu rentabilidad comercial.
+              </p>
+            </div>
+            <div class="rounded-2xl border border-slate-700 bg-slate-800 p-8">
+              <div
+                class="bg-brand-gold mb-6 flex h-12 w-12 items-center justify-center rounded-xl text-xl font-bold"
+              >
+                02
+              </div>
+              <h3 class="mb-3 text-xl font-bold">Gestión de Crédito Hipotecario</h3>
+              <p class="text-sm leading-relaxed text-slate-400">
+                Tenemos alianzas con los principales bancos de Chile para agilizar el proceso de
+                preaprobación de tus compradores.
+              </p>
+            </div>
+            <div class="rounded-2xl border border-slate-700 bg-slate-800 p-8">
+              <div
+                class="bg-brand-gold mb-6 flex h-12 w-12 items-center justify-center rounded-xl text-xl font-bold"
+              >
+                03
+              </div>
+              <h3 class="mb-3 text-xl font-bold">Asesoría Legal Integral</h3>
+              <p class="text-sm leading-relaxed text-slate-400">
+                Nos encargamos del estudio de títulos, redacción de promesas de compraventa y
+                coordinación notarial completa.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECCIÓN NOSOTROS / AGENTE -->
+      <section
+        id="nosotros"
+        class="mx-auto grid max-w-7xl items-center gap-12 px-4 py-20 sm:px-6 md:grid-cols-2 lg:px-8"
+      >
+        <div class="relative mx-auto max-w-md md:max-w-none">
+          <img
+            src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=600&q=80"
+            alt="Agente inmobiliario en Temuco"
+            class="aspect-[4/5] w-full rounded-2xl object-cover shadow-xl"
+          />
+          <div
+            class="bg-brand-gold absolute -right-6 -bottom-6 hidden max-w-xs rounded-2xl p-6 text-white shadow-xl sm:block"
+          >
+            <p class="text-lg font-bold">
+              "Transparencia absoluta en cada firma y cierre de negocio."
+            </p>
+          </div>
+        </div>
+        <div class="space-y-6">
+          <span class="text-brand-gold text-sm font-bold tracking-wider uppercase"
+            >Tu Aliado de Confianza</span
+          >
+          <h2 class="text-brand-navy text-3xl font-bold tracking-tight sm:text-4xl">
+            Hola, soy Carlos Fuentes
+          </h2>
+          <p class="text-lg leading-relaxed text-slate-600">
+            Fundador de **Ñielol Propiedades** y corredor certificado con más de 8 años de
+            experiencia en el mercado inmobiliario de la Región de la Araucanía.
+          </p>
+          <p class="leading-relaxed text-slate-600">
+            Mi enfoque no es vender propiedades en masa, sino guiar de forma personalizada a
+            familias e inversionistas que buscan asentar su patrimonio de manera segura en el sur de
+            Chile. Conozco cada rincón de Temuco, Labranza, Lautaro y las dinámicas comerciales
+            rurales.
+          </p>
+          <div class="grid grid-cols-2 gap-4 pt-4">
+            <div>
+              <span class="text-brand-navy block text-3xl font-black">+150</span>
+              <span class="text-xs font-bold tracking-wider text-slate-500 uppercase"
+                >Propiedades Transadas</span
+              >
+            </div>
+            <div>
+              <span class="text-brand-navy block text-3xl font-black">100%</span>
+              <span class="text-xs font-bold tracking-wider text-slate-500 uppercase"
+                >Clientes Satisfechos</span
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECCIÓN CONTACTO / CAPTACIÓN -->
+      <section id="contacto" class="bg-brand-light border-t border-slate-200 py-20">
+        <div
+          class="mx-auto max-w-4xl rounded-3xl border border-slate-100 bg-white p-8 px-4 shadow-xl sm:p-12 sm:px-6 lg:px-8"
+        >
+          <div class="mx-auto mb-10 max-w-2xl text-center">
+            <h2 class="text-brand-navy text-3xl font-bold tracking-tight">
+              Hablemos de tu Proyecto Inmobiliario
+            </h2>
+            <p class="mt-3 text-slate-600">
+              Completa el formulario y te contactaré en menos de 24 horas hábiles para coordinar una
+              reunión.
+            </p>
+          </div>
+
+          <form action="#" method="POST" class="grid gap-6 sm:grid-cols-2">
+            <div>
+              <label for="name" class="mb-1 block text-xs font-bold text-slate-500 uppercase"
+                >Nombre Completo</label
+              >
+              <input
+                type="text"
+                id="name"
+                name="name"
+                required
+                class="focus:border-brand-gold w-full rounded-lg border border-slate-200 bg-slate-50 p-3 transition-colors focus:outline-none"
+                placeholder="Ej: Juan Pérez"
+              />
+            </div>
+            <div>
+              <label for="phone" class="mb-1 block text-xs font-bold text-slate-500 uppercase"
+                >Teléfono de Contacto</label
+              >
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                required
+                class="focus:border-brand-gold w-full rounded-lg border border-slate-200 bg-slate-50 p-3 transition-colors focus:outline-none"
+                placeholder="Ej: +56 9 1234 5678"
+              />
+            </div>
+            <div class="sm:col-span-2">
+              <label for="email" class="mb-1 block text-xs font-bold text-slate-500 uppercase"
+                >Correo Electrónico</label
+              >
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                class="focus:border-brand-gold w-full rounded-lg border border-slate-200 bg-slate-50 p-3 transition-colors focus:outline-none"
+                placeholder="juan.perez@email.com"
+              />
+            </div>
+            <div class="sm:col-span-2">
+              <label for="interest" class="mb-1 block text-xs font-bold text-slate-500 uppercase"
+                >¿En qué te puedo ayudar?</label
+              >
+              <select
+                id="interest"
+                name="interest"
+                class="focus:border-brand-gold w-full rounded-lg border border-slate-200 bg-slate-50 p-3 transition-colors focus:outline-none"
+              >
+                <option>Quiero vender una propiedad en Temuco</option>
+                <option>Quiero comprar una casa / departamento</option>
+                <option>Busco invertir en parcelas</option>
+                <option>Otro tipo de asesoría</option>
+              </select>
+            </div>
+            <div class="sm:col-span-2">
+              <label for="message" class="mb-1 block text-xs font-bold text-slate-500 uppercase"
+                >Mensaje (Opcional)</label
+              >
+              <textarea
+                id="message"
+                name="message"
+                rows="4"
+                class="focus:border-brand-gold w-full rounded-lg border border-slate-200 bg-slate-50 p-3 transition-colors focus:outline-none"
+                placeholder="Cuéntame brevemente los detalles de tu propiedad o lo que buscas..."
+              ></textarea>
+            </div>
+            <div class="pt-2 sm:col-span-2">
+              <button
+                type="submit"
+                class="bg-brand-gold w-full rounded-lg py-4 text-sm font-bold tracking-wider text-white uppercase shadow-lg transition-colors hover:bg-amber-700"
+                >Enviar Solicitud de Asesoría</button
+              >
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-brand-navy border-t border-slate-800 py-12 text-slate-400">
+      <div class="mx-auto grid max-w-7xl gap-8 px-4 sm:px-6 md:grid-cols-3 lg:px-8">
+        <div class="space-y-4">
+          <span class="text-xl font-bold tracking-tight text-white"
+            >Ñielol<span class="text-brand-gold">Propiedades</span></span
+          >
+          <p class="text-sm">
+            Gestión inmobiliaria transparente y con identidad local en la Región de la Araucanía.
+          </p>
+        </div>
+        <div class="space-y-2">
+          <h4 class="text-sm font-bold tracking-wider text-white uppercase">Contacto Directo</h4>
+          <p class="text-sm">📍 Oficina Comercial: Av. Alemania, Temuco, Chile.</p>
+          <p class="text-sm">📞 +56 45 234 5678</p>
+          <p class="text-sm">✉️ contacto@propiedadesnielol.cl</p>
+        </div>
+        <div class="space-y-2 text-sm md:text-right">
+          <p>&copy; 2026 Ñielol Propiedades. Todos los derechos reservados.</p>
+          <p class="text-xs text-slate-500">Diseñado para el mercado inmobiliario de Chile.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Lógica funcional nativa para el menú móvil -->
+    <script>
+      const menuBtn = document.getElementById("menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      menuBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+
+      // Cerrar menú al hacer click en cualquier link interno
+      const mobileLinks = mobileMenu.querySelectorAll("a");
+      mobileLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+          mobileMenu.classList.add("hidden");
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,525 @@
+<!doctype html>
+<html lang="es" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO Local Médico/Veterinario -->
+    <title>Clínica Veterinaria Ñielol | Urgencias y Hospitalización en Temuco</title>
+    <meta
+      name="description"
+      content="Clínica Veterinaria en Temuco altamente equipada. Ofrecemos urgencias, cirugías, laboratorio clínico, ecografías y consultas especializadas en la Región de la Araucanía."
+    />
+    <meta
+      name="keywords"
+      content="veterinaria temuco, urgencias veterinarias temuco, clinica veterinaria temuco, cirugia veterinaria temuco, veterinario 24 horas temuco, hospitalizacion mascotas temuco, ecografia veterinaria la araucania"
+    />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph -->
+    <meta
+      property="og:title"
+      content="Clínica Veterinaria Ñielol - Cuidado Médico Avanzado en Temuco"
+    />
+    <meta
+      property="og:description"
+      content="Infraestructura médica avanzada para el diagnóstico, cirugía y bienestar de tu mascota en la Araucanía."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_CL" />
+
+    <!-- Importación obligatoria de Tailwind CSS -->
+    <script is:inline src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts: Look Corporativo, Clínico y Limpio -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+      }
+      h1,
+      h2,
+      h3,
+      h4 {
+        font-family: "Outfit", sans-serif;
+      }
+    </style>
+  </head>
+  <body class="bg-slate-50 text-slate-800 antialiased">
+    <!-- TOP BAR: Alerta de Urgencia Médica (Altamente persuasivo para el rubro) -->
+    <div class="bg-red-600 px-4 py-2 text-xs font-semibold text-white">
+      <div class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-2 sm:flex-row">
+        <span class="flex items-center gap-1">🚨 Red de Urgencia Veterinaria activa en Temuco</span>
+        <a href="tel:+56933445566" class="font-bold underline hover:text-slate-100"
+          >Llamar a Guardias: +56 9 3344 5566</a
+        >
+      </div>
+    </div>
+
+    <!-- HEADER / NAVBAR -->
+    <header class="sticky top-0 z-50 border-b border-slate-200 bg-white/95 shadow-sm backdrop-blur">
+      <div class="mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+        <!-- Logo Médico -->
+        <a href="#" class="flex items-center gap-3">
+          <div class="rounded-lg bg-teal-600 p-2 text-white">
+            <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"
+              ></path>
+            </svg>
+          </div>
+          <div>
+            <span class="block text-xl font-bold tracking-tight text-slate-900 uppercase"
+              >Ñielol</span
+            >
+            <span class="-mt-1 block text-xs font-semibold tracking-widest text-teal-600 uppercase"
+              >Clínica Veterinaria</span
+            >
+          </div>
+        </a>
+
+        <!-- Navegación Corporativa -->
+        <nav class="hidden items-center space-x-6 text-sm font-semibold text-slate-600 md:flex">
+          <a href="#inicio" class="transition-colors hover:text-teal-600">Inicio</a>
+          <a href="#infraestructura" class="transition-colors hover:text-teal-600"
+            >Infraestructura</a
+          >
+          <a href="#servicios" class="transition-colors hover:text-teal-600">Especialidades</a>
+          <a href="#equipo" class="transition-colors hover:text-teal-600">Cuerpo Médico</a>
+          <a href="#contacto" class="transition-colors hover:text-teal-600">Contacto</a>
+        </nav>
+
+        <!-- Reserva de horas clínicas -->
+        <div class="hidden lg:block">
+          <a
+            href="#contacto"
+            class="rounded bg-slate-900 px-5 py-3 text-xs font-bold tracking-wider text-white uppercase transition-all hover:bg-slate-800"
+          >
+            Agendar Control Clínico
+          </a>
+        </div>
+
+        <!-- Botón Móvil -->
+        <button id="btn-menu-vet" class="p-2 text-slate-700 md:hidden" aria-label="Abrir Menú">
+          <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+            ><path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"></path></svg
+          >
+        </button>
+      </div>
+
+      <!-- Menú Móvil -->
+      <div id="vet-dropdown" class="hidden space-y-4 bg-slate-900 px-4 py-6 text-white md:hidden">
+        <a href="#inicio" class="block border-b border-slate-800 pb-2 text-sm font-medium">Inicio</a
+        >
+        <a href="#infraestructura" class="block border-b border-slate-800 pb-2 text-sm font-medium"
+          >Infraestructura</a
+        >
+        <a href="#servicios" class="block border-b border-slate-800 pb-2 text-sm font-medium"
+          >Especialidades</a
+        >
+        <a href="#equipo" class="block border-b border-slate-800 pb-2 text-sm font-medium"
+          >Cuerpo Médico</a
+        >
+        <a href="#contacto" class="block pb-2 text-sm font-medium">Contacto</a>
+        <a
+          href="https://wa.me/56933445566?text=Hola,%20necesito%20agendar%20una%20hora%20medica%20veterinaria."
+          target="_blank"
+          class="block rounded bg-teal-600 py-3 text-center text-sm font-bold text-white"
+        >
+          Escribir por WhatsApp Clínico
+        </a>
+      </div>
+    </header>
+
+    <main>
+      <!-- HERO SECTION: Rigor Clínico y Seguridad -->
+      <section id="inicio" class="relative border-b border-slate-200 bg-white py-16 lg:py-24">
+        <div class="mx-auto grid max-w-7xl items-center gap-12 px-4 sm:px-6 md:grid-cols-2 lg:px-8">
+          <div class="space-y-6">
+            <div
+              class="inline-flex items-center gap-2 rounded border border-teal-200 bg-teal-50 px-3 py-1 text-xs font-bold tracking-wide text-teal-800 uppercase"
+            >
+              🩺 Medicina Veterinaria de Alta Complejidad
+            </div>
+            <h1
+              class="text-4xl leading-tight font-extrabold tracking-tight text-slate-900 sm:text-5xl"
+            >
+              Diagnóstico certero y medicina avanzada para su mascota.
+            </h1>
+            <p class="max-w-xl text-base text-slate-600">
+              Respaldados por un equipo de cirujanos y especialistas médicos dedicados las 24 horas
+              a resguardar la salud de pacientes críticos en la IX Región.
+            </p>
+            <div class="flex flex-col gap-4 pt-2 sm:flex-row">
+              <a
+                href="tel:+56933445566"
+                class="flex items-center justify-center gap-2 rounded bg-red-600 px-6 py-4 text-center text-xs font-bold tracking-wider text-white uppercase shadow-md transition-all hover:bg-red-700"
+              >
+                📞 Llamar Urgencia Ahora
+              </a>
+              <a
+                href="#servicios"
+                class="rounded border border-slate-300 px-6 py-4 text-center text-xs font-bold tracking-wider text-slate-700 uppercase transition-all hover:bg-slate-50"
+              >
+                Nuestras Especialidades
+              </a>
+            </div>
+          </div>
+
+          <!-- Bloque Gráfico Simbólico Hospitalario -->
+          <div
+            class="relative flex min-h-[360px] flex-col justify-between overflow-hidden rounded-xl border border-slate-800 bg-slate-900 p-8 text-slate-300 shadow-2xl"
+          >
+            <div class="absolute top-0 right-0 p-6 text-9xl opacity-10">➕</div>
+            <div class="z-10 space-y-4">
+              <span class="text-xs font-bold tracking-widest text-teal-400 uppercase"
+                >Infraestructura Tecnológica</span
+              >
+              <h3 class="text-2xl font-bold tracking-tight text-white">
+                Pabellones Quirúrgicos Completamente Equipados
+              </h3>
+              <p class="text-sm leading-relaxed text-slate-400">
+                Contamos con monitorización multiparámetro, anestesia inhalatoria y salas de
+                aislamiento bioseguro para evitar contagios clínicos.
+              </p>
+            </div>
+            <div
+              class="mt-6 grid grid-cols-2 gap-4 border-t border-slate-800 pt-6 text-xs font-semibold"
+            >
+              <div>🔬 Laboratorio Propio</div>
+              <div>🩻 Radiología Digital</div>
+              <div>🧬 Unidad de Paciente Crítico</div>
+              <div>🚙 Convenio de Traslado Médico</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECCIÓN ESTADÍSTICAS / VALOR DE MARCA -->
+      <section id="infraestructura" class="bg-slate-900 py-12 text-white">
+        <div
+          class="mx-auto grid max-w-7xl grid-cols-2 gap-8 px-4 text-center sm:px-6 lg:grid-cols-4 lg:px-8"
+        >
+          <div>
+            <span class="block text-3xl font-extrabold text-teal-400 sm:text-4xl">24/7</span>
+            <span class="mt-1 block text-xs tracking-widest text-slate-400 uppercase"
+              >Disponibilidad de Turnos</span
+            >
+          </div>
+          <div>
+            <span class="block text-3xl font-extrabold text-teal-400 sm:text-4xl">+10</span>
+            <span class="mt-1 block text-xs tracking-widest text-slate-400 uppercase"
+              >Médicos Especialistas</span
+            >
+          </div>
+          <div>
+            <span class="block text-3xl font-extrabold text-teal-400 sm:text-4xl">2</span>
+            <span class="mt-1 block text-xs tracking-widest text-slate-400 uppercase"
+              >Pabellones de Alta Cirugía</span
+            >
+          </div>
+          <div>
+            <span class="block text-3xl font-extrabold text-teal-400 sm:text-4xl">100%</span>
+            <span class="mt-1 block text-xs tracking-widest text-slate-400 uppercase"
+              >Foco en Bienestar Animal</span
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- SECCIÓN ESPECIALIDADES (Catálogo Clínico) -->
+      <section id="servicios" class="bg-slate-50 py-20">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div class="mx-auto mb-16 max-w-3xl text-center">
+            <h2 class="text-3xl font-extrabold tracking-tight text-slate-900">
+              Servicios Médicos Disponibles
+            </h2>
+            <p class="mt-2 text-sm text-slate-500">
+              Desarrollamos soluciones clínicas rigurosas bajo normativas sanitarias vigentes en
+              Chile.
+            </p>
+          </div>
+
+          <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+            <!-- Servicio 1 -->
+            <div
+              class="flex flex-col justify-between rounded-lg border border-slate-200 bg-white p-6 transition-shadow hover:shadow-md"
+            >
+              <div>
+                <div class="mb-2 text-sm font-bold tracking-wider text-teal-600 uppercase">
+                  Consulta General y Especializada
+                </div>
+                <h3 class="mb-3 text-lg font-bold text-slate-900">Medicina Interna</h3>
+                <p class="mb-6 text-xs leading-relaxed text-slate-600">
+                  Diagnóstico oportuno, manejo de patologías crónicas, endocrinología y planes
+                  preventivos integrales para felinos y caninos de todas las edades.
+                </p>
+              </div>
+              <a
+                href="https://wa.me/56933445566?text=Hola,%20necesito%20informacion%20sobre%20Consultas%20Medicas."
+                target="_blank"
+                class="text-xs font-bold tracking-wider text-teal-600 uppercase hover:text-teal-700"
+              >
+                Consultar Horarios →
+              </a>
+            </div>
+
+            <!-- Servicio 2 -->
+            <div
+              class="flex flex-col justify-between rounded-lg border border-slate-200 bg-white p-6 transition-shadow hover:shadow-md"
+            >
+              <div>
+                <div class="mb-2 text-sm font-bold tracking-wider text-teal-600 uppercase">
+                  Traumatología y Tejidos Blandos
+                </div>
+                <h3 class="mb-3 text-lg font-bold text-slate-900">Cirugía de Complejidad</h3>
+                <p class="mb-6 text-xs leading-relaxed text-slate-600">
+                  Intervenciones quirúrgicas realizadas en entornos estériles con anestesia segura y
+                  monitorización constante de constantes vitales por médicos dedicados.
+                </p>
+              </div>
+              <a
+                href="https://wa.me/56933445566?text=Hola,%20necesito%20informacion%20sobre%20el%20area%20de%20Cirugias."
+                target="_blank"
+                class="text-xs font-bold tracking-wider text-teal-600 uppercase hover:text-teal-700"
+              >
+                Consultar Horarios →
+              </a>
+            </div>
+
+            <!-- Servicio 3 -->
+            <div
+              class="flex flex-col justify-between rounded-lg border border-slate-200 bg-white p-6 transition-shadow hover:shadow-md"
+            >
+              <div>
+                <div class="mb-2 text-sm font-bold tracking-wider text-teal-600 uppercase">
+                  Imagenología Inmediata
+                </div>
+                <h3 class="mb-3 text-lg font-bold text-slate-900">Radiografías y Ecografía</h3>
+                <p class="mb-6 text-xs leading-relaxed text-slate-600">
+                  Equipos digitales modernos que permiten obtener imágenes de alta definición en
+                  minutos, vitales para el diagnóstico de emergencias traumatológicas u
+                  obstrucciones.
+                </p>
+              </div>
+              <a
+                href="https://wa.me/56933445566?text=Hola,%20necesito%20informacion%20sobre%20Examenes%20e%20Imagenologia."
+                target="_blank"
+                class="text-xs font-bold tracking-wider text-teal-600 uppercase hover:text-teal-700"
+              >
+                Consultar Horarios →
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECCIÓN CUERPO MÉDICO (Potencia el SEO de autoría y confianza) -->
+      <section id="equipo" class="bg-white py-20">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div class="mx-auto mb-16 max-w-3xl text-center">
+            <h2 class="text-3xl font-extrabold text-slate-900">
+              Profesionales Médicos Registrados
+            </h2>
+            <p class="mt-1 text-sm text-slate-500">
+              Médicos cirujanos veterinarios validados por el Colegio Médico Veterinario de Chile
+              (Colmevet).
+            </p>
+          </div>
+
+          <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+            <!-- Médico 1 -->
+            <article class="rounded border border-slate-200 bg-slate-50 p-6 text-center">
+              <div
+                class="mx-auto mb-4 flex h-20 w-20 items-center justify-center rounded-full border-2 border-white bg-slate-300 text-xl font-bold text-slate-600 shadow-sm"
+              >
+                Dr
+              </div>
+              <h3 class="text-lg font-bold text-slate-900">Dr. Ricardo Aguilera</h3>
+              <span class="mt-1 block text-xs font-semibold tracking-wider text-teal-600 uppercase"
+                >Director Médico - Cirujano Principal</span
+              >
+              <p class="mt-3 text-xs leading-relaxed text-slate-500">
+                Especialista en traumatología animal, egresado con amplia trayectoria hospitalaria
+                en la Araucanía.
+              </p>
+            </article>
+
+            <!-- Médico 2 -->
+            <article class="rounded border border-slate-200 bg-slate-50 p-6 text-center">
+              <div
+                class="mx-auto mb-4 flex h-20 w-20 items-center justify-center rounded-full border-2 border-white bg-slate-300 text-xl font-bold text-slate-600 shadow-sm"
+              >
+                Dra
+              </div>
+              <h3 class="text-lg font-bold text-slate-900">Dra. Camila Fuentes</h3>
+              <span class="mt-1 block text-xs font-semibold tracking-wider text-teal-600 uppercase"
+                >Medicina Felina e Interna</span
+              >
+              <p class="mt-3 text-xs leading-relaxed text-slate-500">
+                Dedicada exclusivamente al manejo integral y de bajo estrés para pacientes felinos
+                (Cat Friendly).
+              </p>
+            </article>
+
+            <!-- Médico 3 -->
+            <article class="rounded border border-slate-200 bg-slate-50 p-6 text-center">
+              <div
+                class="mx-auto mb-4 flex h-20 w-20 items-center justify-center rounded-full border-2 border-white bg-slate-300 text-xl font-bold text-slate-600 shadow-sm"
+              >
+                Dr
+              </div>
+              <h3 class="text-lg font-bold text-slate-900">Dr. Matías Toledo</h3>
+              <span class="mt-1 block text-xs font-semibold tracking-wider text-teal-600 uppercase"
+                >Imagenología y Cuidados Críticos</span
+              >
+              <p class="mt-3 text-xs leading-relaxed text-slate-500">
+                Encargado del diagnóstico ecográfico de emergencia y la supervisión de pacientes
+                hospitalizados.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECCIÓN FORMULARIO / CONTACTO DIRECTO / DIRECCIÓN -->
+      <section id="contacto" class="bg-slate-900 py-20 text-white">
+        <div class="mx-auto grid max-w-7xl items-center gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">
+          <div class="space-y-6">
+            <h2 class="text-3xl font-extrabold tracking-tight">Ubicación de Nuestra Sede</h2>
+            <p class="text-sm text-slate-400">
+              Nuestras dependencias de atención abierta y hospitalización se ubican en una zona de
+              alta conectividad y rápido acceso dentro de la comuna de Temuco.
+            </p>
+
+            <div class="space-y-4 text-xs font-medium text-slate-300">
+              <p class="flex items-center gap-3">
+                <span class="font-bold text-teal-400">🏢 Dirección:</span> Sector Camino El Venado / Av.
+                Rudecindo Ortega (Entrada Norte), Temuco, Chile.
+              </p>
+              <p class="flex items-center gap-3">
+                <span class="font-bold text-teal-400">📞 Teléfono Fijo:</span>
+                <a href="tel:+56452223344" class="hover:underline">+56 45 222 3344</a>
+              </p>
+              <p class="flex items-center gap-3">
+                <span class="font-bold text-teal-400">📲 Urgencias WhatsApp:</span>
+                <a href="https://wa.me/56933445566" class="hover:underline">+56 9 3344 5566</a>
+              </p>
+              <p class="flex items-center gap-3">
+                <span class="font-bold text-teal-400">⏰ Horario Consultas:</span> Lunes a Viernes de
+                09:00 a 19:30 hrs. Sábados de 09:00 a 14:00 hrs. (Fuera de este horario aplica tarifa
+                de urgencia).
+              </p>
+            </div>
+
+            <div class="pt-2">
+              <!-- Botón de llamada telefónica instantánea -->
+              <a
+                href="tel:+56933445566"
+                class="inline-block rounded bg-teal-600 px-6 py-4 text-xs font-bold tracking-wider text-white uppercase shadow-lg transition-colors hover:bg-teal-700"
+              >
+                Llamar Central Telefónica
+              </a>
+            </div>
+          </div>
+
+          <!-- Simulación de Módulo de Reservas Médicas -->
+          <div class="rounded-lg border border-slate-200 bg-white p-8 text-slate-900 shadow-xl">
+            <h3 class="mb-2 text-lg font-bold text-slate-900">Solicitud de Horas Médicas</h3>
+            <p class="mb-6 text-xs text-slate-500">
+              Complete los antecedentes para pre-agendar un cupo de atención preventiva o control.
+            </p>
+
+            <!-- El formulario redirige de forma esperada simulando acción comercial por WhatsApp -->
+            <form action="https://wa.me/56933445566" method="get" target="_blank" class="space-y-4">
+              <div>
+                <label class="mb-1 block text-xs font-bold text-slate-700 uppercase"
+                  >Nombre del Propietario</label
+                >
+                <input
+                  type="text"
+                  required
+                  class="w-full rounded border border-slate-300 bg-slate-50 p-3 text-sm focus:border-teal-600 focus:outline-none"
+                  placeholder="Ej: María José"
+                />
+              </div>
+              <div>
+                <label class="mb-1 block text-xs font-bold text-slate-700 uppercase"
+                  >Especie de la Mascota</label
+                >
+                <select
+                  class="w-full rounded border border-slate-300 bg-slate-50 p-3 text-sm focus:border-teal-600 focus:outline-none"
+                >
+                  <option>Canino (Perro)</option>
+                  <option>Felino (Gato)</option>
+                  <option>Otro</option>
+                </select>
+              </div>
+              <div>
+                <label class="mb-1 block text-xs font-bold text-slate-700 uppercase"
+                  >Motivo de Atención</label
+                >
+                <textarea
+                  required
+                  class="h-20 w-full rounded border border-slate-300 bg-slate-50 p-3 text-sm focus:border-teal-600 focus:outline-none"
+                  placeholder="Ej: Control sano, vacunas anuales, cojera..."></textarea>
+              </div>
+              <button
+                type="submit"
+                class="w-full rounded bg-slate-900 py-4 text-xs font-bold tracking-wider text-white uppercase shadow transition-colors hover:bg-slate-800"
+              >
+                Enviar Solicitud de Reserva
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-slate-900 bg-slate-950 py-12 text-xs text-slate-500">
+      <div
+        class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 px-4 sm:px-6 md:flex-row lg:px-8"
+      >
+        <div>
+          <p class="mb-1 font-bold text-slate-300">Clínica Veterinaria Ñielol Limitada.</p>
+          <p>&copy; 2026 Resguardo y Salud Veterinaria Avanzada en Temuco, Chile.</p>
+        </div>
+        <div class="flex gap-6 text-slate-400">
+          <a href="#" class="transition-colors hover:text-white">Normativa Sanitaria</a>
+          <a href="#" class="transition-colors hover:text-white">Términos de Hospitalización</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- LÓGICA MENÚ MÓVIL -->
+    <script>
+      const btnMenuVet = document.getElementById("btn-menu-vet");
+      const vetDropdown = document.getElementById("vet-dropdown");
+
+      btnMenuVet.addEventListener("click", () => {
+        vetDropdown.classList.toggle("hidden");
+      });
+
+      const linksVet = vetDropdown.querySelectorAll("a");
+      linksVet.forEach((link) => {
+        link.addEventListener("click", () => {
+          vetDropdown.classList.add("hidden");
+        });
+      });
+    </script>
+  </body>
+</html>

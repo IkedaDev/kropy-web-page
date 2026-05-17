@@ -1,0 +1,741 @@
+<!doctype html>
+<html lang="es" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO BÁSICO -->
+    <title>SurTerra Propiedades | Agente Inmobiliario en Temuco y La Araucanía</title>
+    <meta
+      name="description"
+      content="Venta y arriendo de parcelas, casas y departamentos exclusivos en Temuco, Portal de la Frontera, Villarrica y toda La Araucanía. Asesoría experta con SurTerra."
+    />
+    <meta
+      name="keywords"
+      content="propiedades temuco, casas en venta temuco, portal de la frontera, parcelas la araucania, corretaje de propiedades temuco, surterra propiedades"
+    />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://www.surterrapropiedades.cl" />
+
+    <!-- SEO OPEN GRAPH (Para compartir en Redes Sociales) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="SurTerra Propiedades | Asesoría Inmobiliaria en Temuco" />
+    <meta
+      property="og:description"
+      content="Encuentra tu próximo hogar o inversión en la Región de La Araucanía. Casas, departamentos y parcelas con gestión profesional."
+    />
+    <meta
+      property="og:image"
+      content="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1200&q=80"
+    />
+    <meta property="og:url" content="https://www.surterrapropiedades.cl" />
+    <meta property="og:locale" content="es_CL" />
+
+    <!-- IMPORTACIÓN DE TAILWIND (Etiqueta solicitada) -->
+    <script is:inline src="https://cdn.tailwindcss.com"></script>
+
+    <!-- CONFIGURACIÓN DE COLORES PERSONALIZADOS -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              araucaria: {
+                50: "#f2f8f5",
+                100: "#e2f0e8",
+                600: "#1e5e3a",
+                700: "#17492e",
+                800: "#133b26",
+                900: "#0f2f1e",
+              },
+              oro: {
+                500: "#d4af37",
+                600: "#aa8c2c",
+              },
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-slate-50 font-sans text-slate-800 antialiased">
+    <!-- HEADER / NAVBAR -->
+    <header
+      class="fixed z-50 w-full bg-white/95 shadow-sm backdrop-blur-md transition-all duration-300"
+    >
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="flex h-20 items-center justify-between">
+          <!-- Logo -->
+          <div class="flex flex-shrink-0 items-center">
+            <a
+              href="#"
+              class="text-araucaria-800 flex items-center gap-2 text-2xl font-bold tracking-tight"
+            >
+              <span class="text-oro-500">◆</span> SurTerra <span
+                class="block border-l border-slate-300 pl-2 text-sm font-light tracking-widest text-slate-500 uppercase"
+                >Propiedades</span
+              >
+            </a>
+          </div>
+
+          <!-- Desktop Nav -->
+          <nav class="hidden items-center space-x-8 md:flex">
+            <a
+              href="#inicio"
+              class="hover:text-araucaria-700 font-medium text-slate-600 transition-colors"
+              >Inicio</a
+            >
+            <a
+              href="#propiedades"
+              class="hover:text-araucaria-700 font-medium text-slate-600 transition-colors"
+              >Propiedades</a
+            >
+            <a
+              href="#sobre-mi"
+              class="hover:text-araucaria-700 font-medium text-slate-600 transition-colors"
+              >Sobre Mí</a
+            >
+            <a
+              href="#testimonios"
+              class="hover:text-araucaria-700 font-medium text-slate-600 transition-colors"
+              >Testimonios</a
+            >
+            <a
+              href="#contacto"
+              class="bg-araucaria-700 hover:bg-araucaria-800 shadow-araucaria-700/10 rounded-lg px-5 py-2.5 font-medium text-white shadow-md transition-all active:scale-95"
+              >Agendar Asesoría</a
+            >
+          </nav>
+
+          <!-- Mobile menu button -->
+          <div class="flex items-center md:hidden">
+            <button
+              id="mobile-menu-btn"
+              type="button"
+              class="hover:text-araucaria-700 text-slate-600 focus:outline-none"
+              aria-label="Abrir menú"
+            >
+              <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path
+                  id="menu-icon"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile Nav Menu -->
+      <div id="mobile-menu" class="hidden border-b border-slate-200 bg-white md:hidden">
+        <div class="space-y-1 px-2 pt-2 pb-4 sm:px-3">
+          <a
+            href="#inicio"
+            class="block rounded-md px-3 py-2 text-base font-medium text-slate-700 hover:bg-slate-100"
+            >Inicio</a
+          >
+          <a
+            href="#propiedades"
+            class="block rounded-md px-3 py-2 text-base font-medium text-slate-700 hover:bg-slate-100"
+            >Propiedades</a
+          >
+          <a
+            href="#sobre-mi"
+            class="block rounded-md px-3 py-2 text-base font-medium text-slate-700 hover:bg-slate-100"
+            >Sobre Mí</a
+          >
+          <a
+            href="#testimonios"
+            class="block rounded-md px-3 py-2 text-base font-medium text-slate-700 hover:bg-slate-100"
+            >Testimonios</a
+          >
+          <a
+            href="#contacto"
+            class="bg-araucaria-700 block w-full rounded-md px-3 py-3 text-center text-base font-medium text-white shadow-sm"
+            >Agendar Asesoría</a
+          >
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- HERO SECTION -->
+      <section
+        id="inicio"
+        class="bg-araucaria-900 relative flex min-h-screen items-center overflow-hidden pt-20"
+      >
+        <div class="absolute inset-0 opacity-40">
+          <img
+            src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1920&q=80"
+            alt="Casas exclusivas en Temuco La Araucanía"
+            class="h-full w-full object-cover"
+          />
+        </div>
+        <div
+          class="from-araucaria-900 via-araucaria-900/80 absolute inset-0 bg-gradient-to-r to-transparent"
+        >
+        </div>
+
+        <div class="relative z-10 mx-auto max-w-7xl px-4 py-24 sm:px-6 md:py-32 lg:px-8">
+          <div class="max-w-2xl">
+            <span
+              class="bg-oro-500/20 text-oro-500 border-oro-500/30 mb-6 inline-flex items-center gap-2 rounded-full border px-3 py-1 text-sm font-semibold tracking-wider uppercase"
+            >
+              Mercado Inmobiliario Premium
+            </span>
+            <h1
+              class="text-4xl leading-tight font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl"
+            >
+              Encuentra tu espacio ideal en <span class="text-oro-500">Temuco</span> y el Sur de Chile
+            </h1>
+            <p class="mt-6 max-w-xl text-lg leading-relaxed text-slate-300">
+              Te ayudo a gestionar la compra, venta o inversión de propiedades exclusivas en la
+              Región de La Araucanía. Confianza, transparencia y gestión local experta.
+            </p>
+            <div class="mt-10 flex flex-col gap-4 sm:flex-row">
+              <a
+                href="#propiedades"
+                class="bg-oro-500 text-araucaria-950 hover:bg-oro-600 shadow-oro-500/20 rounded-xl px-8 py-4 text-center font-bold shadow-lg transition-all active:scale-95"
+              >
+                Ver Catálogo de Propiedades
+              </a>
+              <a
+                href="#contacto"
+                class="rounded-xl border-2 border-white/80 px-8 py-4 text-center font-semibold text-white transition-all hover:bg-white/10 active:scale-95"
+              >
+                Hablar con un Asesor
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECCIÓN DE ENFOQUE / LOGROS (BENEFICIOS) -->
+      <section
+        class="relative z-20 mx-auto -mt-8 max-w-7xl rounded-t-3xl bg-white px-4 py-16 shadow-inner sm:px-6 lg:px-8"
+      >
+        <div class="grid grid-cols-1 gap-8 text-center md:grid-cols-3">
+          <div class="rounded-2xl border border-slate-100 bg-slate-50 p-6">
+            <div class="text-araucaria-700 mb-2 text-4xl font-extrabold">+120</div>
+            <p class="font-medium text-slate-600">Familias con nuevo hogar en Temuco</p>
+          </div>
+          <div class="rounded-2xl border border-slate-100 bg-slate-50 p-6">
+            <div class="text-araucaria-700 mb-2 text-4xl font-extrabold">98%</div>
+            <p class="font-medium text-slate-600">Satisfechos con tasaciones y cierres rápidos</p>
+          </div>
+          <div class="rounded-2xl border border-slate-100 bg-slate-50 p-6">
+            <div class="text-araucaria-700 mb-2 text-4xl font-extrabold">UF 4.500+</div>
+            <p class="font-medium text-slate-600">Ticket promedio de inversión gestionada</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROPIEDADES DESTACADAS -->
+      <section id="propiedades" class="bg-slate-50 py-24">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div class="mx-auto mb-16 max-w-3xl text-center">
+            <h2 class="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
+              Oportunidades Destacadas en La Araucanía
+            </h2>
+            <p class="mt-4 text-lg text-slate-600">
+              Casas residenciales, departamentos de alta plusvalía y parcelas exclusivas
+              seleccionadas bajo estrictos estándares.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
+            <!-- Propiedad 1 -->
+            <article
+              class="flex flex-col overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-lg transition-all duration-300 hover:shadow-xl"
+            >
+              <div class="relative h-64 bg-slate-200">
+                <img
+                  src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=600&q=80"
+                  alt="Casa en Portal de la Frontera, Temuco"
+                  class="h-full w-full object-cover"
+                />
+                <span
+                  class="bg-araucaria-700 absolute top-4 left-4 rounded-md px-3 py-1.5 text-xs font-bold tracking-wider text-white uppercase"
+                  >Venta</span
+                >
+              </div>
+              <div class="flex flex-grow flex-col justify-between p-6">
+                <div>
+                  <div class="text-oro-600 mb-1 text-sm font-semibold">
+                    Portal de la Frontera, Temuco
+                  </div>
+                  <h3 class="mb-2 text-xl font-bold text-slate-900">Moderna Casa Mediterránea</h3>
+                  <p class="mb-4 line-clamp-2 text-sm text-slate-600">
+                    Emplazada en el sector de mayor plusvalía de Temuco. Excelentes accesos,
+                    seguridad 24/7 y finas terminaciones.
+                  </p>
+                </div>
+                <div>
+                  <div
+                    class="mb-4 flex items-center justify-between border-t border-slate-100 pt-4 text-sm text-slate-500"
+                  >
+                    <span><strong>4</strong> Dorm.</span>
+                    <span><strong>3</strong> Baños</span>
+                    <span><strong>240</strong> m² const.</span>
+                  </div>
+                  <div class="flex items-center justify-between">
+                    <span class="text-araucaria-800 text-2xl font-black">UF 8.900</span>
+                    <a
+                      href="#contacto"
+                      onclick="setSubject('Consulta por: Moderna Casa Mediterránea - Portal de la Frontera')"
+                      class="text-araucaria-700 hover:text-oro-600 inline-flex items-center gap-1 text-sm font-bold"
+                    >
+                      Ver Detalles <span>&rarr;</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Propiedad 2 -->
+            <article
+              class="flex flex-col overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-lg transition-all duration-300 hover:shadow-xl"
+            >
+              <div class="relative h-64 bg-slate-200">
+                <img
+                  src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=600&q=80"
+                  alt="Parcela en Villarrica, La Araucanía"
+                  class="h-full w-full object-cover"
+                />
+                <span
+                  class="bg-araucaria-700 absolute top-4 left-4 rounded-md px-3 py-1.5 text-xs font-bold tracking-wider text-white uppercase"
+                  >Exclusivo</span
+                >
+              </div>
+              <div class="flex flex-grow flex-col justify-between p-6">
+                <div>
+                  <div class="text-oro-600 mb-1 text-sm font-semibold">
+                    Camino Villarrica - Pucón
+                  </div>
+                  <h3 class="mb-2 text-xl font-bold text-slate-900">Parcela con Vista al Volcán</h3>
+                  <p class="mb-4 line-clamp-2 text-sm text-slate-600">
+                    Terreno plano de 5.000 m² inserto en bosque nativo. Con luz soterrada, agua
+                    potable y vista limpia al Volcán Villarrica.
+                  </p>
+                </div>
+                <div>
+                  <div
+                    class="mb-4 flex items-center justify-between border-t border-slate-100 pt-4 text-sm text-slate-500"
+                  >
+                    <span>Bosque Nativo</span>
+                    <span><strong>5.000</strong> m² tot.</span>
+                  </div>
+                  <div class="flex items-center justify-between">
+                    <span class="text-araucaria-800 text-2xl font-black">UF 3.200</span>
+                    <a
+                      href="#contacto"
+                      onclick="setSubject('Consulta por: Parcela con Vista al Volcán - Villarrica')"
+                      class="text-araucaria-700 hover:text-oro-600 inline-flex items-center gap-1 text-sm font-bold"
+                    >
+                      Ver Detalles <span>&rarr;</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Propiedad 3 -->
+            <article
+              class="flex flex-col overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-lg transition-all duration-300 hover:shadow-xl"
+            >
+              <div class="relative h-64 bg-slate-200">
+                <img
+                  src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=600&q=80"
+                  alt="Departamento en Avenida Alemania, Temuco"
+                  class="h-full w-full object-cover"
+                />
+                <span
+                  class="bg-araucaria-700 absolute top-4 left-4 rounded-md px-3 py-1.5 text-xs font-bold tracking-wider text-white uppercase"
+                  >Inversión</span
+                >
+              </div>
+              <div class="flex flex-grow flex-col justify-between p-6">
+                <div>
+                  <div class="text-oro-600 mb-1 text-sm font-semibold">
+                    Sector Av. Alemania, Temuco
+                  </div>
+                  <h3 class="mb-2 text-xl font-bold text-slate-900">Departamento Studio Moderno</h3>
+                  <p class="mb-4 line-clamp-2 text-sm text-slate-600">
+                    Ideal para inversión rentista. Cercano a universidades, centros comerciales y
+                    clínicas. Alta demanda de arriendo asegurada.
+                  </p>
+                </div>
+                <div>
+                  <div
+                    class="mb-4 flex items-center justify-between border-t border-slate-100 pt-4 text-sm text-slate-500"
+                  >
+                    <span><strong>1</strong> Dorm.</span>
+                    <span><strong>1</strong> Baño</span>
+                    <span><strong>42</strong> m² const.</span>
+                  </div>
+                  <div class="flex items-center justify-between">
+                    <span class="text-araucaria-800 text-2xl font-black">$78.000.000</span>
+                    <a
+                      href="#contacto"
+                      onclick="setSubject('Consulta por: Departamento Studio Moderno - Av. Alemania')"
+                      class="text-araucaria-700 hover:text-oro-600 inline-flex items-center gap-1 text-sm font-bold"
+                    >
+                      Ver Detalles <span>&rarr;</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- SOBRE MÍ / AGENTE -->
+      <section id="sobre-mi" class="bg-white py-24">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div class="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
+            <div class="relative">
+              <div class="bg-araucaria-100 absolute -top-4 -left-4 -z-10 h-72 w-72 rounded-2xl">
+              </div>
+              <div class="bg-oro-500/10 absolute -right-4 -bottom-4 -z-10 h-72 w-72 rounded-2xl">
+              </div>
+              <img
+                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80"
+                alt="Agente Inmobiliario de SurTerra Propiedades Temuco"
+                class="mx-auto w-full max-w-md rounded-2xl object-cover shadow-xl"
+              />
+            </div>
+            <div>
+              <span class="text-oro-600 mb-2 block text-sm font-bold tracking-widest uppercase"
+                >Tu aliada inmobiliaria</span
+              >
+              <h2 class="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
+                Hola, soy Andrea Benavides
+              </h2>
+              <p class="mt-6 leading-relaxed text-slate-600">
+                Como corredora de propiedades titulada y con más de 8 años viviendo y trabajando en
+                Temuco, entiendo perfectamente el valor del territorio, la conectividad urbana y la
+                paz rural que buscas en nuestra hermosa Araucanía.
+              </p>
+              <p class="mt-4 leading-relaxed text-slate-600">
+                Mi compromiso contigo va más allá de un contrato de compraventa; te asesoro legal,
+                técnica y comercialmente para garantizar que tu patrimonio esté seguro y que la
+                transacción sea una experiencia fluida y transparente.
+              </p>
+              <div class="mt-8 grid grid-cols-2 gap-4">
+                <div class="flex items-start gap-2">
+                  <span class="text-araucaria-600 text-lg font-bold">✔</span>
+                  <span class="text-sm font-medium text-slate-700">Tasación Comercial Real</span>
+                </div>
+                <div class="flex items-start gap-2">
+                  <span class="text-araucaria-600 text-lg font-bold">✔</span>
+                  <span class="text-sm font-medium text-slate-700">Red Legal Especializada</span>
+                </div>
+                <div class="flex items-start gap-2">
+                  <span class="text-araucaria-600 text-lg font-bold">✔</span>
+                  <span class="text-sm font-medium text-slate-700">Marketing Digital Avanzado</span>
+                </div>
+                <div class="flex items-start gap-2">
+                  <span class="text-araucaria-600 text-lg font-bold">✔</span>
+                  <span class="text-sm font-medium text-slate-700"
+                    >Gestión de Crédito Hipotecario</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TESTIMONIOS -->
+      <section id="testimonios" class="bg-araucaria-900 py-24 text-white">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div class="mx-auto mb-16 max-w-2xl text-center">
+            <h2 class="text-3xl font-bold tracking-tight sm:text-4xl">
+              Lo que dicen mis clientes en la región
+            </h2>
+            <p class="text-araucaria-100 mt-4">
+              Historias reales de personas que confiaron en SurTerra Propiedades.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+            <!-- Testimonio 1 -->
+            <div
+              class="bg-araucaria-800 border-araucaria-700 flex flex-col justify-between rounded-2xl border p-8"
+            >
+              <p class="leading-relaxed text-slate-200 italic">
+                "Excelente gestión en la venta de nuestra casa en el Barrio Inglés. Andrea se
+                encargó de todo el papeleo y los filtros de clientes. La venta salió en menos de dos
+                meses."
+              </p>
+              <div class="mt-6 flex items-center gap-3">
+                <div
+                  class="bg-oro-500 text-araucaria-900 flex h-10 w-10 items-center justify-center rounded-full font-bold"
+                >
+                  CA
+                </div>
+                <div>
+                  <h4 class="text-sm font-bold text-white">Carlos Aguilera M.</h4>
+                  <span class="text-araucaria-300 text-xs">Vendedor, Temuco</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Testimonio 2 -->
+            <div
+              class="bg-araucaria-800 border-araucaria-700 flex flex-col justify-between rounded-2xl border p-8"
+            >
+              <p class="leading-relaxed text-slate-200 italic">
+                "Comprar nuestra parcela familiar en el camino hacia Labranza nos ponía nerviosos
+                por los derechos de agua, pero la asesoría de SurTerra fue impecable y muy
+                profesional."
+              </p>
+              <div class="mt-6 flex items-center gap-3">
+                <div
+                  class="bg-oro-500 text-araucaria-900 flex h-10 w-10 items-center justify-center rounded-full font-bold"
+                >
+                  MS
+                </div>
+                <div>
+                  <h4 class="text-sm font-bold text-white">Mariela Schäfer</h4>
+                  <span class="text-araucaria-300 text-xs">Compradora, Temuco</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Testimonio 3 -->
+            <div
+              class="bg-araucaria-800 border-araucaria-700 flex flex-col justify-between rounded-2xl border p-8"
+            >
+              <p class="leading-relaxed text-slate-200 italic">
+                "Como inversionista de Santiago, busqué oportunidades en departamentos cerca de la
+                Universidad de La Frontera. El retorno de arriendo ha sido exactamente lo proyectado
+                por Andrea."
+              </p>
+              <div class="mt-6 flex items-center gap-3">
+                <div
+                  class="bg-oro-500 text-araucaria-900 flex h-10 w-10 items-center justify-center rounded-full font-bold"
+                >
+                  RG
+                </div>
+                <div>
+                  <h4 class="text-sm font-bold text-white">Rodrigo Gatica</h4>
+                  <span class="text-araucaria-300 text-xs">Inversionista, Santiago</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FORMULARIO DE CONTACTO (CAPTACIÓN) -->
+      <section id="contacto" class="bg-slate-50 py-24">
+        <div
+          class="mx-auto max-w-3xl rounded-3xl border border-slate-100 bg-white p-8 px-4 shadow-xl sm:p-12 sm:px-6 lg:px-8"
+        >
+          <div class="mb-10 text-center">
+            <h2 class="text-3xl font-bold text-slate-900">
+              Conversemos sobre tu próxima propiedad
+            </h2>
+            <p class="mt-2 text-slate-600">
+              Completa el formulario y te contactaré en menos de 24 horas hábiles.
+            </p>
+          </div>
+
+          <form id="contact-form" action="#" method="POST" class="space-y-6">
+            <div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
+              <div>
+                <label for="nombre" class="mb-2 block text-sm font-semibold text-slate-700"
+                  >Nombre Completo</label
+                >
+                <input
+                  type="text"
+                  id="nombre"
+                  name="nombre"
+                  required
+                  class="focus:ring-araucaria-600 w-full rounded-xl border border-slate-300 px-4 py-3 transition-all outline-none focus:border-transparent focus:ring-2"
+                />
+              </div>
+              <div>
+                <label for="telefono" class="mb-2 block text-sm font-semibold text-slate-700"
+                  >Teléfono de Contacto</label
+                >
+                <input
+                  type="tel"
+                  id="telefono"
+                  name="telefono"
+                  placeholder="+56 9 1234 5678"
+                  required
+                  class="focus:ring-araucaria-600 w-full rounded-xl border border-slate-300 px-4 py-3 transition-all outline-none focus:border-transparent focus:ring-2"
+                />
+              </div>
+            </div>
+
+            <div>
+              <label for="email" class="mb-2 block text-sm font-semibold text-slate-700"
+                >Correo Electrónico</label
+              >
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                class="focus:ring-araucaria-600 w-full rounded-xl border border-slate-300 px-4 py-3 transition-all outline-none focus:border-transparent focus:ring-2"
+              />
+            </div>
+
+            <div>
+              <label for="interes" class="mb-2 block text-sm font-semibold text-slate-700"
+                >¿Qué buscas hacer?</label
+              >
+              <select
+                id="interes"
+                name="interes"
+                class="focus:ring-araucaria-600 w-full rounded-xl border border-slate-300 bg-white px-4 py-3 transition-all outline-none focus:border-transparent focus:ring-2"
+              >
+                <option value="comprar">Quiero comprar una propiedad</option>
+                <option value="vender">Quiero vender / tasar mi propiedad</option>
+                <option value="invertir">Busco opciones de inversión</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="mensaje" class="mb-2 block text-sm font-semibold text-slate-700"
+                >Mensaje o Detalles de tu búsqueda</label
+              >
+              <textarea
+                id="mensaje"
+                name="mensaje"
+                rows="4"
+                required
+                class="focus:ring-araucaria-600 w-full resize-none rounded-xl border border-slate-300 px-4 py-3 transition-all outline-none focus:border-transparent focus:ring-2"
+              ></textarea>
+            </div>
+
+            <!-- Botón de Envío con feedback -->
+            <div>
+              <button
+                type="submit"
+                class="bg-araucaria-700 hover:bg-araucaria-800 shadow-araucaria-700/20 flex w-full items-center justify-center gap-2 rounded-xl py-4 font-bold text-white shadow-lg transition-all active:scale-[0.99]"
+              >
+                <span>Enviar Solicitud de Asesoría</span>
+              </button>
+            </div>
+          </form>
+
+          <!-- Alerta de Éxito Mockup -->
+          <div
+            id="form-success"
+            class="mt-6 hidden rounded-xl border border-emerald-200 bg-emerald-50 p-4 text-center font-medium text-emerald-800"
+          >
+            ¡Mensaje recibido con éxito! Nos comunicaremos contigo a la brevedad.
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-slate-800 bg-slate-900 py-12 text-slate-400">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="mb-8 grid grid-cols-1 gap-8 md:grid-cols-3">
+          <div>
+            <span class="mb-4 flex items-center gap-2 text-xl font-bold tracking-tight text-white">
+              <span class="text-oro-500">◆</span> SurTerra
+            </span>
+            <p class="text-sm">
+              Corretaje de Propiedades y Asesorías de Inversión en toda la Región de La Araucanía,
+              Chile.
+            </p>
+          </div>
+          <div>
+            <h4 class="mb-4 font-semibold text-white">Contacto Local</h4>
+            <p class="mb-2 text-sm">📍 Av. Alemania #01240, Oficina 402, Temuco.</p>
+            <p class="mb-2 text-sm">📞 +56 45 2 990022</p>
+            <p class="text-sm">✉ contacto@surterrapropiedades.cl</p>
+          </div>
+          <div>
+            <h4 class="mb-4 font-semibold text-white">Horario de Atención</h4>
+            <p class="text-sm">Lunes a Viernes: 09:00 a 18:30 hrs</p>
+            <p class="mt-1 text-sm">Sábados (Agendamiento previo): 10:00 a 13:00 hrs</p>
+          </div>
+        </div>
+        <div
+          class="flex flex-col justify-between border-t border-slate-800 pt-8 text-xs text-slate-500 sm:flex-row"
+        >
+          <p>
+            &copy; 2026 SurTerra Propiedades. Todos los derechos reservados. Diseñado para Temuco,
+            Chile.
+          </p>
+          <div class="mt-4 flex gap-4 sm:mt-0">
+            <a href="#" class="hover:text-white">Política de Privacidad</a>
+            <a href="#" class="hover:text-white">Términos del Servicio</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- INTERACCIONES Y LÓGICA DE BOTONES (JS NATIVO) -->
+    <script>
+      // Lógica Menú Móvil
+      const mobileMenuBtn = document.getElementById("mobile-menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+      const menuIcon = document.getElementById("menu-icon");
+
+      mobileMenuBtn.addEventListener("click", () => {
+        const isExpanded = mobileMenu.classList.contains("hidden");
+        if (isExpanded) {
+          mobileMenu.classList.remove("hidden");
+          menuIcon.setAttribute("d", "M6 18L18 6M6 6l12 12"); // Icono Cerrar (X)
+        } else {
+          mobileMenu.classList.add("hidden");
+          menuIcon.setAttribute("d", "M4 6h16M4 12h16M4 18h16"); // Icono Hamburguesa
+        }
+      });
+
+      // Cerrar menú móvil al hacer click en un enlace
+      const mobileLinks = mobileMenu.querySelectorAll("a");
+      mobileLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+          mobileMenu.classList.add("hidden");
+          menuIcon.setAttribute("d", "M4 6h16M4 12h16M4 18h16");
+        });
+      });
+
+      // Función dinámica al presionar "Ver Detalles" en las propiedades
+      function setSubject(propertyText) {
+        const textarea = document.getElementById("mensaje");
+        textarea.value = `Hola Andrea, me interesa obtener más información sobre la propiedad "${propertyText}". Quedo atento/a a tus comentarios.`;
+        // Scroll fluido inmediato al formulario
+        document.getElementById("contacto").scrollIntoView({ behavior: "smooth" });
+      }
+
+      // Lógica de Envío del Formulario (Feedback interactivo)
+      const form = document.getElementById("contact-form");
+      const successAlert = document.getElementById("form-success");
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault(); // Evita recarga real en el template de venta
+
+        // Simular carga de envío
+        const submitBtn = form.querySelector('button[type="submit"]');
+        submitBtn.disabled = true;
+        submitBtn.innerText = "Enviando...";
+
+        setTimeout(() => {
+          form.reset();
+          submitBtn.disabled = false;
+          submitBtn.innerText = "Enviar Solicitud de Asesoría";
+          successAlert.classList.remove("hidden");
+
+          // Ocultar alerta después de 5 segundos
+          setTimeout(() => {
+            successAlert.classList.add("hidden");
+          }, 5000);
+        }, 1200);
+      });
+    </script>
+  </body>
+</html>
