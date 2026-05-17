@@ -1,0 +1,1311 @@
+<!doctype html>
+<html lang="es" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inka | Kinetic & Thermal Lab • Temuco</title>
+
+    <!-- Tailwind CSS (Default CDN) -->
+    <script is:inline src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts: Plus Jakarta Sans (Limpia y moderna) & Playfair Display (Serif de lujo orgánico) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      /* CSS PURO: Definición de variables de diseño para una estética minimalista-sensorial de alta gama */
+      :root {
+        --kutral-bg: #faf8f5; /* Tiza cálido / Arena suave */
+        --kutral-white: #ffffff; /* Blanco puro */
+        --kutral-dark: #1c2220; /* Carbón mineral suave */
+        --kutral-clay: #c87a53; /* Arcilla / Terracota satinada */
+        --kutral-clay-light: #f7efea; /* Fondo arcilla ultra suave */
+        --kutral-border: #e8e4de; /* Líneas finas y sutiles de separación */
+        --kutral-muted: #6e7572; /* Gris de lectura técnica relajado */
+      }
+
+      body {
+        background-color: var(--kutral-bg);
+        color: var(--kutral-dark);
+        font-family: "Plus Jakarta Sans", sans-serif;
+        letter-spacing: -0.01em;
+      }
+
+      .font-editorial {
+        font-family: "Playfair Display", serif;
+      }
+
+      /* Transiciones sedosas y fluidas de interfaz */
+      .kutral-transition {
+        transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+
+      /* Máscara de recorte fina para imágenes */
+      .premium-mask {
+        clip-path: inset(0% 0% 0% 0% round 12px);
+      }
+    </style>
+  </head>
+  <body class="relative overflow-x-hidden antialiased">
+    <!-- CABECERA SENSORIAL (Minimalista, transparente y de líneas finas) -->
+    <header
+      class="sticky top-0 z-50 border-b border-[--kutral-border] bg-[#FAF8F5]/80 py-4 backdrop-blur-lg"
+    >
+      <div class="mx-auto flex max-w-7xl items-center justify-between px-6 sm:px-10">
+        <!-- Marca Inka -->
+        <a href="#" class="group flex items-center gap-2">
+          <span
+            class="font-editorial kutral-transition text-2xl font-bold tracking-tight text-[--kutral-dark] italic group-hover:text-[--kutral-clay]"
+          >
+            Inka<span class="text-[--kutral-clay] not-italic">.</span>
+          </span>
+        </a>
+
+        <!-- Navegación Refinada -->
+        <nav
+          class="hidden items-center space-x-12 text-[10px] font-bold tracking-[0.25em] text-[--kutral-muted] uppercase lg:flex"
+        >
+          <a href="#concepto" class="kutral-transition hover:text-[--kutral-dark]">Concepto</a>
+          <a href="#ciclo" class="kutral-transition hover:text-[--kutral-dark]">Ciclo Térmico</a>
+          <a href="#clases" class="kutral-transition hover:text-[--kutral-dark]">Clases</a>
+          <a href="#planes" class="kutral-transition hover:text-[--kutral-dark]">Tarifas</a>
+        </nav>
+
+        <!-- Acción de Alta Conversión -->
+        <div class="flex items-center gap-4">
+          <a
+            href="https://wa.me/56900000000?text=Hola%20Inka,%20me%20gustaría%20solicitar%20mi%20pase%20de%20cortesía%20para%20conocer%20el%20espacio."
+            target="_blank"
+            class="kutral-transition rounded-full bg-[--kutral-dark] px-6 py-3 text-[10px] font-bold tracking-widest text-white uppercase shadow-sm hover:bg-[--kutral-clay]"
+          >
+            Pase de Prueba
+          </a>
+
+          <!-- Menú móvil sutil -->
+          <button
+            id="drawer-toggle"
+            class="p-2 text-[--kutral-dark] focus:outline-none lg:hidden"
+            aria-label="Abrir Menú"
+          >
+            <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path
+                id="drawer-icon"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.8"
+                d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Cajón de navegación móvil -->
+      <div
+        id="mobile-drawer"
+        class="absolute left-0 hidden w-full border-b border-[--kutral-border] bg-[#FAF8F5] px-6 py-6 shadow-lg lg:hidden"
+      >
+        <div
+          class="flex flex-col space-y-4 text-[10px] font-bold tracking-widest text-[--kutral-muted] uppercase"
+        >
+          <a href="#concepto" class="py-1 hover:text-[--kutral-dark]">Concepto</a>
+          <a href="#ciclo" class="py-1 hover:text-[--kutral-dark]">Ciclo Térmico</a>
+          <a href="#clases" class="py-1 hover:text-[--kutral-dark]">Clases</a>
+          <a href="#planes" class="py-1 hover:text-[--kutral-dark]">Tarifas</a>
+          <a
+            href="https://wa.me/56900000000"
+            class="mt-2 block rounded-full bg-[--kutral-dark] py-3.5 text-center text-[10px] font-bold tracking-widest text-white uppercase"
+            >Clase de Prueba de Cortesía</a
+          >
+        </div>
+      </div>
+    </header>
+
+    <!-- SECCIÓN HERO: Composición Limpia, Aireada e Inspiradora -->
+    <section class="relative mx-auto max-w-7xl px-6 py-20 sm:px-10 lg:py-32">
+      <div class="grid grid-cols-1 items-center gap-16 lg:grid-cols-12">
+        <!-- Copys de Lujo Editorial -->
+        <div class="space-y-8 text-center lg:col-span-7 lg:text-left">
+          <div
+            class="inline-flex items-center gap-2 rounded-full border border-[--kutral-border] bg-white px-3.5 py-1.5 text-[9px] font-bold tracking-[0.2em] text-[--kutral-clay] uppercase"
+          >
+            <span>🌲</span> TEMUCO, ARAUCANÍA
+          </div>
+
+          <h1
+            class="font-editorial text-5xl leading-[1.05] tracking-tight text-[--kutral-dark] sm:text-7xl lg:text-8xl"
+          >
+            Equilibrio en <br />
+            <span class="font-normal text-[--kutral-clay] italic">cada plano.</span>
+          </h1>
+
+          <p
+            class="mx-auto max-w-xl text-sm leading-relaxed font-light text-[--kutral-muted] md:text-base lg:mx-0"
+          >
+            Inka redefine la preparación física combinando el rigor del entrenamiento de fuerza con
+            la restauración termodinámica. Un refugio templado diseñado para contrarrestar la
+            humedad de la Araucanía, sanando tu cuerpo y despejando tu mente.
+          </p>
+
+          <!-- Acciones Claras de Conversión -->
+          <div
+            class="flex flex-col items-stretch justify-center gap-4 pt-4 sm:flex-row sm:items-center lg:justify-start"
+          >
+            <a
+              href="#planes"
+              class="kutral-transition rounded-full bg-[--kutral-dark] px-8 py-4 text-center text-[10px] font-bold tracking-widest text-white uppercase shadow-sm hover:bg-[--kutral-clay]"
+            >
+              Planes y Valores CLP
+            </a>
+            <a
+              href="https://wa.me/56900000000"
+              target="_blank"
+              class="kutral-transition rounded-full border border-[--kutral-border] bg-white px-8 py-4 text-center text-[10px] font-bold tracking-widest text-[--kutral-dark] uppercase hover:border-[--kutral-dark]"
+            >
+              Conocer Horarios por WhatsApp
+            </a>
+          </div>
+        </div>
+
+        <!-- Columna de Imagen Estilo Passepartout (Limpio y Premium) -->
+        <div class="flex justify-center lg:col-span-5">
+          <div
+            class="w-full max-w-[380px] rounded-3xl border border-[--kutral-border] bg-white p-4 shadow-[0_12px_40px_rgba(0,0,0,0.02)]"
+          >
+            <div class="relative aspect-[3/4] w-full overflow-hidden rounded-2xl">
+              <img
+                src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?auto=format&fit=crop&w=600&q=80"
+                alt="Instalaciones minimalistas de Inka con racks de fuerza y luz natural"
+                class="h-full w-full object-cover brightness-[1.01] saturate-[0.1]"
+                onerror="this.onerror=null;this.src='https://placehold.co/400x500/FFFFFF/1C2220?text=Kutral+Athletic'"
+              />
+              <div class="absolute inset-0 bg-[--kutral-clay]/5 mix-blend-multiply"></div>
+            </div>
+
+            <div
+              class="mt-4 flex items-center justify-between border-t border-[#F2EDE7] pt-3 text-left"
+            >
+              <div>
+                <span
+                  class="block text-[8px] font-bold tracking-widest text-[--kutral-muted] uppercase"
+                  >Ubicación</span
+                >
+                <span class="font-editorial text-xs font-bold text-[--kutral-dark] italic"
+                  >Avenida Alemania, Temuco</span
+                >
+              </div>
+              <span
+                class="rounded-full border border-[--kutral-clay]/10 bg-[--kutral-clay-light] px-3 py-1.5 text-[8px] font-bold tracking-wider text-[--kutral-clay] uppercase"
+                >Refugio Activo</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN FILOSOFÍA: Tres Columnas Espaciosas sin Ruido Visual -->
+    <section id="concepto" class="border-y border-[--kutral-border] bg-white py-24">
+      <div class="mx-auto max-w-7xl px-6 sm:px-10">
+        <div class="mx-auto mb-20 max-w-2xl space-y-3 text-center">
+          <span class="block text-[10px] font-bold tracking-[0.25em] text-[--kutral-clay] uppercase"
+            >EL ESTÁNDAR Inka</span
+          >
+          <h2 class="font-editorial text-3xl text-[--kutral-dark] sm:text-4xl">
+            Diseñado para el bienestar y la fuerza
+          </h2>
+          <p class="text-sm font-light text-[--kutral-muted]">
+            Eliminamos las distracciones para ofrecer un espacio de entrenamiento limpio, enfocado y
+            con base científica.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 gap-12 sm:gap-16 md:grid-cols-3">
+          <!-- Pilar 1 -->
+          <div class="space-y-4 text-center md:text-left">
+            <span class="font-editorial text-4xl font-light text-[--kutral-clay] italic">01/</span>
+            <h3 class="font-editorial text-lg font-bold text-[--kutral-dark]">
+              Sobrecarga Científica
+            </h3>
+            <p class="text-xs leading-relaxed font-light text-[--kutral-muted]">
+              Diseñamos programas de entrenamiento individualizados enfocados en la sobrecarga
+              progresiva. Entrena bajo control de variables biomecánicas para ganar fuerza real de
+              forma segura.
+            </p>
+          </div>
+
+          <!-- Pilar 2 -->
+          <div class="space-y-4 text-center md:text-left">
+            <span class="font-editorial text-4xl font-light text-[--kutral-clay] italic">02/</span>
+            <h3 class="font-editorial text-lg font-bold text-[--kutral-dark]">Shock Térmico</h3>
+            <p class="text-xs leading-relaxed font-light text-[--kutral-muted]">
+              El frío y el calor actúan como catalizadores biológicos. Alternamos saunas secos a
+              90°C con tinas de hielo purificado a 4°C para modular la inflamación y reponer tu
+              sistema nervioso.
+            </p>
+          </div>
+
+          <!-- Pilar 3 -->
+          <div class="space-y-4 text-center md:text-left">
+            <span class="font-editorial text-4xl font-light text-[--kutral-clay] italic">03/</span>
+            <h3 class="font-editorial text-lg font-bold text-[--kutral-dark]">Movilidad Activa</h3>
+            <p class="text-xs leading-relaxed font-light text-[--kutral-muted]">
+              Liberamos las tensiones causadas por malas posturas y sedentarismo. Integramos
+              técnicas de flexibilidad dinámica y descompresión miofascial en tu rutina semanal.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN INTERACTIVA: EL CICLO TÉRMICO (Limpio y Altamente Estético) -->
+    <section id="ciclo" class="mx-auto max-w-7xl px-6 py-24 sm:px-10">
+      <div class="mx-auto mb-16 max-w-2xl space-y-3 text-center">
+        <span class="text-[10px] font-bold tracking-[0.25em] text-[--kutral-clay] uppercase"
+          >TERAPIA DE CONTRASTE</span
+        >
+        <h2 class="font-editorial text-3xl text-[--kutral-dark] sm:text-4xl">
+          La Restauración Térmica
+        </h2>
+        <p class="text-sm font-light text-[--kutral-muted]">
+          Entiende cómo alternar entre los dos estados biológicos clave para regular la fatiga
+          neuromuscular.
+        </p>
+
+        <!-- Control del Switcher con micro-diseño de píldora -->
+        <div
+          class="mt-6 inline-flex gap-2 rounded-full border border-[--kutral-border] bg-white p-1.5"
+        >
+          <button
+            onclick="switchThermalState('kutral', this)"
+            class="thermal-toggle-btn kutral-transition rounded-full bg-[--kutral-dark] px-6 py-2.5 text-[10px] font-bold tracking-widest text-white uppercase"
+          >
+            Zona Inka (Activación)
+          </button>
+          <button
+            onclick="switchThermalState('piru', this)"
+            class="thermal-toggle-btn kutral-transition rounded-full bg-transparent px-6 py-2.5 text-[10px] font-bold tracking-widest text-[--kutral-muted] uppercase"
+          >
+            Zona Piru (Restauración)
+          </button>
+        </div>
+      </div>
+
+      <!-- Tarjeta del Ciclo Térmico -->
+      <div
+        class="rounded-3xl border border-[--kutral-border] bg-white p-8 shadow-[0_12px_40px_rgba(0,0,0,0.01)] sm:p-12"
+        id="thermal-panel"
+      >
+        <div class="grid grid-cols-1 items-center gap-12 lg:grid-cols-12">
+          <!-- Info Técnica de la Zona -->
+          <div class="space-y-6 lg:col-span-7">
+            <div class="flex items-center gap-3">
+              <span class="text-2xl" id="thermal-icon">🔥</span>
+              <div>
+                <span
+                  class="block text-[8px] font-bold tracking-[0.2em] text-[--kutral-clay] uppercase"
+                  id="thermal-subtitle">ESTADO DE ACTIVACIÓN CELULAR</span
+                >
+                <h3
+                  class="font-editorial text-2xl font-bold text-[--kutral-dark] sm:text-3xl"
+                  id="thermal-title"
+                >
+                  Inka: Calor & Fuerza
+                </h3>
+              </div>
+            </div>
+
+            <p
+              class="border-t border-gray-100 pt-6 text-xs leading-relaxed font-light text-[--kutral-muted] sm:text-sm"
+              id="thermal-description"
+            >
+              Es el centro de esfuerzo neuromuscular. Aquí se trabaja la fuerza de sobrecarga
+              progresiva con plataformas olímpicas y sistemas de poleas calibradas. Las salas se
+              mantienen calefaccionadas a temperatura constante para optimizar la elasticidad de tus
+              tendones durante la sesión.
+            </p>
+
+            <!-- Lista de Especificaciones con Diseño Limpio -->
+            <div class="grid grid-cols-2 gap-4 pt-2">
+              <div class="rounded-xl border border-[--kutral-border] bg-[#FAF8F5] p-5">
+                <span
+                  class="block text-[8px] font-bold tracking-widest text-[--kutral-muted] uppercase"
+                  >Temperatura ambiente</span
+                >
+                <span class="mt-1 block text-xs font-bold text-[--kutral-dark]" id="thermal-temp"
+                  >24°C Constante</span
+                >
+              </div>
+              <div class="rounded-xl border border-[--kutral-border] bg-[#FAF8F5] p-5">
+                <span
+                  class="block text-[8px] font-bold tracking-widest text-[--kutral-muted] uppercase"
+                  >Enfoque Fisiológico</span
+                >
+                <span class="mt-1 block text-xs font-bold text-[--kutral-dark]" id="thermal-focus"
+                  >Hipertrofia & Fuerza</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Detalle Visual sutil -->
+          <div class="flex justify-center lg:col-span-5">
+            <div
+              class="w-full max-w-[320px] rounded-2xl border border-[--kutral-border] bg-[#FAF8F5] p-3"
+            >
+              <div class="relative aspect-square w-full overflow-hidden rounded-xl">
+                <img
+                  id="thermal-image"
+                  src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?auto=format&fit=crop&w=500&q=80"
+                  alt="Detalle de zona de pesas y musculación de alta gama en Inka"
+                  class="h-full w-full object-cover brightness-[1.02] saturate-[0.1]"
+                  onerror="this.onerror=null;this.src='https://placehold.co/400x400/FFFFFF/1C2220?text=KUTRAL+Zone'"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN: TALLERES (Filtro con micro-diseño de píldora) -->
+    <section id="clases" class="border-y border-[--kutral-border] bg-white py-24">
+      <div class="mx-auto max-w-7xl px-6 sm:px-10">
+        <div class="mb-16 flex flex-col justify-between gap-8 lg:flex-row lg:items-end">
+          <div class="max-w-xl space-y-3">
+            <span
+              class="block text-[10px] font-bold tracking-[0.25em] text-[--kutral-clay] uppercase"
+              >PROGRAMACIÓN DE SESIONES</span
+            >
+            <h2 class="font-editorial text-4xl text-[--kutral-dark]">Talleres de Movimiento</h2>
+            <p class="text-sm font-light text-[--kutral-muted]">
+              Todas las clases son planificadas científicamente, con un aforo limitado de 10 atletas
+              para asegurar una corrección de técnica personalizada.
+            </p>
+          </div>
+
+          <!-- Filtros con Estilo Minimalista -->
+          <div
+            class="inline-flex gap-1 rounded-full border border-[--kutral-border] bg-[#FAF8F5] p-1"
+          >
+            <button
+              onclick="filterClasses('all', this)"
+              class="class-filter-btn kutral-transition rounded-full bg-[--kutral-dark] px-5 py-2 text-[9px] font-bold tracking-widest text-white uppercase"
+            >
+              Todos
+            </button>
+            <button
+              onclick="filterClasses('fuerza', this)"
+              class="class-filter-btn kutral-transition rounded-full bg-transparent px-5 py-2 text-[9px] font-bold tracking-widest text-[--kutral-muted] uppercase"
+            >
+              Fuerza
+            </button>
+            <button
+              onclick="filterClasses('recuperacion', this)"
+              class="class-filter-btn kutral-transition rounded-full bg-transparent px-5 py-2 text-[9px] font-bold tracking-widest text-[--kutral-muted] uppercase"
+            >
+              Recuperación
+            </button>
+          </div>
+        </div>
+
+        <!-- Grilla Limpia de Clases -->
+        <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3" id="clases-container">
+          <!-- Clase 1 -->
+          <div
+            class="class-card-item kutral-transition space-y-5 rounded-2xl border border-[--kutral-border] bg-[#FAF8F5] p-7 hover:shadow-sm"
+            data-tab="fuerza"
+          >
+            <div class="flex items-center justify-between border-b border-gray-200/50 pb-3">
+              <span class="text-[9px] font-bold tracking-widest text-[--kutral-clay] uppercase"
+                >Fuerza Compuesta</span
+              >
+              <span class="text-xs font-medium text-[--kutral-muted]">Lunes a Viernes</span>
+            </div>
+            <h3 class="font-editorial text-xl font-bold text-[--kutral-dark]">Inka Barbell Club</h3>
+            <p class="text-xs leading-relaxed font-light text-[--kutral-muted]">
+              Clase enfocada en dominar los tres levantamientos básicos: Sentadilla, Press de Banca
+              y Peso Muerto. Optimiza tu densidad muscular y reclutamiento motor.
+            </p>
+            <div class="flex items-center justify-between pt-2">
+              <span class="text-[11px] font-bold text-[--kutral-dark]">08:00 & 19:30</span>
+              <a
+                href="https://wa.me/56900000000?text=Hola%20Inka,%20me%20gustaría%20solicitar%20un%20cupo%20para%20el%20taller%20Inka%20Barbell%20Club."
+                target="_blank"
+                class="border-b border-[--kutral-dark] pb-0.5 text-[9px] font-bold tracking-wider text-[--kutral-dark] uppercase hover:text-[--kutral-clay]"
+                >Consultar cupos &rarr;</a
+              >
+            </div>
+          </div>
+
+          <!-- Clase 2 -->
+          <div
+            class="class-card-item kutral-transition space-y-5 rounded-2xl border border-[--kutral-border] bg-[#FAF8F5] p-7 hover:shadow-sm"
+            data-tab="recuperacion"
+          >
+            <div class="flex items-center justify-between border-b border-gray-200/50 pb-3">
+              <span class="text-[9px] font-bold tracking-widest text-emerald-700 uppercase"
+                >Movilidad Activa</span
+              >
+              <span class="text-xs font-medium text-[--kutral-muted]">Martes y Jueves</span>
+            </div>
+            <h3 class="font-editorial text-xl font-bold text-[--kutral-dark]">
+              Fascial Flow & Release
+            </h3>
+            <p class="text-xs leading-relaxed font-light text-[--kutral-muted]">
+              Taller diseñado para restablecer la flexibilidad del tejido conjuntivo mediante
+              rodillos de espuma, pelotas de lacrosse y estiramientos dinámicos asistidos.
+            </p>
+            <div class="flex items-center justify-between pt-2">
+              <span class="text-[11px] font-bold text-[--kutral-dark]">10:00 & 18:30</span>
+              <a
+                href="https://wa.me/56900000000?text=Hola%20Inka,%20me%20gustaría%20solicitar%20un%20cupo%20para%20el%20taller%20Fascial%20Flow."
+                target="_blank"
+                class="border-b border-[--kutral-dark] pb-0.5 text-[9px] font-bold tracking-wider text-[--kutral-dark] uppercase hover:text-[--kutral-clay]"
+                >Consultar cupos &rarr;</a
+              >
+            </div>
+          </div>
+
+          <!-- Clase 3 -->
+          <div
+            class="class-card-item kutral-transition space-y-5 rounded-2xl border border-[--kutral-border] bg-[#FAF8F5] p-7 hover:shadow-sm"
+            data-tab="fuerza"
+          >
+            <div class="flex items-center justify-between border-b border-gray-200/50 pb-3">
+              <span class="text-[9px] font-bold tracking-widest text-[--kutral-clay] uppercase"
+                >Hipertrofia</span
+              >
+              <span class="text-xs font-medium text-[--kutral-muted]">Sábados</span>
+            </div>
+            <h3 class="font-editorial text-xl font-bold text-[--kutral-dark]">
+              Unilateral Strength
+            </h3>
+            <p class="text-xs leading-relaxed font-light text-[--kutral-muted]">
+              Trabajo analítico unilateral para corregir asimetrías musculares y mejorar el control
+              postural. Diseñado para potenciar el estímulo neuromuscular.
+            </p>
+            <div class="flex items-center justify-between pt-2">
+              <span class="text-[11px] font-bold text-[--kutral-dark]">11:00 AM</span>
+              <a
+                href="https://wa.me/56900000000?text=Hola%20Inka,%20me%20gustaría%20solicitar%20un%20cupo%20para%20el%20taller%20Unilateral%20Strength."
+                target="_blank"
+                class="border-b border-[--kutral-dark] pb-0.5 text-[9px] font-bold tracking-wider text-[--kutral-dark] uppercase hover:text-[--kutral-clay]"
+                >Consultar cupos &rarr;</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN: TARIFAS (CLP con Toggle de Micro-diseño) -->
+    <section id="planes" class="mx-auto max-w-7xl px-6 py-24 sm:px-10">
+      <div class="mx-auto mb-16 max-w-2xl space-y-3 text-center">
+        <span class="text-[10px] font-bold tracking-[0.25em] text-[--kutral-clay] uppercase"
+          >MEMBRESÍAS</span
+        >
+        <h2 class="font-editorial text-3xl text-[--kutral-dark] sm:text-4xl">Valores y Planes</h2>
+        <p class="text-sm font-light text-[--kutral-muted]">
+          Matrícula liberada y planes sin permanencia. Activa el pago trimestral para obtener un 25%
+          de ahorro directo.
+        </p>
+
+        <!-- Selector CLP Mensual / Trimestral con Micro-Diseño -->
+        <div
+          class="mt-6 inline-flex gap-2 rounded-full border border-[--kutral-border] bg-white p-1"
+        >
+          <button
+            onclick="toggleBillingPeriod(false, this)"
+            class="billing-btn kutral-transition rounded-full bg-[--kutral-dark] px-5 py-2.5 text-[10px] font-bold tracking-widest text-white uppercase"
+          >
+            Mensual
+          </button>
+          <button
+            onclick="toggleBillingPeriod(true, this)"
+            class="billing-btn kutral-transition flex items-center gap-1.5 rounded-full bg-transparent px-5 py-2.5 text-[10px] font-bold tracking-widest text-[--kutral-muted] uppercase"
+          >
+            Trimestral
+            <span
+              class="rounded-full border border-[--kutral-clay]/10 bg-[--kutral-clay-light] px-2 py-0.5 text-[8px] font-bold tracking-wider text-[--kutral-clay] uppercase"
+              >Ahorra 25%</span
+            >
+          </button>
+        </div>
+      </div>
+
+      <!-- Tarjetas de Suscripción Simétricas, de Estética Limpia -->
+      <div class="grid grid-cols-1 gap-8 lg:grid-cols-3">
+        <!-- Plan 1 -->
+        <div
+          class="kutral-transition flex flex-col justify-between rounded-3xl border border-[--kutral-border] bg-white p-8 hover:shadow-sm sm:p-10"
+        >
+          <div class="space-y-6">
+            <div class="space-y-1">
+              <span class="text-[9px] font-bold tracking-wider text-[--kutral-muted] uppercase"
+                >OPCIÓN BÁSICA</span
+              >
+              <h3 class="font-editorial text-2xl font-bold text-[--kutral-dark]">
+                Musculación Pass
+              </h3>
+              <p class="text-xs font-light text-[--kutral-muted]">
+                Acceso total a la sala de pesas libre y máquinas de poleas.
+              </p>
+            </div>
+
+            <div class="border-t border-gray-100 pt-5">
+              <span class="font-editorial text-3xl font-bold text-[--kutral-dark]" id="price-basic"
+                >$38.000</span
+              >
+              <span class="text-xs font-light text-[--kutral-muted]" id="label-basic"
+                >/ mes estándar</span
+              >
+            </div>
+
+            <ul
+              class="space-y-3.5 border-t border-gray-100/50 pt-2 text-xs font-light text-[--kutral-muted]"
+            >
+              <li class="flex items-center gap-2">✔ Acceso ilimitado 24/7 a sala de sobrecarga</li>
+              <li class="flex items-center gap-2">
+                ✔ Duchas y vestuarios privados de alta presión
+              </li>
+              <li class="flex items-center gap-2">✔ Rutina digital base de inducción</li>
+              <li class="text-gray-300 line-through">✘ Clases y talleres grupales dirigidos</li>
+              <li class="text-gray-300 line-through">✘ Acceso libre a zona fría y saunas secos</li>
+            </ul>
+          </div>
+          <div class="pt-8">
+            <a
+              id="btn-basic-link"
+              href="https://wa.me/56900000000?text=Hola%20Inka,%20me%20interesa%20inscribirme%20en%20el%20plan%20Musculacion%20Pass%20(Mensual)."
+              target="_blank"
+              class="kutral-transition block w-full rounded-full border border-[--kutral-border] bg-white py-3.5 text-center text-[10px] font-bold tracking-widest text-[--kutral-dark] uppercase hover:border-[--kutral-dark]"
+              >Comenzar Plan</a
+            >
+          </div>
+        </div>
+
+        <!-- Plan 2 (Recomendado con Borde Fino Terracota) -->
+        <div
+          class="relative flex flex-col justify-between rounded-3xl border-2 border-[--kutral-clay] bg-white p-8 shadow-[0_12px_40px_rgba(200,122,83,0.03)] sm:p-10"
+        >
+          <div
+            class="absolute top-0 right-10 -translate-y-1/2 rounded-full border border-white bg-[--kutral-clay] px-4 py-1.5 text-[8px] font-bold tracking-widest text-white uppercase"
+          >
+            RECOMENDADO
+          </div>
+          <div class="space-y-6">
+            <div class="space-y-1">
+              <span class="text-[9px] font-bold tracking-wider text-[--kutral-clay] uppercase"
+                >ACCESO COMPLETO</span
+              >
+              <h3 class="font-editorial text-2xl font-bold text-[--kutral-dark]">
+                Active & Contrast Pass
+              </h3>
+              <p class="text-xs font-light text-[--kutral-muted]">
+                Ideal para equilibrar sesiones de fuerza con talleres y saunas de contraste.
+              </p>
+            </div>
+
+            <div class="border-t border-gray-100 pt-5">
+              <span
+                class="font-editorial text-3xl font-bold text-[--kutral-clay]"
+                id="price-athlete">$48.000</span
+              >
+              <span class="text-xs font-light text-[--kutral-muted]" id="label-athlete"
+                >/ mes estándar</span
+              >
+            </div>
+
+            <ul
+              class="space-y-3.5 border-t border-gray-100/50 pt-2 text-xs font-light text-[--kutral-dark]"
+            >
+              <li class="flex items-center gap-2 font-semibold text-[--kutral-clay]">
+                ✔ Acceso ilimitado 24/7 a sala de musculación
+              </li>
+              <li class="flex items-center gap-2">
+                ✔ Acceso libre a todos los talleres de movimiento
+              </li>
+              <li class="flex items-center gap-2">
+                ✔ Acceso ilimitado a zona de saunas y crioterapia
+              </li>
+              <li class="flex items-center gap-2">
+                ✔ Espresso o infusión herbal de cortesía diario
+              </li>
+              <li class="flex items-center gap-2 text-[--kutral-muted]">
+                ✔ 1 sesión de asesoramiento mensual con profesor
+              </li>
+            </ul>
+          </div>
+          <div class="pt-8">
+            <a
+              id="btn-athlete-link"
+              href="https://wa.me/56900000000?text=Hola%20Inka,%20me%20interesa%20inscribirme%20en%20el%20plan%20Active%20Pass%20(Mensual)."
+              target="_blank"
+              class="kutral-transition block w-full rounded-full bg-[--kutral-dark] py-3.5 text-center text-[10px] font-bold tracking-widest text-white uppercase hover:bg-[--kutral-clay]"
+              >Comenzar Plan</a
+            >
+          </div>
+        </div>
+
+        <!-- Plan 3 -->
+        <div
+          class="kutral-transition flex flex-col justify-between rounded-3xl border border-[--kutral-border] bg-white p-8 hover:shadow-sm sm:p-10"
+        >
+          <div class="space-y-6">
+            <div class="space-y-1">
+              <span class="text-[9px] font-bold tracking-wider text-[--kutral-muted] uppercase"
+                >PROGRAMA PREMIUM</span
+              >
+              <h3 class="font-editorial text-2xl font-bold text-[--kutral-dark]">
+                Inka Elite 1-on-1
+              </h3>
+              <p class="text-xs font-light text-[--kutral-muted]">
+                Máximo control. Incluye sesiones de Personal Training exclusivas al mes.
+              </p>
+            </div>
+
+            <div class="border-t border-gray-100 pt-5">
+              <span class="font-editorial text-3xl font-bold text-[--kutral-dark]" id="price-elite"
+                >$68.000</span
+              >
+              <span class="text-xs font-light text-[--kutral-muted]" id="label-elite"
+                >/ mes estándar</span
+              >
+            </div>
+
+            <ul
+              class="space-y-3.5 border-t border-gray-100/50 pt-2 text-xs font-light text-[--kutral-muted]"
+            >
+              <li class="flex items-center gap-2">✔ Todo lo incluido en el plan Active Pass</li>
+              <li class="flex items-center gap-2">
+                ✔ 2 sesiones mensuales de Personal Training privadas
+              </li>
+              <li class="flex items-center gap-2">✔ Plan de nutrición personalizada mensual</li>
+              <li class="flex items-center gap-2">
+                ✔ Evaluación de bioimpedancia corporal cada 30 días
+              </li>
+            </ul>
+          </div>
+          <div class="pt-8">
+            <a
+              id="btn-elite-link"
+              href="https://wa.me/56900000000?text=Hola%20Inka,%20me%20interesa%20inscribirme%20en%20el%20plan%20Elite%20(Mensual)."
+              target="_blank"
+              class="kutral-transition block w-full rounded-full border border-[--kutral-border] bg-white py-3.5 text-center text-[10px] font-bold tracking-widest text-[--kutral-dark] uppercase hover:border-[--kutral-dark]"
+              >Comenzar Plan</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIOS: Comentarios Editorial (Finos y de Lectura Impecable) -->
+    <section class="mx-auto max-w-7xl px-6 py-24 sm:px-10">
+      <div class="grid grid-cols-1 items-center gap-16 lg:grid-cols-12">
+        <div class="space-y-5 lg:col-span-5">
+          <span class="block text-xs font-bold tracking-widest text-[--kutral-clay] uppercase"
+            >EXPERIENCIAS REALES</span
+          >
+          <h2 class="font-editorial text-4xl text-[--kutral-dark]">La comunidad de Inka</h2>
+          <p class="text-sm font-light text-[--kutral-muted]">
+            Personas del sur que decidieron transformar su estilo de vida a través de un
+            entrenamiento fundamentado y un descanso inteligente.
+          </p>
+
+          <!-- Botones de Navegación -->
+          <div class="flex gap-3 pt-4">
+            <button
+              onclick="prevReview()"
+              class="kutral-transition flex h-10 w-10 items-center justify-center rounded-full border border-[--kutral-border] bg-white font-bold text-[--kutral-dark] hover:bg-[--kutral-dark] hover:text-white"
+              aria-label="Anterior"
+            >
+              &larr;
+            </button>
+            <button
+              onclick="nextReview()"
+              class="kutral-transition flex h-10 w-10 items-center justify-center rounded-full border border-[--kutral-border] bg-white font-bold text-[--kutral-dark] hover:bg-[--kutral-dark] hover:text-white"
+              aria-label="Siguiente"
+            >
+              &rarr;
+            </button>
+          </div>
+        </div>
+
+        <!-- Carrusel minimalista en tarjeta blanca -->
+        <div
+          class="relative flex min-h-[240px] items-center overflow-hidden rounded-3xl border border-[--kutral-border] bg-white p-8 shadow-[0_12px_40px_rgba(0,0,0,0.01)] sm:p-12 lg:col-span-7"
+        >
+          <!-- Testimonio 1 -->
+          <div
+            class="testimonial-slide kutral-transition block w-full space-y-6 opacity-100 duration-500"
+          >
+            <p
+              class="font-editorial text-base leading-relaxed font-light text-[--kutral-dark] italic sm:text-lg"
+            >
+              "En Temuco es común dejar de entrenar en invierno por la lluvia y el frío de las salas
+              de musculación tradicionales. En Inka encontré un espacio templado, con un café de
+              grano delicioso, saunas secos que eliminan la humedad de los huesos y un equipamiento
+              impecable."
+            </p>
+            <div class="flex items-center gap-4 border-t border-gray-100 pt-4">
+              <div
+                class="flex h-9 w-9 items-center justify-center rounded-full bg-[--kutral-clay-light] text-xs font-bold text-[--kutral-clay] uppercase"
+              >
+                FS
+              </div>
+              <div>
+                <span class="block text-xs font-bold text-[--kutral-dark]">Francisca Silva</span>
+                <span class="block text-[9px] tracking-wider text-[--kutral-muted] uppercase"
+                  >Socia Sede Av. Alemania • Plan Active</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonio 2 -->
+          <div
+            class="testimonial-slide kutral-transition hidden w-full space-y-6 opacity-0 duration-500"
+          >
+            <p
+              class="font-editorial text-base leading-relaxed font-light text-[--kutral-dark] italic sm:text-lg"
+            >
+              "Me encanta el orden, el silencio y el respeto con el que se trabaja en el club. No
+              hay música estridente ni aglomeraciones. Las piletas frías de la zona Piru son
+              extraordinarias para desinflamar las piernas después de mi entrenamiento de
+              sentadillas."
+            </p>
+            <div class="flex items-center gap-4 border-t border-gray-100 pt-4">
+              <div
+                class="flex h-9 w-9 items-center justify-center rounded-full bg-[--kutral-clay-light] text-xs font-bold text-[--kutral-clay] uppercase"
+              >
+                MA
+              </div>
+              <div>
+                <span class="block text-xs font-bold text-[--kutral-dark]">Matías Alarcón</span>
+                <span class="block text-[9px] tracking-wider text-[--kutral-muted] uppercase"
+                  >Socio Portal de la Frontera • Plan Solo Gym</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN: PREGUNTAS FRECUENTES (Acordeones sutiles y elegantes) -->
+    <section id="faqs" class="border-y border-[--kutral-border] bg-white py-24">
+      <div class="mx-auto max-w-4xl px-6">
+        <div class="mx-auto mb-16 max-w-2xl space-y-3 text-center">
+          <span class="block text-xs font-bold tracking-widest text-[--kutral-clay] uppercase"
+            >PREGUNTAS</span
+          >
+          <h2 class="font-editorial text-3xl text-[--kutral-dark] sm:text-4xl">
+            Consultas Frecuentes
+          </h2>
+          <p class="text-sm font-light text-[--kutral-muted]">
+            Aclaramos las dudas operativas clave de nuestro laboratorio.
+          </p>
+        </div>
+
+        <div class="space-y-4">
+          <!-- FAQ 1 -->
+          <div class="overflow-hidden rounded-2xl border border-[--kutral-border] bg-[#FAF8F5]">
+            <button
+              onclick="toggleFaq(this)"
+              class="kutral-transition flex w-full items-center justify-between p-6 text-left text-sm font-bold text-[--kutral-dark] hover:text-[--kutral-clay] focus:outline-none"
+            >
+              <span>¿Cuentan con estacionamiento privado para socios?</span>
+              <span class="faq-icon kutral-transition font-mono text-lg text-[--kutral-muted]"
+                >+</span
+              >
+            </button>
+            <div class="faq-content kutral-transition max-h-0 overflow-hidden duration-300">
+              <p class="px-6 pb-6 text-xs leading-relaxed font-light text-[--kutral-muted]">
+                Sí. Contamos con una zona de estacionamiento vigilado exclusivo y gratuito para
+                todos nuestros socios activos en la entrada de nuestro laboratorio en Avenida
+                Alemania.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div class="overflow-hidden rounded-2xl border border-[--kutral-border] bg-[#FAF8F5]">
+            <button
+              onclick="toggleFaq(this)"
+              class="kutral-transition flex w-full items-center justify-between p-6 text-left text-sm font-bold text-[--kutral-dark] hover:text-[--kutral-clay] focus:outline-none"
+            >
+              <span>¿Se requiere reserva previa para los saunas secos?</span>
+              <span class="faq-icon kutral-transition font-mono text-lg text-[--kutral-muted]"
+                >+</span
+              >
+            </button>
+            <div class="faq-content kutral-transition max-h-0 overflow-hidden duration-300">
+              <p class="px-6 pb-6 text-xs leading-relaxed font-light text-[--kutral-muted]">
+                No es obligatoria la reserva previa, pero controlamos el aforo mediante un indicador
+                digital automático en la aplicación web para asegurar que tu experiencia de
+                descompresión sea siempre óptima y cómoda.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div class="overflow-hidden rounded-2xl border border-[--kutral-border] bg-[#FAF8F5]">
+            <button
+              onclick="toggleFaq(this)"
+              class="kutral-transition flex w-full items-center justify-between p-6 text-left text-sm font-bold text-[--kutral-dark] hover:text-[--kutral-clay] focus:outline-none"
+            >
+              <span>¿Hay cobros adicionales de matrícula o cuota de incorporación?</span>
+              <span class="faq-icon kutral-transition font-mono text-lg text-[--kutral-muted]"
+                >+</span
+              >
+            </button>
+            <div class="faq-content kutral-transition max-h-0 overflow-hidden duration-300">
+              <p class="px-6 pb-6 text-xs leading-relaxed font-light text-[--kutral-muted]">
+                Absolutamente ninguno. Creemos en un sistema de suscripción limpio y transparente.
+                No cobramos matrícula ni cobros de incorporación sorpresa. Puedes dar de baja tu
+                plan mensual en cualquier momento.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN: CAPTACIÓN DE LEAD Y CONTACTO DIRECTO -->
+    <section id="contacto" class="mx-auto max-w-7xl px-6 py-24 sm:px-10">
+      <div class="grid grid-cols-1 items-center gap-12 lg:grid-cols-12">
+        <!-- Datos de Dirección de Inka -->
+        <div class="space-y-6 text-center lg:col-span-5 lg:text-left">
+          <span class="block text-xs font-bold tracking-widest text-[--kutral-clay] uppercase"
+            >ENCUENTRA TU ESPACIO</span
+          >
+          <h2 class="font-editorial text-4xl text-[--kutral-dark]">Visita el Refugio</h2>
+          <p class="text-xs leading-relaxed font-light text-[--kutral-muted] sm:text-sm">
+            Nuestras puertas están siempre abiertas. Ven a tomar un espresso de especialidad recién
+            molido, siente la calidez de nuestras salas climatizadas y conoce en persona el
+            equipamiento de nivel olímpico que diseñamos para Temuco.
+          </p>
+
+          <div
+            class="mx-auto max-w-md space-y-4 pt-4 text-left text-xs font-semibold text-[--kutral-dark] lg:mx-0"
+          >
+            <div
+              class="flex items-center gap-3 rounded-xl border border-[--kutral-border] bg-white p-4"
+            >
+              <span class="text-base">📍</span>
+              <span class="font-medium text-[--kutral-dark]"
+                >Avenida Alemania 01450, Temuco, Araucanía, Chile</span
+              >
+            </div>
+            <div
+              class="flex items-center gap-3 rounded-xl border border-[--kutral-border] bg-white p-4"
+            >
+              <span class="text-base">📞</span>
+              <span class="font-medium text-[--kutral-dark]"
+                >WhatsApp Admisiones: +56 9 1234 5678</span
+              >
+            </div>
+            <div
+              class="flex items-center gap-3 rounded-xl border border-[--kutral-border] bg-white p-4"
+            >
+              <span class="text-base">✉</span>
+              <span class="font-medium text-[--kutral-dark]">hola@kutralathletic.cl</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Formulario de Conversión de Alta Gama (Blanco, limpio y refinado) -->
+        <div
+          class="rounded-3xl border border-[--kutral-border] bg-white p-8 shadow-[0_12px_40px_rgba(0,0,0,0.01)] sm:p-10 lg:col-span-7"
+        >
+          <form onsubmit="handleContactSubmit(event)" class="space-y-5">
+            <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+              <div class="space-y-1">
+                <label class="text-[9px] font-bold tracking-wider text-[--kutral-muted] uppercase"
+                  >Nombre Completo</label
+                >
+                <input
+                  required
+                  type="text"
+                  id="contact-name"
+                  placeholder="Ej. Francisca Silva"
+                  class="kutral-transition w-full rounded-xl border border-[--kutral-border] bg-[#FAF8F5] px-4 py-3 text-xs text-[--kutral-dark] outline-none focus:bg-white"
+                />
+              </div>
+              <div class="space-y-1">
+                <label class="text-[9px] font-bold tracking-wider text-[--kutral-muted] uppercase"
+                  >Teléfono móvil</label
+                >
+                <input
+                  required
+                  type="text"
+                  id="contact-phone"
+                  placeholder="Ej. +569 9876 5432"
+                  class="kutral-transition w-full rounded-xl border border-[--kutral-border] bg-[#FAF8F5] px-4 py-3 text-xs text-[--kutral-dark] outline-none focus:bg-white"
+                />
+              </div>
+            </div>
+
+            <div class="space-y-1">
+              <label class="text-[9px] font-bold tracking-wider text-[--kutral-muted] uppercase"
+                >Plan de interés</label
+              >
+              <select
+                id="contact-plan"
+                class="kutral-transition w-full rounded-xl border border-[--kutral-border] bg-[#FAF8F5] px-4 py-3 text-xs text-[--kutral-muted] outline-none focus:bg-white"
+              >
+                <option value="basic">Musculación Pass — $38.000/mes</option>
+                <option value="active" selected>Active & Contrast — $48.000/mes</option>
+                <option value="premium">Inka Elite One-on-One — $68.000/mes</option>
+              </select>
+            </div>
+
+            <div class="space-y-1">
+              <label class="text-[9px] font-bold tracking-wider text-[--kutral-muted] uppercase"
+                >Cuéntanos tus metas deportivas</label
+              >
+              <textarea
+                required
+                id="contact-message"
+                rows="4"
+                placeholder="Ej. Deseo ganar fuerza, mejorar mi recuperación, etc..."
+                class="kutral-transition w-full rounded-xl border border-[--kutral-border] bg-[#FAF8F5] px-4 py-3 text-xs text-[--kutral-dark] outline-none focus:bg-white"
+              ></textarea>
+            </div>
+
+            <button
+              type="submit"
+              class="kutral-transition w-full rounded-full bg-[--kutral-dark] py-4 text-center text-[10px] font-bold tracking-widest text-white uppercase shadow-sm hover:bg-[--kutral-clay]"
+            >
+              Agendar Clase de Prueba Gratis &rarr;
+            </button>
+          </form>
+
+          <!-- Notificación de Éxito Limpia -->
+          <div
+            id="contact-success-msg"
+            class="mt-4 hidden rounded-xl border border-[--kutral-clay]/20 bg-orange-50 p-4 text-center text-xs font-semibold text-[--kutral-dark]"
+          >
+            🌋 ¡Solicitud recibida! Te contactaremos vía WhatsApp para coordinar tu día de acceso de
+            cortesía al laboratorio.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PIE DE PÁGINA (Estilo Corporativo Kropy) -->
+    <footer class="border-t border-[--kutral-border] bg-[--kutral-dark] py-14 text-white">
+      <div class="mx-auto max-w-7xl px-6 sm:px-10">
+        <div
+          class="flex flex-col items-center justify-between gap-8 border-b border-gray-800 pb-8 md:flex-row"
+        >
+          <div class="space-y-1 text-center md:text-left">
+            <span class="font-editorial block text-xl font-bold tracking-tight text-white italic"
+              >Inka<span class="text-[--kutral-clay] not-italic">.</span></span
+            >
+            <span class="block text-[9px] tracking-widest text-gray-500 uppercase"
+              >Kinetic & Thermal Lab • Temuco</span
+            >
+          </div>
+
+          <!-- Enlaces Rápidos del Pie -->
+          <div
+            class="flex flex-wrap justify-center gap-6 text-[10px] font-bold tracking-wider text-gray-400 uppercase"
+          >
+            <a href="#concepto" class="kutral-transition hover:text-[--kutral-clay]">Concepto</a>
+            <a href="#ciclo" class="kutral-transition hover:text-[--kutral-clay]">Ciclo</a>
+            <a href="#clases" class="kutral-transition hover:text-[--kutral-clay]">Clases</a>
+            <a href="#planes" class="kutral-transition hover:text-[--kutral-clay]">Tarifas</a>
+          </div>
+        </div>
+
+        <!-- Propiedad Intelectual Kropy -->
+        <div
+          class="flex flex-col items-center justify-between gap-4 pt-8 text-center text-[10px] tracking-wide text-gray-500 sm:flex-row sm:text-left"
+        >
+          <p>
+            &copy; 2026 Inka ATHLETIC LAB. Diseñado para potenciar tu portafolio de landings
+            profesionales.
+          </p>
+          <div class="flex gap-4">
+            <a href="#" class="hover:text-white">Aviso de Privacidad</a>
+            <span class="text-neutral-700">|</span>
+            <p class="text-white">
+              Desarrollado por <a href="#" class="font-bold hover:text-[--kutral-clay]">Kropy</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      /* --- MENÚ MÓVIL DESPLEGABLE --- */
+      const menuToggle = document.getElementById("drawer-toggle");
+      const mobileDrawer = document.getElementById("mobile-drawer");
+      const menuIcon = document.getElementById("drawer-icon");
+
+      menuToggle.addEventListener("click", () => {
+        mobileDrawer.classList.toggle("hidden");
+        if (mobileDrawer.classList.contains("hidden")) {
+          menuIcon.setAttribute("d", "M4 6h16M4 12h16M4 18h16");
+        } else {
+          menuIcon.setAttribute("d", "M6 18L18 6M6 6l12 12");
+        }
+      });
+
+      const drawerLinks = mobileDrawer.querySelectorAll("a");
+      drawerLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+          mobileDrawer.classList.add("hidden");
+          menuIcon.setAttribute("d", "M4 6h16M4 12h16M4 18h16");
+        });
+      });
+
+      /* --- SWITCHER INTERACTIVO DEL ESTADO TÉRMICO --- */
+      const thermalStates = {
+        kutral: {
+          icon: "🔥",
+          subtitle: "ESTADO DE ACTIVACIÓN CELULAR",
+          title: "Inka: Calor & Fuerza",
+          description:
+            "Es el centro de esfuerzo neuromuscular. Aquí se trabaja la fuerza de sobrecarga progresiva con plataformas olímpicas y sistemas de poleas calibradas. Las salas se mantienen calefaccionadas a temperatura constante para optimizar la elasticidad de tus tendones durante la sesión.",
+          temp: "24°C Constante",
+          focus: "Hipertrofia & Fuerza",
+          image:
+            "https://images.unsplash.com/photo-1540497077202-7c8a3999166f?auto=format&fit=crop&w=500&q=80",
+        },
+        piru: {
+          icon: "❄️",
+          subtitle: "ESTADO DE RECUPERACIÓN METABÓLICA",
+          title: "Piru: Frío & Contraste",
+          description:
+            "La zona de restauración biológica más potente de la Araucanía. Sumérgete en nuestras piletas de agua helada purificada a 4°C y alterna con sesiones en saunas secos revestidos de cedro a 90°C para modular la inflamación y regular tu sistema nervioso autónomo.",
+          temp: "4°C Agua / 90°C Sauna Seco",
+          focus: "Drenaje & Antinflamatorio",
+          image:
+            "https://images.unsplash.com/photo-1545205597-3d9d02c29597?auto=format&fit=crop&w=500&q=80",
+        },
+      };
+
+      function switchThermalState(stateKey, buttonElement) {
+        const data = thermalStates[stateKey];
+
+        // Actualizar contenido
+        document.getElementById("thermal-icon").textContent = data.icon;
+        document.getElementById("thermal-subtitle").textContent = data.subtitle;
+        document.getElementById("thermal-title").textContent = data.title;
+        document.getElementById("thermal-description").textContent = data.description;
+        document.getElementById("thermal-temp").textContent = data.temp;
+        document.getElementById("thermal-focus").textContent = data.focus;
+        document.getElementById("thermal-image").src = data.image;
+
+        // Cambiar estados activos de los botones
+        const buttons = document.querySelectorAll(".thermal-toggle-btn");
+        buttons.forEach((btn) => {
+          btn.classList.remove("bg-[--kutral-dark]", "text-white");
+          btn.classList.add("bg-transparent", "text-[--kutral-muted]");
+        });
+
+        if (buttonElement) {
+          buttonElement.classList.remove("bg-transparent", "text-[--kutral-muted]");
+          buttonElement.classList.add("bg-[--kutral-dark]", "text-white");
+        }
+      }
+
+      /* --- FILTRO DINÁMICO DE CLASES --- */
+      function filterClasses(category, btnElement) {
+        const cards = document.querySelectorAll(".class-card-item");
+
+        cards.forEach((card) => {
+          if (category === "all" || card.getAttribute("data-tab") === category) {
+            card.style.display = "block";
+            setTimeout(() => {
+              card.style.opacity = "1";
+            }, 10);
+          } else {
+            card.style.opacity = "0";
+            setTimeout(() => {
+              card.style.display = "none";
+            }, 200);
+          }
+        });
+
+        // Estilo activo para las pestañas de clases
+        const buttons = document.querySelectorAll(".class-filter-btn");
+        buttons.forEach((btn) => {
+          btn.classList.remove("bg-[--kutral-dark]", "text-white");
+          btn.classList.add("bg-transparent", "text-[--kutral-muted]");
+        });
+
+        if (btnElement) {
+          btnElement.classList.remove("bg-transparent", "text-[--kutral-muted]");
+          btnElement.classList.add("bg-[--kutral-dark]", "text-white");
+        }
+      }
+
+      /* --- INTERACTIVE BILLING Period (Toggle CLP Mensual / Trimestral con 25% Ahorro) --- */
+      let isQuarterly = false;
+
+      function toggleBillingPeriod(annualMode, btnElement) {
+        const priceBasic = document.getElementById("price-basic");
+        const priceAthlete = document.getElementById("price-athlete");
+        const priceElite = document.getElementById("price-elite");
+
+        const labelBasic = document.getElementById("label-basic");
+        const labelAthlete = document.getElementById("label-athlete");
+        const labelElite = document.getElementById("label-elite");
+
+        const btnBasic = document.getElementById("btn-basic-link");
+        const btnAthlete = document.getElementById("btn-athlete-link");
+        const btnElite = document.getElementById("btn-elite-link");
+
+        // Actualizar estilo de los botones del toggle
+        const buttons = document.querySelectorAll(".billing-btn");
+        buttons.forEach((btn) => {
+          btn.classList.remove("bg-[--kutral-dark]", "text-white");
+          btn.classList.add("bg-transparent", "text-[--kutral-muted]");
+        });
+
+        btnElement.classList.remove("bg-transparent", "text-[--kutral-muted]");
+        btnElement.classList.add("bg-[--kutral-dark]", "text-white");
+
+        isQuarterly = annualMode;
+
+        if (isQuarterly) {
+          // Valores trimestrales con un 25% de ahorro en CLP chileno
+          priceBasic.textContent = "$28.500";
+          priceAthlete.textContent = "$36.000";
+          priceElite.textContent = "$51.000";
+
+          labelBasic.textContent = "/ mes (cobrado trimestral)";
+          labelAthlete.textContent = "/ mes (cobrado trimestral)";
+          labelElite.textContent = "/ mes (cobrado trimestral)";
+
+          // Enlaces directos formateados para WhatsApp
+          btnBasic.href =
+            "https://wa.me/56900000000?text=Hola%20Inka,%20quiero%20más%20información%20sobre%20el%20plan%20Musculacion%20Pass%20(Pago%20Trimestral).";
+          btnAthlete.href =
+            "https://wa.me/56900000000?text=Hola%20Inka,%20quiero%20más%20información%20sobre%20el%20plan%20Active%20Pass%20(Pago%20Trimestral).";
+          btnElite.href =
+            "https://wa.me/56900000000?text=Hola%20Inka,%20quiero%20más%20información%20sobre%20el%20plan%20Elite%20(Pago%20Trimestral).";
+        } else {
+          // Regresar a valores estándar CLP
+          priceBasic.textContent = "$38.000";
+          priceAthlete.textContent = "$48.000";
+          priceElite.textContent = "$68.000";
+
+          labelBasic.textContent = "/ mes estándar";
+          labelAthlete.textContent = "/ mes estándar";
+          labelElite.textContent = "/ mes estándar";
+
+          btnBasic.href =
+            "https://wa.me/56900000000?text=Hola%20Inka,%20me%20interesa%20inscribirme%20en%20el%20plan%20Musculacion%20Pass%20(Mensual).";
+          btnAthlete.href =
+            "https://wa.me/56900000000?text=Hola%20Inka,%20me%20interesa%20inscribirme%20en%20el%20plan%20Active%20Pass%20(Mensual).";
+          btnElite.href =
+            "https://wa.me/56900000000?text=Hola%20Inka,%20me%20interesa%20inscribirme%20en%20el%20plan%20Elite%20(Mensual).";
+        }
+      }
+
+      /* --- CAROUSEL DE TESTIMONIOS INTERACTIVO --- */
+      let currentReviewIndex = 0;
+      const slides = document.querySelectorAll(".testimonial-slide");
+
+      function showReview(index) {
+        slides.forEach((slide, i) => {
+          slide.classList.add("opacity-0", "hidden");
+          slide.classList.remove("opacity-100", "block");
+          if (i === index) {
+            slide.classList.remove("hidden");
+            setTimeout(() => {
+              slide.classList.add("opacity-100", "block");
+            }, 50);
+          }
+        });
+      }
+
+      function nextReview() {
+        currentReviewIndex++;
+        if (currentReviewIndex >= slides.length) {
+          currentReviewIndex = 0;
+        }
+        showReview(currentReviewIndex);
+      }
+
+      function prevReview() {
+        currentReviewIndex--;
+        if (currentReviewIndex < 0) {
+          currentReviewIndex = slides.length - 1;
+        }
+        showReview(currentReviewIndex);
+      }
+
+      /* --- ACORDEÓN DE PREGUNTAS FRECUENTES (FAQs) --- */
+      function toggleFaq(button) {
+        const content = button.nextElementSibling;
+        const icon = button.querySelector(".faq-icon");
+
+        // Cerrar otros acordeones abiertos para mantener orden visual
+        const allContents = document.querySelectorAll(".faq-content");
+        const allIcons = document.querySelectorAll(".faq-icon");
+
+        allContents.forEach((c) => {
+          if (c !== content) {
+            c.style.maxHeight = null;
+          }
+        });
+        allIcons.forEach((i) => {
+          if (i !== icon) {
+            i.textContent = "+";
+            i.classList.remove("rotate-45");
+          }
+        });
+
+        // Alternar estado del acordeón pulsado
+        if (content.style.maxHeight) {
+          content.style.maxHeight = null;
+          icon.textContent = "+";
+          icon.classList.remove("rotate-45");
+        } else {
+          content.style.maxHeight = content.scrollHeight + "px";
+          icon.textContent = "×";
+          icon.classList.add("rotate-45");
+        }
+      }
+
+      /* --- ENVÍO DE FORMULARIO DE CONTACTO --- */
+      function handleContactSubmit(event) {
+        event.preventDefault();
+
+        const name = document.getElementById("contact-name").value;
+        const phone = document.getElementById("contact-phone").value;
+        const plan = document.getElementById("contact-plan").value;
+        const message = document.getElementById("contact-message").value;
+
+        const submitBtn = event.target.querySelector('button[type="submit"]');
+        submitBtn.textContent = "Procesando...";
+        submitBtn.disabled = true;
+
+        setTimeout(() => {
+          submitBtn.textContent = "Agendar Clase de Prueba Gratis →";
+          submitBtn.disabled = false;
+
+          const successBlock = document.getElementById("contact-success-msg");
+          successBlock.classList.remove("hidden");
+
+          // Reiniciar inputs
+          event.target.reset();
+
+          // Ocultar mensaje de éxito tras 7 segundos
+          setTimeout(() => {
+            successBlock.classList.add("hidden");
+          }, 7000);
+        }, 1000);
+      }
+    </script>
+  </body>
+</html>

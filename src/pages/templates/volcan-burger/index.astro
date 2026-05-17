@@ -1,0 +1,406 @@
+<!doctype html>
+<html lang="es" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO Básico y Local -->
+    <title>Volcán Burger & Bajón | Las Mejores Hamburguesas al Paso en Temuco</title>
+    <meta
+      name="description"
+      content="¿Buscando el mejor bajón de Temuco? En Volcán Burger te ofrecemos hamburguesas premium, completos gigantes y las papas fritas más crujientes de la Araucanía. ¡Pide al paso o con delivery!"
+    />
+    <meta
+      name="keywords"
+      content="comida rapida temuco, hamburguesas temuco, bajon temuco, completos temuco, papas fritas temuco, comida al paso araucania"
+    />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://www.volcanburger.cl" />
+
+    <!-- Open Graph / Facebook (Para compartir en Redes Sociales) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Volcán Burger & Bajón | Comida Rápida en Temuco" />
+    <meta
+      property="og:description"
+      content="El verdadero sabor del bajón temucano. Ingredientes frescos, porciones generosas y atención rápida en Av. Alemania."
+    />
+    <meta
+      property="og:image"
+      content="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=800&auto=format&fit=crop"
+    />
+    <meta property="og:url" content="https://www.volcanburger.cl" />
+
+    <!-- Importación de Tailwind CSS solicitada -->
+    <script is:inline src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Configuración de Fuentes y Estilos Extra -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+      }
+    </style>
+  </head>
+  <body class="bg-stone-950 text-stone-100 antialiased">
+    <!-- HEADER / NAVBAR -->
+    <header class="sticky top-0 z-50 border-b border-stone-800 bg-stone-950/90 backdrop-blur-md">
+      <div class="mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+        <a href="#" class="flex items-center gap-2">
+          <span class="text-2xl font-extrabold tracking-wider text-amber-500">VOLCÁN</span>
+          <span
+            class="rounded bg-amber-500 px-2 py-1 text-xs font-bold tracking-widest text-stone-950"
+            >BURGER</span
+          >
+        </a>
+
+        <nav
+          class="hidden items-center gap-8 text-sm font-semibold tracking-wide text-stone-300 md:flex"
+        >
+          <a href="#menu" class="transition-colors hover:text-amber-500">Nuestro Menú</a>
+          <a href="#nosotros" class="transition-colors hover:text-amber-500">¿Por qué Volcán?</a>
+          <a href="#ubicacion" class="transition-colors hover:text-amber-500"
+            >Ubicación e Horarios</a
+          >
+        </nav>
+
+        <div class="flex items-center gap-4">
+          <a
+            href="https://wa.me/56912345678?text=Hola!%20Quiero%20hacer%20un%20pedido"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex transform items-center gap-2 rounded-full bg-emerald-600 px-5 py-2.5 text-sm font-bold text-white shadow-lg shadow-emerald-900/30 transition-all hover:scale-105 hover:bg-emerald-500"
+          >
+            <svg class="h-5 w-5 fill-current" viewBox="0 0 24 24"
+              ><path
+                d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.4.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.713-1.457L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.864-9.799.002-2.63-1.023-5.101-2.885-6.963C16.528 1.98 14.076.957 11.457.957c-5.44 0-9.866 4.372-9.87 9.802 0 1.689.46 3.336 1.33 4.816l-.999 3.644 3.739-.965zm13.125-11.233c-.266-.134-1.58-.78-1.822-.867-.243-.088-.419-.133-.596.134-.176.265-.685.867-.839 1.044-.156.177-.311.199-.577.065-.266-.134-1.12-.414-2.13-1.319-.789-.705-1.322-1.575-1.478-1.842-.155-.266-.017-.41.117-.543.12-.12.266-.31.4-.464.133-.155.177-.266.266-.443.089-.177.044-.332-.022-.465-.067-.133-.596-1.437-.816-1.968-.215-.518-.432-.448-.596-.456-.153-.008-.331-.01-.508-.01-.177 0-.465.067-.708.332-.243.266-.93.908-.93 2.214 0 1.306.948 2.569 1.08 2.747.133.177 1.865 2.848 4.519 3.993.632.272 1.125.435 1.51.557.635.202 1.212.174 1.669.106.51-.076 1.58-.646 1.802-1.24.221-.594.221-1.107.155-1.214-.066-.106-.242-.153-.508-.287z"
+              ></path></svg
+            >
+            Pide Aquí
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- HERO SECTION -->
+      <section class="relative overflow-hidden bg-stone-900 py-16 lg:py-24">
+        <div
+          class="relative z-10 mx-auto grid max-w-7xl items-center gap-12 px-4 sm:px-6 md:grid-cols-2 lg:px-8"
+        >
+          <div class="space-y-6 text-center md:text-left">
+            <span
+              class="inline-block rounded-full border border-orange-500/20 bg-orange-500/10 px-4 py-2 text-xs font-bold tracking-widest text-orange-400 uppercase"
+            >
+              🔥 El Bajón Oficial de Temuco
+            </span>
+            <h1
+              class="text-4xl leading-tight font-extrabold tracking-tight sm:text-5xl lg:text-6xl"
+            >
+              Sabor explosivo que calma tu <span class="text-amber-500">hambre</span>
+            </h1>
+            <p class="mx-auto max-w-lg text-lg text-stone-400 md:mx-0">
+              Hamburguesas caseras monumentales, completos con palta de verdad y papas rústicas al
+              paso en el corazón de la Araucanía. Calidad premium sin rodeos.
+            </p>
+            <div class="flex flex-col justify-center gap-4 pt-2 sm:flex-row md:justify-start">
+              <a
+                href="#menu"
+                class="transform rounded-xl bg-amber-500 px-8 py-4 text-center font-bold text-stone-950 shadow-xl shadow-amber-500/10 transition-all hover:-translate-y-0.5 hover:bg-amber-400"
+              >
+                Ver el Menú
+              </a>
+              <a
+                href="#ubicacion"
+                class="rounded-xl border border-stone-700 bg-stone-800 px-8 py-4 text-center font-bold text-stone-200 transition-all hover:bg-stone-700"
+              >
+                ¿Dónde estamos?
+              </a>
+            </div>
+          </div>
+          <div class="relative flex justify-center">
+            <div
+              class="absolute inset-0 mx-auto my-auto h-72 w-72 rounded-full bg-gradient-to-tr from-amber-500/20 to-transparent blur-3xl filter"
+            >
+            </div>
+            <img
+              src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=800&auto=format&fit=crop"
+              alt="Hamburguesa Volcán XL con queso derretido y papas fritas"
+              class="relative z-10 w-full max-w-md rotate-2 transform rounded-2xl object-cover shadow-2xl transition-transform duration-300 hover:rotate-0"
+            />
+          </div>
+        </div>
+        <div
+          class="absolute right-0 bottom-0 left-0 h-16 bg-gradient-to-t from-stone-950 to-transparent"
+        >
+        </div>
+      </section>
+
+      <!-- FEATURES / BENEFICIOS -->
+      <section id="nosotros" class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+        <div class="mx-auto mb-12 max-w-3xl text-center">
+          <h2 class="text-3xl font-bold tracking-tight text-amber-500">
+            ¿Por qué elegir Volcán Burger?
+          </h2>
+          <p class="mt-2 text-stone-400">
+            Aquí no escatimamos en calidad. Descubre el secreto de nuestro éxito al paso.
+          </p>
+        </div>
+        <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          <div
+            class="rounded-2xl border border-stone-800 bg-stone-900 p-8 transition-all hover:border-stone-700"
+          >
+            <div
+              class="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-amber-500/10 text-xl font-bold text-amber-500"
+            >
+              🥩
+            </div>
+            <h3 class="mb-2 text-lg font-bold text-stone-100">Carne 100% Vacuno</h3>
+            <p class="text-sm leading-relaxed text-stone-400">
+              Molienda propia diaria utilizando cortes seleccionados, sin aditivos ni misterios.
+              Solo carne y sazón.
+            </p>
+          </div>
+          <div
+            class="rounded-2xl border border-stone-800 bg-stone-900 p-8 transition-all hover:border-stone-700"
+          >
+            <div
+              class="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-amber-500/10 text-xl font-bold text-amber-500"
+            >
+              🥑
+            </div>
+            <h3 class="mb-2 text-lg font-bold text-stone-100">Palta Hass Molida en el Día</h3>
+            <p class="text-sm leading-relaxed text-stone-400">
+              Olvídate de las pastas industriales. Para nuestros completos y burgers, usamos palta
+              natural directo al pan.
+            </p>
+          </div>
+          <div
+            class="rounded-2xl border border-stone-800 bg-stone-900 p-8 transition-all hover:border-stone-700 sm:col-span-2 lg:col-span-1"
+          >
+            <div
+              class="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-amber-500/10 text-xl font-bold text-amber-500"
+            >
+              ⚡
+            </div>
+            <h3 class="mb-2 text-lg font-bold text-stone-100">Servicio Al Paso Ultra Veloz</h3>
+            <p class="text-sm leading-relaxed text-stone-400">
+              Sabemos que el bajón no espera. Optimizamos nuestros flujos de cocina para entregarte
+              tu comida ardiendo en minutos.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- MENU / PRODUCTOS -->
+      <section id="menu" class="border-y border-stone-900 bg-stone-900/40 py-16">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div class="mb-12 flex flex-col justify-between md:flex-row md:items-end">
+            <div class="max-w-xl text-center md:text-left">
+              <h2 class="text-3xl font-bold tracking-tight text-amber-500">
+                Nuestro Menú de Combate
+              </h2>
+              <p class="mt-2 text-stone-400">
+                Los favoritos indiscutidos de la comunidad temucana. Elige tu arma contra el hambre.
+              </p>
+            </div>
+          </div>
+
+          <!-- Grid de Productos -->
+          <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+            <!-- Producto 1 -->
+            <div
+              class="flex flex-col justify-between overflow-hidden rounded-2xl border border-stone-800 bg-stone-900"
+            >
+              <div>
+                <img
+                  src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=500&auto=format&fit=crop"
+                  alt="Burger Volcán Llaima"
+                  class="h-48 w-full object-cover"
+                />
+                <div class="p-6">
+                  <div class="flex items-start justify-between gap-4">
+                    <h3 class="text-xl font-bold text-stone-100">Burger Volcán Llaima</h3>
+                    <span class="text-lg font-extrabold whitespace-nowrap text-amber-500"
+                      >$7.990</span
+                    >
+                  </div>
+                  <p class="mt-2 text-sm leading-relaxed text-stone-400">
+                    Doble carne de vacuno (2x120g), queso cheddar derretido, tocino crocante, aros
+                    de cebolla morada y salsa barbacoa secreta de la casa.
+                  </p>
+                </div>
+              </div>
+              <div class="p-6 pt-0">
+                <a
+                  href="https://wa.me/56912345678?text=Hola!%20Quiero%20pedir%20la%20Burger%20Volcan%20Llaima"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="inline-block w-full rounded-xl bg-stone-800 py-3 text-center text-sm font-bold text-stone-200 transition-all hover:bg-amber-500 hover:text-stone-950"
+                >
+                  Pedir por WhatsApp
+                </a>
+              </div>
+            </div>
+
+            <!-- Producto 2 -->
+            <div
+              class="flex flex-col justify-between overflow-hidden rounded-2xl border border-stone-800 bg-stone-900"
+            >
+              <div>
+                <img
+                  src="https://images.unsplash.com/photo-1627059318424-d7293223e330?q=80&w=500&auto=format&fit=crop"
+                  alt="Italiano Gigante Ñielol"
+                  class="h-48 w-full object-cover"
+                />
+                <div class="p-6">
+                  <div class="flex items-start justify-between gap-4">
+                    <h3 class="text-xl font-bold text-stone-100">Italiano Gigante Ñielol</h3>
+                    <span class="text-lg font-extrabold whitespace-nowrap text-amber-500"
+                      >$4.500</span
+                    >
+                  </div>
+                  <p class="mt-2 text-sm leading-relaxed text-stone-400">
+                    Salchicha de primera calidad en pan artesanal de 22cm, cargado con tomate picado
+                    fresco, harta palta Hass natural molida y mayo casera de la casa.
+                  </p>
+                </div>
+              </div>
+              <div class="p-6 pt-0">
+                <a
+                  href="https://wa.me/56912345678?text=Hola!%20Quiero%20pedir%20el%20Italiano%20Gigante%20Ñielol"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="inline-block w-full rounded-xl bg-stone-800 py-3 text-center text-sm font-bold text-stone-200 transition-all hover:bg-amber-500 hover:text-stone-950"
+                >
+                  Pedir por WhatsApp
+                </a>
+              </div>
+            </div>
+
+            <!-- Producto 3 -->
+            <div
+              class="flex flex-col justify-between overflow-hidden rounded-2xl border border-stone-800 bg-stone-900"
+            >
+              <div>
+                <img
+                  src="https://images.unsplash.com/photo-1576107232684-1279f390859f?q=80&w=500&auto=format&fit=crop"
+                  alt="Papas Supremas Cautín"
+                  class="h-48 w-full object-cover"
+                />
+                <div class="p-6">
+                  <div class="flex items-start justify-between gap-4">
+                    <h3 class="text-xl font-bold text-stone-100">Papas Supremas Cautín</h3>
+                    <span class="text-lg font-extrabold whitespace-nowrap text-amber-500"
+                      >$6.200</span
+                    >
+                  </div>
+                  <p class="mt-2 text-sm leading-relaxed text-stone-400">
+                    Papas fritas corte rústico bien crujientes, bañadas en salsa de queso cheddar
+                    artesanal, carne picada sazonada y cebollín fresco picado.
+                  </p>
+                </div>
+              </div>
+              <div class="p-6 pt-0">
+                <a
+                  href="https://wa.me/56912345678?text=Hola!%20Quiero%20pedir%20las%20Papas%20Supremas%20Cautin"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="inline-block w-full rounded-xl bg-stone-800 py-3 text-center text-sm font-bold text-stone-200 transition-all hover:bg-amber-500 hover:text-stone-950"
+                >
+                  Pedir por WhatsApp
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- LOCALIZACIÓN / HORARIOS -->
+      <section id="ubicacion" class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+        <div
+          class="grid items-center gap-12 rounded-3xl border border-stone-800 bg-gradient-to-br from-stone-900 to-stone-950 p-8 md:grid-cols-2 lg:p-12"
+        >
+          <div class="space-y-6">
+            <h2 class="text-3xl font-bold text-amber-500">¿Dónde pasar por el tuyo?</h2>
+            <p class="leading-relaxed text-stone-400">
+              Estamos estratégicamente ubicados en la zona del movimiento temucano para salvarte del
+              hambre de día o de noche. ¡Pasa a retirar o pídelo directo a tu ubicación!
+            </p>
+            <div class="space-y-4 font-medium text-stone-300">
+              <div class="flex items-start gap-3">
+                <span class="text-xl text-amber-500">📍</span>
+                <div>
+                  <p class="font-bold text-stone-100">Dirección:</p>
+                  <p class="text-sm text-stone-400">
+                    Av. Alemania 01230, Temuco, Región de la Araucanía.
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-start gap-3">
+                <span class="text-xl text-amber-500">🕒</span>
+                <div>
+                  <p class="font-bold text-stone-100">Horarios de Atención:</p>
+                  <p class="text-sm text-stone-400">Lunes a Jueves: 12:00 a 01:00 hrs.</p>
+                  <p class="text-sm text-stone-400">
+                    Viernes y Sábado: 12:00 a 03:30 hrs (Ideal bajón).
+                  </p>
+                  <p class="text-sm text-stone-400">Domingo: Cerrado por descanso del staff.</p>
+                </div>
+              </div>
+            </div>
+            <div class="pt-2">
+              <a
+                href="tel:+56912345678"
+                class="inline-flex items-center gap-2 font-bold text-amber-400 transition-colors hover:text-amber-300"
+              >
+                <span>📞 Llámanos para asegurar tu retiro: +56 9 1234 5678</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Placeholder de Mapa Funcional / Estético -->
+          <div
+            class="relative flex h-64 w-full items-center justify-center overflow-hidden rounded-2xl border border-stone-700 bg-stone-800 p-6 text-center md:h-80"
+          >
+            <!-- Simulación de Mapa Elegante -->
+            <div
+              class="absolute inset-0 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px] opacity-20"
+            >
+            </div>
+            <div class="relative z-10 space-y-3">
+              <span class="block text-3xl">🗺️</span>
+              <p class="text-sm font-semibold text-stone-300">Mapa Satelital de Av. Alemania</p>
+              <p class="mx-auto max-w-xs text-xs text-stone-500">
+                Aquí puedes incrustar el iframe de Google Maps al implementar el sitio final de tu
+                cliente.
+              </p>
+              <a
+                href="https://maps.google.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-block rounded-lg bg-stone-700 px-4 py-2 text-xs font-bold text-stone-200 transition-colors hover:bg-stone-600"
+              >
+                Abrir en Google Maps
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-stone-900 bg-stone-950 py-8">
+      <div
+        class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-4 text-xs font-medium text-stone-500 sm:flex-row sm:px-6 lg:px-8"
+      >
+        <p>&copy; 2026 Volcán Burger & Bajón. Todos los derechos reservados.</p>
+        <p>Diseñado con orgullo para la Araucanía, Chile.</p>
+      </div>
+    </footer>
+  </body>
+</html>

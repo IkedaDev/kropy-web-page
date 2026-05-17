@@ -1,0 +1,1682 @@
+<!-- Material Design --><!doctype html>
+<html lang="es" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO DE EXCELENCIA: Metadatos y Posicionamiento Local Google Chile -->
+    <title>MAWIDA | Constructora & Ingeniería Bioclimática • Temuco Araucanía</title>
+    <meta
+      name="description"
+      content="MAWIDA es la constructora líder en Temuco. Especialistas en edificación bioclimática, estructuras de hormigón armado, madera nativa e ingeniería sustentable en la Araucanía."
+    />
+    <meta
+      name="keywords"
+      content="constructora Temuco, construccion bioclimatica Chile, ingenieria civil Araucania, constructora de casas Temuco, obras civiles Temuco, arquitectura sustentable"
+    />
+    <meta name="author" content="MAWIDA Ingeniería y Construcción" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://www.mawidaconstructora.cl" />
+
+    <!-- Open Graph (Facebook / LinkedIn) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="MAWIDA | Constructora & Ingeniería Bioclimática en Temuco" />
+    <meta
+      property="og:description"
+      content="Diseño y construcción de alta resistencia térmica para el clima del sur de Chile. Proyectos residenciales, comerciales e industriales en Temuco, Pucón y Villarrica."
+    />
+    <meta property="og:url" content="https://www.mawidaconstructora.cl" />
+    <meta property="og:site_name" content="MAWIDA Constructora" />
+    <meta property="og:locale" content="es_CL" />
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="MAWIDA | Constructora Bioclimática • Temuco" />
+    <meta
+      name="twitter:description"
+      content="Proyectamos obras sustentables de hormigón, acero y maderas nativas preparadas para el invierno de la Araucanía."
+    />
+
+    <!-- SCHEMA.ORG DATA: Marcado de Datos Estructurados para SEO Local -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "MAWIDA | Ingeniería, Diseño & Construcción",
+        "image": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80",
+        "@id": "https://www.mawidaconstructora.cl/#localbusiness",
+        "url": "https://www.mawidaconstructora.cl",
+        "telephone": "+56912345678",
+        "priceRange": "$$$$",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Avenida Alemania 01450",
+          "addressLocality": "Temuco",
+          "addressRegion": "Araucanía",
+          "postalCode": "4780000",
+          "addressCountry": "CL"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": -38.740278,
+          "longitude": -72.615278
+        },
+        "openingHoursSpecification": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "08:30",
+          "closes": "18:30"
+        },
+        "sameAs": [
+          "https://www.facebook.com/mawidaconstructora",
+          "https://www.instagram.com/mawidaconstructora"
+        ]
+      }
+    </script>
+
+    <!-- Tailwind CSS (Default CDN) con etiqueta is:inline solicitada -->
+    <script is:inline src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts: Plus Jakarta Sans (Limpia y moderna) & Playfair Display (Serif de lujo orgánico) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,700;1,500&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      /* CSS PURO: Variables y Utilidades de Material Design 3 claro */
+      :root {
+        /* M3 Tonal Palette */
+        --md-sys-color-primary: #006a54; /* Verde Araucaria */
+        --md-sys-color-on-primary: #ffffff;
+        --md-sys-color-primary-container: #c8eed9;
+        --md-sys-color-secondary: #8b503a; /* Arcilla / Terracota */
+        --md-sys-color-on-secondary: #ffffff;
+        --md-sys-color-background: #f8f9fa; /* Tiza claro neutral */
+        --md-sys-color-surface: #f0f4f1; /* Tonalidad suave */
+        --md-sys-color-surface-variant: #e1e4e1; /* Contenedor variante */
+        --md-sys-color-outline: #727974; /* Delineado M3 */
+        --md-sys-color-text: #191c1b; /* Carbón M3 */
+        --md-sys-color-muted: #5b625e; /* Gris de lectura */
+
+        /* M3 Elevations (Elevation Levels 1 to 5) */
+        --md-elevation-1: 0px 1px 3px 1px rgba(0, 0, 0, 0.15), 0px 1px 2px 0px rgba(0, 0, 0, 0.3);
+        --md-elevation-2: 0px 2px 6px 2px rgba(0, 0, 0, 0.15), 0px 1px 2px 0px rgba(0, 0, 0, 0.3);
+        --md-elevation-3: 0px 4px 8px 3px rgba(0, 0, 0, 0.15), 0px 1px 3px 0px rgba(0, 0, 0, 0.3);
+      }
+
+      body {
+        background-color: var(--md-sys-color-background);
+        color: var(--md-sys-color-text);
+        font-family: "Plus Jakarta Sans", sans-serif;
+        letter-spacing: -0.01em;
+      }
+
+      .font-editorial {
+        font-family: "Playfair Display", serif;
+      }
+
+      /* Utilidades M3 */
+      .m3-elevation-1 {
+        box-shadow: var(--md-elevation-1);
+      }
+
+      .m3-elevation-2 {
+        box-shadow: var(--md-elevation-2);
+      }
+
+      .m3-elevation-3 {
+        box-shadow: var(--md-elevation-3);
+      }
+
+      /* Efecto de Onda de Presión Táctil (Ripple feedback) */
+      .m3-ripple {
+        position: relative;
+        overflow: hidden;
+      }
+      .m3-ripple::after {
+        content: "";
+        background: rgba(255, 255, 255, 0.2);
+        display: block;
+        position: absolute;
+        border-radius: 50%;
+        padding-top: 240%;
+        padding-left: 240%;
+        margin-top: -120%;
+        margin-left: -120%;
+        opacity: 0;
+        transition: all 0.8s;
+      }
+      .m3-ripple:active::after {
+        padding-top: 0;
+        padding-left: 0;
+        margin-top: 0;
+        margin-left: 0;
+        opacity: 1;
+        transition: 0s;
+      }
+
+      /* Transición suave estándar */
+      .m3-transition {
+        transition: all 0.3s cubic-bezier(0.2, 0, 0, 1);
+      }
+    </style>
+  </head>
+  <body class="relative min-h-screen overflow-x-hidden antialiased">
+    <!-- FLOATING ACTION BUTTON (FAB) - ÍCONO EMBLEMÁTICO DE MATERIAL DESIGN 3 -->
+    <div class="fixed right-6 bottom-6 z-50">
+      <a
+        href="https://wa.me/56912345678?text=Hola%20Mawida%20Constructora,%20me%20gustaria%20realizar%20una%20consulta%20para%20un%20proyecto."
+        target="_blank"
+        class="m3-elevation-3 m3-ripple m3-transition group flex h-14 w-14 items-center justify-center rounded-2xl border border-white/30 bg-[--md-sys-color-primary-container] text-[--md-sys-color-primary] hover:bg-[--md-sys-color-primary] hover:text-white"
+        aria-label="Contacto directo por WhatsApp"
+      >
+        <svg
+          class="m3-transition h-6 w-6 group-hover:scale-110"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          stroke-width="2"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
+          ></path>
+        </svg>
+      </a>
+    </div>
+
+    <!-- CABECERA DE NAVEGACIÓN M3 (Barra de Superficie Tonal, Esquinas Redondeadas) -->
+    <header class="sticky top-0 z-40 mx-auto max-w-7xl px-4 pt-4 sm:px-6">
+      <div
+        class="m3-elevation-1 m3-transition hover:m3-elevation-2 flex items-center justify-between rounded-3xl border border-[--md-sys-color-surface-variant] bg-white px-6 py-4"
+      >
+        <!-- Logotipo Corporativo -->
+        <a href="#" class="group flex items-center gap-3" aria-label="Volver al inicio">
+          <div
+            class="h-9 w-9 rounded-xl bg-gradient-to-tr from-[--md-sys-color-primary] to-[--md-sys-color-secondary] p-[1px]"
+          >
+            <div
+              class="font-editorial m3-transition flex h-full w-full items-center justify-center rounded-lg bg-white text-base font-bold text-[--md-sys-color-primary] group-hover:bg-[--md-sys-color-primary] group-hover:text-white"
+            >
+              M
+            </div>
+          </div>
+          <span
+            class="font-editorial m3-transition text-2xl font-bold tracking-tight text-[--md-sys-color-text] group-hover:text-[--md-sys-color-primary]"
+          >
+            Mawida<span class="text-[--md-sys-color-secondary]">.</span>
+          </span>
+        </a>
+
+        <!-- Navegación M3 Estilo Tonal Tabs -->
+        <nav
+          class="hidden items-center space-x-1.5 text-xs font-bold tracking-[0.2em] text-[--md-sys-color-muted] uppercase lg:flex"
+        >
+          <a
+            href="#concepto"
+            class="m3-transition rounded-full px-4 py-2.5 hover:bg-[--md-sys-color-primary-container] hover:text-[--md-sys-color-primary]"
+            >El Método</a
+          >
+          <a
+            href="#estimador"
+            class="m3-transition rounded-full px-4 py-2.5 hover:bg-[--md-sys-color-primary-container] hover:text-[--md-sys-color-primary]"
+            >Calculadora</a
+          >
+          <a
+            href="#proyectos"
+            class="m3-transition rounded-full px-4 py-2.5 hover:bg-[--md-sys-color-primary-container] hover:text-[--md-sys-color-primary]"
+            >Obras</a
+          >
+          <a
+            href="#faqs"
+            class="m3-transition rounded-full px-4 py-2.5 hover:bg-[--md-sys-color-primary-container] hover:text-[--md-sys-color-primary]"
+            >Consultas</a
+          >
+        </nav>
+
+        <!-- Acción Principal -->
+        <div class="flex items-center gap-4">
+          <a
+            href="https://wa.me/56912345678?text=Hola%20Mawida,%20me%20gustaria%20agendar%20una%20reunion%20de%20factibilidad%20para%20un%20proyecto."
+            target="_blank"
+            class="m3-ripple m3-transition rounded-full bg-[--md-sys-color-primary] px-6 py-3 text-[10px] font-bold tracking-widest text-white uppercase shadow-sm hover:bg-[--md-sys-color-secondary]"
+          >
+            Cotizar Obra
+          </a>
+
+          <!-- Menú móvil M3 sutil -->
+          <button
+            id="drawer-toggle"
+            class="m3-transition rounded-full bg-gray-50 p-2 text-[--md-sys-color-text] hover:bg-gray-100 lg:hidden"
+            aria-label="Abrir Menú de Navegación"
+          >
+            <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path
+                id="drawer-icon"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.8"
+                d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Cajón de navegación móvil M3 -->
+      <div
+        id="mobile-drawer"
+        class="m3-elevation-3 mt-2 hidden space-y-3 rounded-3xl border border-[--md-sys-color-surface-variant] bg-white p-6 lg:hidden"
+      >
+        <div
+          class="flex flex-col space-y-2 text-[10px] font-bold tracking-widest text-[--md-sys-color-muted] uppercase"
+        >
+          <a
+            href="#concepto"
+            class="m3-transition rounded-xl px-4 py-2.5 hover:bg-[--md-sys-color-primary-container] hover:text-[--md-sys-color-primary]"
+            >El Método</a
+          >
+          <a
+            href="#estimador"
+            class="m3-transition rounded-xl px-4 py-2.5 hover:bg-[--md-sys-color-primary-container] hover:text-[--md-sys-color-primary]"
+            >Calculadora de Obra</a
+          >
+          <a
+            href="#proyectos"
+            class="m3-transition rounded-xl px-4 py-2.5 hover:bg-[--md-sys-color-primary-container] hover:text-[--md-sys-color-primary]"
+            >Obras Realizadas</a
+          >
+          <a
+            href="#faqs"
+            class="m3-transition rounded-xl px-4 py-2.5 hover:bg-[--md-sys-color-primary-container] hover:text-[--md-sys-color-primary]"
+            >Preguntas Frecuentes</a
+          >
+          <a
+            href="https://wa.me/56912345678"
+            class="m3-ripple m3-transition mt-2 block rounded-full bg-[--md-sys-color-primary] py-3.5 text-center text-[10px] font-bold tracking-widest text-white uppercase"
+            >Presupuestar Proyecto</a
+          >
+        </div>
+      </div>
+    </header>
+
+    <!-- SECCIÓN HERO: Armonía de Líneas, Tonalidades y Contenido Persuasivo -->
+    <section class="relative mx-auto max-w-7xl px-6 py-16 sm:px-10 lg:py-24">
+      <div class="grid grid-cols-1 items-center gap-16 lg:grid-cols-12">
+        <!-- Propuesta de Valor Editorial de Alta Gama -->
+        <div class="space-y-8 text-center lg:col-span-7 lg:text-left">
+          <div
+            class="inline-flex items-center gap-2.5 rounded-full border border-[--md-sys-color-outline]/20 bg-white px-4 py-2 text-[9px] font-bold tracking-[0.2em] text-[--md-sys-color-primary] uppercase shadow-sm"
+          >
+            <span class="h-2 w-2 animate-pulse rounded-full bg-[--md-sys-color-primary]"></span> INGENIERÍA
+            & CONSTRUCCIÓN DE VANGUARDIA
+          </div>
+
+          <h1
+            class="font-editorial text-5xl leading-[1.05] tracking-tight text-[--md-sys-color-text] sm:text-7xl lg:text-8xl"
+          >
+            Construcción con <br />
+            <span
+              class="bg-gradient-to-r from-[--md-sys-color-primary] to-[--md-sys-color-secondary] bg-clip-text font-normal text-transparent italic"
+              >carácter sureño.</span
+            >
+          </h1>
+
+          <p
+            class="mx-auto max-w-xl text-sm leading-relaxed font-light text-[--md-sys-color-muted] md:text-base lg:mx-0"
+          >
+            MAWIDA proyecta y edifica obras de alta resistencia estructural y eficiencia térmica
+            continua en la Araucanía. Fusionamos la nobleza del hormigón visto y maderas nativas con
+            ingeniería bioclimática avanzada para resistir el implacable clima del sur.
+          </p>
+
+          <!-- Acciones M3 claras -->
+          <div
+            class="flex flex-col items-stretch justify-center gap-4 pt-4 sm:flex-row sm:items-center lg:justify-start"
+          >
+            <a
+              href="#planes"
+              class="m3-ripple m3-transition rounded-full bg-[--md-sys-color-primary] px-8 py-4 text-center text-[10px] font-bold tracking-widest text-white uppercase shadow-sm hover:bg-[--md-sys-color-secondary] hover:shadow"
+            >
+              Línea de Servicios & Honorarios
+            </a>
+            <a
+              href="#estimador"
+              class="m3-transition rounded-full border border-[--md-sys-color-outline]/30 bg-white px-8 py-4.5 text-center text-[10px] font-bold tracking-widest text-[--md-sys-color-text] uppercase shadow-sm hover:border-[--md-sys-color-primary] hover:shadow"
+            >
+              Estimar Presupuesto M²
+            </a>
+          </div>
+        </div>
+
+        <!-- Columna de Vitrina de Imagen (M3 Card Elevada) -->
+        <div class="flex justify-center lg:col-span-5">
+          <div
+            class="m3-elevation-2 hover:m3-elevation-3 m3-transition relative w-full max-w-[390px] rounded-3xl border border-[--md-sys-color-outline]/10 bg-white p-5"
+          >
+            <div
+              class="relative aspect-[3/4] w-full overflow-hidden rounded-2xl border border-black/5"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80"
+                alt="Fachada residencial moderna con acabados en hormigón y madera en Temuco"
+                class="h-full w-full object-cover brightness-[1.01] saturate-[0.3]"
+                onerror="this.onerror=null;this.src='https://placehold.co/400x500/F8F9FA/191C1B?text=Mawida+Arquitectura'"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-[--md-sys-color-text]/40 via-transparent to-transparent"
+              >
+              </div>
+            </div>
+
+            <div
+              class="mt-4 flex items-center justify-between border-t border-black/5 pt-4 text-left"
+            >
+              <div>
+                <span
+                  class="block text-[8px] font-bold tracking-widest text-[--md-sys-color-muted] uppercase"
+                  >Obra Civil Destacada</span
+                >
+                <span class="font-editorial text-xs font-bold text-[--md-sys-color-text] italic"
+                  >Casa Bosque, Portal de la Frontera</span
+                >
+              </div>
+              <span
+                class="rounded-full border border-[--md-sys-color-primary]/10 bg-[--md-sys-color-primary-container] px-3 py-1.5 text-[8px] font-bold tracking-wider text-[--md-sys-color-primary] uppercase"
+                >HORMIGÓN ARMADO</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN FILOSOFÍA: Tres Pilares M3 en Tarjetas Alineadas -->
+    <section
+      id="concepto"
+      class="border-t border-b border-[--md-sys-color-surface-variant] bg-white/30 py-24"
+    >
+      <div class="mx-auto max-w-7xl px-6 sm:px-10">
+        <div class="mx-auto mb-20 max-w-2xl space-y-3 text-center">
+          <span
+            class="block text-[10px] font-bold tracking-[0.25em] text-[--md-sys-color-secondary] uppercase"
+            >EL ESTÁNDAR MAWIDA</span
+          >
+          <h2 class="font-editorial text-3xl text-[--md-sys-color-text] sm:text-4xl">
+            Construcción de Alta Permanencia
+          </h2>
+          <p class="text-sm font-light text-[--md-sys-color-muted]">
+            Erigimos infraestructuras diseñadas para trascender generaciones, optimizando los
+            recursos energéticos del entorno.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
+          <!-- Tarjeta 1 -->
+          <div
+            class="m3-elevation-1 hover:m3-elevation-2 m3-transition space-y-4 rounded-3xl border border-[--md-sys-color-outline]/10 bg-white p-8 hover:border-[--md-sys-color-primary]/20 sm:p-10"
+          >
+            <span class="font-editorial text-4xl font-light text-[--md-sys-color-primary] italic"
+              >01/</span
+            >
+            <h3 class="font-editorial text-lg font-bold text-[--md-sys-color-text]">
+              Sustentabilidad Pasiva
+            </h3>
+            <p class="text-xs leading-relaxed font-light text-[--md-sys-color-muted]">
+              Proyectamos orientaciones solares óptimas, aislamiento continuo de poliuretano
+              inyectado de alta densidad y ventanas termopanel que cumplen estrictamente con el PDA
+              de Temuco.
+            </p>
+          </div>
+
+          <!-- Tarjeta 2 -->
+          <div
+            class="m3-elevation-1 hover:m3-elevation-2 m3-transition space-y-4 rounded-3xl border border-[--md-sys-color-outline]/10 bg-white p-8 hover:border-[--md-sys-color-primary]/20 sm:p-10"
+          >
+            <span class="font-editorial text-4xl font-light text-[--md-sys-color-secondary] italic"
+              >02/</span
+            >
+            <h3 class="font-editorial text-lg font-bold text-[--md-sys-color-text]">
+              Rigor Estructural
+            </h3>
+            <p class="text-xs leading-relaxed font-light text-[--md-sys-color-muted]">
+              Calculamos cada estructura para soportar altas cargas sísmicas y condiciones extremas
+              de humedad. Hormigón dosificado H30 de alta resistencia y fundaciones protegidas
+              contra escurrimientos.
+            </p>
+          </div>
+
+          <!-- Tarjeta 3 -->
+          <div
+            class="m3-elevation-1 hover:m3-elevation-2 m3-transition space-y-4 rounded-3xl border border-[--md-sys-color-outline]/10 bg-white p-8 hover:border-[--md-sys-color-primary]/20 sm:p-10"
+          >
+            <span class="font-editorial text-4xl font-light text-[--md-sys-color-primary] italic"
+              >03/</span
+            >
+            <h3 class="font-editorial text-lg font-bold text-[--md-sys-color-text]">
+              Maderas Carbonizadas
+            </h3>
+            <p class="text-xs leading-relaxed font-light text-[--md-sys-color-muted]">
+              Innovamos integrando revestimientos de pino y ciprés tratados bajo el método japonés
+              *Shou Sugi Ban*, logrando una resistencia natural impecable al agua del sur, termitas
+              y fuego.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN INTERACTIVA: CALCULADORA DE INVERSIÓN (Estimador de M² en CLP) -->
+    <section id="estimador" class="mx-auto max-w-7xl px-6 py-24 sm:px-10">
+      <div class="mx-auto mb-16 max-w-2xl space-y-3 text-center">
+        <span
+          class="text-[10px] font-bold tracking-[0.25em] text-[--md-sys-color-secondary] uppercase"
+          >HERRAMIENTA ACTIVA DE DISEÑO</span
+        >
+        <h2 class="font-editorial text-3xl text-[--md-sys-color-text] sm:text-4xl">
+          Calculadora de Presupuesto Base
+        </h2>
+        <p class="text-sm font-light text-[--md-sys-color-muted]">
+          Calibra las dimensiones de tu proyecto e indica el estándar de materialidad para obtener
+          un presupuesto estimado del valor de la obra gruesa en CLP.
+        </p>
+      </div>
+
+      <!-- Mapeo de Caja de Control M3 -->
+      <div
+        class="m3-elevation-1 hover:m3-elevation-2 m3-transition rounded-3xl border border-[--md-sys-color-surface-variant] bg-white p-8 sm:p-12"
+        id="calculator-panel"
+      >
+        <div class="grid grid-cols-1 items-center gap-12 lg:grid-cols-12">
+          <!-- Inputs de Ajuste -->
+          <div class="space-y-6 lg:col-span-6">
+            <div class="flex items-center gap-3 border-b border-black/5 pb-4">
+              <span class="text-2xl">📐</span>
+              <div>
+                <span
+                  class="block text-[8px] font-bold tracking-widest text-[--md-sys-color-muted] uppercase"
+                  >ESTIMACIÓN EN TIEMPO REAL</span
+                >
+                <h3 class="font-editorial text-xl font-bold text-[--md-sys-color-text]">
+                  Dimensiones del Proyecto
+                </h3>
+              </div>
+            </div>
+
+            <!-- Slider de M² -->
+            <div class="space-y-2">
+              <div
+                class="flex items-center justify-between text-xs font-bold text-[--md-sys-color-text] uppercase"
+              >
+                <span>Superficie Útil Proyectada</span>
+                <span class="font-extrabold text-[--md-sys-color-primary]" id="area-val"
+                  >120 M²</span
+                >
+              </div>
+              <input
+                type="range"
+                id="input-area"
+                min="60"
+                max="450"
+                value="120"
+                step="10"
+                oninput="calculateConstructionBudget()"
+                class="h-2 w-full cursor-pointer appearance-none rounded-lg border border-gray-300 bg-gray-200 accent-[--md-sys-color-primary]"
+              />
+              <div class="flex justify-between text-[9px] font-bold text-gray-400">
+                <span>Mínimo: 60 M²</span>
+                <span>Máximo: 450 M²</span>
+              </div>
+            </div>
+
+            <!-- Selector de Materialidad M3 -->
+            <div class="space-y-2">
+              <label class="block text-xs font-bold text-[--md-sys-color-text] uppercase"
+                >Estándar de Materiales & Terminaciones</label
+              >
+              <div class="grid grid-cols-1 gap-3 sm:grid-cols-2" id="standard-container">
+                <button
+                  onclick="selectStandard('premium', this)"
+                  class="standard-btn m3-ripple m3-transition rounded-2xl border border-[--md-sys-color-primary]/20 bg-[--md-sys-color-primary-container] py-3 text-xs font-bold text-[--md-sys-color-primary] select-none"
+                  id="btn-premium"
+                >
+                  Premium Bioclimático
+                </button>
+                <button
+                  onclick="selectStandard('solid', this)"
+                  class="standard-btn m3-ripple m3-transition rounded-2xl border border-gray-200 bg-gray-50 py-3 text-xs font-bold text-[--md-sys-color-muted] select-none"
+                  id="btn-solid"
+                >
+                  Hormigón visto & Acero
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Resultados del Cálculo -->
+          <div class="flex h-full flex-col justify-center lg:col-span-6">
+            <div
+              class="space-y-6 rounded-3xl border border-[--md-sys-color-surface-variant] bg-[--md-sys-color-surface] p-6 text-center sm:p-8"
+            >
+              <div class="space-y-1">
+                <span
+                  class="block text-[9px] font-bold tracking-widest text-[--md-sys-color-muted] uppercase"
+                  >INVERSIÓN TOTAL ESTIMADA</span
+                >
+                <span
+                  class="font-editorial block text-3xl font-bold tracking-tight text-[--md-sys-color-primary] sm:text-5xl"
+                  id="total-price-display">$114.000.000 CLP</span
+                >
+                <span class="block text-[9px] font-bold tracking-wider text-gray-400 uppercase"
+                  >Valor neto referencial • No incluye terreno</span
+                >
+              </div>
+
+              <div class="grid grid-cols-2 gap-4 border-t border-black/5 pt-4 text-left">
+                <div>
+                  <span
+                    class="block text-[8px] font-bold tracking-widest text-[--md-sys-color-muted] uppercase"
+                    >Honorarios Proyecto</span
+                  >
+                  <span
+                    class="mt-0.5 block text-xs font-extrabold text-[--md-sys-color-text]"
+                    id="design-fees-display">$11.400.000 CLP</span
+                  >
+                </div>
+                <div>
+                  <span
+                    class="block text-[8px] font-bold tracking-widest text-[--md-sys-color-muted] uppercase"
+                    >Plazo Proyectado</span
+                  >
+                  <span
+                    class="mt-0.5 block text-xs font-extrabold text-[--md-sys-color-text]"
+                    id="construction-time-display">7 Meses de ejecución</span
+                  >
+                </div>
+              </div>
+
+              <!-- CTA Directo con link de WhatsApp dinámico -->
+              <a
+                id="calculator-cta"
+                href="https://wa.me/56912345678?text=Hola%20Mawida,%20he%20calculado%20el%20estimado%20de%20un%20proyecto%20de%20120%20m2%20en%20Premium%20Bioclimatico."
+                target="_blank"
+                class="m3-ripple m3-transition flex w-full items-center justify-center gap-2 rounded-full bg-[--md-sys-color-primary] py-4 text-center text-xs font-bold tracking-widest text-white uppercase shadow-sm hover:bg-[--md-sys-color-secondary]"
+              >
+                <span>Sincronizar Proyecto por WhatsApp</span>
+                <span>&rarr;</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN: OBRAS REALIZADAS (Filtros de Catálogo 100% Funcionales) -->
+    <section
+      id="proyectos"
+      class="border-t border-[--md-sys-color-surface-variant] bg-white/20 py-24"
+    >
+      <div class="mx-auto max-w-7xl px-6 sm:px-10">
+        <div class="mb-16 flex flex-col justify-between gap-8 lg:flex-row lg:items-end">
+          <div class="max-w-xl space-y-3 text-center lg:text-left">
+            <span
+              class="block text-[10px] font-bold tracking-[0.25em] text-[--md-sys-color-secondary] uppercase"
+              >OBRAS CIVILES</span
+            >
+            <h2 class="font-editorial text-4xl font-bold text-[--md-sys-color-text]">
+              Registros del Portafolio
+            </h2>
+            <p class="text-sm font-light text-[--md-sys-color-muted]">
+              Explora algunas de nuestras construcciones más emblemáticas en la Región de la
+              Araucanía.
+            </p>
+          </div>
+
+          <!-- Filtros M3 Estilo Píldoras Deslizables (Transiciones y Lógica Impecables) -->
+          <div
+            class="inline-flex gap-1.5 self-center rounded-full border border-[--md-sys-color-surface-variant] bg-[--md-sys-color-surface] p-1 backdrop-blur-md lg:self-auto"
+          >
+            <button
+              onclick="filterPortfolio('all', this)"
+              class="class-filter-btn m3-transition rounded-full bg-[--md-sys-color-primary] px-6 py-2.5 text-[9px] font-bold tracking-widest text-white uppercase shadow-sm"
+            >
+              Todos
+            </button>
+            <button
+              onclick="filterPortfolio('residencial', this)"
+              class="class-filter-btn m3-transition rounded-full bg-transparent px-6 py-2.5 text-[9px] font-bold tracking-widest text-[--md-sys-color-muted] uppercase"
+            >
+              Residencial
+            </button>
+            <button
+              onclick="filterPortfolio('comercial', this)"
+              class="class-filter-btn m3-transition rounded-full bg-transparent px-6 py-2.5 text-[9px] font-bold tracking-widest text-[--md-sys-color-muted] uppercase"
+            >
+              Comercial
+            </button>
+          </div>
+        </div>
+
+        <!-- Grilla de Tarjetas M3 de Obras -->
+        <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3" id="clases-container">
+          <!-- Proyecto 1 (Residencial) -->
+          <div
+            class="class-card-item m3-elevation-1 hover:m3-elevation-2 m3-transition space-y-5 rounded-3xl border border-[--md-sys-color-outline]/10 bg-white p-6 hover:border-[--md-sys-color-primary]/25"
+            data-tab="residencial"
+          >
+            <div class="flex items-center justify-between border-b border-black/5 pb-3">
+              <span
+                class="text-[9px] font-bold tracking-widest text-[--md-sys-color-primary] uppercase"
+                >Vivienda Bioclimática</span
+              >
+              <span class="text-xs font-medium text-[--md-sys-color-muted]">Temuco • 260 m²</span>
+            </div>
+            <div class="aspect-video w-full overflow-hidden rounded-2xl border border-black/5">
+              <img
+                src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=500&q=80"
+                alt="Fotografía de la Casa Llaima de hormigón visto y maderas nobles en Temuco"
+                class="h-full w-full object-cover saturate-[0.25]"
+                onerror="this.onerror=null;this.src='https://placehold.co/400x300/F0F4F1/191C1B?text=Casa+Llaima'"
+              />
+            </div>
+            <h3 class="font-editorial text-xl font-bold text-[--md-sys-color-text]">Casa Llaima</h3>
+            <p class="text-xs leading-relaxed font-light text-[--md-sys-color-muted]">
+              Residencia edificada en tres volúmenes desfasados de hormigón visto, diseñada con
+              amplios muros térmicos acumuladores de calor solar pasivo.
+            </p>
+            <div class="flex items-center justify-between pt-2">
+              <span class="text-xs font-bold text-[--md-sys-color-primary]">Construido: 2024</span>
+              <a
+                href="https://wa.me/56912345678?text=Hola%20Mawida,%20me%20gustaria%20conocer%20mas%20detalles%20de%20la%20Casa%20Llaima."
+                target="_blank"
+                class="kutral-transition border-b border-black/20 pb-0.5 text-[9px] font-bold tracking-wider text-[--md-sys-color-text] uppercase hover:text-[--md-sys-color-primary]"
+                >Explorar Obra &rarr;</a
+              >
+            </div>
+          </div>
+
+          <!-- Proyecto 2 (Comercial) -->
+          <div
+            class="class-card-item m3-elevation-1 hover:m3-elevation-2 m3-transition space-y-5 rounded-3xl border border-[--md-sys-color-outline]/10 bg-white p-6 hover:border-[--md-sys-color-primary]/25"
+            data-tab="comercial"
+          >
+            <div class="flex items-center justify-between border-b border-black/5 pb-3">
+              <span
+                class="text-[9px] font-bold tracking-widest text-[--md-sys-color-secondary] uppercase"
+                >Estudio & Retail</span
+              >
+              <span class="text-xs font-medium text-[--md-sys-color-muted]">Temuco • 180 m²</span>
+            </div>
+            <div class="aspect-video w-full overflow-hidden rounded-2xl border border-black/5">
+              <img
+                src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=500&q=80"
+                alt="Fachada comercial moderna de madera carbonizada y acero en Av. Alemania"
+                class="h-full w-full object-cover saturate-[0.25]"
+                onerror="this.onerror=null;this.src='https://placehold.co/400x300/F0F4F1/191C1B?text=Oficinas+Alemania'"
+              />
+            </div>
+            <h3 class="font-editorial text-xl font-bold text-[--md-sys-color-text]">
+              Oficinas Alemania
+            </h3>
+            <p class="text-xs leading-relaxed font-light text-[--md-sys-color-muted]">
+              Espacio corporativo monolítico revestido en madera carbonizada Shou Sugi Ban, con
+              ventilación cruzada y aislación termoacústica del 100%.
+            </p>
+            <div class="flex items-center justify-between pt-2">
+              <span class="text-xs font-bold text-[--md-sys-color-secondary]">Construido: 2025</span
+              >
+              <a
+                href="https://wa.me/56912345678?text=Hola%20Mawida,%20me%20gustaria%20conocer%20mas%20detalles%20del%20proyecto%20Oficinas%20Alemania."
+                target="_blank"
+                class="kutral-transition border-b border-black/20 pb-0.5 text-[9px] font-bold tracking-wider text-[--md-sys-color-text] uppercase hover:text-[--md-sys-color-secondary]"
+                >Explorar Obra &rarr;</a
+              >
+            </div>
+          </div>
+
+          <!-- Proyecto 3 (Residencial) -->
+          <div
+            class="class-card-item m3-elevation-1 hover:m3-elevation-2 m3-transition space-y-5 rounded-3xl border border-[--md-sys-color-outline]/10 bg-white p-6 hover:border-[--md-sys-color-primary]/25"
+            data-tab="residencial"
+          >
+            <div class="flex items-center justify-between border-b border-black/5 pb-3">
+              <span
+                class="text-[9px] font-bold tracking-widest text-[--md-sys-color-primary] uppercase"
+                >Refugio de Montaña</span
+              >
+              <span class="text-xs font-medium text-[--md-sys-color-muted]">Pucón • 310 m²</span>
+            </div>
+            <div class="aspect-video w-full overflow-hidden rounded-2xl border border-black/5">
+              <img
+                src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=500&q=80"
+                alt="Refugio residencial de montaña con estructura de acero y madera en Pucon"
+                class="h-full w-full object-cover saturate-[0.25]"
+                onerror="this.onerror=null;this.src='https://placehold.co/400x300/F0F4F1/191C1B?text=Refugio+Villarrica'"
+              />
+            </div>
+            <h3 class="font-editorial text-xl font-bold text-[--md-sys-color-text]">
+              Refugio Villarrica
+            </h3>
+            <p class="text-xs leading-relaxed font-light text-[--md-sys-color-muted]">
+              Vivienda de gran resistencia estructural construida con vigas de acero negro,
+              revestimientos de roble recuperado y vidrios triples con gas argón.
+            </p>
+            <div class="flex items-center justify-between pt-2">
+              <span class="text-xs font-bold text-[--md-sys-color-primary]">Construido: 2023</span>
+              <a
+                href="https://wa.me/56912345678?text=Hola%20Mawida,%20me%20gustaria%20conocer%20mas%20detalles%20del%20Refugio%20Villarrica."
+                target="_blank"
+                class="kutral-transition border-b border-black/20 pb-0.5 text-[9px] font-bold tracking-wider text-[--md-sys-color-text] uppercase hover:text-[--md-sys-color-primary]"
+                >Explorar Obra &rarr;</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN: HONORARIOS DE DISEÑO & PROYECTO (Membresías / Fases de Obra M3) -->
+    <section id="planes" class="border-t border-[--md-sys-color-surface-variant] bg-white/40 py-24">
+      <div class="mx-auto max-w-7xl px-6 sm:px-10">
+        <div class="mx-auto mb-16 max-w-2xl space-y-3 text-center">
+          <span
+            class="block text-[10px] font-bold tracking-[0.25em] text-[--md-sys-color-primary] uppercase"
+            >HONORARIOS DE OFICINA</span
+          >
+          <h2 class="font-editorial text-3xl text-[--md-sys-color-text] sm:text-4xl">
+            Fases de Diseño & Proyecto
+          </h2>
+          <p class="text-sm font-light text-[--md-sys-color-muted]">
+            Proyectamos tu obra por fases con contratos cerrados sin costos ocultos. Paga el
+            proyecto completo y accede a un 25% de ahorro.
+          </p>
+
+          <!-- Toggle CLP de Facturación Mensual / Trimestral con Micro-Diseño M3 -->
+          <div
+            class="mt-6 inline-flex gap-2 rounded-full border border-[--md-sys-color-surface-variant] bg-[--md-sys-color-surface] p-1.5"
+          >
+            <button
+              onclick="toggleBillingPeriod(false, this)"
+              class="billing-btn m3-transition rounded-full bg-[--md-sys-color-primary] px-6 py-2.5 text-[10px] font-bold tracking-widest text-white uppercase shadow-sm"
+            >
+              Mensual (Fase)
+            </button>
+            <button
+              onclick="toggleBillingPeriod(true, this)"
+              class="billing-btn m3-transition flex items-center gap-1.5 rounded-full bg-transparent px-5 py-2.5 text-[10px] font-bold tracking-widest text-[--md-sys-color-muted] uppercase"
+            >
+              Proyecto Cerrado
+              <span
+                class="rounded-full border border-gray-200 bg-white px-2 py-0.5 text-[8px] font-bold tracking-wider text-[--md-sys-color-primary] uppercase"
+                >Ahorra 25%</span
+              >
+            </button>
+          </div>
+        </div>
+
+        <!-- Tarjetas M3 de Fases de Diseño -->
+        <div class="grid grid-cols-1 gap-8 lg:grid-cols-3">
+          <!-- Plan 1 -->
+          <div
+            class="m3-transition flex flex-col justify-between rounded-3xl border border-[--md-sys-color-outline]/10 bg-white p-8 hover:shadow-sm sm:p-10"
+          >
+            <div class="space-y-6">
+              <div class="space-y-1">
+                <span
+                  class="text-[9px] font-bold tracking-wider text-[--md-sys-color-muted] uppercase"
+                  >ANTEPROYECTO INICIAL</span
+                >
+                <h3 class="font-editorial text-2xl font-bold text-[--md-sys-color-text]">
+                  Basic Design Pass
+                </h3>
+                <p class="text-xs font-light text-[--md-sys-color-muted]">
+                  Proyectamos la distribución espacial, volumetrías de diseño y maquetas
+                  preliminares.
+                </p>
+              </div>
+
+              <div class="border-t border-black/5 pt-5">
+                <span
+                  class="font-editorial text-3xl font-bold text-[--md-sys-color-text]"
+                  id="price-basic">$380.000</span
+                >
+                <span class="text-xs font-light text-[--md-sys-color-muted]" id="label-basic"
+                  >/ cuota mensual</span
+                >
+              </div>
+
+              <ul
+                class="space-y-3.5 border-t border-black/5 pt-2 text-xs font-light text-[--md-sys-color-muted]"
+              >
+                <li class="flex items-center gap-2">✔ 1 Modelo conceptual en 3D volumétrico</li>
+                <li class="flex items-center gap-2">
+                  ✔ 2 Renders exteriores fotorrealistas básicos
+                </li>
+                <li class="flex items-center gap-2">
+                  ✔ Planimetría general de distribución espacial
+                </li>
+                <li class="text-gray-300 line-through">
+                  ✘ Detalles de instalaciones y cálculo de estructuras
+                </li>
+                <li class="text-gray-300 line-through">
+                  ✘ Trámite de permiso de edificación en municipalidad
+                </li>
+              </ul>
+            </div>
+            <div class="pt-8">
+              <a
+                id="btn-basic-link"
+                href="https://wa.me/56912345678?text=Hola%20Mawida,%20me%20gustaria%20saber%20mas%20del%20plan%20Basic%20Design%20Pass%20(Mensual)."
+                target="_blank"
+                class="m3-ripple m3-transition block w-full rounded-full border border-gray-200 bg-gray-100 py-3.5 text-center text-[10px] font-bold tracking-widest text-black uppercase hover:bg-gray-200"
+                >Comenzar Plan</a
+              >
+            </div>
+          </div>
+
+          <!-- Plan 2 (Recomendado con Borde de Oro Rosa) -->
+          <div
+            class="relative flex flex-col justify-between rounded-3xl border-2 border-[--md-sys-color-primary] bg-white p-8 shadow-lg sm:p-10"
+          >
+            <div
+              class="absolute top-0 right-10 -translate-y-1/2 rounded-full border border-white/20 bg-[--md-sys-color-primary] px-4 py-1.5 text-[8px] font-bold tracking-widest text-white uppercase"
+            >
+              RECOMENDADO
+            </div>
+            <div class="space-y-6">
+              <div class="space-y-1">
+                <span
+                  class="text-[9px] font-bold tracking-wider text-[--md-sys-color-primary] uppercase"
+                  >PROYECTO COMPLETO MUNICIPAL</span
+                >
+                <h3 class="font-editorial text-2xl font-bold text-[--md-sys-color-text]">
+                  Arquitectura & Detalles
+                </h3>
+                <p class="text-xs font-light text-[--md-sys-color-muted]">
+                  Diseño definitivo y set de planos de detalles constructivos aptos para
+                  edificación.
+                </p>
+              </div>
+
+              <div class="border-t border-black/5 pt-5">
+                <span
+                  class="font-editorial text-3xl font-bold text-[--md-sys-color-primary]"
+                  id="price-athlete">$480.000</span
+                >
+                <span class="text-xs font-light text-[--md-sys-color-muted]" id="label-athlete"
+                  >/ cuota mensual</span
+                >
+              </div>
+
+              <ul
+                class="space-y-3.5 border-t border-black/5 pt-2 text-xs font-light text-[--md-sys-color-text]"
+              >
+                <li class="flex items-center gap-2 font-semibold text-[--md-sys-color-primary]">
+                  ✔ Carpeta de planos de arquitectura completos de detalle
+                </li>
+                <li class="flex items-center gap-2">
+                  ✔ Carpeta técnica de ingreso a municipalidad de Temuco
+                </li>
+                <li class="flex items-center gap-2">
+                  ✔ Maquetas tridimensionales y fotorrenders interiores
+                </li>
+                <li class="flex items-center gap-2">
+                  ✔ Coordinación completa de ingenierías y especialidades
+                </li>
+                <li class="flex items-center gap-2 text-[--md-sys-color-muted]">
+                  ✔ 2 Visitas a terreno mensuales de control del arquitecto
+                </li>
+              </ul>
+            </div>
+            <div class="pt-8">
+              <a
+                id="btn-athlete-link"
+                href="https://wa.me/56912345678?text=Hola%20Mawida,%20me%20interesa%20contratar%20el%20plan%20Arquitectura%20y%20Detalles%20(Mensual)."
+                target="_blank"
+                class="m3-ripple m3-transition block w-full rounded-full bg-[--md-sys-color-primary] py-3.5 text-center text-[10px] font-bold tracking-widest text-white uppercase hover:bg-[--md-sys-color-secondary]"
+                >Comenzar Plan</a
+              >
+            </div>
+          </div>
+
+          <!-- Plan 3 -->
+          <div
+            class="m3-transition flex flex-col justify-between rounded-3xl border border-[--md-sys-color-outline]/10 bg-white p-8 hover:shadow-sm sm:p-10"
+          >
+            <div class="space-y-6">
+              <div class="space-y-1">
+                <span
+                  class="text-[9px] font-bold tracking-wider text-[--md-sys-color-muted] uppercase"
+                  >LLAVE EN MANO PREMIUM</span
+                >
+                <h3 class="font-editorial text-2xl font-bold text-[--md-sys-color-text]">
+                  Mawida Turnkey Elite
+                </h3>
+                <p class="text-xs font-light text-[--md-sys-color-muted]">
+                  Diseño, control estricto de obra con ITO integrada y recepción final municipal.
+                </p>
+              </div>
+
+              <div class="border-t border-black/5 pt-5">
+                <span
+                  class="font-editorial text-3xl font-bold text-[--md-sys-color-text]"
+                  id="price-elite">$680.000</span
+                >
+                <span class="text-xs font-light text-[--md-sys-color-muted]" id="label-elite"
+                  >/ cuota mensual</span
+                >
+              </div>
+
+              <ul
+                class="space-y-3.5 border-t border-black/5 pt-2 text-xs font-light text-[--md-sys-color-muted]"
+              >
+                <li class="flex items-center gap-2">
+                  ✔ Todo lo incluido en el plan Arquitectura & Detalles
+                </li>
+                <li class="flex items-center gap-2">
+                  ✔ Gestión de recepción municipal definitiva de obras
+                </li>
+                <li class="flex items-center gap-2">
+                  ✔ Diseño completo de interiorismo y materialidades
+                </li>
+                <li class="flex items-center gap-2">
+                  ✔ Inspección técnica in-situ (ITO) semanal obligatoria
+                </li>
+              </ul>
+            </div>
+            <div class="pt-8">
+              <a
+                id="btn-elite-link"
+                href="https://wa.me/56912345678?text=Hola%20Mawida,%20me%20interesa%20contratar%20el%20plan%20Mawida%20Turnkey%20Elite%20(Mensual)."
+                target="_blank"
+                class="m3-ripple m3-transition block w-full rounded-full border border-gray-200 bg-gray-100 py-3.5 text-center text-[10px] font-bold tracking-widest text-black uppercase hover:bg-gray-200"
+                >Comenzar Plan</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TESTIMONIOS: Relatos Reales de Mandantes en Temuco -->
+      <section class="mx-auto max-w-7xl px-6 py-24 sm:px-10">
+        <div class="grid grid-cols-1 items-center gap-16 lg:grid-cols-12">
+          <div class="space-y-5 lg:col-span-5">
+            <span
+              class="block text-xs font-bold tracking-widest text-[--md-sys-color-primary] uppercase"
+              >CONFIdanza M3</span
+            >
+            <h2 class="font-editorial text-4xl font-bold text-[--md-sys-color-text]">
+              Nuestra comunidad de mandantes
+            </h2>
+            <p class="text-sm font-light text-[--md-sys-color-muted]">
+              Conoce el testimonio de personas de Temuco y la Araucanía que decidieron edificar sus
+              sueños de forma sustentable con nosotros.
+            </p>
+
+            <!-- Botonera M3 de control -->
+            <div class="flex gap-3 pt-4">
+              <button
+                onclick="prevReview()"
+                class="m3-transition flex h-10 w-10 items-center justify-center rounded-full border border-black/10 bg-white font-bold text-[--md-sys-color-text] shadow-sm hover:bg-[--md-sys-color-primary] hover:text-white"
+                aria-label="Anterior Opinión"
+              >
+                &larr;
+              </button>
+              <button
+                onclick="nextReview()"
+                class="m3-transition flex h-10 w-10 items-center justify-center rounded-full border border-black/10 bg-white font-bold text-[--md-sys-color-text] shadow-sm hover:bg-[--md-sys-color-primary] hover:text-white"
+                aria-label="Siguiente Opinión"
+              >
+                &rarr;
+              </button>
+            </div>
+          </div>
+
+          <!-- Carrusel de Testimonios (M3 soft-card) -->
+          <div
+            class="relative flex min-h-[240px] items-center overflow-hidden rounded-3xl border border-[--md-sys-color-outline]/10 bg-white p-8 shadow-sm sm:p-12 lg:col-span-7"
+          >
+            <!-- Testimonio 1 -->
+            <div
+              class="testimonial-slide m3-transition block w-full space-y-6 opacity-100 duration-500"
+            >
+              <p
+                class="font-editorial text-base leading-relaxed font-light text-[--md-sys-color-text] italic sm:text-lg"
+              >
+                "En Temuco la humedad y el frío invernal pueden dañar las estructuras en poco
+                tiempo. Proyectamos con Mawida una casa bioclimática de hormigón y pino carbonizado.
+                El aislamiento térmico funciona de manera impecable y las salas mantienen una
+                calidez perfecta."
+              </p>
+              <div class="flex items-center gap-4 border-t border-black/5 pt-4">
+                <div
+                  class="flex h-9 w-9 items-center justify-center rounded-full bg-[--md-sys-color-primary-container] text-xs font-bold text-[--md-sys-color-primary] uppercase"
+                >
+                  FS
+                </div>
+                <div>
+                  <span class="block text-xs font-bold text-[--md-sys-color-text]"
+                    >Francisca Silva</span
+                  >
+                  <span
+                    class="block text-[9px] tracking-wider text-[--md-sys-color-muted] uppercase"
+                    >Mandante Casa Llaima • Sector Av. Alemania</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Testimonio 2 -->
+            <div
+              class="testimonial-slide m3-transition hidden w-full space-y-6 opacity-0 duration-500"
+            >
+              <p
+                class="font-editorial text-base leading-relaxed font-light text-[--md-sys-color-text] italic sm:text-lg"
+              >
+                "La calidad en las uniones de madera y el hormigón visto del refugio Villarrica es
+                fantástica. El profesionalismo de la ITO y el equipo de ingenieros durante los meses
+                de invierno fue ejemplar. Volvería a proyectar con ellos sin dudarlo."
+              </p>
+              <div class="flex items-center gap-4 border-t border-black/5 pt-4">
+                <div
+                  class="flex h-9 w-9 items-center justify-center rounded-full bg-[--md-sys-color-primary-container] text-xs font-bold text-[--md-sys-color-primary] uppercase"
+                >
+                  MA
+                </div>
+                <div>
+                  <span class="block text-xs font-bold text-[--md-sys-color-text]"
+                    >Matías Alarcón</span
+                  >
+                  <span
+                    class="block text-[9px] tracking-wider text-[--md-sys-color-muted] uppercase"
+                    >Mandante Refugio Villarrica • Pucón</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECCIÓN: PREGUNTAS FRECUENTES (Acordeones M3) -->
+      <section id="faqs" class="border-t border-[--md-sys-color-surface-variant] bg-white/20 py-24">
+        <div class="mx-auto max-w-4xl px-6">
+          <div class="mx-auto mb-16 max-w-2xl space-y-3 text-center">
+            <span
+              class="block text-xs font-bold tracking-widest text-[--md-sys-color-primary] uppercase"
+              >CONSULTAS</span
+            >
+            <h2 class="font-editorial text-3xl text-[--md-sys-color-text] sm:text-4xl">
+              Preguntas Frecuentes
+            </h2>
+            <p class="text-sm font-light text-[--md-sys-color-muted]">
+              Aclaramos las dudas operativas esenciales sobre nuestro estudio.
+            </p>
+          </div>
+
+          <div class="space-y-4">
+            <!-- FAQ 1 -->
+            <div
+              class="m3-transition overflow-hidden rounded-2xl border border-[--md-sys-color-outline]/10 bg-white shadow-sm hover:shadow"
+            >
+              <button
+                onclick="toggleFaq(this)"
+                class="m3-transition flex w-full items-center justify-between p-6 text-left text-sm font-bold text-[--md-sys-color-text] hover:text-[--md-sys-color-primary] focus:outline-none"
+              >
+                <span
+                  >¿La constructora Mawida cuenta con constructores asociados para edificar?</span
+                >
+                <span class="faq-icon m3-transition font-mono text-lg text-[--md-sys-color-muted]"
+                  >+</span
+                >
+              </button>
+              <div class="faq-content m3-transition max-h-0 overflow-hidden duration-300">
+                <p
+                  class="border-t border-black/5 px-6 pt-4 pb-6 text-xs leading-relaxed font-light text-[--md-sys-color-muted]"
+                >
+                  Sí. Contamos con un selecto pool de contratistas e ingenieros civiles asociados de
+                  primer nivel en la Región de la Araucanía. Nosotros coordinamos y vigilamos la
+                  obra por medio de una inspección técnica semanal y permanente (ITO) para asegurar
+                  la fidelidad del plano de arquitectura.
+                </p>
+              </div>
+            </div>
+
+            <!-- FAQ 2 -->
+            <div
+              class="m3-transition overflow-hidden rounded-2xl border border-[--md-sys-color-outline]/10 bg-white shadow-sm hover:shadow"
+            >
+              <button
+                onclick="toggleFaq(this)"
+                class="m3-transition flex w-full items-center justify-between p-6 text-left text-sm font-bold text-[--md-sys-color-text] hover:text-[--md-sys-color-primary] focus:outline-none"
+              >
+                <span>¿Cómo gestionan el trámite de permiso de edificación en la Araucanía?</span>
+                <span class="faq-icon m3-transition font-mono text-lg text-[--md-sys-color-muted]"
+                  >+</span
+                >
+              </button>
+              <div class="faq-content m3-transition max-h-0 overflow-hidden duration-300">
+                <p
+                  class="border-t border-black/5 px-6 pt-4 pb-6 text-xs leading-relaxed font-light text-[--md-sys-color-muted]"
+                >
+                  Nosotros recopilamos y preparamos toda la documentación técnica exigida por la Ley
+                  General de Urbanismo y Construcciones (especificaciones, loteos y firmas de
+                  calculistas), ingresándola al departamento de obras municipales (DOM)
+                  correspondiente y gestionando observaciones hasta el otorgamiento del permiso.
+                </p>
+              </div>
+            </div>
+
+            <!-- FAQ 3 -->
+            <div
+              class="m3-transition overflow-hidden rounded-2xl border border-[--md-sys-color-outline]/10 bg-white shadow-sm hover:shadow"
+            >
+              <button
+                onclick="toggleFaq(this)"
+                class="m3-transition flex w-full items-center justify-between p-6 text-left text-sm font-bold text-[--md-sys-color-text] hover:text-[--md-sys-color-primary] focus:outline-none"
+              >
+                <span>¿Cumplen con los estándares exigidos por el PDA de Temuco?</span>
+                <span class="faq-icon m3-transition font-mono text-lg text-[--md-sys-color-muted]"
+                  >+</span
+                >
+              </button>
+              <div class="faq-content m3-transition max-h-0 overflow-hidden duration-300">
+                <p
+                  class="border-t border-black/5 px-6 pt-4 pb-6 text-xs leading-relaxed font-light text-[--md-sys-color-muted]"
+                >
+                  Absolutamente. Todos nuestros diseños de envolvente e ingeniería térmica son
+                  modelados digitalmente para cumplir e incluso superar las exigencias del Plan de
+                  Descontaminación Atmosférica (PDA) de Temuco y Padre Las Casas, reduciendo al
+                  mínimo el uso de calefacción contaminante.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECCIÓN: CAPTACIÓN, FORMULARIO & GOOGLE MAPS DE TEMUCO -->
+      <section
+        id="contacto"
+        class="mx-auto max-w-7xl border-t border-[--md-sys-color-surface-variant] px-6 py-20 sm:px-10"
+      >
+        <div class="grid grid-cols-1 items-stretch gap-12 lg:grid-cols-12">
+          <!-- Direcciones, Contacto & Google Maps -->
+          <div class="flex flex-col justify-between space-y-8 lg:col-span-5">
+            <div class="space-y-6 text-center lg:text-left">
+              <span
+                class="block text-xs font-bold tracking-widest text-[--md-sys-color-primary] uppercase"
+                >OFICINA TÉCNICA</span
+              >
+              <h2 class="font-editorial text-4xl font-bold text-[--md-sys-color-text]">
+                Ubicación & Entorno
+              </h2>
+              <p class="text-xs leading-relaxed font-light text-[--md-sys-color-muted] sm:text-sm">
+                Visítanos en nuestra oficina en Avenida Alemania para conversar sobre tu idea de
+                proyecto bioclimático. Te esperamos con café de especialidad caliente.
+              </p>
+
+              <div
+                class="mx-auto max-w-md space-y-4 pt-2 text-left text-xs font-semibold text-[--md-sys-color-text] lg:mx-0"
+              >
+                <div
+                  class="flex items-center gap-3 rounded-2xl border border-[--md-sys-color-outline]/15 bg-white p-4 shadow-sm"
+                >
+                  <span class="text-base">📍</span>
+                  <span class="font-medium text-[--md-sys-color-text]"
+                    >Avenida Alemania 01450, Temuco, Araucanía, Chile</span
+                  >
+                </div>
+                <div
+                  class="flex items-center gap-3 rounded-2xl border border-[--md-sys-color-outline]/15 bg-white p-4 shadow-sm"
+                >
+                  <span class="text-base">📞</span>
+                  <span class="font-medium text-[--md-sys-color-text]"
+                    >WhatsApp Admisiones: +56 9 1234 5678</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Google Maps de Temuco con Estilo Claro Integrado -->
+            <div
+              class="aspect-[16/10] w-full overflow-hidden rounded-3xl border border-[--md-sys-color-outline]/15 bg-white p-1.5 shadow-sm"
+            >
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3112.5936528827725!2d-72.6152778!3d-38.7402778!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9614d3e387c2b53b%3A0x272c30df9cb5bcbf!2sAv.%20Alemania%2C%20Temuco%2C%20Araucan%C3%ADa!5e0!3m2!1ses!2scl!4v1700000000000!5m2!1ses!2scl"
+                class="h-full w-full rounded-2xl border-0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                style="filter: grayscale(15%) contrast(98%) brightness(99%); opacity: 0.95;"
+              >
+              </iframe>
+            </div>
+          </div>
+
+          <!-- Formulario de Estética M3 -->
+          <div
+            class="flex flex-col justify-center rounded-3xl border border-[--md-sys-color-outline]/10 bg-white p-8 shadow-sm sm:p-10 lg:col-span-7"
+          >
+            <form onsubmit="handleContactSubmit(event)" class="space-y-5">
+              <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                <div class="space-y-1">
+                  <label
+                    class="text-[9px] font-bold tracking-wider text-[--md-sys-color-muted] uppercase"
+                    >Nombre Completo</label
+                  >
+                  <input
+                    required
+                    type="text"
+                    id="contact-name"
+                    placeholder="Ej. Francisca Silva"
+                    class="m3-transition w-full rounded-xl border border-[--md-sys-color-outline]/20 bg-[#F8F9FA] px-4 py-3 text-xs text-[--md-sys-color-text] outline-none focus:border-[--md-sys-color-primary] focus:bg-white"
+                  />
+                </div>
+                <div class="space-y-1">
+                  <label
+                    class="text-[9px] font-bold tracking-wider text-[--md-sys-color-muted] uppercase"
+                    >Teléfono móvil</label
+                  >
+                  <input
+                    required
+                    type="text"
+                    id="contact-phone"
+                    placeholder="Ej. +569 9876 5432"
+                    class="m3-transition w-full rounded-xl border border-[--md-sys-color-outline]/20 bg-[#F8F9FA] px-4 py-3 text-xs text-[--md-sys-color-text] outline-none focus:border-[--md-sys-color-primary] focus:bg-white"
+                  />
+                </div>
+              </div>
+
+              <div class="space-y-1">
+                <label
+                  class="text-[9px] font-bold tracking-wider text-[--md-sys-color-muted] uppercase"
+                  >Fase de interés</label
+                >
+                <select
+                  id="contact-plan"
+                  class="m3-transition w-full rounded-xl border border-[--md-sys-color-outline]/20 bg-[#F8F9FA] px-4 py-3 text-xs text-[--md-sys-color-muted] outline-none focus:border-[--md-sys-color-primary] focus:bg-white"
+                >
+                  <option value="basic" class="bg-white text-[--md-sys-color-text]"
+                    >Basic Design Pass — $380.000/mes</option
+                  >
+                  <option value="active" selected class="bg-white text-[--md-sys-color-text]"
+                    >Arquitectura & Detalles — $480.000/mes</option
+                  >
+                  <option value="premium" class="bg-white text-[--md-sys-color-text]"
+                    >Mawida Turnkey Elite — $680.000/mes</option
+                  >
+                </select>
+              </div>
+
+              <div class="space-y-1">
+                <label
+                  class="text-[9px] font-bold tracking-wider text-[--md-sys-color-muted] uppercase"
+                  >Detalles de tu idea de obra (Ubicación, M² de terreno)</label
+                >
+                <textarea
+                  required
+                  id="contact-message"
+                  rows="4"
+                  placeholder="Ej. Busco construir una vivienda unifamiliar de 140 m² en Portal de la Frontera..."
+                  class="m3-transition w-full rounded-xl border border-[--md-sys-color-outline]/20 bg-[#F8F9FA] px-4 py-3 text-xs text-[--md-sys-color-text] outline-none focus:border-[--md-sys-color-primary] focus:bg-white"
+                ></textarea>
+              </div>
+
+              <button
+                type="submit"
+                class="m3-ripple m3-transition w-full rounded-full border border-transparent bg-[--md-sys-color-primary] py-4 text-center text-[10px] font-bold tracking-widest text-white uppercase shadow-sm hover:bg-[--md-sys-color-secondary]"
+              >
+                Agendar Reunión de Factibilidad & Free Anteproyecto &rarr;
+              </button>
+            </form>
+
+            <!-- Notificación de Éxito -->
+            <div
+              id="contact-success-msg"
+              class="mt-4 hidden rounded-xl border border-black/5 bg-[#FAF9F6] p-4 text-center text-xs font-bold text-[--md-sys-color-text]"
+            >
+              🌲 ¡Formulario recibido correctamente! Nos pondremos en contacto vía WhatsApp o
+              teléfono en las próximas 2 horas.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PIE DE PÁGINA (Estilo Kropy Clear M3) -->
+      <footer
+        class="relative border-t border-[--md-sys-color-surface-variant] bg-white/40 pt-14 text-[--md-sys-color-muted]"
+      >
+        <div class="mx-auto max-w-7xl px-6 sm:px-10">
+          <div
+            class="flex flex-col items-center justify-between gap-8 border-b border-black/5 pb-8 md:flex-row"
+          >
+            <div class="space-y-1 text-center md:text-left">
+              <span
+                class="font-editorial block text-xl font-bold tracking-tight text-[--md-sys-color-text] italic"
+                >Mawida<span class="text-[--md-sys-color-secondary] not-italic">.</span></span
+              >
+              <span class="block text-[9px] tracking-widest text-gray-500 uppercase"
+                >Ingeniería, Diseño & Construcción • Temuco</span
+              >
+            </div>
+
+            <!-- Enlaces del Pie -->
+            <div
+              class="flex flex-wrap justify-center gap-6 text-[10px] font-bold tracking-wider text-gray-500 uppercase"
+            >
+              <a href="#concepto" class="m3-transition hover:text-[--md-sys-color-primary]"
+                >El Método</a
+              >
+              <a href="#estimador" class="m3-transition hover:text-[--md-sys-color-primary]"
+                >Calculadora</a
+              >
+              <a href="#proyectos" class="m3-transition hover:text-[--md-sys-color-primary]"
+                >Obras</a
+              >
+              <a href="#planes" class="m3-transition hover:text-[--md-sys-color-primary]">Tarifas</a
+              >
+            </div>
+          </div>
+
+          <!-- Identidad de Marca Kropy -->
+          <div
+            class="flex flex-col items-center justify-between gap-4 pt-8 text-center text-[10px] tracking-wide text-gray-400 sm:flex-row sm:text-left"
+          >
+            <p>
+              &copy; 2026 MAWIDA INGENIERÍA. Diseñado para potenciar tu portafolio de landings
+              profesionales.
+            </p>
+            <div class="flex gap-4">
+              <a href="#" class="hover:text-[--md-sys-color-text]">Aviso de Privacidad</a>
+              <span class="text-neutral-300">|</span>
+              <p class="text-[--md-sys-color-text]">
+                Desarrollado por <a href="#" class="font-bold hover:text-[--md-sys-color-primary]"
+                  >Kropy</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+      <script>
+        /* --- MENÚ MÓVIL DESPLEGABLE --- */
+        const menuToggle = document.getElementById("drawer-toggle");
+        const mobileDrawer = document.getElementById("mobile-drawer");
+        const menuIcon = document.getElementById("drawer-icon");
+
+        menuToggle.addEventListener("click", () => {
+          mobileDrawer.classList.toggle("hidden");
+          if (mobileDrawer.classList.contains("hidden")) {
+            menuIcon.setAttribute("d", "M4 6h16M4 12h16M4 18h16");
+          } else {
+            menuIcon.setAttribute("d", "M6 18L18 6M6 6l12 12");
+          }
+        });
+
+        const drawerLinks = mobileDrawer.querySelectorAll("a");
+        drawerLinks.forEach((link) => {
+          link.addEventListener("click", () => {
+            mobileDrawer.classList.add("hidden");
+            menuIcon.setAttribute("d", "M4 6h16M4 12h16M4 18h16");
+          });
+        });
+
+        /* --- CALCULADORA DE PRESUPUESTO INTERACTIVO DE M² EN CLP (FíSICA SENSORIAL) --- */
+        let selectedStandardKey = "premium";
+
+        function selectStandard(standardKey, btnElement) {
+          selectedStandardKey = standardKey;
+
+          // Actualizar estilo visual plano de los botones
+          const buttons = document.querySelectorAll(".standard-btn");
+          buttons.forEach((btn) => {
+            btn.classList.remove(
+              "bg-[--md-sys-color-primary-container]",
+              "text-[--md-sys-color-primary]",
+              "border-[--md-sys-color-primary]/20"
+            );
+            btn.classList.add("bg-gray-50", "text-[--md-sys-color-muted]", "border-gray-200");
+          });
+
+          btnElement.classList.remove(
+            "bg-gray-50",
+            "text-[--md-sys-color-muted]",
+            "border-gray-200"
+          );
+          btnElement.classList.add(
+            "bg-[--md-sys-color-primary-container]",
+            "text-[--md-sys-color-primary]",
+            "border-[--md-sys-color-primary]/20"
+          );
+
+          calculateConstructionBudget();
+        }
+
+        function calculateConstructionBudget() {
+          const areaValue = parseInt(document.getElementById("input-area").value);
+          document.getElementById("area-val").textContent = `${areaValue} M²`;
+
+          // Configuración de costos por M² de construcción real en el Sur de Chile
+          const costPerM2 = selectedStandardKey === "premium" ? 950000 : 780000;
+          const timePerM2 = selectedStandardKey === "premium" ? 0.05 : 0.045;
+
+          // Cálculos matemáticos
+          const totalPrice = areaValue * costPerM2;
+          const designFees = Math.round(totalPrice * 0.1); // 10% Honorarios de diseño de arquitectura
+          const constructionMonths = Math.max(6, Math.round(areaValue * timePerM2 + 2));
+
+          // Actualizar visualizaciones con formato de moneda chilena (CLP)
+          document.getElementById("total-price-display").textContent =
+            `$${totalPrice.toLocaleString("es-CL")} CLP`;
+          document.getElementById("design-fees-display").textContent =
+            `$${designFees.toLocaleString("es-CL")} CLP`;
+          document.getElementById("construction-time-display").textContent =
+            `${constructionMonths} Meses de ejecución`;
+
+          // Actualizar link de WhatsApp con el cálculo real
+          const standardLabel =
+            selectedStandardKey === "premium" ? "Premium Bioclimático" : "Hormigón Visto & Acero";
+          const msgText = `Hola Mawida, he calculado el estimado para un proyecto de ${areaValue} M² con estándar de terminación ${standardLabel}. El valor estimado es de $${totalPrice.toLocaleString("es-CL")} CLP. Me gustaría programar una cita.`;
+          document.getElementById("calculator-cta").href =
+            `https://wa.me/56912345678?text=${encodeURIComponent(msgText)}`;
+        }
+
+        /* --- FILTRO DINÁMICO DE CLASES / PROYECTOS (TOTALMENTE OPERATIVO) --- */
+        function filterPortfolio(category, btnElement) {
+          const cards = document.querySelectorAll(".class-card-item");
+
+          cards.forEach((card) => {
+            if (category === "all" || card.getAttribute("data-tab") === category) {
+              card.classList.remove("hidden");
+              card.classList.add("block");
+            } else {
+              card.classList.remove("block");
+              card.classList.add("hidden");
+            }
+          });
+
+          // Estilo activo e inactivo de botones con directrices M3
+          const buttons = document.querySelectorAll(".class-filter-btn");
+          buttons.forEach((btn) => {
+            btn.classList.remove("bg-[--md-sys-color-primary]", "text-white", "shadow-sm");
+            btn.classList.add("bg-transparent", "text-[--md-sys-color-muted]");
+          });
+
+          if (btnElement) {
+            btnElement.classList.remove("bg-transparent", "text-[--md-sys-color-muted]");
+            btnElement.classList.add("bg-[--md-sys-color-primary]", "text-white", "shadow-sm");
+          }
+        }
+
+        /* --- INTERACTIVE BILLING Period (Toggle CLP Mensual / Trimestral con 25% Ahorro) --- */
+        let isQuarterly = false;
+
+        function toggleBillingPeriod(annualMode, btnElement) {
+          const priceBasic = document.getElementById("price-basic");
+          const priceAthlete = document.getElementById("price-athlete");
+          const priceElite = document.getElementById("price-elite");
+
+          const labelBasic = document.getElementById("label-basic");
+          const labelAthlete = document.getElementById("label-athlete");
+          const labelElite = document.getElementById("label-elite");
+
+          const btnBasic = document.getElementById("btn-basic-link");
+          const btnAthlete = document.getElementById("btn-athlete-link");
+          const btnElite = document.getElementById("btn-elite-link");
+
+          // Actualizar estilo del interruptor M3
+          const buttons = document.querySelectorAll(".billing-btn");
+          buttons.forEach((btn) => {
+            btn.classList.remove("bg-[--md-sys-color-primary]", "text-white", "shadow-sm");
+            btn.classList.add("bg-transparent", "text-[--md-sys-color-muted]");
+          });
+
+          btnElement.classList.remove("bg-transparent", "text-[--md-sys-color-muted]");
+          btnElement.classList.add("bg-[--md-sys-color-primary]", "text-white", "shadow-sm");
+
+          isQuarterly = annualMode;
+
+          if (isQuarterly) {
+            // Valores trimestrales con un 25% de ahorro en CLP chileno (Honorarios totales proyectados)
+            priceBasic.textContent = "$285.000";
+            priceAthlete.textContent = "$360.000";
+            priceElite.textContent = "$510.000";
+
+            labelBasic.textContent = "/ cuota mensual (Proyecto Cerrado)";
+            labelAthlete.textContent = "/ cuota mensual (Proyecto Cerrado)";
+            labelElite.textContent = "/ cuota mensual (Proyecto Cerrado)";
+
+            // Enlaces directos formateados para WhatsApp
+            btnBasic.href =
+              "https://wa.me/56912345678?text=Hola%20Mawida,%20quiero%20más%20información%20sobre%20el%20plan%20Basic%20Design%20Pass%20(Proyecto%20Cerrado).";
+            btnAthlete.href =
+              "https://wa.me/56912345678?text=Hola%20Mawida,%20quiero%20más%20información%20sobre%20el%20plan%20Arquitectura%20y%20Detalles%20(Proyecto%20Cerrado).";
+            btnElite.href =
+              "https://wa.me/56912345678?text=Hola%20Mawida,%20quiero%20más%20información%20sobre%20el%20plan%20Mawida%20Turnkey%20Elite%20(Proyecto%20Cerrado).";
+          } else {
+            // Regresar a valores estándar CLP
+            priceBasic.textContent = "$380.000";
+            priceAthlete.textContent = "$480.000";
+            priceElite.textContent = "$680.000";
+
+            labelBasic.textContent = "/ cuota mensual";
+            labelAthlete.textContent = "/ cuota mensual";
+            labelElite.textContent = "/ cuota mensual";
+
+            btnBasic.href =
+              "https://wa.me/56912345678?text=Hola%20Mawida,%20me%20interesa%20contratar%20el%20plan%20Basic%20Design%20Pass%20(Mensual).";
+            btnAthlete.href =
+              "https://wa.me/56912345678?text=Hola%20Mawida,%20me%20interesa%20contratar%20el%20plan%20Arquitectura%20y%20Detalles%20(Mensual).";
+            btnElite.href =
+              "https://wa.me/56912345678?text=Hola%20Mawida,%20me%20interesa%20contratar%20el%20plan%20Mawida%20Turnkey%20Elite%20(Mensual).";
+          }
+        }
+
+        /* --- CAROUSEL DE TESTIMONIOS INTERACTIVO --- */
+        let currentReviewIndex = 0;
+        const slides = document.querySelectorAll(".testimonial-slide");
+
+        function showReview(index) {
+          slides.forEach((slide, i) => {
+            slide.classList.add("opacity-0", "hidden");
+            slide.classList.remove("opacity-100", "block");
+            if (i === index) {
+              slide.classList.remove("hidden");
+              setTimeout(() => {
+                slide.classList.add("opacity-100", "block");
+              }, 50);
+            }
+          });
+        }
+
+        function nextReview() {
+          currentReviewIndex++;
+          if (currentReviewIndex >= slides.length) {
+            currentReviewIndex = 0;
+          }
+          showReview(currentReviewIndex);
+        }
+
+        function prevReview() {
+          currentReviewIndex--;
+          if (currentReviewIndex < 0) {
+            currentReviewIndex = slides.length - 1;
+          }
+          showReview(currentReviewIndex);
+        }
+
+        /* --- ACORDEÓN DE PREGUNTAS FRECUENTES (FAQs) --- */
+        function toggleFaq(button) {
+          const content = button.nextElementSibling;
+          const icon = button.querySelector(".faq-icon");
+
+          // Cerrar otros acordeones abiertos para mantener orden visual
+          const allContents = document.querySelectorAll(".faq-content");
+          const allIcons = document.querySelectorAll(".faq-icon");
+
+          allContents.forEach((c) => {
+            if (c !== content) {
+              c.style.maxHeight = null;
+            }
+          });
+          allIcons.forEach((i) => {
+            if (i !== icon) {
+              i.textContent = "+";
+              i.classList.remove("rotate-45");
+            }
+          });
+
+          // Alternar estado del acordeón pulsado
+          if (content.style.maxHeight) {
+            content.style.maxHeight = null;
+            icon.textContent = "+";
+            icon.classList.remove("rotate-45");
+          } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+            icon.textContent = "×";
+            icon.classList.add("rotate-45");
+          }
+        }
+
+        /* --- ENVÍO DE FORMULARIO DE CONTACTO --- */
+        function handleContactSubmit(event) {
+          event.preventDefault();
+
+          const name = document.getElementById("contact-name").value;
+          const phone = document.getElementById("contact-phone").value;
+          const plan = document.getElementById("contact-plan").value;
+          const message = document.getElementById("contact-message").value;
+
+          const submitBtn = event.target.querySelector('button[type="submit"]');
+          submitBtn.textContent = "Procesando...";
+          submitBtn.disabled = true;
+
+          setTimeout(() => {
+            submitBtn.textContent = "Agendar Reunión de Factibilidad & Free Anteproyecto →";
+            submitBtn.disabled = false;
+
+            const successBlock = document.getElementById("contact-success-msg");
+            successBlock.classList.remove("hidden");
+
+            // Reiniciar inputs
+            event.target.reset();
+
+            // Ocultar mensaje de éxito tras 7 segundos
+            setTimeout(() => {
+              successBlock.classList.add("hidden");
+            }, 7000);
+          }, 1000);
+        }
+
+        // Inicialización de la calculadora
+        window.addEventListener("DOMContentLoaded", () => {
+          selectStandard("premium", document.getElementById("btn-premium"));
+        });
+      </script>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,1592 @@
+<!doctype html>
+<html lang="es" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Andino Estudio | Producción Audiovisual & Arriendo de Estudio en Temuco</title>
+    <meta
+      name="description"
+      content="Estudio fotográfico profesional en Temuco. Producción audiovisual, fotografía publicitaria, catálogos e-commerce y arriendo de estudio equipado en la Araucanía."
+    />
+    <meta
+      name="keywords"
+      content="estudio fotografico temuco, arriendo estudio fotografia araucania, fotos de productos temuco, retratos corporativos temuco, produccion audiovisual temuco, estudio con ciclorama chile"
+    />
+    <link rel="canonical" href="https://www.andinoestudio.cl/" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Andino Estudio | Espacio de Creación Visual en Temuco" />
+    <meta
+      property="og:description"
+      content="Estudio de fotografía publicitaria, retratos corporativos y arriendo de set equipado con tecnología de punta en Temuco, Araucanía."
+    />
+    <meta
+      property="og:image"
+      content="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=1200&h=630&q=80"
+    />
+    <meta property="og:url" content="https://www.andinoestudio.cl/" />
+
+    <!-- Tailwind CSS Engine -->
+    <script is:inline src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Plus Jakarta Sans", "sans-serif"],
+              display: ["Space Grotesk", "sans-serif"],
+            },
+            colors: {
+              studio: {
+                50: "#f8fafc",
+                100: "#f1f5f9",
+                200: "#e2e8f0",
+                300: "#cbd5e1",
+                400: "#94a3b8",
+                500: "#64748b",
+                600: "#475569",
+                700: "#334155",
+                800: "#1e293b",
+                900: "#0f172a",
+                950: "#020617",
+              },
+              electric: {
+                400: "#60a5fa",
+                500: "#3b82f6",
+                600: "#2563eb",
+                700: "#1d4ed8",
+              },
+            },
+          },
+        },
+      };
+    </script>
+
+    <!-- Schema.org JSON-LD para posicionamiento local de Negocio / Estudio Profesional -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Andino Estudio",
+        "image": "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=800&q=80",
+        "telephone": "+56912345678",
+        "email": "contacto@andinoestudio.cl",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Avenida Alemania 01130, Oficina 502",
+          "addressLocality": "Temuco",
+          "addressRegion": "Araucanía",
+          "postalCode": "4780000",
+          "addressCountry": "CL"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": -38.7359,
+          "longitude": -72.6184
+        },
+        "url": "https://www.andinoestudio.cl/",
+        "priceRange": "$$$",
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+            "opens": "09:00",
+            "closes": "19:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": "Saturday",
+            "opens": "10:00",
+            "closes": "14:00"
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body
+    class="bg-studio-950 text-studio-100 selection:bg-electric-600 font-sans antialiased selection:text-white"
+  >
+    <!-- Header / Navigation -->
+    <header
+      class="bg-studio-950/90 border-studio-800 sticky top-0 z-50 border-b backdrop-blur-lg transition-all duration-300"
+    >
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="flex h-20 items-center justify-between">
+          <!-- Tech / Studio Logo -->
+          <a href="#inicio" class="group flex items-center gap-3 focus:outline-none">
+            <div
+              class="bg-electric-600 font-display group-hover:bg-electric-700 flex h-10 w-10 items-center justify-center rounded-lg text-xl font-bold text-white transition-colors"
+            >
+              A
+            </div>
+            <div class="flex flex-col">
+              <span
+                class="font-display group-hover:text-electric-400 text-lg font-bold tracking-tight text-white transition-colors"
+                >ANDINO ESTUDIO</span
+              >
+              <span class="text-studio-400 -mt-1 text-[9px] font-medium tracking-widest uppercase"
+                >PRODUCCIÓN VISUAL & SET</span
+              >
+            </div>
+          </a>
+
+          <!-- Desktop Navigation Menu -->
+          <nav class="hidden items-center space-x-8 md:flex">
+            <a
+              href="#espacios"
+              class="text-studio-300 hover:text-electric-400 text-xs font-semibold tracking-widest uppercase transition-colors"
+              >El Estudio</a
+            >
+            <a
+              href="#servicios"
+              class="text-studio-300 hover:text-electric-400 text-xs font-semibold tracking-widest uppercase transition-colors"
+              >Servicios</a
+            >
+            <a
+              href="#portafolio"
+              class="text-studio-300 hover:text-electric-400 text-xs font-semibold tracking-widest uppercase transition-colors"
+              >Portafolio</a
+            >
+            <a
+              href="#calculador"
+              class="text-electric-400 hover:text-electric-300 flex items-center gap-1.5 text-xs font-semibold tracking-widest uppercase transition-colors"
+            >
+              <span class="bg-electric-500 inline-block h-2 w-2 animate-ping rounded-full"></span>
+              Cotizar Online
+            </a>
+            <a
+              href="#preguntas"
+              class="text-studio-300 hover:text-electric-400 text-xs font-semibold tracking-widest uppercase transition-colors"
+              >Preguntas</a
+            >
+            <a
+              href="#contacto"
+              class="bg-studio-800 hover:bg-electric-600 border-studio-700 inline-flex items-center justify-center rounded-lg border px-5 py-3 text-[10px] font-bold tracking-widest text-white uppercase transition-all duration-300 hover:border-transparent hover:text-white"
+            >
+              Reservar Hora
+            </a>
+          </nav>
+
+          <!-- Mobile Menu Button -->
+          <div class="flex items-center md:hidden">
+            <button
+              id="mobile-menu-btn"
+              type="button"
+              class="hover:text-electric-400 text-white focus:outline-none"
+              aria-label="Menu"
+            >
+              <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path
+                  id="menu-icon-open"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"></path>
+                <path
+                  id="menu-icon-close"
+                  class="hidden"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M6 18L18 6M6 6l12 12"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile Navigation Panel -->
+      <div
+        id="mobile-menu"
+        class="bg-studio-900 border-studio-800 hidden space-y-4 border-b px-4 pt-4 pb-8 md:hidden"
+      >
+        <a
+          href="#espacios"
+          class="text-studio-200 hover:bg-studio-800 hover:text-electric-400 block rounded-lg px-3 py-2.5 text-xs font-semibold tracking-wider uppercase"
+          >El Estudio</a
+        >
+        <a
+          href="#servicios"
+          class="text-studio-200 hover:bg-studio-800 hover:text-electric-400 block rounded-lg px-3 py-2.5 text-xs font-semibold tracking-wider uppercase"
+          >Servicios</a
+        >
+        <a
+          href="#portafolio"
+          class="text-studio-200 hover:bg-studio-800 hover:text-electric-400 block rounded-lg px-3 py-2.5 text-xs font-semibold tracking-wider uppercase"
+          >Portafolio</a
+        >
+        <a
+          href="#calculador"
+          class="text-electric-400 hover:bg-studio-800 block rounded-lg px-3 py-2.5 text-xs font-semibold tracking-wider uppercase"
+          >Cotizador en Vivo</a
+        >
+        <a
+          href="#preguntas"
+          class="text-studio-200 hover:bg-studio-800 hover:text-electric-400 block rounded-lg px-3 py-2.5 text-xs font-semibold tracking-wider uppercase"
+          >Preguntas</a
+        >
+        <a
+          href="#contacto"
+          class="bg-electric-600 hover:bg-electric-700 block w-full rounded-lg px-4 py-3.5 text-center text-xs font-bold tracking-widest text-white uppercase transition-colors"
+        >
+          Reservar Set / Sesión
+        </a>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section
+      id="inicio"
+      class="bg-studio-950 relative flex min-h-[90vh] items-center justify-center overflow-hidden py-12"
+    >
+      <div class="absolute inset-0 z-0">
+        <!-- Dynamic tech pattern/mesh and high-contrast dark overlay -->
+        <div
+          class="from-studio-950 via-studio-950/70 to-studio-950/90 absolute inset-0 z-10 bg-gradient-to-r"
+        >
+        </div>
+        <img
+          src="https://images.unsplash.com/photo-1595814433015-e6f5cd696144?auto=format&fit=crop&w=1920&q=80"
+          alt="Estudio de producción fotográfica industrial"
+          class="h-full w-full object-cover opacity-25 contrast-125 saturate-50 filter"
+          onerror="this.src='https://placehold.co/1920x1080/020617/ffffff?text=Estudio+Andino'"
+        />
+      </div>
+
+      <div
+        class="relative z-10 mx-auto grid max-w-7xl grid-cols-1 items-center gap-12 px-4 sm:px-6 lg:grid-cols-12 lg:px-8"
+      >
+        <!-- Left content -->
+        <div class="space-y-6 text-left lg:col-span-7">
+          <div
+            class="bg-electric-600/10 border-electric-500/20 inline-flex items-center gap-2 rounded-full border px-3 py-1.5"
+          >
+            <span class="bg-electric-500 h-2 w-2 animate-pulse rounded-full"></span>
+            <span class="text-electric-400 text-[10px] font-bold tracking-widest uppercase"
+              >Estudio Profesional & Arriendo — Temuco, Chile</span
+            >
+          </div>
+          <h1
+            class="font-display text-4xl leading-tight font-extrabold tracking-tight text-white sm:text-6xl"
+          >
+            Producción visual con <br />
+            <span
+              class="from-electric-400 bg-gradient-to-r to-indigo-500 bg-clip-text text-transparent"
+              >precisión milimétrica</span
+            >
+          </h1>
+          <p class="text-studio-300 max-w-xl text-sm leading-relaxed font-light sm:text-base">
+            Espacio creativo de 150m² equipado para marcas líderes, e-commerce, agencias y
+            productoras. Arrienda nuestro set o contrata a nuestro equipo de fotógrafos
+            especializados en la Región de la Araucanía.
+          </p>
+          <div class="flex flex-wrap gap-4 pt-4">
+            <a
+              href="#calculador"
+              class="bg-electric-600 hover:bg-electric-700 shadow-electric-600/10 inline-flex items-center justify-center rounded-lg px-8 py-4 text-xs font-bold tracking-widest text-white uppercase shadow-xl transition-all duration-300"
+            >
+              Calcular Presupuesto Online
+            </a>
+            <a
+              href="#portafolio"
+              class="border-studio-700 hover:border-studio-400 bg-studio-900/40 hover:bg-studio-800 inline-flex items-center justify-center rounded-lg border px-8 py-4 text-xs font-bold tracking-widest text-white uppercase transition-all duration-300"
+            >
+              Ver Trabajos Recientes
+            </a>
+          </div>
+        </div>
+
+        <!-- Right dynamic badge / quick stat panel -->
+        <div
+          class="bg-studio-900/60 border-studio-800 relative rounded-2xl border p-8 shadow-2xl backdrop-blur-md lg:col-span-5"
+        >
+          <div
+            class="bg-electric-600 font-display absolute -top-3 -right-3 flex h-12 w-12 rotate-12 transform items-center justify-center rounded-xl text-lg font-bold text-white shadow-lg"
+          >
+            Set
+          </div>
+          <h3 class="font-display mb-6 text-lg font-bold text-white">Especificaciones de Set</h3>
+          <div class="space-y-4">
+            <div class="border-studio-800 flex items-center justify-between border-b py-2.5">
+              <span class="text-studio-400 text-xs font-medium"
+                >Ciclorama de obra de obra blanco</span
+              >
+              <span class="text-xs font-semibold text-white">6m ancho x 5m fondo</span>
+            </div>
+            <div class="border-studio-800 flex items-center justify-between border-b py-2.5">
+              <span class="text-studio-400 text-xs font-medium">Iluminación incluida</span>
+              <span class="text-xs font-semibold text-white">Profoto D2 & Godox VL300</span>
+            </div>
+            <div class="border-studio-800 flex items-center justify-between border-b py-2.5">
+              <span class="text-studio-400 text-xs font-medium">Área total</span>
+              <span class="text-xs font-semibold text-white">150 m² útiles</span>
+            </div>
+            <div class="border-studio-800 flex items-center justify-between border-b py-2.5">
+              <span class="text-studio-400 text-xs font-medium">Acceso de carga</span>
+              <span class="text-xs font-semibold text-white">Portón directo y montacargas</span>
+            </div>
+          </div>
+          <p class="text-studio-500 mt-6 text-center text-[10px]">
+            Ubicado en el polo empresarial de Av. Alemania, Temuco.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Studio Spaces & Technology Section -->
+    <section id="espacios" class="bg-studio-900 border-studio-800 border-y py-20">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 items-center gap-12 lg:grid-cols-12">
+          <!-- Graphic column with multiple images -->
+          <div class="grid grid-cols-12 gap-4 lg:col-span-6">
+            <div
+              class="border-studio-700 relative col-span-8 aspect-[4/3] overflow-hidden rounded-xl border shadow-xl"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=800&q=80"
+                alt="Set con ciclorama blanco"
+                class="h-full w-full object-cover"
+                onerror="this.src='https://placehold.co/800x600/1e293b/ffffff?text=Ciclorama'"
+              />
+            </div>
+            <div
+              class="border-studio-700 relative col-span-4 mb-6 aspect-square self-end overflow-hidden rounded-xl border shadow-xl"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&w=400&q=80"
+                alt="Lente fotográfico profesional"
+                class="h-full w-full object-cover contrast-125 grayscale filter"
+                onerror="this.src='https://placehold.co/400x400/1e293b/ffffff?text=Lente'"
+              />
+            </div>
+            <div
+              class="border-studio-700 relative col-span-4 -mt-6 aspect-square overflow-hidden rounded-xl border shadow-xl"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=400&q=80"
+                alt="Estación de post-producción"
+                class="h-full w-full object-cover contrast-125 saturate-50 filter"
+                onerror="this.src='https://placehold.co/400x400/1e293b/ffffff?text=Edicion'"
+              />
+            </div>
+            <div
+              class="border-studio-700 relative col-span-8 -mt-6 aspect-[16/9] overflow-hidden rounded-xl border shadow-xl"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1560253023-3ec5d502959f?auto=format&fit=crop&w=800&q=80"
+                alt="Focos e iluminación técnica en rieles"
+                class="h-full w-full object-cover"
+                onerror="this.src='https://placehold.co/800x450/1e293b/ffffff?text=Iluminacion'"
+              />
+            </div>
+          </div>
+
+          <!-- Text Column (Specs) -->
+          <div class="space-y-6 lg:col-span-6">
+            <span class="text-electric-400 block text-xs font-bold tracking-widest uppercase"
+              >Infraestructura Técnica</span
+            >
+            <h2 class="font-display text-3xl leading-tight font-extrabold text-white sm:text-5xl">
+              Diseñado para la máxima exigencia
+            </h2>
+            <p class="text-studio-300 text-sm leading-relaxed font-light">
+              Creamos un espacio versátil con aislamiento acústico óptimo para grabaciones de video
+              de alta calidad, entrevistas corporativas y lanzamientos de marcas en Temuco y la
+              Región de la Araucanía.
+            </p>
+
+            <!-- Feature checkmarks in clean grid -->
+            <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+              <div class="flex items-start gap-3">
+                <span class="text-electric-500 text-lg font-bold">✓</span>
+                <div>
+                  <h4 class="text-xs font-bold tracking-wider text-white uppercase">
+                    Ciclorama Infinito
+                  </h4>
+                  <p class="text-studio-400 mt-0.5 text-[11px]">
+                    Perfecto para fotos de modelos y catálogos comerciales sin bordes.
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-start gap-3">
+                <span class="text-electric-500 text-lg font-bold">✓</span>
+                <div>
+                  <h4 class="text-xs font-bold tracking-wider text-white uppercase">
+                    Poder Trifásico
+                  </h4>
+                  <p class="text-studio-400 mt-0.5 text-[11px]">
+                    Soporta equipos de iluminación continuos pesados de cine y video.
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-start gap-3">
+                <span class="text-electric-500 text-lg font-bold">✓</span>
+                <div>
+                  <h4 class="text-xs font-bold tracking-wider text-white uppercase">
+                    Estación de Maquillaje
+                  </h4>
+                  <p class="text-studio-400 mt-0.5 text-[11px]">
+                    Espacio dedicado para estilistas con luces de temperatura controlada.
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-start gap-3">
+                <span class="text-electric-500 text-lg font-bold">✓</span>
+                <div>
+                  <h4 class="text-xs font-bold tracking-wider text-white uppercase">
+                    Estación de Tethering
+                  </h4>
+                  <p class="text-studio-400 mt-0.5 text-[11px]">
+                    Visualización instantánea para clientes en monitor calibrado de 27".
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio Gallery Section (Fully Functional Filter & Lightbox Trigger) -->
+    <section id="portafolio" class="bg-studio-950 py-20">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="mx-auto mb-12 max-w-3xl text-center">
+          <span class="text-electric-400 block text-xs font-bold tracking-widest uppercase"
+            >Nuestro Trabajo</span
+          >
+          <h2
+            class="font-display mt-2 text-3xl font-extrabold tracking-tight text-white sm:text-4xl"
+          >
+            Producciones Exclusivas
+          </h2>
+          <div class="bg-electric-500 mx-auto mt-4 h-1 w-16 rounded-full"></div>
+          <p class="text-studio-400 mt-4 text-xs sm:text-sm">
+            Explora portafolios comerciales reales desarrollados para prestigiosas marcas, pymes
+            locales de la Araucanía y sesiones de retratos ejecutivos de primer nivel.
+          </p>
+        </div>
+
+        <!-- Fully working Filter Buttons -->
+        <div class="mb-10 flex flex-wrap justify-center gap-2">
+          <button
+            onclick="filterPortfolio('all')"
+            id="btn-filter-all"
+            class="portfolio-filter-btn border-electric-500 bg-electric-600 rounded-lg border px-6 py-2.5 text-[10px] font-bold tracking-widest text-white uppercase transition-all"
+          >
+            Ver Todos
+          </button>
+          <button
+            onclick="filterPortfolio('comercial')"
+            id="btn-filter-comercial"
+            class="portfolio-filter-btn border-studio-800 hover:bg-studio-800 text-studio-300 rounded-lg border px-6 py-2.5 text-[10px] font-bold tracking-widest uppercase transition-all hover:text-white"
+          >
+            E-Commerce & Producto
+          </button>
+          <button
+            onclick="filterPortfolio('retratos')"
+            id="btn-filter-retratos"
+            class="portfolio-filter-btn border-studio-800 hover:bg-studio-800 text-studio-300 rounded-lg border px-6 py-2.5 text-[10px] font-bold tracking-widest uppercase transition-all hover:text-white"
+          >
+            Retratos Corporativos
+          </button>
+          <button
+            onclick="filterPortfolio('arquitectura')"
+            id="btn-filter-arquitectura"
+            class="portfolio-filter-btn border-studio-800 hover:bg-studio-800 text-studio-300 rounded-lg border px-6 py-2.5 text-[10px] font-bold tracking-widest uppercase transition-all hover:text-white"
+          >
+            Arquitectura & Espacios
+          </button>
+        </div>
+
+        <!-- Portfolio Image Grid -->
+        <div id="portfolio-grid" class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <!-- Card 1 (E-commerce / Producto) -->
+          <div
+            class="portfolio-item comercial group border-studio-800 bg-studio-900 relative aspect-square cursor-pointer overflow-hidden rounded-xl border"
+            onclick="openLightbox(0)"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=800&h=800&q=80"
+              alt="Catálogo comercial de zapatillas en estudio"
+              class="h-full w-full object-cover contrast-125 saturate-50 filter transition-all duration-500 group-hover:scale-105 group-hover:saturate-100"
+            />
+            <div
+              class="from-studio-950 via-studio-950/40 absolute inset-0 flex flex-col justify-end bg-gradient-to-t to-transparent p-6 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+            >
+              <span class="text-electric-400 text-[9px] font-bold tracking-widest uppercase"
+                >Campaña Publicitaria</span
+              >
+              <h3 class="font-display mt-1 text-lg font-bold text-white">
+                E-Commerce de Calzado Técnico
+              </h3>
+              <p class="text-studio-300 mt-1 text-xs">
+                Fotografía de producto en ciclorama infinito.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 2 (Retratos Corporativos) -->
+          <div
+            class="portfolio-item retratos group border-studio-800 bg-studio-900 relative aspect-square cursor-pointer overflow-hidden rounded-xl border"
+            onclick="openLightbox(1)"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=800&h=800&q=80"
+              alt="Retrato ejecutivo formal"
+              class="h-full w-full object-cover contrast-125 saturate-50 filter transition-all duration-500 group-hover:scale-105 group-hover:saturate-100"
+            />
+            <div
+              class="from-studio-950 via-studio-950/40 absolute inset-0 flex flex-col justify-end bg-gradient-to-t to-transparent p-6 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+            >
+              <span class="text-electric-400 text-[9px] font-bold tracking-widest uppercase"
+                >Retrato Ejecutivo</span
+              >
+              <h3 class="font-display mt-1 text-lg font-bold text-white">
+                Directorio Inmobiliaria Araucanía
+              </h3>
+              <p class="text-studio-300 mt-1 text-xs">
+                Esquema clásico de iluminación de 3 puntos.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 3 (Arquitectura & Espacios) -->
+          <div
+            class="portfolio-item arquitectura group border-studio-800 bg-studio-900 relative aspect-square cursor-pointer overflow-hidden rounded-xl border"
+            onclick="openLightbox(2)"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&h=800&q=80"
+              alt="Fotografía de interior de hotel boutique en Pucón"
+              class="h-full w-full object-cover contrast-125 saturate-50 filter transition-all duration-500 group-hover:scale-105 group-hover:saturate-100"
+            />
+            <div
+              class="from-studio-950 via-studio-950/40 absolute inset-0 flex flex-col justify-end bg-gradient-to-t to-transparent p-6 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+            >
+              <span class="text-electric-400 text-[9px] font-bold tracking-widest uppercase"
+                >Arquitectura</span
+              >
+              <h3 class="font-display mt-1 text-lg font-bold text-white">
+                Hotel Boutique en Pucón
+              </h3>
+              <p class="text-studio-300 mt-1 text-xs">
+                Registro de espacios interiores y exteriores premium.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 4 (E-commerce / Producto) -->
+          <div
+            class="portfolio-item comercial group border-studio-800 bg-studio-900 relative aspect-square cursor-pointer overflow-hidden rounded-xl border"
+            onclick="openLightbox(3)"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&h=800&q=80"
+              alt="Fotografía de producto audífonos en estudio"
+              class="h-full w-full object-cover contrast-125 saturate-50 filter transition-all duration-500 group-hover:scale-105 group-hover:saturate-100"
+            />
+            <div
+              class="from-studio-950 via-studio-950/40 absolute inset-0 flex flex-col justify-end bg-gradient-to-t to-transparent p-6 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+            >
+              <span class="text-electric-400 text-[9px] font-bold tracking-widest uppercase"
+                >Fotografía de Catálogo</span
+              >
+              <h3 class="font-display mt-1 text-lg font-bold text-white">
+                Campaña de Tecnología & Audio
+              </h3>
+              <p class="text-studio-300 mt-1 text-xs">
+                Estilismo de producto con iluminación continua.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 5 (Retratos Corporativos) -->
+          <div
+            class="portfolio-item retratos group border-studio-800 bg-studio-900 relative aspect-square cursor-pointer overflow-hidden rounded-xl border"
+            onclick="openLightbox(4)"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&h=800&q=80"
+              alt="Retrato corporativo de equipo femenino"
+              class="h-full w-full object-cover contrast-125 saturate-50 filter transition-all duration-500 group-hover:scale-105 group-hover:saturate-100"
+            />
+            <div
+              class="from-studio-950 via-studio-950/40 absolute inset-0 flex flex-col justify-end bg-gradient-to-t to-transparent p-6 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+            >
+              <span class="text-electric-400 text-[9px] font-bold tracking-widest uppercase"
+                >Retrato de Autor</span
+              >
+              <h3 class="font-display mt-1 text-lg font-bold text-white">
+                Staff Médico Clínica Temuco
+              </h3>
+              <p class="text-studio-300 mt-1 text-xs">
+                Sesiones de marca personal para profesionales independientes.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 6 (Arquitectura & Espacios) -->
+          <div
+            class="portfolio-item arquitectura group border-studio-800 bg-studio-900 relative aspect-square cursor-pointer overflow-hidden rounded-xl border"
+            onclick="openLightbox(5)"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&h=800&q=80"
+              alt="Fotografía de arquitectura moderna"
+              class="h-full w-full object-cover contrast-125 saturate-50 filter transition-all duration-500 group-hover:scale-105 group-hover:saturate-100"
+            />
+            <div
+              class="from-studio-950 via-studio-950/40 absolute inset-0 flex flex-col justify-end bg-gradient-to-t to-transparent p-6 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+            >
+              <span class="text-electric-400 text-[9px] font-bold tracking-widest uppercase"
+                >Producción de Espacios</span
+              >
+              <h3 class="font-display mt-1 text-lg font-bold text-white">
+                Showroom Corporativo Araucanía
+              </h3>
+              <p class="text-studio-300 mt-1 text-xs">
+                Fotografía de alta definición técnica para constructoras.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Budget Estimator Section (Live JavaScript Calculation) -->
+    <section id="calculador" class="bg-studio-900 relative py-20">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="mx-auto mb-16 max-w-3xl text-center">
+          <span class="text-electric-400 block text-xs font-bold tracking-widest uppercase"
+            >Herramienta Interactiva</span
+          >
+          <h2
+            class="font-display mt-2 text-3xl font-extrabold tracking-tight text-white sm:text-4xl"
+          >
+            Configura tu Presupuesto al Instante
+          </h2>
+          <div class="bg-electric-500 mx-auto mt-4 h-1 w-16 rounded-full"></div>
+          <p class="text-studio-400 mt-4 text-xs sm:text-sm">
+            Selecciona el servicio que requieres, define el tiempo estimado y añade los
+            requerimientos adicionales para ver un cálculo inmediato.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 items-start gap-12 lg:grid-cols-12">
+          <!-- Left: Configurator inputs -->
+          <div
+            class="bg-studio-950 border-studio-800 space-y-6 rounded-2xl border p-8 shadow-xl lg:col-span-7"
+          >
+            <h3 class="font-display text-lg font-bold text-white">1. Configurar Requerimientos</h3>
+
+            <!-- Service selection buttons -->
+            <div>
+              <span
+                class="text-studio-400 mb-3 block text-[10px] font-semibold tracking-wider uppercase"
+                >Tipo de Servicio:</span
+              >
+              <div class="grid grid-cols-1 gap-3 sm:grid-cols-3">
+                <button
+                  onclick="setCalService('arriendo', 30000)"
+                  id="svc-arriendo"
+                  class="calc-svc-btn border-electric-500 bg-electric-600/10 rounded-xl border p-4 text-left text-white transition-all"
+                >
+                  <span class="block text-xs font-bold tracking-wider uppercase">Arriendo Set</span>
+                  <span class="text-electric-400 mt-1 block text-[10px]">$30.000 / hora</span>
+                </button>
+                <button
+                  onclick="setCalService('producto', 45000)"
+                  id="svc-producto"
+                  class="calc-svc-btn border-studio-800 hover:bg-studio-900 text-studio-300 rounded-xl border p-4 text-left transition-all hover:text-white"
+                >
+                  <span class="block text-xs font-bold tracking-wider uppercase"
+                    >Fotos Producto</span
+                  >
+                  <span class="text-studio-400 mt-1 block text-[10px]">$45.000 / hora</span>
+                </button>
+                <button
+                  onclick="setCalService('retratos', 50000)"
+                  id="svc-retratos"
+                  class="calc-svc-btn border-studio-800 hover:bg-studio-900 text-studio-300 rounded-xl border p-4 text-left transition-all hover:text-white"
+                >
+                  <span class="block text-xs font-bold tracking-wider uppercase"
+                    >Sesión Retratos</span
+                  >
+                  <span class="text-studio-400 mt-1 block text-[10px]">$50.000 / hora</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Hours Slider -->
+            <div>
+              <div class="mb-2 flex items-center justify-between">
+                <label
+                  for="calc-hours"
+                  class="text-studio-400 text-[10px] font-semibold tracking-wider uppercase"
+                  >Horas Estimadas:</label
+                >
+                <span id="hours-display" class="font-display text-electric-400 text-sm font-bold"
+                  >4 Horas</span
+                >
+              </div>
+              <input
+                type="range"
+                id="calc-hours"
+                min="2"
+                max="12"
+                value="4"
+                oninput="updateHours(this.value)"
+                class="bg-studio-800 accent-electric-500 h-2 w-full cursor-pointer appearance-none rounded-lg"
+              />
+              <div class="text-studio-500 mt-1 flex justify-between text-[10px]">
+                <span>Mínimo (2 horas)</span>
+                <span>Máximo (12 horas)</span>
+              </div>
+            </div>
+
+            <!-- Extras checkboxes -->
+            <div>
+              <span
+                class="text-studio-400 mb-3 block text-[10px] font-semibold tracking-wider uppercase"
+                >Equipamiento y Servicios Extras:</span
+              >
+              <div class="space-y-3">
+                <label
+                  class="border-studio-800 hover:border-studio-700 bg-studio-900/40 flex cursor-pointer items-center gap-3 rounded-xl border p-3"
+                >
+                  <input
+                    type="checkbox"
+                    id="extra-asistente"
+                    value="25000"
+                    onchange="calcTotal()"
+                    class="text-electric-600 bg-studio-800 border-studio-700 focus:ring-electric-500 h-4 w-4 rounded"
+                  />
+                  <div class="flex-grow">
+                    <div class="flex items-center justify-between">
+                      <span class="text-xs font-bold text-white">Asistente de Iluminación</span>
+                      <span class="text-electric-400 text-xs font-semibold">+$25.000 total</span>
+                    </div>
+                    <p class="text-studio-400 mt-0.5 text-[10px]">
+                      Asistencia técnica profesional para el set durante el rodaje.
+                    </p>
+                  </div>
+                </label>
+
+                <label
+                  class="border-studio-800 hover:border-studio-700 bg-studio-900/40 flex cursor-pointer items-center gap-3 rounded-xl border p-3"
+                >
+                  <input
+                    type="checkbox"
+                    id="extra-iluminacion"
+                    value="15000"
+                    onchange="calcTotal()"
+                    class="text-electric-600 bg-studio-800 border-studio-700 focus:ring-electric-500 h-4 w-4 rounded"
+                  />
+                  <div class="flex-grow">
+                    <div class="flex items-center justify-between">
+                      <span class="text-xs font-bold text-white">Kit Profoto Premium</span>
+                      <span class="text-electric-400 text-xs font-semibold">+$15.000 / hora</span>
+                    </div>
+                    <p class="text-studio-400 mt-0.5 text-[10px]">
+                      Acceso a generadores y flashes de alta velocidad Profoto Air.
+                    </p>
+                  </div>
+                </label>
+
+                <label
+                  class="border-studio-800 hover:border-studio-700 bg-studio-900/40 flex cursor-pointer items-center gap-3 rounded-xl border p-3"
+                >
+                  <input
+                    type="checkbox"
+                    id="extra-postprod"
+                    value="50000"
+                    onchange="calcTotal()"
+                    class="text-electric-600 bg-studio-800 border-studio-700 focus:ring-electric-500 h-4 w-4 rounded"
+                  />
+                  <div class="flex-grow">
+                    <div class="flex items-center justify-between">
+                      <span class="text-xs font-bold text-white"
+                        >Revelado / Post-Producción Express</span
+                      >
+                      <span class="text-electric-400 text-xs font-semibold">+$50.000 total</span>
+                    </div>
+                    <p class="text-studio-400 mt-0.5 text-[10px]">
+                      Edición en menos de 48 horas de las fotos seleccionadas.
+                    </p>
+                  </div>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Calculation Summary Card -->
+          <div
+            class="from-studio-900 to-studio-950 border-electric-500/30 relative flex flex-col justify-between self-stretch rounded-2xl border bg-gradient-to-br p-8 shadow-2xl lg:col-span-5"
+          >
+            <div>
+              <div
+                class="bg-electric-600 absolute top-4 right-4 rounded-full px-3 py-1 text-[9px] font-bold tracking-widest text-white uppercase"
+              >
+                Estimación CLP
+              </div>
+              <h3 class="font-display mb-6 text-lg font-bold text-white">
+                Resumen del Presupuesto
+              </h3>
+
+              <div class="space-y-4 text-xs">
+                <div class="border-studio-800 flex justify-between border-b py-2">
+                  <span class="text-studio-400">Servicio Base</span>
+                  <span id="summary-svc" class="font-semibold text-white">Arriendo Set</span>
+                </div>
+                <div class="border-studio-800 flex justify-between border-b py-2">
+                  <span class="text-studio-400">Horas Solicitadas</span>
+                  <span id="summary-hours" class="font-semibold text-white">4 Horas</span>
+                </div>
+                <div class="border-studio-800 flex justify-between border-b py-2">
+                  <span class="text-studio-400">Valor Base</span>
+                  <span id="summary-base-val" class="font-mono font-semibold text-white"
+                    >$120.000</span
+                  >
+                </div>
+                <div class="border-studio-800 flex justify-between border-b py-2">
+                  <span class="text-studio-400">Valor de Adicionales</span>
+                  <span id="summary-extras-val" class="font-mono font-semibold text-white">$0</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Giant Total Display -->
+            <div class="border-studio-800 mt-8 border-t pt-6">
+              <span
+                class="text-studio-400 mb-1 block text-[10px] font-semibold tracking-wider uppercase"
+                >Presupuesto Estimado Final:</span
+              >
+              <div class="flex items-baseline gap-2">
+                <span
+                  id="summary-total"
+                  class="font-display text-electric-400 font-mono text-4xl font-extrabold sm:text-5xl"
+                  >$120.000</span
+                >
+                <span class="text-studio-400 text-xs font-light">CLP + IVA</span>
+              </div>
+              <p class="text-studio-500 mt-2 text-[10px]">
+                Valor sujeto a disponibilidad técnica y de fecha.
+              </p>
+
+              <!-- Interconnection Button -->
+              <button
+                onclick="applyEstimateToContact()"
+                class="bg-electric-600 hover:bg-electric-700 shadow-electric-600/10 mt-6 inline-flex w-full items-center justify-center rounded-xl px-6 py-4 text-xs font-bold tracking-widest text-white uppercase shadow-lg transition-all"
+              >
+                Reservar con esta Cotización
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section (Fully Interactive Accordions) -->
+    <section id="preguntas" class="bg-studio-950 border-studio-800 border-t py-20">
+      <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+        <div class="mb-16 text-center">
+          <span class="text-electric-400 block text-xs font-bold tracking-widest uppercase"
+            >Soporte y Respuestas</span
+          >
+          <h2
+            class="font-display mt-2 text-3xl font-extrabold tracking-tight text-white sm:text-4xl"
+          >
+            Preguntas Frecuentes
+          </h2>
+          <div class="bg-electric-500 mx-auto mt-4 h-1 w-16 rounded-full"></div>
+        </div>
+
+        <div class="space-y-4">
+          <!-- FAQ Item 1 -->
+          <div class="border-studio-800 bg-studio-900/40 overflow-hidden rounded-xl border">
+            <button
+              class="hover:bg-studio-800 flex w-full items-center justify-between p-6 text-left transition-colors focus:outline-none"
+              onclick="toggleFaq('faq-1')"
+            >
+              <span class="font-display text-sm font-bold text-white sm:text-base"
+                >¿Qué equipamiento básico incluye el arriendo del set?</span
+              >
+              <span
+                id="faq-icon-faq-1"
+                class="text-electric-400 transform text-lg font-bold transition-transform duration-200"
+                >＋</span
+              >
+            </button>
+            <div
+              id="faq-1"
+              class="border-studio-800 text-studio-300 bg-studio-950/40 hidden border-t p-6 text-xs leading-relaxed sm:text-sm"
+            >
+              El arriendo base del set incluye el uso del ciclorama blanco, un set de fondos
+              infinitos de cartón (colores variados según disponibilidad), 2 cabezales de flash
+              Profoto o Godox con difusores (softboxes de distintos tamaños, octabox, paraguas),
+              conexión Wi-Fi de alta velocidad para transmisión remota y acceso completo al vestidor
+              / sala de maquillaje.
+            </div>
+          </div>
+
+          <!-- FAQ Item 2 -->
+          <div class="border-studio-800 bg-studio-900/40 overflow-hidden rounded-xl border">
+            <button
+              class="hover:bg-studio-800 flex w-full items-center justify-between p-6 text-left transition-colors focus:outline-none"
+              onclick="toggleFaq('faq-2')"
+            >
+              <span class="font-display text-sm font-bold text-white sm:text-base"
+                >¿Cuál es el horario de atención y disponibilidad en Temuco?</span
+              >
+              <span
+                id="faq-icon-faq-2"
+                class="text-electric-400 transform text-lg font-bold transition-transform duration-200"
+                >＋</span
+              >
+            </button>
+            <div
+              id="faq-2"
+              class="border-studio-800 text-studio-300 bg-studio-950/40 hidden border-t p-6 text-xs leading-relaxed sm:text-sm"
+            >
+              Atendemos de lunes a viernes de 09:00 a 19:00 horas, y los sábados de 10:00 a 14:00
+              horas. Sin embargo, para producciones especiales o arriendos de larga jornada, podemos
+              programar sesiones en horarios nocturnos o días feriados previo recargo por logística.
+              Requerimos coordinación previa para resguardar la privacidad de cada sesión.
+            </div>
+          </div>
+
+          <!-- FAQ Item 3 -->
+          <div class="border-studio-800 bg-studio-900/40 overflow-hidden rounded-xl border">
+            <button
+              class="hover:bg-studio-800 flex w-full items-center justify-between p-6 text-left transition-colors focus:outline-none"
+              onclick="toggleFaq('faq-3')"
+            >
+              <span class="font-display text-sm font-bold text-white sm:text-base"
+                >¿Hacen envíos de archivos editados en formato RAW?</span
+              >
+              <span
+                id="faq-icon-faq-3"
+                class="text-electric-400 transform text-lg font-bold transition-transform duration-200"
+                >＋</span
+              >
+            </button>
+            <div
+              id="faq-3"
+              class="border-studio-800 text-studio-300 bg-studio-950/40 hidden border-t p-6 text-xs leading-relaxed sm:text-sm"
+            >
+              Nuestra política estándar de producción y propiedad intelectual contempla la entrega
+              exclusiva de archivos definitivos en formato digital JPG en alta resolución, revelados
+              y editados detalladamente. No se entregan archivos RAW crudos sin edición, excepto en
+              casos donde se establezca un contrato comercial de cesión de derechos sobre materiales
+              en bruto.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Booking & Contact Section -->
+    <section id="contacto" class="bg-studio-900 border-studio-800 border-t py-20">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 gap-12 lg:grid-cols-12">
+          <!-- Studio Details -->
+          <div class="space-y-6 lg:col-span-5">
+            <span class="text-electric-400 block text-xs font-bold tracking-widest uppercase"
+              >Agendar & Visitar</span
+            >
+            <h2 class="font-display text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
+              Construyamos tu Propuesta Visual
+            </h2>
+            <div class="bg-electric-500 h-1 w-16 rounded-full"></div>
+            <p class="text-studio-300 text-sm leading-relaxed">
+              Reserva el set o solicita un servicio audiovisual a la medida. Rellena los datos de
+              contacto y cuéntanos sobre el proyecto de tu marca o empresa. Respondemos en un plazo
+              máximo de 12 horas hábiles.
+            </p>
+
+            <div class="space-y-4 pt-4 text-xs">
+              <div class="flex items-start gap-4">
+                <div class="text-electric-400 mt-1">
+                  <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    ><path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                    ></path><path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg
+                  >
+                </div>
+                <div>
+                  <strong class="mb-0.5 block tracking-wider text-white uppercase"
+                    >Ubicación del Estudio:</strong
+                  >
+                  <span class="text-studio-400"
+                    >Avenida Alemania 01130, Oficina 502, Temuco, Chile</span
+                  >
+                </div>
+              </div>
+
+              <div class="flex items-start gap-4">
+                <div class="text-electric-400 mt-1">
+                  <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    ><path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                    ></path></svg
+                  >
+                </div>
+                <div>
+                  <strong class="mb-0.5 block tracking-wider text-white uppercase"
+                    >Fono / WhatsApp:</strong
+                  >
+                  <a href="tel:+56912345678" class="text-electric-400 font-mono hover:underline"
+                    >+56 9 1234 5678</a
+                  >
+                </div>
+              </div>
+
+              <div class="flex items-start gap-4">
+                <div class="text-electric-400 mt-1">
+                  <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    ><path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                    ></path></svg
+                  >
+                </div>
+                <div>
+                  <strong class="mb-0.5 block tracking-wider text-white uppercase"
+                    >Correo Electrónico:</strong
+                  >
+                  <a href="mailto:contacto@andinoestudio.cl" class="text-studio-400 hover:underline"
+                    >contacto@andinoestudio.cl</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Booking Form -->
+          <div
+            class="bg-studio-950 border-studio-800 relative rounded-2xl border p-8 shadow-2xl lg:col-span-7"
+          >
+            <h3 class="font-display mb-6 text-lg font-bold text-white">
+              Solicitud de Reserva / Reunión
+            </h3>
+
+            <form id="contact-form" class="space-y-6" onsubmit="handleContactSubmit(event)">
+              <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                <div>
+                  <label
+                    for="c-name"
+                    class="text-studio-400 block text-[10px] font-semibold tracking-wider uppercase"
+                    >Tu Nombre o Empresa:</label
+                  >
+                  <input
+                    type="text"
+                    id="c-name"
+                    required
+                    class="bg-studio-900 border-studio-800 focus:border-electric-500 mt-2 block w-full rounded-xl border px-4 py-3 text-sm text-white focus:outline-none"
+                  />
+                </div>
+                <div>
+                  <label
+                    for="c-phone"
+                    class="text-studio-400 block text-[10px] font-semibold tracking-wider uppercase"
+                    >WhatsApp o Fono:</label
+                  >
+                  <input
+                    type="tel"
+                    id="c-phone"
+                    required
+                    class="bg-studio-900 border-studio-800 focus:border-electric-500 mt-2 block w-full rounded-xl border px-4 py-3 text-sm text-white focus:outline-none"
+                    placeholder="+56 9 ..."
+                  />
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                <div>
+                  <label
+                    for="c-type"
+                    class="text-studio-400 block text-[10px] font-semibold tracking-wider uppercase"
+                    >Tipo de Solicitud:</label
+                  >
+                  <select
+                    id="c-type"
+                    class="bg-studio-900 border-studio-800 focus:border-electric-500 mt-2 block w-full rounded-xl border px-4 py-3 text-sm text-white focus:outline-none"
+                  >
+                    <option value="arriendo">Arriendo de Set</option>
+                    <option value="producto">Producción de Producto / E-Commerce</option>
+                    <option value="retratos">Sesión de Retratos Corporativos</option>
+                    <option value="otro">Otras Consultas / Cotización Especial</option>
+                  </select>
+                </div>
+                <div>
+                  <label
+                    for="c-date"
+                    class="text-studio-400 block text-[10px] font-semibold tracking-wider uppercase"
+                    >Fecha Requerida:</label
+                  >
+                  <input
+                    type="date"
+                    id="c-date"
+                    required
+                    class="bg-studio-900 border-studio-800 focus:border-electric-500 mt-2 block w-full rounded-xl border px-4 py-3 text-sm text-white focus:outline-none"
+                  />
+                </div>
+              </div>
+
+              <div>
+                <label
+                  for="c-msg"
+                  class="text-studio-400 block text-[10px] font-semibold tracking-wider uppercase"
+                  >Detalles del Proyecto y Cotización Seleccionada:</label
+                >
+                <textarea
+                  id="c-msg"
+                  rows="4"
+                  required
+                  class="bg-studio-900 border-studio-800 focus:border-electric-500 mt-2 block w-full rounded-xl border px-4 py-3 text-sm text-white focus:outline-none"
+                  placeholder="Describe brevemente tus requerimientos o indica si estás aplicando un presupuesto cotizado en la calculadora..."
+                ></textarea>
+              </div>
+
+              <button
+                type="submit"
+                class="bg-electric-600 hover:bg-electric-700 shadow-electric-600/10 inline-flex w-full items-center justify-center rounded-xl px-6 py-4 text-xs font-bold tracking-widest text-white uppercase shadow-lg transition-all"
+              >
+                Enviar Solicitud de Reserva
+              </button>
+            </form>
+
+            <!-- Success State (Dynamic DOM injection) -->
+            <div id="contact-success" class="hidden space-y-4 py-12 text-center">
+              <div
+                class="bg-electric-600/10 border-electric-500 text-electric-400 mx-auto flex h-16 w-16 items-center justify-center rounded-full border text-2xl font-bold"
+              >
+                ✓
+              </div>
+              <h4 class="font-display text-2xl font-bold text-white">¡Solicitud Procesada!</h4>
+              <p id="success-desc" class="text-studio-300 mx-auto max-w-md text-sm">
+                Nos contactaremos contigo en menos de 12 horas hábiles para coordinar la
+                factibilidad y agendar formalmente la hora en el set.
+              </p>
+              <button
+                onclick="resetContactForm()"
+                class="bg-studio-800 hover:bg-studio-700 rounded-lg px-5 py-2.5 text-xs font-bold tracking-widest text-white uppercase"
+              >
+                Enviar Otra Solicitud
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-studio-950 text-studio-400 border-studio-800 border-t py-16 text-[11px]">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="mb-12 grid grid-cols-1 gap-8 md:grid-cols-4">
+          <!-- Brand bio -->
+          <div class="space-y-4 md:col-span-2">
+            <span class="font-display block text-lg font-bold tracking-tight text-white"
+              >ANDINO ESTUDIO</span
+            >
+            <p class="text-studio-400 max-w-sm text-xs leading-relaxed font-light">
+              Estudio líder en servicios de fotografía y producción audiovisual de nivel industrial
+              en Temuco. Respaldando el crecimiento de marcas en la Araucanía.
+            </p>
+          </div>
+
+          <!-- Navigation link list -->
+          <div>
+            <h4 class="mb-4 text-[10px] font-bold tracking-widest text-white uppercase">
+              Navegación
+            </h4>
+            <ul class="space-y-2">
+              <li>
+                <a href="#espacios" class="hover:text-electric-400 transition-colors"
+                  >Infraestructura</a>
+              </li>
+              <li>
+                <a href="#portafolio" class="hover:text-electric-400 transition-colors"
+                  >Portafolio</a>
+              </li>
+              <li>
+                <a href="#calculador" class="hover:text-electric-400 transition-colors"
+                  >Cotizador de Horas</a>
+              </li>
+              <li>
+                <a href="#contacto" class="hover:text-electric-400 transition-colors"
+                  >Contacto Directo</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Location details -->
+          <div>
+            <h4 class="mb-4 text-[10px] font-bold tracking-widest text-white uppercase">
+              Soporte Local
+            </h4>
+            <p class="text-studio-400 text-xs leading-relaxed font-light">
+              Ubicado a pasos del centro comercial Av. Alemania. Accesibilidad universal y
+              estacionamiento privado para carga y descarga de equipos de filmación.
+            </p>
+          </div>
+        </div>
+
+        <!-- Bottom Credits -->
+        <div
+          class="border-studio-800 flex flex-col items-center justify-between gap-4 border-t pt-8 text-[10px] sm:flex-row"
+        >
+          <p>
+            &copy; 2026 Andino Estudio SPA. Todos los derechos reservados. Temuco, Araucanía, Chile.
+          </p>
+          <div class="flex gap-4">
+            <a href="#" class="transition-colors hover:text-white">Términos del Servicio</a>
+            <a href="#" class="transition-colors hover:text-white">Reglas del Estudio</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Fully Functional Lightbox Modal with Slider functionality -->
+    <div
+      id="lightbox-modal"
+      class="bg-studio-950/95 fixed inset-0 z-50 flex hidden items-center justify-center p-4 backdrop-blur-md"
+    >
+      <!-- Close button -->
+      <button
+        onclick="closeLightbox()"
+        class="hover:text-electric-400 absolute top-6 right-6 z-50 text-2xl text-white focus:outline-none"
+        aria-label="Cerrar"
+      >
+        ✕
+      </button>
+
+      <div class="relative flex w-full max-w-4xl flex-col items-center">
+        <!-- Navigation controls -->
+        <button
+          onclick="prevSlide()"
+          class="hover:text-electric-400 font-display bg-studio-900/50 absolute top-1/2 left-2 z-50 -translate-y-1/2 transform rounded px-3 py-1.5 text-3xl font-semibold text-white focus:outline-none sm:-left-12 sm:bg-transparent"
+        >
+          ◀
+        </button>
+
+        <button
+          onclick="nextSlide()"
+          class="hover:text-electric-400 font-display bg-studio-900/50 absolute top-1/2 right-2 z-50 -translate-y-1/2 transform rounded px-3 py-1.5 text-3xl font-semibold text-white focus:outline-none sm:-right-12 sm:bg-transparent"
+        >
+          ▶
+        </button>
+
+        <!-- Lightbox Slide Image container -->
+        <img
+          id="lightbox-img"
+          src=""
+          alt="Ampliada"
+          class="border-studio-800 max-h-[75vh] max-w-full rounded-lg border object-contain shadow-2xl"
+        />
+
+        <!-- Dynamic descriptive text -->
+        <p
+          id="lightbox-caption"
+          class="text-studio-300 mt-4 px-4 text-center text-xs font-light tracking-wider"
+        >
+        </p>
+      </div>
+    </div>
+
+    <!-- JavaScript Controllers -->
+    <script>
+      // DOM Elements
+      const mobileBtn = document.getElementById("mobile-menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+      const openIcon = document.getElementById("menu-icon-open");
+      const closeIcon = document.getElementById("menu-icon-close");
+
+      // Mobile Navigation Toggle
+      mobileBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+        openIcon.classList.toggle("hidden");
+        closeIcon.classList.toggle("hidden");
+      });
+
+      // Close mobile panel on menu item click
+      const navLinks = mobileMenu.querySelectorAll("a");
+      navLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+          mobileMenu.classList.add("hidden");
+          openIcon.classList.remove("hidden");
+          closeIcon.classList.add("hidden");
+        });
+      });
+
+      // FAQ Accordion Handler
+      function toggleFaq(faqId) {
+        const el = document.getElementById(faqId);
+        const icon = document.getElementById("faq-icon-" + faqId);
+
+        if (el.classList.contains("hidden")) {
+          el.classList.remove("hidden");
+          icon.innerText = "－";
+          icon.classList.add("text-electric-400");
+        } else {
+          el.classList.add("hidden");
+          icon.innerText = "＋";
+          icon.classList.remove("text-electric-400");
+        }
+      }
+
+      // Portfolio Filtering logic
+      function filterPortfolio(category) {
+        const items = document.querySelectorAll(".portfolio-item");
+        const buttons = document.querySelectorAll(".portfolio-filter-btn");
+
+        // Reset active style on buttons
+        buttons.forEach((btn) => {
+          btn.className =
+            "portfolio-filter-btn px-6 py-2.5 rounded-lg border border-studio-800 text-[10px] font-bold uppercase tracking-widest hover:bg-studio-800 text-studio-300 hover:text-white transition-all";
+        });
+
+        // Set active style for selected filter button
+        const activeBtn = document.getElementById("btn-filter-" + category);
+        if (activeBtn) {
+          activeBtn.className =
+            "portfolio-filter-btn px-6 py-2.5 rounded-lg border border-electric-500 text-[10px] font-bold uppercase tracking-widest bg-electric-600 text-white transition-all";
+        }
+
+        // Show or hide elements
+        items.forEach((item) => {
+          if (category === "all" || item.classList.contains(category)) {
+            item.style.display = "block";
+          } else {
+            item.style.display = "none";
+          }
+        });
+      }
+
+      // Dynamic Cost Calculator States
+      let currentSvcType = "arriendo";
+      let currentHourlyRate = 30000;
+      let selectedHours = 4;
+
+      function setCalService(type, hourlyRate) {
+        currentSvcType = type;
+        currentHourlyRate = hourlyRate;
+
+        // Update design buttons status
+        const buttons = document.querySelectorAll(".calc-svc-btn");
+        buttons.forEach((btn) => {
+          btn.className =
+            "calc-svc-btn p-4 border border-studio-800 text-left hover:bg-studio-900 text-studio-300 hover:text-white rounded-xl transition-all";
+        });
+
+        const activeBtn = document.getElementById("svc-" + type);
+        activeBtn.className =
+          "calc-svc-btn p-4 border border-electric-500 text-left bg-electric-600/10 text-white rounded-xl transition-all";
+
+        // Update Summary Name
+        const names = {
+          arriendo: "Arriendo Set",
+          producto: "Fotos de Producto / Catálogo",
+          retratos: "Sesión de Retratos",
+        };
+        document.getElementById("summary-svc").innerText = names[type];
+
+        calcTotal();
+      }
+
+      function updateHours(val) {
+        selectedHours = parseInt(val);
+        document.getElementById("hours-display").innerText = `${selectedHours} Horas`;
+        document.getElementById("summary-hours").innerText = `${selectedHours} Horas`;
+        calcTotal();
+      }
+
+      function calcTotal() {
+        // Calculate base cost
+        let baseCost = currentHourlyRate * selectedHours;
+        document.getElementById("summary-base-val").innerText =
+          `$${baseCost.toLocaleString("es-CL")}`;
+
+        // Calculate extras
+        let extrasCost = 0;
+
+        // Asistente (Fixed total)
+        const assistCheck = document.getElementById("extra-asistente");
+        if (assistCheck.checked) {
+          extrasCost += parseInt(assistCheck.value);
+        }
+
+        // Iluminacion (Hourly extra)
+        const lightCheck = document.getElementById("extra-iluminacion");
+        if (lightCheck.checked) {
+          extrasCost += parseInt(lightCheck.value) * selectedHours;
+        }
+
+        // Postprod (Fixed total)
+        const postCheck = document.getElementById("extra-postprod");
+        if (postCheck.checked) {
+          extrasCost += parseInt(postCheck.value);
+        }
+
+        document.getElementById("summary-extras-val").innerText =
+          `$${extrasCost.toLocaleString("es-CL")}`;
+
+        // Show Total
+        let total = baseCost + extrasCost;
+        document.getElementById("summary-total").innerText = `$${total.toLocaleString("es-CL")}`;
+      }
+
+      // Populate Contact Form instantly using calculation
+      function applyEstimateToContact() {
+        // Select type in form drop-down
+        const selectEl = document.getElementById("c-type");
+        selectEl.value = currentSvcType;
+
+        // Generate customized text
+        const hoursVal = selectedHours;
+        const extrasChecked = [];
+        if (document.getElementById("extra-asistente").checked)
+          extrasChecked.push("Asistente de Iluminación");
+        if (document.getElementById("extra-iluminacion").checked)
+          extrasChecked.push("Kit Profoto Premium");
+        if (document.getElementById("extra-postprod").checked)
+          extrasChecked.push("Edición Express");
+
+        const extrasText =
+          extrasChecked.length > 0 ? `\nAdicionales requeridos: ${extrasChecked.join(", ")}.` : "";
+        const totalPrice = document.getElementById("summary-total").innerText;
+
+        const text = `Hola Andino Estudio, me interesa programar un servicio de ${document.getElementById("summary-svc").innerText} por un total de ${hoursVal} horas.${extrasText}\n\nPresupuesto estimado autocalculado: ${totalPrice} CLP. Favor indicar fechas disponibles.`;
+
+        document.getElementById("c-msg").value = text;
+
+        // Focus and Smooth scroll to form
+        document.getElementById("contacto").scrollIntoView({ behavior: "smooth" });
+        setTimeout(() => {
+          document.getElementById("c-name").focus();
+        }, 800);
+      }
+
+      // Gallery Lightbox Controller with Carousel Logic
+      let activeImageIndex = 0;
+
+      // Define list of images with detailed descriptions for slide functionality
+      const galleryImages = [
+        {
+          src: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=1200&q=80",
+          caption: "E-Commerce de Calzado Técnico — Ciclorama de obra con difusores de luz Godox",
+        },
+        {
+          src: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=1200&q=80",
+          caption: "Directorio Inmobiliaria Araucanía — Retrato formal corporativo de alta calidad",
+        },
+        {
+          src: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80",
+          caption: "Hotel Boutique en Pucón — Fotografía de arquitectura e interiorismo",
+        },
+        {
+          src: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=1200&q=80",
+          caption: "Campaña de Tecnología & Audio — Estilismo comercial avanzado",
+        },
+        {
+          src: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=1200&q=80",
+          caption:
+            "Staff Médico Clínica Temuco — Sesiones grupales de marca personal y profesional",
+        },
+        {
+          src: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=80",
+          caption:
+            "Showroom Corporativo Araucanía — Registro fotográfico de interiores para constructoras",
+        },
+      ];
+
+      const lightbox = document.getElementById("lightbox-modal");
+      const lightboxImg = document.getElementById("lightbox-img");
+      const lightboxCaption = document.getElementById("lightbox-caption");
+
+      function openLightbox(index) {
+        activeImageIndex = index;
+        updateLightboxSlide();
+        lightbox.classList.remove("hidden");
+      }
+
+      function closeLightbox() {
+        lightbox.classList.add("hidden");
+        lightboxImg.src = "";
+      }
+
+      function updateLightboxSlide() {
+        const currentData = galleryImages[activeImageIndex];
+        lightboxImg.src = currentData.src;
+        lightboxCaption.innerText = currentData.caption;
+      }
+
+      function nextSlide() {
+        activeImageIndex = (activeImageIndex + 1) % galleryImages.length;
+        updateLightboxSlide();
+      }
+
+      function prevSlide() {
+        activeImageIndex = (activeImageIndex - 1 + galleryImages.length) % galleryImages.length;
+        updateLightboxSlide();
+      }
+
+      // Keyboard accessibility inside Lightbox
+      document.addEventListener("keydown", (e) => {
+        if (!lightbox.classList.contains("hidden")) {
+          if (e.key === "Escape") closeLightbox();
+          if (e.key === "ArrowRight") nextSlide();
+          if (e.key === "ArrowLeft") prevSlide();
+        }
+      });
+
+      // Contact form handling and DOM injection state
+      function handleContactSubmit(event) {
+        event.preventDefault();
+
+        const userName = document.getElementById("c-name").value;
+        const successDesc = document.getElementById("success-desc");
+
+        // Custom message success
+        successDesc.innerHTML = `Estimado(a) <strong>${userName}</strong>, hemos recibido tu solicitud de reserva para las dependencias de nuestro estudio en Temuco. Nos contactaremos de inmediato por vía telefónica o correo electrónico en menos de 12 horas hábiles.`;
+
+        // State changes
+        document.getElementById("contact-form").classList.add("hidden");
+        document.getElementById("contact-success").classList.remove("hidden");
+      }
+
+      function resetContactForm() {
+        document.getElementById("contact-form").reset();
+        document.getElementById("contact-form").classList.remove("hidden");
+        document.getElementById("contact-success").classList.add("hidden");
+      }
+
+      // Initialize total pricing on load
+      window.onload = function () {
+        calcTotal();
+      };
+    </script>
+  </body>
+</html>
