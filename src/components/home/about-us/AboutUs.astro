@@ -1,0 +1,88 @@
+---
+
+---
+
+<section class="bg-white py-20 transition-colors dark:bg-neutral-950">
+  <div id="aboutus" class="mx-auto grid max-w-6xl items-center gap-16 px-4 md:grid-cols-2">
+    <div id="aboutus-text">
+      <span
+        class="mb-4 block text-xs font-bold tracking-widest text-emerald-600 uppercase dark:text-emerald-400"
+        >Sobre Nosotros</span
+      >
+      <h2 class="mb-6 text-4xl font-extrabold tracking-tight">
+        Cultura de ingeniería, pasión por el software.
+      </h2>
+      <p class="mb-6 text-lg text-slate-500 dark:text-neutral-400">
+        Nacimos de la necesidad de cerrar la brecha entre el diseño plano y el desarrollo de
+        software de alta calidad. No somos una agencia tradicional; somos tu socio tecnológico de
+        confianza.
+      </p>
+      <p class="mb-8 text-slate-500 dark:text-neutral-400">
+        Nuestro equipo combina años de experiencia en infraestructura de nube con un ojo obsesivo
+        por el detalle estético.
+      </p>
+      <div class="grid grid-cols-2 gap-8">
+        <div>
+          <h4 class="text-2xl font-bold text-emerald-600 dark:text-emerald-400">100%</h4>
+          <p class="text-xs font-bold tracking-wider text-slate-400 uppercase">
+            Optimización SEO & Rendimiento
+          </p>
+        </div>
+        <div>
+          <h4 class="text-2xl font-bold text-emerald-600 dark:text-emerald-400">< 1.2s</h4>
+          <p class="text-xs font-bold tracking-wider text-slate-400 uppercase">
+            Tiempo de Carga Promedio
+          </p>
+        </div>
+      </div>
+    </div>
+    <div id="aboutus-image" class="relative">
+      <div
+        class="flex aspect-square w-full items-center justify-center overflow-hidden rounded-3xl bg-slate-100 text-slate-300 shadow-2xl transition-colors dark:bg-neutral-900 dark:text-neutral-700"
+      >
+        [Imagen de Equipo de Desarrollo]
+      </div>
+      <div
+        class="absolute -bottom-6 -left-6 max-w-xs rounded-2xl bg-emerald-600 p-8 text-white shadow-xl"
+      >
+        <p class="text-sm font-medium italic">
+          "Nuestra meta es que nunca más tengas que preocuparte por una actualización de servidor."
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  import { createTimeline } from "animejs";
+
+  function initScrollAnimations() {
+    const observerOptions = {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.15,
+    };
+
+    const observerAboutUs = new IntersectionObserver((entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          if (entry.target.id === "aboutus") {
+            const tl = createTimeline({
+              defaults: { ease: "outQuint", duration: 1000 },
+            });
+
+            tl.add("#aboutus-image", { x: [150, 0], opacity: [0, 1] }, 0);
+            tl.add("#aboutus-text", { x: [-150, 0], opacity: [0, 1] }, 0);
+            observer.unobserve(entry.target);
+          }
+        }
+      });
+    }, observerOptions);
+    const aboutUsSection = document.getElementById("aboutus");
+    if (aboutUsSection) observerAboutUs.observe(aboutUsSection);
+  }
+
+  document.addEventListener("astro:page-load", () => {
+    initScrollAnimations();
+  });
+</script>
