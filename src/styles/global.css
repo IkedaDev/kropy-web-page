@@ -16,5 +16,5 @@ body {
 ::view-transition-old(root),
 ::view-transition-new(root) {
   animation: none !important;
-  mix-blend-mode: normal !important;
+  /* mix-blend-mode: normal !important; */
 }

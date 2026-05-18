@@ -1,55 +1,123 @@
-<section class="bg-white py-24 transition-colors dark:bg-neutral-950">
+---
+import { Icon } from "astro-icon/components";
+
+interface FAQ {
+  question: string;
+  answer: string;
+}
+
+const faqs: FAQ[] = [
+  {
+    question: "¿Quién es el dueño del código de mi web?",
+    answer: `Tú eres el dueño absoluto de tu marca, contenido y dominio.
+Kropy te proporciona el entorno y la infraestructura.
+Si decides migrar, te facilitamos la exportación completa de tus datos de manera transparente.`,
+  },
+  {
+    question: "¿Qué pasa si mi sitio recibe un pico masivo de tráfico?",
+    answer: `Nuestra infraestructura integrada se apoya en una red automatizada de autoescalado,
+          asegurando estabilidad y que la latencia se mantenga óptima al 100%.`,
+  },
+];
+---
+
+<section id="faq" class="bg-white py-24 transition-colors dark:bg-neutral-950">
   <div class="mx-auto max-w-3xl px-4">
     <div class="mb-16 text-center">
       <span
-        class="mb-4 block text-[10px] font-bold tracking-widest text-emerald-600 uppercase dark:text-emerald-400"
+        class="faq-text mb-4 block text-[10px] font-bold tracking-widest text-emerald-600 uppercase opacity-0 will-change-transform dark:text-emerald-400"
         >Resolución de dudas</span
       >
-      <h2 class="text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white">
+      <h2
+        class="faq-text text-4xl font-extrabold tracking-tight text-slate-900 opacity-0 will-change-transform dark:text-white"
+      >
         Preguntas Frecuentes
       </h2>
     </div>
-    <div class="space-y-4">
-      <details
-        class="group overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition-all duration-300 dark:border-neutral-800 dark:bg-neutral-900"
-      >
-        <summary
-          class="flex cursor-pointer list-none items-center justify-between p-6 font-bold text-slate-800 dark:text-neutral-200"
-        >
-          ¿Quién es el dueño del código de mi web?
-          <span
-            class="text-emerald-600 transition-transform duration-300 group-open:rotate-180 dark:text-emerald-400"
-            >▼</span
-          >
-        </summary>
-        <div
-          class="border-t border-slate-100 p-6 pt-4 text-sm leading-relaxed text-slate-500 dark:border-neutral-800 dark:text-neutral-400"
-        >
-          Tú eres el dueño absoluto de tu marca, contenido y dominio. Kropy te proporciona el
-          entorno y la infraestructura. Si decides migrar, te facilitamos la exportación completa de
-          tus datos de manera transparente.
-        </div>
-      </details>
 
-      <details
-        class="group overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition-all duration-300 dark:border-neutral-800 dark:bg-neutral-900"
-      >
-        <summary
-          class="flex cursor-pointer list-none items-center justify-between p-6 font-bold text-slate-800 dark:text-neutral-200"
-        >
-          ¿Qué pasa si mi sitio recibe un pico masivo de tráfico?
-          <span
-            class="text-emerald-600 transition-transform duration-300 group-open:rotate-180 dark:text-emerald-400"
-            >▼</span
-          >
-        </summary>
-        <div
-          class="border-t border-slate-100 p-6 pt-4 text-sm leading-relaxed text-slate-500 dark:border-neutral-800 dark:text-neutral-400"
-        >
-          Nuestra infraestructura integrada se apoya en una red automatizada de autoescalado,
-          asegurando estabilidad y que la latencia se mantenga óptima al 100%.
-        </div>
-      </details>
+    <div class="space-y-4">
+      {
+        faqs.map(({ question, answer }) => (
+          <div class="faq-item rounded-2xl border border-slate-200 bg-white opacity-0 shadow-sm transition-colors duration-300 will-change-transform dark:border-neutral-800 dark:bg-neutral-900">
+            <button class="faq-btn flex w-full cursor-pointer list-none items-center justify-between p-6 font-bold text-slate-800 dark:text-neutral-200">
+              {question}
+              <span class="faq-icon text-emerald-600 transition-transform duration-300 dark:text-emerald-400">
+                <Icon name="lucide:chevron-down" class="h-5 w-5 text-emerald-600" />
+              </span>
+            </button>
+
+            <div class="faq-content grid grid-rows-[0fr] opacity-0 transition-all duration-300 ease-in-out">
+              <div class="overflow-hidden">
+                <div class="border-t border-slate-100 p-6 pt-4 text-sm leading-relaxed text-slate-500 dark:border-neutral-800 dark:text-neutral-400">
+                  {answer}
+                </div>
+              </div>
+            </div>
+          </div>
+        ))
+      }
     </div>
   </div>
 </section>
+
+<script>
+  import { createTimeline, stagger } from "animejs";
+
+  function initAccordionToggle() {
+    const faqBtns = document.querySelectorAll(".faq-btn");
+
+    faqBtns.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        // Seleccionamos el contenido y el icono correspondientes a este botón
+        const content = btn.nextElementSibling;
+        if (!content) return;
+        const icon = btn.querySelector(".faq-icon");
+        if (!icon) return;
+        // Activamos la magia del CSS Grid y la opacidad
+        content.classList.toggle("grid-rows-[0fr]");
+        content.classList.toggle("grid-rows-[1fr]");
+        content.classList.toggle("opacity-0");
+        content.classList.toggle("opacity-100");
+
+        // Rotamos la flecha
+        icon.classList.toggle("rotate-180");
+      });
+    });
+  }
+
+  // Asegúrate de llamarlo al cargar la página
+  document.addEventListener("astro:page-load", () => {
+    // initFaqAnimations(); <-- Tu animación de entrada de Anime.js que ya tenías
+    initAccordionToggle();
+  });
+
+  function initFaqAnimations() {
+    const observerOptions = {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.3,
+    };
+
+    const observerFaq = new IntersectionObserver((entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          if (entry.target.id === "faq") {
+            const tl = createTimeline({
+              defaults: { ease: "outExpo", duration: 1000 },
+            });
+
+            tl.add(".faq-text", { opacity: [0, 1], y: [30, 0], delay: stagger(150) }, 0);
+            tl.add(".faq-item", { opacity: [0, 1], y: [20, 0], delay: stagger(150) }, 300);
+
+            observer.unobserve(entry.target);
+          }
+        }
+      });
+    }, observerOptions);
+
+    const faqSection = document.getElementById("faq");
+    if (faqSection) observerFaq.observe(faqSection);
+  }
+
+  document.addEventListener("astro:page-load", () => initFaqAnimations());
+</script>

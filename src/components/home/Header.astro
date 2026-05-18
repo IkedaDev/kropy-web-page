@@ -181,13 +181,10 @@
     }
   };
 
-  // 2. ESCUCHAR EL SWAP: Corre inmediatamente cuando Astro intercambia las páginas en el DOM.
-  // Esto previene que el tema vuelva a "light" y evita el flashazo blanco.
   document.addEventListener("astro:after-swap", applyTheme);
 
   // 3. Configurar el resto de la interactividad al cargar la página
   document.addEventListener("astro:page-load", () => {
-    // Nos aseguramos de que el tema esté bien puesto en la página recién cargada
     applyTheme();
 
     const toggleBtn = document.getElementById("theme-toggle");
@@ -215,7 +212,7 @@
       updateIcons();
     };
 
-    // Evento de click para el cambio de tema (Animación circular de Telegram)
+    // Evento de click para el cambio de tema
     toggleBtn?.addEventListener("click", (event) => {
       if (
         !document.startViewTransition ||
@@ -243,8 +240,8 @@
             clipPath: [`circle(0px at ${x}px ${y}px)`, `circle(${endRadius}px at ${x}px ${y}px)`],
           },
           {
-            duration: 580,
-            easing: "cubic-bezier(0.16, 1, 0.6, 1)",
+            duration: 600,
+            easing: "cubic-bezier(0.8, 1, 0.6, 0.8)",
             pseudoElement: "::view-transition-new(root)",
           }
         );

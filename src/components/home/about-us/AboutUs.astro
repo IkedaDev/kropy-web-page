@@ -4,7 +4,7 @@
 
 <section class="bg-white py-20 transition-colors dark:bg-neutral-950">
   <div id="aboutus" class="mx-auto grid max-w-6xl items-center gap-16 px-4 md:grid-cols-2">
-    <div id="aboutus-text">
+    <div id="aboutus-text" class="relative opacity-0 will-change-transform">
       <span
         class="mb-4 block text-xs font-bold tracking-widest text-emerald-600 uppercase dark:text-emerald-400"
         >Sobre Nosotros</span
@@ -36,7 +36,7 @@
         </div>
       </div>
     </div>
-    <div id="aboutus-image" class="relative">
+    <div id="aboutus-image" class="relative opacity-0 will-change-transform">
       <div
         class="flex aspect-square w-full items-center justify-center overflow-hidden rounded-3xl bg-slate-100 text-slate-300 shadow-2xl transition-colors dark:bg-neutral-900 dark:text-neutral-700"
       >
@@ -68,11 +68,11 @@
         if (entry.isIntersecting) {
           if (entry.target.id === "aboutus") {
             const tl = createTimeline({
-              defaults: { ease: "outQuint", duration: 1000 },
+              defaults: { ease: "outExpo", duration: 1200 },
             });
 
-            tl.add("#aboutus-image", { x: [150, 0], opacity: [0, 1] }, 0);
-            tl.add("#aboutus-text", { x: [-150, 0], opacity: [0, 1] }, 0);
+            tl.add("#aboutus-image", { x: [140, 0], opacity: [0, 1] }, 0);
+            tl.add("#aboutus-text", { x: [-140, 0], opacity: [0, 1] }, 0);
             observer.unobserve(entry.target);
           }
         }

@@ -1,8 +1,8 @@
 ---
-
+import { Icon } from "astro-icon/components";
 ---
 
-<section class="bg-white py-16 transition-colors lg:py-24 dark:bg-neutral-950">
+<section id="contact-section" class="bg-white py-16 transition-colors lg:py-24 dark:bg-neutral-950">
   <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
     <!-- Contenedor de rejilla de 2 columnas -->
     <div class="grid grid-cols-1 items-start gap-12 lg:grid-cols-12 lg:gap-16">
@@ -10,17 +10,19 @@
       <div class="space-y-10 lg:col-span-5">
         <div class="space-y-4">
           <span
-            class="mb-4 block text-xs font-bold tracking-widest text-emerald-600 uppercase dark:text-emerald-400"
+            class="anim-contact-item mb-4 block text-xs font-bold tracking-widest text-emerald-600 uppercase opacity-0 dark:text-emerald-400"
             >Conexion Directa</span
           >
           <h1
-            class="text-4xl leading-tight font-extrabold tracking-tight text-slate-950 lg:text-5xl dark:text-white"
+            class="anim-contact-item text-4xl leading-tight font-extrabold tracking-tight text-slate-950 opacity-0 lg:text-5xl dark:text-white"
           >
             Hablemos sin rodeos.
           </h1>
 
           <!-- Mensaje rompehielos sutil -->
-          <p class="pt-2 text-base leading-relaxed font-light text-slate-500 dark:text-neutral-400">
+          <p
+            class="anim-contact-item pt-2 text-base leading-relaxed font-light text-slate-500 opacity-0 dark:text-neutral-400"
+          >
             Sabemos que rellenar formularios puede ser aburrido o intimidante. Prometemos que este
             no es un buzón sin salida. Al otro lado hay desarrolladores y diseñadores reales listos
             para escuchar tu idea, tomarnos un café (asíncrono o por Meet) y planificar algo
@@ -31,12 +33,12 @@
         <!-- Canales de comunicación expuestos -->
         <div class="space-y-6">
           <h3
-            class="text-xs font-bold tracking-widest text-slate-400 uppercase dark:text-neutral-500"
+            class="anim-contact-item text-xs font-bold tracking-widest text-slate-400 uppercase opacity-0 dark:text-neutral-500"
           >
             Canales directos
           </h3>
 
-          <div class="space-y-4">
+          <div class="anim-contact-item space-y-4 opacity-0">
             <!-- Teléfono / Celular -->
             <a
               href="tel:+56987654321"
@@ -45,19 +47,7 @@
               <div
                 class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-emerald-500/10 text-emerald-600 transition-all group-hover:bg-emerald-600 group-hover:text-white dark:text-emerald-400"
               >
-                <svg
-                  class="h-5 w-5"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
-                  ></path>
-                </svg>
+                <Icon name="lucide:phone" class="h-5 w-5 group-hover:text-white" />
               </div>
               <div>
                 <span
@@ -78,19 +68,7 @@
               <div
                 class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-emerald-500/10 text-emerald-600 transition-all group-hover:bg-emerald-600 group-hover:text-white dark:text-emerald-400"
               >
-                <svg
-                  class="h-5 w-5"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                  ></path>
-                </svg>
+                <Icon name="lucide:mail" class="h-5 w-5 group-hover:text-white" />
               </div>
               <div>
                 <span
@@ -106,9 +84,9 @@
         </div>
       </div>
 
-      <!-- Columna del Formulario (70% de ancho en escritorio) -->
       <div
-        class="rounded-3xl border border-slate-200/60 bg-slate-50/40 p-8 transition-colors sm:p-10 lg:col-span-7 dark:border-neutral-800/60 dark:bg-neutral-900/20"
+        id="contact-form-box"
+        class="rounded-3xl border border-slate-200/60 bg-slate-50/40 p-8 opacity-0 transition-colors sm:p-10 lg:col-span-7 dark:border-neutral-800/60 dark:bg-neutral-900/20"
       >
         <form class="space-y-6" id="contact-form">
           <!-- Selector segmentado tipo Persona / Empresa -->
@@ -238,6 +216,58 @@
     >
   </div>
 </div>
+
+<script>
+  import { createTimeline, stagger } from "animejs";
+
+  function initContactAnimations() {
+    const observerOptions = {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.2, // Umbral bajo para que el formulario se anime rápido
+    };
+
+    const observerContact = new IntersectionObserver((entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          if (entry.target.id === "contact-section") {
+            const tl = createTimeline({
+              defaults: { ease: "outExpo", duration: 1200 },
+            });
+
+            // 1. Animamos la columna izquierda (Textos y Contactos directos)
+            tl.add(
+              ".anim-contact-item",
+              {
+                opacity: [0, 1],
+                translateY: [30, 0],
+                delay: stagger(150),
+              },
+              0
+            );
+
+            // 2. Animamos la caja del formulario entera
+            // Aparece moviéndose ligeramente desde la derecha hacia su posición final
+            tl.add(
+              "#contact-form-box",
+              {
+                opacity: [0, 1],
+                translateX: [140, 0], // Movimiento horizontal
+              },
+              0
+            ); // Comienza un poco después de que los textos empiezan a salir
+
+            observer.unobserve(entry.target);
+          }
+        }
+      });
+    }, observerOptions);
+
+    const contactSection = document.getElementById("contact-section");
+    if (contactSection) observerContact.observe(contactSection);
+  }
+  document.addEventListener("astro:page-load", () => initContactAnimations());
+</script>
 
 <script>
   // Lógica del selector segmentado de clientes
