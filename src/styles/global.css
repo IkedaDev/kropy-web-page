@@ -18,3 +18,67 @@ body {
   animation: none !important;
   /* mix-blend-mode: normal !important; */
 }
+
+/* 1. Texto Base: Lectura fluida y sin fatiga visual */
+.prose-kropy p {
+  @apply mb-6 text-[1.05rem] leading-8 font-normal text-slate-800 dark:text-neutral-300;
+}
+
+.prose-kropy p strong {
+  @apply font-bold text-slate-900 dark:text-white;
+}
+
+/* 3. Listas: Sincronizadas con el contraste del texto base */
+.prose-kropy ul,
+.prose-kropy ol {
+  @apply mb-8 space-y-3 pl-5 text-[1.05rem] leading-8 text-slate-800 dark:text-neutral-300;
+}
+
+/* 2. Jerarquía de Títulos: Escala geométrica y peso */
+.prose-kropy h2 {
+  @apply mt-14 mb-6 text-3xl font-extrabold tracking-tight text-slate-900 dark:text-white;
+}
+
+.prose-kropy h3 {
+  @apply mt-10 mb-4 text-2xl font-bold tracking-tight text-slate-900 dark:text-white;
+}
+
+.prose-kropy ul {
+  @apply list-disc;
+}
+.prose-kropy ol {
+  @apply list-decimal;
+}
+
+.prose-kropy li::marker {
+  @apply font-bold text-emerald-600 dark:text-emerald-500;
+}
+
+/* 4. Enlaces: Interacción premium (subrayado separado) */
+.prose-kropy a {
+  @apply font-semibold text-emerald-600 underline decoration-emerald-600/30 decoration-2 underline-offset-4 transition-all hover:text-emerald-700 hover:decoration-emerald-700 dark:text-emerald-400 dark:hover:text-emerald-300 dark:hover:decoration-emerald-300;
+}
+
+/* 5. Citas (Blockquotes): Toque editorial distintivo */
+.prose-kropy blockquote {
+  @apply my-10 rounded-r-3xl border-l-4 border-emerald-600 bg-slate-50 px-8 py-6 text-lg leading-relaxed text-slate-800 italic dark:border-emerald-500 dark:bg-neutral-900/40 dark:text-neutral-200;
+}
+
+/* 6. Imágenes Internas: Radios curvos consistentes con Kropy */
+.prose-kropy img {
+  @apply my-10 w-full rounded-3xl border border-slate-200 object-cover shadow-sm dark:border-neutral-800;
+}
+
+/* 7. Código: Etiquetas inline y bloques */
+.prose-kropy :not(pre) > code {
+  @apply rounded-md border border-slate-200 bg-slate-100 px-1.5 py-0.5 text-[0.9em] font-medium text-emerald-700 dark:border-neutral-800 dark:bg-neutral-900 dark:text-emerald-400;
+}
+
+.prose-kropy pre {
+  @apply my-8 overflow-x-auto rounded-3xl border border-slate-200 bg-slate-50 p-6 text-sm shadow-sm dark:border-neutral-800 dark:bg-neutral-950;
+}
+
+/* 8. Separadores */
+.prose-kropy hr {
+  @apply my-12 border-slate-200 dark:border-neutral-800;
+}

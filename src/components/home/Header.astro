@@ -1,5 +1,17 @@
 ---
+interface NavLink {
+  href: string;
+  label: string;
+}
 
+const navLinks: NavLink[] = [
+  { href: "/", label: "Inicio" },
+  { href: "/servicios", label: "Servicios" },
+  { href: "/portafolio", label: "Portafolio" },
+  { href: "/nosotros", label: "Nosotros" },
+  { href: "/contacto", label: "Contacto" },
+  { href: "/blog", label: "Blog" },
+];
 ---
 
 <header class="fixed top-0 left-0 z-50 w-full py-5 transition-all duration-300" id="main-header">
@@ -16,41 +28,18 @@
 
       <!-- Navegación -->
       <ul class="hidden list-none gap-8 md:flex">
-        <li>
-          <a
-            href="/"
-            class="nav-link text-xs font-bold tracking-widest text-slate-500 uppercase transition-colors hover:text-emerald-600 dark:text-neutral-400 dark:hover:text-emerald-400"
-            >Inicio</a
-          >
-        </li>
-        <li>
-          <a
-            href="/servicios"
-            class="nav-link text-xs font-bold tracking-widest text-slate-500 uppercase transition-colors hover:text-emerald-600 dark:text-neutral-400 dark:hover:text-emerald-400"
-            >Servicios</a
-          >
-        </li>
-        <li>
-          <a
-            href="/portafolio"
-            class="nav-link text-xs font-bold tracking-widest text-slate-500 uppercase transition-colors hover:text-emerald-600 dark:text-neutral-400 dark:hover:text-emerald-400"
-            >Portafolio</a
-          >
-        </li>
-        <li>
-          <a
-            href="/nosotros"
-            class="nav-link text-xs font-bold tracking-widest text-slate-500 uppercase transition-colors hover:text-emerald-600 dark:text-neutral-400 dark:hover:text-emerald-400"
-            >Nosotros</a
-          >
-        </li>
-        <li>
-          <a
-            href="/contacto"
-            class="nav-link text-xs font-bold tracking-widest text-slate-500 uppercase transition-colors hover:text-emerald-600 dark:text-neutral-400 dark:hover:text-emerald-400"
-            >Contacto</a
-          >
-        </li>
+        {
+          navLinks.map(({ href, label }) => (
+            <li>
+              <a
+                href={href}
+                class="nav-link text-xs font-bold tracking-widest text-slate-500 uppercase transition-colors hover:text-emerald-600 dark:text-neutral-400 dark:hover:text-emerald-400"
+              >
+                {label}
+              </a>
+            </li>
+          ))
+        }
       </ul>
 
       <!-- Acciones -->
@@ -120,25 +109,16 @@
     id="mobile-menu"
     class="glass mx-4 mt-2 flex hidden flex-col gap-3 rounded-2xl border border-slate-200/50 p-4 text-center shadow-lg transition-colors md:hidden dark:border-neutral-800/80"
   >
-    <a href="/" class="py-2 text-xs font-bold text-slate-700 uppercase dark:text-neutral-200"
-      >Inicio</a
-    >
-    <a
-      href="/servicios"
-      class="py-2 text-xs font-bold text-slate-700 uppercase dark:text-neutral-200">Servicios</a
-    >
-    <a
-      href="/portafolio"
-      class="py-2 text-xs font-bold text-slate-700 uppercase dark:text-neutral-200">Portafolio</a
-    >
-    <a
-      href="/nosotros"
-      class="py-2 text-xs font-bold text-slate-700 uppercase dark:text-neutral-200">Nosotros</a
-    >
-    <a
-      href="/contacto"
-      class="py-2 text-xs font-bold text-slate-700 uppercase dark:text-neutral-200">Contacto</a
-    >
+    {
+      navLinks.map(({ href, label }) => (
+        <a
+          href={href}
+          class="py-2 text-xs font-bold text-slate-700 uppercase dark:text-neutral-200"
+        >
+          {label}
+        </a>
+      ))
+    }
   </div>
 </header>
 

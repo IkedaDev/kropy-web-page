@@ -1,0 +1,90 @@
+---
+// src/pages/blog/[...slug].astro
+import { getCollection, render } from "astro:content";
+import HomeLayout from "@layouts/HomeLayout.astro";
+
+export async function getStaticPaths() {
+  const blogEntries = await getCollection("blog");
+  return blogEntries.map((entry) => ({
+    params: { slug: entry.id },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+
+const formattedDate = entry.data.publishDate.toLocaleDateString("es-CL", {
+  year: "numeric",
+  month: "long",
+  day: "numeric",
+});
+---
+
+<HomeLayout title={`${entry.data.title} | Blog Kropy`}>
+  <article class="mx-auto max-w-3xl px-4 pt-10 pb-20">
+    {/* Botón de Retorno */}
+    <div class="mb-8">
+      <a
+        href="/blog"
+        class="inline-flex items-center gap-2 text-xs font-bold tracking-widest text-emerald-600 uppercase transition-colors hover:text-emerald-700 dark:text-emerald-400 dark:hover:text-emerald-300"
+      >
+        ← Volver al blog
+      </a>
+    </div>
+
+    {/* Cabecera del Artículo */}
+    <header class="mb-12 border-b border-slate-100 pb-8 dark:border-neutral-900">
+      <div class="mb-4 flex flex-wrap gap-2">
+        {
+          entry.data.tags?.map((tag: string) => (
+            <span class="rounded-full bg-slate-100 px-3 py-1 text-[10px] font-bold tracking-widest text-emerald-600 uppercase dark:bg-neutral-900 dark:text-emerald-400">
+              {tag}
+            </span>
+          ))
+        }
+      </div>
+
+      <h1
+        class="mb-6 text-3xl font-extrabold tracking-tight text-slate-900 md:text-5xl dark:text-white"
+      >
+        {entry.data.title}
+      </h1>
+
+      <div class="flex items-center gap-4 text-xs font-medium text-slate-400 dark:text-neutral-500">
+        {
+          entry.data.author && (
+            <>
+              <span>
+                Por{" "}
+                <span class="font-semibold text-slate-600 dark:text-neutral-300">
+                  {entry.data.author}
+                </span>
+              </span>
+              <span>•</span>
+            </>
+          )
+        }
+        <time>{formattedDate}</time>
+      </div>
+    </header>
+
+    {/* Imagen Destacada (Opcional) */}
+    {
+      entry.data.image && (
+        <div class="mb-12 overflow-hidden rounded-3xl border border-slate-200 shadow-sm dark:border-neutral-800">
+          <img
+            src={entry.data.image}
+            alt={entry.data.title}
+            class="h-auto max-h-[400px] w-full object-cover"
+          />
+        </div>
+      )
+    }
+
+    {/* Contenido Inyectado del Markdown con Estilos de Vanguardia */}
+    <div class="prose-kropy">
+      <Content />
+    </div>
+  </article>
+</HomeLayout>
