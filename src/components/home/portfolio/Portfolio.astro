@@ -1,0 +1,212 @@
+---
+
+---
+
+<section id="portfolio-section" class="bg-white py-20 transition-colors dark:bg-neutral-950">
+  <div class="mx-auto max-w-6xl px-4">
+    <div id="portfolio-header" class="mb-16 text-center opacity-0">
+      <span
+        class="mb-4 block text-xs font-bold tracking-widest text-emerald-600 uppercase dark:text-emerald-400"
+        >Trabajos</span
+      >
+      <h1 class="text-4xl font-extrabold tracking-tight">Proyectos Realizados</h1>
+    </div>
+
+    <div id="portfolio-filters" class="mb-12 flex flex-wrap justify-center gap-4 opacity-0">
+      <button
+        id="filter-todos"
+        class="filter-btn rounded-full bg-emerald-600 px-5 py-2.5 text-xs font-bold tracking-widest text-white uppercase shadow-md transition-all"
+        >Todos</button
+      >
+      <button
+        id="filter-landings"
+        class="filter-btn rounded-full bg-slate-100 px-5 py-2.5 text-xs font-bold tracking-widest text-slate-600 uppercase transition-all hover:bg-slate-200 dark:bg-neutral-900 dark:text-neutral-400"
+        >Landings</button
+      >
+      <button
+        id="filter-apps"
+        class="filter-btn rounded-full bg-slate-100 px-5 py-2.5 text-xs font-bold tracking-widest text-slate-600 uppercase transition-all hover:bg-slate-200 dark:bg-neutral-900 dark:text-neutral-400"
+        >Apps Móviles</button
+      >
+      <button
+        id="filter-saas"
+        class="filter-btn rounded-full bg-slate-100 px-5 py-2.5 text-xs font-bold tracking-widest text-slate-600 uppercase transition-all hover:bg-slate-200 dark:bg-neutral-900 dark:text-neutral-400"
+        >SaaS</button
+      >
+    </div>
+
+    <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3" id="portfolio-grid">
+      <div
+        class="portfolio-item overflow-hidden rounded-3xl border border-slate-200 bg-white opacity-0 transition-all dark:border-neutral-800 dark:bg-neutral-950"
+        data-category="landings"
+      >
+        <div
+          class="flex aspect-video w-full items-center justify-center bg-slate-100 p-4 dark:bg-neutral-900"
+        >
+          <span
+            class="text-xs font-bold tracking-widest text-slate-400 uppercase dark:text-neutral-500"
+            >[Preview Landing SaaS]</span
+          >
+        </div>
+        <div class="p-8">
+          <span
+            class="text-[10px] font-bold tracking-widest text-emerald-600 uppercase dark:text-emerald-400"
+            >Landing Page</span
+          >
+          <h4 class="mt-2 text-xl font-bold">Plataforma de Pagos</h4>
+        </div>
+      </div>
+      <div
+        class="portfolio-item overflow-hidden rounded-3xl border border-slate-200 bg-white opacity-0 transition-all dark:border-neutral-800 dark:bg-neutral-950"
+        data-category="apps"
+      >
+        <div
+          class="flex aspect-video w-full items-center justify-center bg-slate-100 p-4 dark:bg-neutral-900"
+        >
+          <span
+            class="text-xs font-bold tracking-widest text-slate-400 uppercase dark:text-neutral-500"
+            >[Preview App iOS/Android]</span
+          >
+        </div>
+        <div class="p-8">
+          <span
+            class="text-[10px] font-bold tracking-widest text-emerald-600 uppercase dark:text-emerald-400"
+            >App Móvil</span
+          >
+          <h4 class="mt-2 text-xl font-bold">Delivery Express</h4>
+        </div>
+      </div>
+      <div
+        class="portfolio-item overflow-hidden rounded-3xl border border-slate-200 bg-white opacity-0 transition-all dark:border-neutral-800 dark:bg-neutral-950"
+        data-category="saas"
+      >
+        <div
+          class="flex aspect-video w-full items-center justify-center bg-slate-100 p-4 dark:bg-neutral-900"
+        >
+          <span
+            class="text-xs font-bold tracking-widest text-slate-400 uppercase dark:text-neutral-500"
+            >[Preview SaaS Dashboard]</span
+          >
+        </div>
+        <div class="p-8">
+          <span
+            class="text-[10px] font-bold tracking-widest text-emerald-600 uppercase dark:text-emerald-400"
+            >SaaS</span
+          >
+          <h4 class="mt-2 text-xl font-bold">Sistema ERP Automotriz</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  import { animate, createTimeline } from "animejs";
+
+  function initPortfolioScripts() {
+    const headerObserver = new IntersectionObserver(
+      (entries, obs) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const tl = createTimeline({ defaults: { ease: "outQuint", duration: 1000 } });
+
+            tl.add("#portfolio-header", { y: [30, 0], opacity: [0, 1] }, 0).add(
+              "#portfolio-filters",
+              { y: [20, 0], opacity: [0, 1] },
+              "-=800"
+            );
+
+            obs.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    const itemObserver = new IntersectionObserver(
+      (entries, obs) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            animate(entry.target, {
+              y: [40, 0],
+              opacity: [0, 1],
+              ease: "outElastic(1, .8)",
+              duration: 1200,
+            });
+
+            obs.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.15 }
+    );
+
+    const portfolioSection = document.getElementById("portfolio-section");
+    const portfolioItems = document.querySelectorAll(".portfolio-item");
+
+    if (portfolioSection) headerObserver.observe(portfolioSection);
+
+    portfolioItems.forEach((item) => itemObserver.observe(item));
+
+    const filterBtns = document.querySelectorAll(".filter-btn");
+
+    filterBtns.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        filterBtns.forEach((b) => {
+          b.classList.remove("bg-emerald-600", "text-white", "shadow-md");
+          b.classList.add(
+            "bg-slate-100",
+            "dark:bg-neutral-900",
+            "text-slate-600",
+            "dark:text-neutral-400"
+          );
+        });
+
+        btn.classList.add("bg-emerald-600", "text-white", "shadow-md");
+        btn.classList.remove(
+          "bg-slate-100",
+          "dark:bg-neutral-900",
+          "text-slate-600",
+          "dark:text-neutral-400"
+        );
+
+        const category = btn.id.replace("filter-", "");
+
+        animate(".portfolio-item", {
+          opacity: 0,
+          scale: 0.95,
+          duration: 5500,
+          ease: "outQuad",
+          onComplete: () => {
+            let delayCount = 0;
+
+            portfolioItems.forEach((item) => {
+              const htmlItem = item as HTMLElement;
+              const itemCategory = htmlItem.getAttribute("data-category");
+
+              if (category === "todos" || itemCategory === category) {
+                htmlItem.style.display = "block";
+
+                animate(htmlItem, {
+                  opacity: [0, 1],
+                  scale: [0.95, 1],
+                  duration: 500,
+                  ease: "outBack(1.2)",
+                  delay: delayCount * 50,
+                });
+
+                delayCount++;
+              } else {
+                htmlItem.style.display = "none";
+              }
+            });
+          },
+        });
+      });
+    });
+  }
+
+  document.addEventListener("astro:page-load", () => {
+    initPortfolioScripts();
+  });
+</script>

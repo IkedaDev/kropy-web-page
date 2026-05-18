@@ -1,0 +1,118 @@
+<section id="specialties-section" class="bg-white py-24 transition-colors dark:bg-neutral-950">
+  <div class="mx-auto max-w-6xl px-4">
+    <div id="specialties-header" class="mb-16 text-center opacity-0">
+      <span
+        class="mb-4 block text-[10px] font-bold tracking-widest text-emerald-600 uppercase dark:text-emerald-400"
+        >Especialidades</span
+      >
+      <h2 class="text-4xl font-extrabold tracking-tight">Otras Soluciones Tecnológicas</h2>
+    </div>
+
+    <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+      <div
+        class="specialty-card rounded-3xl border border-slate-100 bg-slate-50 p-8 opacity-0 dark:border-neutral-900 dark:bg-neutral-900/50"
+      >
+        <span
+          class="mb-2 block text-xs font-bold tracking-wider text-emerald-600 dark:text-emerald-400"
+          >40.000 CLP</span
+        >
+        <h4 class="mb-3 text-lg font-bold">Menús para Restaurantes</h4>
+        <p class="text-sm leading-relaxed text-slate-500 dark:text-neutral-400">
+          Cartas interactivas con lectura QR para móviles y alta velocidad.
+        </p>
+      </div>
+      <div
+        class="specialty-card rounded-3xl border border-slate-100 bg-slate-50 p-8 opacity-0 dark:border-neutral-900 dark:bg-neutral-900/50"
+      >
+        <span
+          class="mb-2 block text-xs font-bold tracking-wider text-emerald-600 dark:text-emerald-400"
+          >Consultorías</span
+        >
+        <h4 class="mb-3 text-lg font-bold">Servicios de Consultoría</h4>
+        <p class="text-sm leading-relaxed text-slate-500 dark:text-neutral-400">
+          Asesorías avanzadas de optimización y reestructuración de software.
+        </p>
+      </div>
+      <div
+        class="specialty-card rounded-3xl border border-slate-100 bg-slate-50 p-8 opacity-0 dark:border-neutral-900 dark:bg-neutral-900/50"
+      >
+        <span
+          class="mb-2 block text-xs font-bold tracking-wider text-emerald-600 dark:text-emerald-400"
+          >Híbridas & Nativas</span
+        >
+        <h4 class="mb-3 text-lg font-bold">Aplicaciones Móviles</h4>
+        <p class="text-sm leading-relaxed text-slate-500 dark:text-neutral-400">
+          Desarrollo especializado de apps fluidas para iOS y Android.
+        </p>
+      </div>
+      <div
+        class="specialty-card rounded-3xl border border-slate-100 bg-slate-50 p-8 opacity-0 dark:border-neutral-900 dark:bg-neutral-900/50"
+      >
+        <span
+          class="mb-2 block text-xs font-bold tracking-wider text-emerald-600 dark:text-emerald-400"
+          >Figma UI/UX</span
+        >
+        <h4 class="mb-3 text-lg font-bold">Diseños Web</h4>
+        <p class="text-sm leading-relaxed text-slate-500 dark:text-neutral-400">
+          Estudios de interfaz de usuario de alta fidelidad, interactivos y limpios.
+        </p>
+      </div>
+      <div
+        class="specialty-card rounded-3xl border border-slate-100 bg-slate-50 p-8 opacity-0 dark:border-neutral-900 dark:bg-neutral-900/50"
+      >
+        <span
+          class="mb-2 block text-xs font-bold tracking-wider text-emerald-600 dark:text-emerald-400"
+          >Arquitectura backend</span
+        >
+        <h4 class="mb-3 text-lg font-bold">Creación de APIs y Microservicios</h4>
+        <p class="text-sm leading-relaxed text-slate-500 dark:text-neutral-400">
+          Creación de microservicios robustos y bases de datos integradas.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  import { animate, stagger } from "animejs";
+
+  function initScrollAnimations() {
+    const observerOptions = {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.15,
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          if (entry.target.id === "specialties-section") {
+            animate("#specialties-header", {
+              y: [20, 0],
+              opacity: [0, 1],
+              ease: "outCubic",
+              duration: 800,
+            });
+
+            animate(".specialty-card", {
+              y: [30, 0],
+              opacity: [0, 1],
+              ease: "outElastic(1, .8)",
+              duration: 1200,
+              delay: stagger(100, { start: 300 }),
+            });
+
+            observer.unobserve(entry.target);
+          }
+        }
+      });
+    }, observerOptions);
+
+    const specialtiesSection = document.getElementById("specialties-section");
+    if (specialtiesSection) observer.observe(specialtiesSection);
+  }
+
+  document.addEventListener("astro:page-load", () => {
+    initScrollAnimations();
+  });
+</script>

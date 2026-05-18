@@ -1,0 +1,71 @@
+---
+
+---
+
+<section
+  id="hero-section"
+  class="relative top-[-40px] bg-[radial-gradient(circle_at_top,_#ecfdf5_0%,_transparent_50%)] px-4 pt-26 pb-24 text-center dark:bg-[radial-gradient(circle_at_top,_rgba(16,185,129,0.06)_0%,_transparent_50%)]"
+>
+  <div class="mx-auto max-w-4xl">
+    <span
+      id="hero-badge"
+      class="mb-8 inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-3 py-1 text-[10px] font-bold tracking-widest text-emerald-600 uppercase opacity-0 dark:border-neutral-800 dark:bg-neutral-900 dark:text-emerald-400"
+    >
+      <span class="h-1.5 w-1.5 animate-pulse rounded-full bg-emerald-600"></span>
+      v2.4.0: INFRAESTRUCTURA DE VANGUARDIA
+    </span>
+    <h1
+      id="hero-title"
+      class="mb-6 text-5xl leading-tight font-extrabold tracking-tight opacity-0 md:text-7xl"
+    >
+      Tu presencia digital, <br /><span class="text-emerald-600 italic dark:text-emerald-400"
+        >sin complicaciones.</span
+      >
+    </h1>
+    <p
+      id="hero-text"
+      class="mx-auto mb-10 max-w-2xl text-lg text-slate-500 opacity-0 dark:text-neutral-400"
+    >
+      Kropy es el motor de tu negocio. Desplegamos sitios de alta gama con infraestructura
+      orquestada para que tú solo te preocupes de vender.
+    </p>
+    <div id="hero-buttons" class="flex flex-col justify-center gap-4 opacity-0 sm:flex-row">
+      <a
+        href="/servicios"
+        class="rounded-full bg-emerald-600 px-8 py-4 font-bold text-white shadow-xl shadow-emerald-600/20 transition-transform hover:scale-105"
+        >Ver Planes</a
+      >
+      <a
+        href="/contacto"
+        class="rounded-full border border-slate-200 bg-white px-8 py-4 font-bold text-slate-900 transition-colors hover:bg-slate-50 dark:border-neutral-800 dark:bg-neutral-900 dark:text-neutral-200 dark:hover:bg-neutral-800"
+        >Hablemos</a
+      >
+    </div>
+  </div>
+</section>
+
+<script>
+  import { createTimeline } from "animejs";
+
+  document.addEventListener("astro:page-load", () => {
+    const heroObserver = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const tl = createTimeline({ defaults: { ease: "outQuint", duration: 1000 } });
+
+            tl.add("#hero-badge", { y: [-20, 0], opacity: [0, 1] }, 200)
+              .add("#hero-title", { y: [30, 0], opacity: [0, 1] }, "-=700")
+              .add("#hero-text", { y: [20, 0], opacity: [0, 1] }, "-=750")
+              .add("#hero-buttons", { y: [15, 0], opacity: [0, 1] }, "-=800");
+
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0 }
+    );
+    const heroSection = document.getElementById("hero-section");
+    if (heroSection) heroObserver.observe(heroSection);
+  });
+</script>

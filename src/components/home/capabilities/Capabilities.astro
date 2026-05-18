@@ -1,0 +1,93 @@
+---
+
+---
+
+<section id="capabilities-section" class="bg-white py-24 transition-colors dark:bg-neutral-950">
+  <div class="mx-auto max-w-6xl px-4 text-center">
+    <div id="capabilities-header">
+      <span
+        id="capabilities-badge"
+        class="mb-4 block text-xs font-bold tracking-widest text-emerald-600 uppercase opacity-0 dark:text-emerald-400"
+        >Capacidades</span
+      >
+      <h2 id="capabilities-title" class="mb-16 text-4xl font-extrabold tracking-tight opacity-0">
+        Software de alta gama para tu marca.
+      </h2>
+    </div>
+    <div class="grid gap-12 md:grid-cols-3">
+      <div class="capabilities-card p-6 opacity-0">
+        <div class="mb-4 text-4xl">⚡</div>
+        <h3 class="mb-2 text-xl font-bold">Velocidad Extrema</h3>
+        <p class="text-sm text-slate-500 dark:text-neutral-400">
+          Código ultra optimizado y entrega inmediata para retener a tus clientes.
+        </p>
+      </div>
+      <div class="capabilities-card p-6 opacity-0">
+        <div class="mb-4 text-4xl">🛡️</div>
+        <h3 class="mb-2 text-xl font-bold">Seguridad Avanzada</h3>
+        <p class="text-sm text-slate-500 dark:text-neutral-400">
+          SSL automático, aislamiento de bases de datos y protección DDoS activa.
+        </p>
+      </div>
+      <div class="capabilities-card p-6 opacity-0">
+        <div class="mb-4 text-4xl">🔄</div>
+        <h3 class="mb-2 text-xl font-bold">Evolución Continua</h3>
+        <p class="text-sm text-slate-500 dark:text-neutral-400">
+          Garantizamos mantenimiento y actualización constante de dependencias.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  import { animate } from "animejs";
+
+  function initHomeAnimations() {
+    const headerObserver = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            animate("#capabilities-badge, #capabilities-title", {
+              y: [20, 0],
+              opacity: [0, 1],
+              ease: "outQuint",
+              duration: 800,
+              delay: 1200,
+            });
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.35 }
+    );
+
+    const cardObserver = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            animate(entry.target, {
+              y: [40, 0],
+              opacity: [0, 1],
+              ease: "outElastic(1, .8)",
+              duration: 1200,
+            });
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.35 }
+    );
+
+    const capabilitiesHeader = document.getElementById("capabilities-header");
+    const capabilitiesCards = document.querySelectorAll(".capabilities-card");
+
+    if (capabilitiesHeader) headerObserver.observe(capabilitiesHeader);
+
+    capabilitiesCards.forEach((card) => cardObserver.observe(card));
+  }
+
+  document.addEventListener("astro:page-load", () => {
+    initHomeAnimations();
+  });
+</script>
