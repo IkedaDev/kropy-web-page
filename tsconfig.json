@@ -2,7 +2,15 @@
   "extends": "astro/tsconfigs/strictest",
   "compilerOptions": {
     "jsx": "preserve",
-    "jsxImportSource": "astro"
+    "jsxImportSource": "astro",
+    "paths": {
+      "@components/*": ["./src/components/*"],
+      "@data/*": ["./src/data/*"],
+      "@interfaces/*": ["./src/interfaces/*"],
+      "@layouts/*": ["./src/layouts/*"],
+      "@pages/*": ["./src/pages/*"],
+      "@styles/*": ["./src/styles/*"]
+    }
   },
   "include": [".astro/types.d.ts", "**/*"],
   "exclude": ["dist"]

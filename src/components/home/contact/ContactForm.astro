@@ -1,0 +1,162 @@
+---
+
+---
+
+<div
+  id="contact-form-box"
+  class="rounded-3xl border border-slate-200/60 bg-slate-50/40 p-8 opacity-0 transition-colors sm:p-10 lg:col-span-7 dark:border-neutral-800/60 dark:bg-neutral-900/20"
+>
+  <form class="space-y-6" id="contact-form">
+    <div class="space-y-3">
+      <label
+        class="block text-xs font-bold tracking-widest text-slate-400 uppercase dark:text-neutral-500"
+        >¿Quién nos escribe?</label
+      >
+      <div
+        class="grid grid-cols-2 gap-2 rounded-2xl border border-slate-200/40 bg-slate-100 p-1.5 dark:border-neutral-800/40 dark:bg-neutral-900/80"
+      >
+        <button
+          type="button"
+          id="btn-client-persona"
+          class="client-type-btn rounded-xl bg-emerald-600 px-4 py-2.5 text-xs font-bold tracking-wider text-white uppercase shadow-sm transition-all duration-200"
+          data-type="persona">Persona / Freelancer</button
+        >
+        <button
+          type="button"
+          id="btn-client-empresa"
+          class="client-type-btn rounded-xl px-4 py-2.5 text-xs font-bold tracking-wider text-slate-500 uppercase transition-all duration-200 hover:text-slate-900 dark:text-neutral-400 dark:hover:text-white"
+          data-type="empresa">Empresa / Organización</button
+        >
+      </div>
+      <input type="hidden" id="form-client-type" name="client_type" value="persona" />
+    </div>
+
+    <div class="grid gap-6 md:grid-cols-2">
+      <div class="space-y-2">
+        <label
+          class="block text-xs font-bold tracking-widest text-slate-400 uppercase dark:text-neutral-500"
+          id="label-name">Tu Nombre</label
+        >
+        <input
+          required
+          type="text"
+          id="form-name"
+          class="w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm font-light text-slate-900 transition-colors focus:border-emerald-600 focus:outline-none dark:border-neutral-800 dark:bg-neutral-950 dark:text-white"
+          placeholder="Ej: Juan Pérez"
+        />
+      </div>
+      <div class="space-y-2">
+        <label
+          class="block text-xs font-bold tracking-widest text-slate-400 uppercase dark:text-neutral-500"
+          >Correo de Contacto</label
+        >
+        <input
+          required
+          type="email"
+          id="form-email"
+          class="w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm font-light text-slate-900 transition-colors focus:border-emerald-600 focus:outline-none dark:border-neutral-800 dark:bg-neutral-950 dark:text-white"
+          placeholder="juan@correo.com"
+        />
+      </div>
+    </div>
+
+    <div class="hidden space-y-2" id="company-field-container">
+      <label
+        class="block text-xs font-bold tracking-widest text-slate-400 uppercase dark:text-neutral-500"
+        >Nombre de la Empresa o Startup</label
+      >
+      <input
+        type="text"
+        id="form-company"
+        class="w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm font-light text-slate-900 transition-colors focus:border-emerald-600 focus:outline-none dark:border-neutral-800 dark:bg-neutral-950 dark:text-white"
+        placeholder="Ej: Innova SpA"
+      />
+    </div>
+
+    <div class="space-y-2">
+      <label
+        class="block text-xs font-bold tracking-widest text-slate-400 uppercase dark:text-neutral-500"
+        id="label-message">Cuéntanos sobre tu idea</label
+      >
+      <textarea
+        required
+        id="form-message"
+        rows="4"
+        class="w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm font-light text-slate-900 transition-colors focus:border-emerald-600 focus:outline-none dark:border-neutral-800 dark:bg-neutral-950 dark:text-white"
+        placeholder="Necesito levantar una landing page para validar mi servicio..."></textarea>
+    </div>
+
+    <button
+      type="submit"
+      class="w-full rounded-xl bg-emerald-600 py-4 font-bold text-white shadow-xl shadow-emerald-600/20 transition-all duration-300 hover:bg-emerald-700"
+      >Enviar Solicitud</button
+    >
+  </form>
+</div>
+
+<script>
+  function initFormLogic() {
+    const btnPersona = document.getElementById("btn-client-persona");
+    const btnEmpresa = document.getElementById("btn-client-empresa");
+    const clientTypeInput = document.getElementById("form-client-type") as HTMLInputElement;
+    const companyFieldContainer = document.getElementById("company-field-container");
+    const companyInput = document.getElementById("form-company") as HTMLInputElement;
+    const labelName = document.getElementById("label-name");
+    const labelMessage = document.getElementById("label-message");
+    const inputMessage = document.getElementById("form-message") as HTMLTextAreaElement;
+
+    function setClientType(type: "persona" | "empresa") {
+      if (clientTypeInput) clientTypeInput.value = type;
+      if (type === "persona") {
+        btnPersona?.classList.add("bg-emerald-600", "text-white", "shadow-sm");
+        btnPersona?.classList.remove(
+          "text-slate-500",
+          "dark:text-neutral-400",
+          "hover:text-slate-900",
+          "dark:hover:text-white"
+        );
+        btnEmpresa?.classList.remove("bg-emerald-600", "text-white", "shadow-sm");
+        btnEmpresa?.classList.add(
+          "text-slate-500",
+          "dark:text-neutral-400",
+          "hover:text-slate-900",
+          "dark:hover:text-white"
+        );
+        companyFieldContainer?.classList.add("hidden");
+        if (companyInput) companyInput.required = false;
+        if (labelName) labelName.innerText = "Tu Nombre";
+        if (labelMessage) labelMessage.innerText = "Cuéntanos sobre tu idea";
+        if (inputMessage)
+          inputMessage.placeholder =
+            "Necesito levantar una landing page para validar mi servicio...";
+      } else {
+        btnEmpresa?.classList.add("bg-emerald-600", "text-white", "shadow-sm");
+        btnEmpresa?.classList.remove(
+          "text-slate-500",
+          "dark:text-neutral-400",
+          "hover:text-slate-900",
+          "dark:hover:text-white"
+        );
+        btnPersona?.classList.remove("bg-emerald-600", "text-white", "shadow-sm");
+        btnPersona?.classList.add(
+          "text-slate-500",
+          "dark:text-neutral-400",
+          "hover:text-slate-900",
+          "dark:hover:text-white"
+        );
+        companyFieldContainer?.classList.remove("hidden");
+        if (companyInput) companyInput.required = true;
+        if (labelName) labelName.innerText = "Nombre de contacto";
+        if (labelMessage) labelMessage.innerText = "Cuéntanos sobre tu requerimiento de software";
+        if (inputMessage)
+          inputMessage.placeholder =
+            "Buscamos reestructurar nuestra plataforma administrativa actual y crear una API externa...";
+      }
+    }
+
+    btnPersona?.addEventListener("click", () => setClientType("persona"));
+    btnEmpresa?.addEventListener("click", () => setClientType("empresa"));
+  }
+
+  document.addEventListener("astro:page-load", initFormLogic);
+</script>

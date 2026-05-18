@@ -1,0 +1,38 @@
+---
+
+---
+
+<div
+  id="success-modal"
+  class="fixed inset-0 z-50 flex hidden items-center justify-center bg-black/40 p-4 backdrop-blur-sm"
+>
+  <div
+    class="w-full max-w-sm rounded-3xl border border-slate-200 bg-white p-8 text-center shadow-2xl transition-colors dark:border-neutral-800 dark:bg-neutral-900"
+  >
+    <div
+      class="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-emerald-100 font-bold text-emerald-600 dark:bg-emerald-950/50 dark:text-emerald-400"
+    >
+      ✓
+    </div>
+    <h4 class="mb-2 text-lg font-extrabold text-slate-950 dark:text-white">¡Solicitud Recibida!</h4>
+    <p class="mb-6 text-sm leading-relaxed text-slate-500 dark:text-neutral-400">
+      Hemos registrado tus datos. Un miembro de nuestro equipo te contactará para agendar nuestra
+      primera reunión técnica.
+    </p>
+    <button
+      id="close-modal-btn"
+      class="w-full rounded-full bg-emerald-600 py-2.5 text-xs font-bold tracking-widest text-white uppercase transition-colors hover:bg-emerald-700"
+      >Entendido</button
+    >
+  </div>
+</div>
+
+<script>
+  document.addEventListener("astro:page-load", () => {
+    const modal = document.getElementById("success-modal");
+    const closeBtn = document.getElementById("close-modal-btn");
+    closeBtn?.addEventListener("click", () => {
+      modal?.classList.add("hidden");
+    });
+  });
+</script>

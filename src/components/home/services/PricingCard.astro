@@ -1,0 +1,71 @@
+---
+import type { Product } from "@interfaces/product";
+import { Icon } from "astro-icon/components";
+
+interface Props extends Product {}
+
+const {
+  title,
+  price,
+  pricePrefix,
+  currency = "CLP",
+  features,
+  href,
+  buttonText,
+  isRecommended = false,
+  buttonVariant = "dark",
+} = Astro.props;
+
+// Clases condicionales para la tarjeta
+const baseCardClasses =
+  "pricing-card flex flex-col justify-between rounded-3xl p-10 opacity-0 transition-colors";
+const cardClasses = isRecommended
+  ? `${baseCardClasses} relative scale-105 transform border-2 border-emerald-600 bg-white shadow-2xl shadow-emerald-600/10 dark:bg-neutral-950`
+  : `${baseCardClasses} border border-slate-200 bg-white shadow-sm dark:border-neutral-800 dark:bg-neutral-950`;
+
+// Diccionario de estilos para los botones
+const buttonStyles = {
+  dark: "bg-slate-900 text-white hover:bg-slate-800 dark:bg-neutral-800 dark:hover:bg-neutral-700",
+  emerald: "bg-emerald-600 text-white hover:bg-emerald-700",
+  outline:
+    "border border-slate-200 text-slate-900 hover:bg-slate-50 dark:border-neutral-800 dark:text-neutral-200 dark:hover:bg-neutral-800",
+};
+---
+
+<div class={cardClasses}>
+  {
+    isRecommended && (
+      <span class="absolute -top-4 left-1/2 -translate-x-1/2 rounded-full bg-emerald-600 px-4 py-1 text-[10px] font-bold tracking-widest text-white uppercase">
+        Recomendado
+      </span>
+    )
+  }
+  <div>
+    <h3 class="mb-4 text-xs font-bold tracking-widest text-slate-400 uppercase">
+      {title}
+    </h3>
+    <div class="mb-6 text-4xl font-extrabold text-slate-900 dark:text-white">
+      {pricePrefix && <span class="text-sm font-medium text-slate-400">{pricePrefix} </span>}
+      {price}
+      <span class="text-sm font-medium text-slate-400">{currency}</span>
+    </div>
+
+    <ul class="mb-10 space-y-4 text-left text-sm text-slate-500 dark:text-neutral-400">
+      {
+        features.map((feature) => (
+          <li class="flex gap-2">
+            <Icon name="lucide:check" class="h-5 w-5 shrink-0 text-emerald-600" />
+            <span>{feature}</span>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+
+  <a
+    href={href}
+    class={`block w-full rounded-full py-3 text-center font-bold transition-colors ${buttonStyles[buttonVariant]}`}
+  >
+    {buttonText}
+  </a>
+</div>

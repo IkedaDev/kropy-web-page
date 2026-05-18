@@ -1,366 +1,55 @@
 ---
-import { Icon } from "astro-icon/components";
+import ContactInfo from "./ContactInfo.astro";
+import ContactForm from "./ContactForm.astro";
+import Modal from "../Modal.astro";
 ---
 
 <section id="contact-section" class="bg-white py-16 transition-colors lg:py-24 dark:bg-neutral-950">
   <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-    <!-- Contenedor de rejilla de 2 columnas -->
     <div class="grid grid-cols-1 items-start gap-12 lg:grid-cols-12 lg:gap-16">
-      <!-- Columna de Información (40% de ancho en escritorio) -->
-      <div class="space-y-10 lg:col-span-5">
-        <div class="space-y-4">
-          <span
-            class="anim-contact-item mb-4 block text-xs font-bold tracking-widest text-emerald-600 uppercase opacity-0 dark:text-emerald-400"
-            >Conexion Directa</span
-          >
-          <h1
-            class="anim-contact-item text-4xl leading-tight font-extrabold tracking-tight text-slate-950 opacity-0 lg:text-5xl dark:text-white"
-          >
-            Hablemos sin rodeos.
-          </h1>
-
-          <!-- Mensaje rompehielos sutil -->
-          <p
-            class="anim-contact-item pt-2 text-base leading-relaxed font-light text-slate-500 opacity-0 dark:text-neutral-400"
-          >
-            Sabemos que rellenar formularios puede ser aburrido o intimidante. Prometemos que este
-            no es un buzón sin salida. Al otro lado hay desarrolladores y diseñadores reales listos
-            para escuchar tu idea, tomarnos un café (asíncrono o por Meet) y planificar algo
-            increíble.
-          </p>
-        </div>
-
-        <!-- Canales de comunicación expuestos -->
-        <div class="space-y-6">
-          <h3
-            class="anim-contact-item text-xs font-bold tracking-widest text-slate-400 uppercase opacity-0 dark:text-neutral-500"
-          >
-            Canales directos
-          </h3>
-
-          <div class="anim-contact-item space-y-4 opacity-0">
-            <!-- Teléfono / Celular -->
-            <a
-              href="tel:+56987654321"
-              class="group flex items-center gap-4 rounded-2xl border border-slate-100 bg-slate-50/50 p-4 transition-all duration-300 hover:border-emerald-600/20 dark:border-neutral-900 dark:bg-neutral-900/10 dark:hover:border-emerald-400/20"
-            >
-              <div
-                class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-emerald-500/10 text-emerald-600 transition-all group-hover:bg-emerald-600 group-hover:text-white dark:text-emerald-400"
-              >
-                <Icon name="lucide:phone" class="h-5 w-5 group-hover:text-white" />
-              </div>
-              <div>
-                <span
-                  class="block text-xs font-bold tracking-wider text-slate-400 uppercase dark:text-neutral-500"
-                  >Celular / WhatsApp</span
-                >
-                <span class="text-sm font-semibold text-slate-900 dark:text-neutral-100"
-                  >+56 9 8909 5115</span
-                >
-              </div>
-            </a>
-
-            <!-- Correo electrónico -->
-            <a
-              href="mailto:hola@kropy.cl"
-              class="group flex items-center gap-4 rounded-2xl border border-slate-100 bg-slate-50/50 p-4 transition-all duration-300 hover:border-emerald-600/20 dark:border-neutral-900 dark:bg-neutral-900/10 dark:hover:border-emerald-400/20"
-            >
-              <div
-                class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-emerald-500/10 text-emerald-600 transition-all group-hover:bg-emerald-600 group-hover:text-white dark:text-emerald-400"
-              >
-                <Icon name="lucide:mail" class="h-5 w-5 group-hover:text-white" />
-              </div>
-              <div>
-                <span
-                  class="block text-xs font-bold tracking-wider text-slate-400 uppercase dark:text-neutral-500"
-                  >Correo electrónico</span
-                >
-                <span class="text-sm font-semibold text-slate-900 dark:text-neutral-100"
-                  >kropyservices@gmail.com
-                </span>
-              </div>
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <div
-        id="contact-form-box"
-        class="rounded-3xl border border-slate-200/60 bg-slate-50/40 p-8 opacity-0 transition-colors sm:p-10 lg:col-span-7 dark:border-neutral-800/60 dark:bg-neutral-900/20"
-      >
-        <form class="space-y-6" id="contact-form">
-          <!-- Selector segmentado tipo Persona / Empresa -->
-          <div class="space-y-3">
-            <label
-              class="block text-xs font-bold tracking-widest text-slate-400 uppercase dark:text-neutral-500"
-              >¿Quién nos escribe?</label
-            >
-            <div
-              class="grid grid-cols-2 gap-2 rounded-2xl border border-slate-200/40 bg-slate-100 p-1.5 dark:border-neutral-800/40 dark:bg-neutral-900/80"
-            >
-              <!-- Botón Persona -->
-              <button
-                type="button"
-                id="btn-client-persona"
-                class="client-type-btn rounded-xl bg-emerald-600 px-4 py-2.5 text-xs font-bold tracking-wider text-white uppercase shadow-sm transition-all duration-200"
-                data-type="persona"
-              >
-                Persona / Freelancer
-              </button>
-              <!-- Botón Empresa -->
-              <button
-                type="button"
-                id="btn-client-empresa"
-                class="client-type-btn rounded-xl px-4 py-2.5 text-xs font-bold tracking-wider text-slate-500 uppercase transition-all duration-200 hover:text-slate-900 dark:text-neutral-400 dark:hover:text-white"
-                data-type="empresa"
-              >
-                Empresa / Organización
-              </button>
-            </div>
-            <input type="hidden" id="form-client-type" name="client_type" value="persona" />
-          </div>
-
-          <!-- Campos Estándar -->
-          <div class="grid gap-6 md:grid-cols-2">
-            <div class="space-y-2">
-              <label
-                class="block text-xs font-bold tracking-widest text-slate-400 uppercase dark:text-neutral-500"
-                id="label-name">Tu Nombre</label
-              >
-              <input
-                required
-                type="text"
-                id="form-name"
-                class="w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm font-light text-slate-900 transition-colors focus:border-emerald-600 focus:outline-none dark:border-neutral-800 dark:bg-neutral-950 dark:text-white"
-                placeholder="Ej: Juan Pérez"
-              />
-            </div>
-            <div class="space-y-2">
-              <label
-                class="block text-xs font-bold tracking-widest text-slate-400 uppercase dark:text-neutral-500"
-                >Correo de Contacto</label
-              >
-              <input
-                required
-                type="email"
-                id="form-email"
-                class="w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm font-light text-slate-900 transition-colors focus:border-emerald-600 focus:outline-none dark:border-neutral-800 dark:bg-neutral-950 dark:text-white"
-                placeholder="juan@correo.com"
-              />
-            </div>
-          </div>
-
-          <!-- Campo dinámico adicional (Nombre de Empresa, oculto al inicio) -->
-          <div class="hidden space-y-2" id="company-field-container">
-            <label
-              class="block text-xs font-bold tracking-widest text-slate-400 uppercase dark:text-neutral-500"
-              >Nombre de la Empresa o Startup</label
-            >
-            <input
-              type="text"
-              id="form-company"
-              class="w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm font-light text-slate-900 transition-colors focus:border-emerald-600 focus:outline-none dark:border-neutral-800 dark:bg-neutral-950 dark:text-white"
-              placeholder="Ej: Innova SpA"
-            />
-          </div>
-
-          <!-- Campo Mensaje -->
-          <div class="space-y-2">
-            <label
-              class="block text-xs font-bold tracking-widest text-slate-400 uppercase dark:text-neutral-500"
-              id="label-message">Cuéntanos sobre tu idea</label
-            >
-            <textarea
-              required
-              id="form-message"
-              rows="4"
-              class="w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm font-light text-slate-900 transition-colors focus:border-emerald-600 focus:outline-none dark:border-neutral-800 dark:bg-neutral-950 dark:text-white"
-              placeholder="Necesito levantar una landing page para validar mi servicio..."
-            ></textarea>
-          </div>
-
-          <button
-            type="submit"
-            class="w-full rounded-xl bg-emerald-600 py-4 font-bold text-white shadow-xl shadow-emerald-600/20 transition-all duration-300 hover:bg-emerald-700"
-          >
-            Enviar Solicitud
-          </button>
-        </form>
-      </div>
+      <ContactInfo />
+      <ContactForm />
     </div>
   </div>
 </section>
 
-<!-- Modal de Éxito sutil (Evitamos alert()) -->
-<div
-  id="success-modal"
-  class="fixed inset-0 z-50 flex hidden items-center justify-center bg-black/40 p-4 backdrop-blur-sm"
->
-  <div
-    class="w-full max-w-sm rounded-3xl border border-slate-200 bg-white p-8 text-center shadow-2xl transition-colors dark:border-neutral-800 dark:bg-neutral-900"
-  >
-    <div
-      class="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-emerald-100 font-bold text-emerald-600 dark:bg-emerald-950/50 dark:text-emerald-400"
-    >
-      ✓
-    </div>
-    <h4 class="mb-2 text-lg font-extrabold text-slate-950 dark:text-white">¡Solicitud Recibida!</h4>
-    <p class="mb-6 text-sm leading-relaxed text-slate-500 dark:text-neutral-400">
-      Hemos registrado tus datos. Un miembro de nuestro equipo te contactará para agendar nuestra
-      primera reunión técnica.
-    </p>
-    <button
-      id="close-modal-btn"
-      class="w-full rounded-full bg-emerald-600 py-2.5 text-xs font-bold tracking-widest text-white uppercase transition-colors hover:bg-emerald-700"
-      >Entendido</button
-    >
-  </div>
-</div>
-
+<Modal />
 <script>
   import { createTimeline, stagger } from "animejs";
 
   function initContactAnimations() {
-    const observerOptions = {
-      root: null,
-      rootMargin: "0px",
-      threshold: 0.2, // Umbral bajo para que el formulario se anime rápido
-    };
-
+    const observerOptions = { root: null, rootMargin: "0px", threshold: 0.2 };
     const observerContact = new IntersectionObserver((entries, observer) => {
       entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          if (entry.target.id === "contact-section") {
-            const tl = createTimeline({
-              defaults: { ease: "outExpo", duration: 1200 },
-            });
+        if (entry.isIntersecting && entry.target.id === "contact-section") {
+          const tl = createTimeline({ defaults: { ease: "outExpo", duration: 1200 } });
 
-            // 1. Animamos la columna izquierda (Textos y Contactos directos)
-            tl.add(
-              ".anim-contact-item",
-              {
-                opacity: [0, 1],
-                translateY: [30, 0],
-                delay: stagger(150),
-              },
-              0
-            );
+          // Sintaxis correcta AnimeJS v4: tl.add(target, parameters, offset)
+          tl.add(".anim-contact-item", { opacity: [0, 1], y: [30, 0], delay: stagger(150) }, 0);
 
-            // 2. Animamos la caja del formulario entera
-            // Aparece moviéndose ligeramente desde la derecha hacia su posición final
-            tl.add(
-              "#contact-form-box",
-              {
-                opacity: [0, 1],
-                translateX: [140, 0], // Movimiento horizontal
-              },
-              0
-            ); // Comienza un poco después de que los textos empiezan a salir
+          tl.add("#contact-form-box", { opacity: [0, 1], x: [140, 0] }, 0);
 
-            observer.unobserve(entry.target);
-          }
+          observer.unobserve(entry.target);
         }
       });
     }, observerOptions);
 
     const contactSection = document.getElementById("contact-section");
     if (contactSection) observerContact.observe(contactSection);
-  }
-  document.addEventListener("astro:page-load", () => initContactAnimations());
-</script>
 
-<script>
-  // Lógica del selector segmentado de clientes
-  const btnPersona = document.getElementById("btn-client-persona");
-  const btnEmpresa = document.getElementById("btn-client-empresa");
-  const clientTypeInput = document.getElementById("form-client-type") as HTMLInputElement;
-  const companyFieldContainer = document.getElementById("company-field-container");
-  const companyInput = document.getElementById("form-company") as HTMLInputElement;
+    // Lógica global para conectar el Formulario con el Modal
+    const form = document.getElementById("contact-form");
+    const modal = document.getElementById("success-modal");
 
-  // Referencias a etiquetas dinámicas
-  const labelName = document.getElementById("label-name");
-  const labelMessage = document.getElementById("label-message");
-  const inputMessage = document.getElementById("form-message") as HTMLTextAreaElement;
+    form?.addEventListener("submit", (e) => {
+      e.preventDefault();
+      modal?.classList.remove("hidden");
+      (form as HTMLFormElement).reset();
 
-  function setClientType(type: "persona" | "empresa") {
-    if (clientTypeInput) clientTypeInput.value = type;
-
-    if (type === "persona") {
-      // Activar botón persona
-      btnPersona?.classList.add("bg-emerald-600", "text-white", "shadow-sm");
-      btnPersona?.classList.remove(
-        "text-slate-500",
-        "dark:text-neutral-400",
-        "hover:text-slate-900",
-        "dark:hover:text-white"
-      );
-
-      // Desactivar botón empresa
-      btnEmpresa?.classList.remove("bg-emerald-600", "text-white", "shadow-sm");
-      btnEmpresa?.classList.add(
-        "text-slate-500",
-        "dark:text-neutral-400",
-        "hover:text-slate-900",
-        "dark:hover:text-white"
-      );
-
-      // Ocultar campo empresa y remover requerimiento
-      companyFieldContainer?.classList.add("hidden");
-      if (companyInput) companyInput.required = false;
-
-      // Actualizar textos contextuales
-      if (labelName) labelName.innerText = "Tu Nombre";
-      if (labelMessage) labelMessage.innerText = "Cuéntanos sobre tu idea";
-      if (inputMessage)
-        inputMessage.placeholder = "Necesito levantar una landing page para validar mi servicio...";
-    } else {
-      // Activar botón empresa
-      btnEmpresa?.classList.add("bg-emerald-600", "text-white", "shadow-sm");
-      btnEmpresa?.classList.remove(
-        "text-slate-500",
-        "dark:text-neutral-400",
-        "hover:text-slate-900",
-        "dark:hover:text-white"
-      );
-
-      // Desactivar botón persona
-      btnPersona?.classList.remove("bg-emerald-600", "text-white", "shadow-sm");
-      btnPersona?.classList.add(
-        "text-slate-500",
-        "dark:text-neutral-400",
-        "hover:text-slate-900",
-        "dark:hover:text-white"
-      );
-
-      // Mostrar campo empresa y hacerlo obligatorio
-      companyFieldContainer?.classList.remove("hidden");
-      if (companyInput) companyInput.required = true;
-
-      // Actualizar textos contextuales
-      if (labelName) labelName.innerText = "Nombre de contacto";
-      if (labelMessage) labelMessage.innerText = "Cuéntanos sobre tu requerimiento de software";
-      if (inputMessage)
-        inputMessage.placeholder =
-          "Buscamos reestructurar nuestra plataforma administrativa actual y crear una API externa...";
-    }
+      // Restablecer visualmente el selector a persona clickeando el botón (si existe)
+      document.getElementById("btn-client-persona")?.click();
+    });
   }
 
-  btnPersona?.addEventListener("click", () => setClientType("persona"));
-  btnEmpresa?.addEventListener("click", () => setClientType("empresa"));
-
-  // Manejo de modal de éxito
-  const form = document.getElementById("contact-form");
-  const modal = document.getElementById("success-modal");
-  const closeBtn = document.getElementById("close-modal-btn");
-
-  form?.addEventListener("submit", (e) => {
-    e.preventDefault();
-    modal?.classList.remove("hidden");
-    (form as HTMLFormElement).reset();
-    setClientType("persona"); // Restablecer a persona por defecto
-  });
-
-  closeBtn?.addEventListener("click", () => {
-    modal?.classList.add("hidden");
-  });
+  document.addEventListener("astro:page-load", initContactAnimations);
 </script>
