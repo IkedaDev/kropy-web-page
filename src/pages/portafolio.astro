@@ -121,11 +121,6 @@ import HomeLayout from "../layouts/HomeLayout.astro";
   import { animate, createTimeline } from "animejs";
 
   function initPortfolioScripts() {
-    // ---------------------------------------------------------
-    // 1. Observadores de Scroll (Individualizados)
-    // ---------------------------------------------------------
-
-    // A. Observador para Título y Filtros
     const headerObserver = new IntersectionObserver(
       (entries, obs) => {
         entries.forEach((entry) => {
@@ -145,12 +140,10 @@ import HomeLayout from "../layouts/HomeLayout.astro";
       { threshold: 0.1 }
     );
 
-    // B. Observador INDIVIDUAL para cada tarjeta de proyecto
     const itemObserver = new IntersectionObserver(
       (entries, obs) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            // Animamos específicamente la tarjeta que acaba de entrar en pantalla
             animate(entry.target, {
               y: [40, 0],
               opacity: [0, 1],
@@ -165,7 +158,6 @@ import HomeLayout from "../layouts/HomeLayout.astro";
       { threshold: 0.15 }
     );
 
-    // C. Observador para la cabecera de la franja "Inspirate"
     const inspirationObserver = new IntersectionObserver(
       (entries, obs) => {
         entries.forEach((entry) => {

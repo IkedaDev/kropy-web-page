@@ -8,8 +8,8 @@ import HomeLayout from "../layouts/HomeLayout.astro";
 >
   <!-- Sobre Nosotros -->
   <section class="bg-white py-20 transition-colors dark:bg-neutral-950">
-    <div class="mx-auto grid max-w-6xl items-center gap-16 px-4 md:grid-cols-2">
-      <div>
+    <div id="aboutus" class="mx-auto grid max-w-6xl items-center gap-16 px-4 md:grid-cols-2">
+      <div id="aboutus-text">
         <span
           class="mb-4 block text-xs font-bold tracking-widest text-emerald-600 uppercase dark:text-emerald-400"
           >Sobre Nosotros</span
@@ -41,7 +41,7 @@ import HomeLayout from "../layouts/HomeLayout.astro";
           </div>
         </div>
       </div>
-      <div class="relative">
+      <div id="aboutus-image" class="relative">
         <div
           class="flex aspect-square w-full items-center justify-center overflow-hidden rounded-3xl bg-slate-100 text-slate-300 shadow-2xl transition-colors dark:bg-neutral-900 dark:text-neutral-700"
         >
@@ -60,11 +60,11 @@ import HomeLayout from "../layouts/HomeLayout.astro";
   </section>
 
   <!-- Misión y Visión -->
-  <section class="bg-slate-50 py-24 transition-colors dark:bg-neutral-900/50">
+  <section id="mv" class="bg-slate-50 py-24 transition-colors dark:bg-neutral-900/50">
     <div class="mx-auto max-w-6xl px-4">
       <div class="grid gap-12 md:grid-cols-2">
         <div
-          class="rounded-3xl border border-slate-100 bg-white p-10 shadow-sm transition-all hover:shadow-md dark:border-neutral-800 dark:bg-neutral-950"
+          class="mv-card rounded-3xl border border-slate-100 bg-white p-10 shadow-sm transition-all hover:shadow-md dark:border-neutral-800 dark:bg-neutral-950"
         >
           <div
             class="mb-6 flex h-12 w-12 items-center justify-center rounded-2xl bg-emerald-100 text-xl text-emerald-600 dark:bg-emerald-950/50 dark:text-emerald-400"
@@ -79,7 +79,7 @@ import HomeLayout from "../layouts/HomeLayout.astro";
           </p>
         </div>
         <div
-          class="rounded-3xl border border-slate-100 bg-white p-10 shadow-sm transition-all hover:shadow-md dark:border-neutral-800 dark:bg-neutral-950"
+          class="mv-card rounded-3xl border border-slate-100 bg-white p-10 shadow-sm transition-all hover:shadow-md dark:border-neutral-800 dark:bg-neutral-950"
         >
           <div
             class="mb-6 flex h-12 w-12 items-center justify-center rounded-2xl bg-emerald-100 text-xl text-emerald-600 dark:bg-emerald-950/50 dark:text-emerald-400"
@@ -153,3 +153,61 @@ import HomeLayout from "../layouts/HomeLayout.astro";
     </div>
   </section>
 </HomeLayout>
+
+<script>
+  import { createTimeline, stagger } from "animejs";
+
+  function initScrollAnimations() {
+    // Configuración del observador: Se dispara cuando el 15% de la sección es visible
+    const observerOptions = {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.15,
+    };
+
+    const observerAboutUs = new IntersectionObserver((entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          if (entry.target.id === "aboutus") {
+            const tl = createTimeline({
+              defaults: { ease: "outQuint", duration: 1000 },
+            });
+
+            tl.add("#aboutus-image", { x: [150, 0], opacity: [0, 1] }, 0);
+            tl.add("#aboutus-text", { x: [-150, 0], opacity: [0, 1] }, 0);
+            observer.unobserve(entry.target);
+          }
+        }
+      });
+    }, observerOptions);
+    const aboutUsSection = document.getElementById("aboutus");
+    if (aboutUsSection) observerAboutUs.observe(aboutUsSection);
+
+    const observerMV = new IntersectionObserver((entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          console.log("1");
+          if (entry.target.id === "mv") {
+            const tl = createTimeline({
+              defaults: { ease: "outQuint", duration: 2000 },
+            });
+
+            tl.add(
+              ".mv-card",
+              { y: [-80, 0], opacity: [0, 1], delay: stagger(200, { start: 200 }) },
+              0
+            );
+            observer.unobserve(entry.target);
+          }
+        }
+      });
+    }, observerOptions);
+    const mvSection = document.getElementById("mv");
+    if (mvSection) observerMV.observe(mvSection);
+  }
+
+  // Asegura la compatibilidad con el ClientRouter / ViewTransitions de Astro
+  document.addEventListener("astro:page-load", () => {
+    initScrollAnimations();
+  });
+</script>
