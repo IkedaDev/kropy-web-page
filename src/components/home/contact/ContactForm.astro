@@ -7,6 +7,9 @@
   class="rounded-3xl border border-slate-200/60 bg-slate-50/40 p-8 opacity-0 transition-colors sm:p-10 lg:col-span-7 dark:border-neutral-800/60 dark:bg-neutral-900/20"
 >
   <form class="space-y-6" id="contact-form">
+    <input type="hidden" name="subject" value="🚀 Nuevo Lead desde Kropy Web" />
+    <input type="hidden" name="from_name" value="Kropy Notificaciones" />
+
     <div class="space-y-3">
       <label
         class="block text-xs font-bold tracking-widest text-slate-400 uppercase dark:text-neutral-500"
@@ -28,7 +31,7 @@
           data-type="empresa">Empresa / Organización</button
         >
       </div>
-      <input type="hidden" id="form-client-type" name="client_type" value="persona" />
+      <input type="hidden" id="form-client-type" name="Tipo de Cliente" value="persona" />
     </div>
 
     <div class="grid gap-6 md:grid-cols-2">
@@ -41,6 +44,7 @@
           required
           type="text"
           id="form-name"
+          name="Nombre"
           class="w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm font-light text-slate-900 transition-colors focus:border-emerald-600 focus:outline-none dark:border-neutral-800 dark:bg-neutral-950 dark:text-white"
           placeholder="Ej: Juan Pérez"
         />
@@ -54,6 +58,7 @@
           required
           type="email"
           id="form-email"
+          name="email"
           class="w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm font-light text-slate-900 transition-colors focus:border-emerald-600 focus:outline-none dark:border-neutral-800 dark:bg-neutral-950 dark:text-white"
           placeholder="juan@correo.com"
         />
@@ -68,6 +73,7 @@
       <input
         type="text"
         id="form-company"
+        name="Empresa"
         class="w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm font-light text-slate-900 transition-colors focus:border-emerald-600 focus:outline-none dark:border-neutral-800 dark:bg-neutral-950 dark:text-white"
         placeholder="Ej: Innova SpA"
       />
@@ -81,6 +87,7 @@
       <textarea
         required
         id="form-message"
+        name="message"
         rows="4"
         class="w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm font-light text-slate-900 transition-colors focus:border-emerald-600 focus:outline-none dark:border-neutral-800 dark:bg-neutral-950 dark:text-white"
         placeholder="Necesito levantar una landing page para validar mi servicio..."></textarea>
@@ -88,9 +95,24 @@
 
     <button
       type="submit"
-      class="w-full rounded-xl bg-emerald-600 py-4 font-bold text-white shadow-xl shadow-emerald-600/20 transition-all duration-300 hover:bg-emerald-700"
-      >Enviar Solicitud</button
+      id="submit-btn"
+      class="flex w-full items-center justify-center gap-2 rounded-xl bg-emerald-600 py-4 font-bold text-white shadow-xl shadow-emerald-600/20 transition-all duration-300 hover:bg-emerald-700"
     >
+      <span id="submit-text">Enviar Solicitud</span>
+      <svg
+        id="submit-spinner"
+        class="hidden h-5 w-5 animate-spin text-white"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        ><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"
+        ></circle><path
+          class="opacity-75"
+          fill="currentColor"
+          d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+        ></path></svg
+      >
+    </button>
   </form>
 </div>
 
@@ -105,6 +127,14 @@
     const labelMessage = document.getElementById("label-message");
     const inputMessage = document.getElementById("form-message") as HTMLTextAreaElement;
 
+    // Referencias para el envío
+    const form = document.getElementById("contact-form") as HTMLFormElement;
+    const submitBtn = document.getElementById("submit-btn") as HTMLButtonElement;
+    const submitText = document.getElementById("submit-text");
+    const submitSpinner = document.getElementById("submit-spinner");
+    const successModal = document.getElementById("success-modal"); // Asumiendo que tu modal tiene este ID globalmente
+
+    // Lógica visual del selector (Sin cambios mayores, solo optimizada)
     function setClientType(type: "persona" | "empresa") {
       if (clientTypeInput) clientTypeInput.value = type;
       if (type === "persona") {
@@ -156,6 +186,45 @@
 
     btnPersona?.addEventListener("click", () => setClientType("persona"));
     btnEmpresa?.addEventListener("click", () => setClientType("empresa"));
+
+    form?.addEventListener("submit", async (e) => {
+      e.preventDefault();
+
+      if (submitBtn) submitBtn.disabled = true;
+      if (submitText) submitText.innerText = "Procesando...";
+      submitSpinner?.classList.remove("hidden");
+
+      const formData = new FormData(form);
+
+      try {
+        // REEMPLAZA ESTA URL CON LA QUE TE DE FORMSPREE
+        const response = await fetch("https://formspree.io/f/mojbvekv", {
+          method: "POST",
+          body: formData,
+          headers: {
+            Accept: "application/json",
+          },
+        });
+
+        if (response.ok) {
+          // El correo se envió con éxito
+          form.reset();
+          setClientType("persona");
+          successModal?.classList.remove("hidden");
+        } else {
+          const data = await response.json();
+          console.error("Error al enviar:", data);
+          alert("Hubo un problema al enviar la solicitud. Por favor intenta de nuevo.");
+        }
+      } catch (error) {
+        console.error("Error de red:", error);
+        alert("Ocurrió un error de red. Revisa tu conexión a internet.");
+      } finally {
+        if (submitBtn) submitBtn.disabled = false;
+        if (submitText) submitText.innerText = "Enviar Solicitud";
+        submitSpinner?.classList.add("hidden");
+      }
+    });
   }
 
   document.addEventListener("astro:page-load", initFormLogic);
