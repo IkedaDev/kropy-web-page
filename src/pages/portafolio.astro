@@ -7,9 +7,9 @@ import HomeLayout from "../layouts/HomeLayout.astro";
   title="Portafolio"
   description="Descubre los proyectos que hemos diseñado y desarrollado"
 >
-  <section class="bg-white py-20 transition-colors dark:bg-neutral-950">
+  <section id="portfolio-section" class="bg-white py-20 transition-colors dark:bg-neutral-950">
     <div class="mx-auto max-w-6xl px-4">
-      <div class="mb-16 text-center">
+      <div id="portfolio-header" class="mb-16 text-center opacity-0">
         <span
           class="mb-4 block text-xs font-bold tracking-widest text-emerald-600 uppercase dark:text-emerald-400"
           >Trabajos</span
@@ -17,8 +17,7 @@ import HomeLayout from "../layouts/HomeLayout.astro";
         <h1 class="text-4xl font-extrabold tracking-tight">Proyectos Realizados</h1>
       </div>
 
-      <!-- Filtros interactivos -->
-      <div class="mb-12 flex flex-wrap justify-center gap-4">
+      <div id="portfolio-filters" class="mb-12 flex flex-wrap justify-center gap-4 opacity-0">
         <button
           id="filter-todos"
           class="filter-btn rounded-full bg-emerald-600 px-5 py-2.5 text-xs font-bold tracking-widest text-white uppercase shadow-md transition-all"
@@ -41,11 +40,9 @@ import HomeLayout from "../layouts/HomeLayout.astro";
         >
       </div>
 
-      <!-- Grilla de Portafolio -->
       <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3" id="portfolio-grid">
-        <!-- Proyecto 1 -->
         <div
-          class="portfolio-item overflow-hidden rounded-3xl border border-slate-200 bg-white transition-all dark:border-neutral-800 dark:bg-neutral-950"
+          class="portfolio-item overflow-hidden rounded-3xl border border-slate-200 bg-white opacity-0 transition-all dark:border-neutral-800 dark:bg-neutral-950"
           data-category="landings"
         >
           <div
@@ -64,9 +61,8 @@ import HomeLayout from "../layouts/HomeLayout.astro";
             <h4 class="mt-2 text-xl font-bold">Plataforma de Pagos</h4>
           </div>
         </div>
-        <!-- Proyecto 2 -->
         <div
-          class="portfolio-item overflow-hidden rounded-3xl border border-slate-200 bg-white transition-all dark:border-neutral-800 dark:bg-neutral-950"
+          class="portfolio-item overflow-hidden rounded-3xl border border-slate-200 bg-white opacity-0 transition-all dark:border-neutral-800 dark:bg-neutral-950"
           data-category="apps"
         >
           <div
@@ -85,9 +81,8 @@ import HomeLayout from "../layouts/HomeLayout.astro";
             <h4 class="mt-2 text-xl font-bold">Delivery Express</h4>
           </div>
         </div>
-        <!-- Proyecto 3 -->
         <div
-          class="portfolio-item overflow-hidden rounded-3xl border border-slate-200 bg-white transition-all dark:border-neutral-800 dark:bg-neutral-950"
+          class="portfolio-item overflow-hidden rounded-3xl border border-slate-200 bg-white opacity-0 transition-all dark:border-neutral-800 dark:bg-neutral-950"
           data-category="saas"
         >
           <div
@@ -111,9 +106,10 @@ import HomeLayout from "../layouts/HomeLayout.astro";
   </section>
 
   <div
+    id="inspiration-section"
     class="border-b border-slate-200 bg-slate-50 py-12 dark:border-neutral-900 dark:bg-neutral-900/20"
   >
-    <div class="mx-auto max-w-7xl px-6 text-center lg:px-8">
+    <div id="inspiration-header" class="mx-auto max-w-7xl px-6 text-center opacity-0 lg:px-8">
       <h1 class="text-4xl font-extrabold tracking-tight sm:text-6xl dark:text-white">Inspirate</h1>
     </div>
   </div>
@@ -122,42 +118,145 @@ import HomeLayout from "../layouts/HomeLayout.astro";
 </HomeLayout>
 
 <script>
-  // Lógica de filtrado en cliente
-  const filterBtns = document.querySelectorAll(".filter-btn");
-  const items = document.querySelectorAll(".portfolio-item");
+  import { animate, createTimeline } from "animejs";
 
-  filterBtns.forEach((btn) => {
-    btn.addEventListener("click", () => {
-      // Remover clase activa de todos
-      filterBtns.forEach((b) => {
-        b.classList.remove("bg-emerald-600", "text-white", "shadow-md");
-        b.classList.add(
+  function initPortfolioScripts() {
+    // ---------------------------------------------------------
+    // 1. Observadores de Scroll (Individualizados)
+    // ---------------------------------------------------------
+
+    // A. Observador para Título y Filtros
+    const headerObserver = new IntersectionObserver(
+      (entries, obs) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const tl = createTimeline({ defaults: { ease: "outQuint", duration: 1000 } });
+
+            tl.add("#portfolio-header", { y: [30, 0], opacity: [0, 1] }, 0).add(
+              "#portfolio-filters",
+              { y: [20, 0], opacity: [0, 1] },
+              "-=800"
+            );
+
+            obs.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    // B. Observador INDIVIDUAL para cada tarjeta de proyecto
+    const itemObserver = new IntersectionObserver(
+      (entries, obs) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            // Animamos específicamente la tarjeta que acaba de entrar en pantalla
+            animate(entry.target, {
+              y: [40, 0],
+              opacity: [0, 1],
+              ease: "outElastic(1, .8)",
+              duration: 1200,
+            });
+
+            obs.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.15 }
+    );
+
+    // C. Observador para la cabecera de la franja "Inspirate"
+    const inspirationObserver = new IntersectionObserver(
+      (entries, obs) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            animate("#inspiration-header", {
+              y: [30, 0],
+              opacity: [0, 1],
+              ease: "outCubic",
+              duration: 1000,
+            });
+            obs.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.15 }
+    );
+
+    // --- Enganchar elementos a sus respectivos observadores ---
+    const portfolioSection = document.getElementById("portfolio-section");
+    const inspirationSection = document.getElementById("inspiration-section");
+    const portfolioItems = document.querySelectorAll(".portfolio-item");
+
+    if (portfolioSection) headerObserver.observe(portfolioSection);
+    if (inspirationSection) inspirationObserver.observe(inspirationSection);
+
+    // Le asignamos el observador a cada tarjeta de forma independiente
+    portfolioItems.forEach((item) => itemObserver.observe(item));
+
+    // ---------------------------------------------------------
+    // 2. Lógica de Filtrado de Proyectos (Intacta)
+    // ---------------------------------------------------------
+    const filterBtns = document.querySelectorAll(".filter-btn");
+
+    filterBtns.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        filterBtns.forEach((b) => {
+          b.classList.remove("bg-emerald-600", "text-white", "shadow-md");
+          b.classList.add(
+            "bg-slate-100",
+            "dark:bg-neutral-900",
+            "text-slate-600",
+            "dark:text-neutral-400"
+          );
+        });
+
+        btn.classList.add("bg-emerald-600", "text-white", "shadow-md");
+        btn.classList.remove(
           "bg-slate-100",
           "dark:bg-neutral-900",
           "text-slate-600",
           "dark:text-neutral-400"
         );
-      });
 
-      // Añadir clase activa al seleccionado
-      btn.classList.add("bg-emerald-600", "text-white", "shadow-md");
-      btn.classList.remove(
-        "bg-slate-100",
-        "dark:bg-neutral-900",
-        "text-slate-600",
-        "dark:text-neutral-400"
-      );
+        const category = btn.id.replace("filter-", "");
 
-      const category = btn.id.replace("filter-", "");
+        animate(".portfolio-item", {
+          opacity: 0,
+          scale: 0.95,
+          duration: 5500,
+          ease: "outQuad",
+          onComplete: () => {
+            let delayCount = 0;
 
-      items.forEach((item) => {
-        const itemCategory = item.getAttribute("data-category");
-        if (category === "todos" || itemCategory === category) {
-          (item as HTMLElement).style.display = "block";
-        } else {
-          (item as HTMLElement).style.display = "none";
-        }
+            portfolioItems.forEach((item) => {
+              const htmlItem = item as HTMLElement;
+              const itemCategory = htmlItem.getAttribute("data-category");
+
+              if (category === "todos" || itemCategory === category) {
+                htmlItem.style.display = "block";
+
+                animate(htmlItem, {
+                  opacity: [0, 1],
+                  scale: [0.95, 1],
+                  duration: 500,
+                  ease: "outBack(1.2)",
+                  delay: delayCount * 50,
+                });
+
+                delayCount++;
+              } else {
+                htmlItem.style.display = "none";
+              }
+            });
+          },
+        });
       });
     });
+  }
+
+  // Hook de ciclo de vida de Astro para funcionamiento perfecto en SPA
+  document.addEventListener("astro:page-load", () => {
+    initPortfolioScripts();
   });
 </script>

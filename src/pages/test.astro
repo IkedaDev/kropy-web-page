@@ -1,0 +1,29 @@
+---
+import HomeLayout from "../layouts/HomeLayout.astro";
+
+// src/pages/index.astro
+---
+
+<HomeLayout><div class="hero-box h-32 w-32 rounded-lg bg-emerald-500"></div> </HomeLayout>
+
+<script>
+  // Importamos la librería directamente aprovechando el empaquetador de Astro
+  import { animate } from "animejs";
+
+  // Creamos la función con la lógica de nuestra animación
+  function iniciarAnimaciones() {
+    // Aseguramos que el elemento exista antes de animar
+    if (document.querySelector(".hero-box")) {
+      animate(".hero-box", {
+        translateY: { from: -50, to: 0 },
+        opacity: { from: 0, to: 1 },
+        duration: 1000,
+        ease: "outExpo", // Recuerda: 'easing' cambia a 'ease' y se quita el prefijo 'ease'
+      });
+    }
+  }
+  // 1. Escuchar cuando ClientRouter complete la transición o cargue la página inicial
+  document.addEventListener("astro:page-load", () => {
+    iniciarAnimaciones();
+  });
+</script>

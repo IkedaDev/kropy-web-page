@@ -7,21 +7,21 @@ import { Icon } from "astro-icon/components";
   title="Servicios & Precios"
   description="Nuestras tarifas y soluciones web transparentes"
 >
-  <section class="bg-slate-50 py-20 transition-colors dark:bg-neutral-900/50">
+  <section id="pricing-section" class="bg-slate-50 py-20 transition-colors dark:bg-neutral-900/50">
     <div class="mx-auto max-w-6xl px-4 text-center">
-      <span
-        class="mb-4 block text-xs font-bold tracking-widest text-emerald-600 uppercase dark:text-emerald-400"
-        >Nuestros Productos</span
-      >
-      <h1 class="mb-16 text-4xl font-extrabold tracking-tight md:text-5xl">
-        Tarifas Transparentes
-      </h1>
+      <div id="services-header" class="opacity-0">
+        <span
+          class="mb-4 block text-xs font-bold tracking-widest text-emerald-600 uppercase dark:text-emerald-400"
+          >Nuestros Productos</span
+        >
+        <h1 class="mb-16 text-4xl font-extrabold tracking-tight md:text-5xl">
+          Tarifas Transparentes
+        </h1>
+      </div>
 
-      <!-- Grid de Productos Principales -->
       <div class="grid gap-8 md:grid-cols-3">
-        <!-- Landing Pages -->
         <div
-          class="flex flex-col justify-between rounded-3xl border border-slate-200 bg-white p-10 shadow-sm transition-colors dark:border-neutral-800 dark:bg-neutral-950"
+          class="pricing-card flex flex-col justify-between rounded-3xl border border-slate-200 bg-white p-10 opacity-0 shadow-sm transition-colors dark:border-neutral-800 dark:bg-neutral-950"
         >
           <div>
             <h3 class="mb-4 text-xs font-bold tracking-widest text-slate-400 uppercase">
@@ -64,9 +64,8 @@ import { Icon } from "astro-icon/components";
           >
         </div>
 
-        <!-- Ecommerces -->
         <div
-          class="relative flex scale-105 transform flex-col justify-between rounded-3xl border-2 border-emerald-600 bg-white p-10 shadow-2xl shadow-emerald-600/10 transition-colors dark:bg-neutral-950"
+          class="pricing-card relative flex scale-105 transform flex-col justify-between rounded-3xl border-2 border-emerald-600 bg-white p-10 opacity-0 shadow-2xl shadow-emerald-600/10 transition-colors dark:bg-neutral-950"
         >
           <span
             class="absolute -top-4 left-1/2 -translate-x-1/2 rounded-full bg-emerald-600 px-4 py-1 text-[10px] font-bold tracking-widest text-white uppercase"
@@ -120,9 +119,8 @@ import { Icon } from "astro-icon/components";
           >
         </div>
 
-        <!-- Customs -->
         <div
-          class="flex flex-col justify-between rounded-3xl border border-slate-200 bg-white p-10 shadow-sm transition-colors dark:border-neutral-800 dark:bg-neutral-950"
+          class="pricing-card flex flex-col justify-between rounded-3xl border border-slate-200 bg-white p-10 opacity-0 shadow-sm transition-colors dark:border-neutral-800 dark:bg-neutral-950"
         >
           <div>
             <h3 class="mb-4 text-xs font-bold tracking-widest text-slate-400 uppercase">Customs</h3>
@@ -145,7 +143,6 @@ import { Icon } from "astro-icon/components";
               <li class="flex gap-2">
                 <Icon name="lucide:check" class="h-5 w-5 text-emerald-600" /> Adaptado a mobiles
               </li>
-              <li class="flex gap-2"></li>
             </ul>
           </div>
           <a
@@ -158,10 +155,9 @@ import { Icon } from "astro-icon/components";
     </div>
   </section>
 
-  <!-- Soluciones Especiales -->
-  <section class="bg-white py-24 transition-colors dark:bg-neutral-950">
+  <section id="specialties-section" class="bg-white py-24 transition-colors dark:bg-neutral-950">
     <div class="mx-auto max-w-6xl px-4">
-      <div class="mb-16 text-center">
+      <div id="specialties-header" class="mb-16 text-center opacity-0">
         <span
           class="mb-4 block text-[10px] font-bold tracking-widest text-emerald-600 uppercase dark:text-emerald-400"
           >Especialidades</span
@@ -170,9 +166,8 @@ import { Icon } from "astro-icon/components";
       </div>
 
       <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-        <!-- Menús para restaurantes -->
         <div
-          class="rounded-3xl border border-slate-100 bg-slate-50 p-8 dark:border-neutral-900 dark:bg-neutral-900/50"
+          class="specialty-card rounded-3xl border border-slate-100 bg-slate-50 p-8 opacity-0 dark:border-neutral-900 dark:bg-neutral-900/50"
         >
           <span
             class="mb-2 block text-xs font-bold tracking-wider text-emerald-600 dark:text-emerald-400"
@@ -183,9 +178,8 @@ import { Icon } from "astro-icon/components";
             Cartas interactivas con lectura QR para móviles y alta velocidad.
           </p>
         </div>
-        <!-- Servicios de Consultoría -->
         <div
-          class="rounded-3xl border border-slate-100 bg-slate-50 p-8 dark:border-neutral-900 dark:bg-neutral-900/50"
+          class="specialty-card rounded-3xl border border-slate-100 bg-slate-50 p-8 opacity-0 dark:border-neutral-900 dark:bg-neutral-900/50"
         >
           <span
             class="mb-2 block text-xs font-bold tracking-wider text-emerald-600 dark:text-emerald-400"
@@ -196,9 +190,8 @@ import { Icon } from "astro-icon/components";
             Asesorías avanzadas de optimización y reestructuración de software.
           </p>
         </div>
-        <!-- Aplicaciones Móviles -->
         <div
-          class="rounded-3xl border border-slate-100 bg-slate-50 p-8 dark:border-neutral-900 dark:bg-neutral-900/50"
+          class="specialty-card rounded-3xl border border-slate-100 bg-slate-50 p-8 opacity-0 dark:border-neutral-900 dark:bg-neutral-900/50"
         >
           <span
             class="mb-2 block text-xs font-bold tracking-wider text-emerald-600 dark:text-emerald-400"
@@ -209,9 +202,8 @@ import { Icon } from "astro-icon/components";
             Desarrollo especializado de apps fluidas para iOS y Android.
           </p>
         </div>
-        <!-- Diseños Web -->
         <div
-          class="rounded-3xl border border-slate-100 bg-slate-50 p-8 dark:border-neutral-900 dark:bg-neutral-900/50"
+          class="specialty-card rounded-3xl border border-slate-100 bg-slate-50 p-8 opacity-0 dark:border-neutral-900 dark:bg-neutral-900/50"
         >
           <span
             class="mb-2 block text-xs font-bold tracking-wider text-emerald-600 dark:text-emerald-400"
@@ -222,9 +214,8 @@ import { Icon } from "astro-icon/components";
             Estudios de interfaz de usuario de alta fidelidad, interactivos y limpios.
           </p>
         </div>
-        <!-- APIs y microservicios -->
         <div
-          class="rounded-3xl border border-slate-100 bg-slate-50 p-8 dark:border-neutral-900 dark:bg-neutral-900/50"
+          class="specialty-card rounded-3xl border border-slate-100 bg-slate-50 p-8 opacity-0 dark:border-neutral-900 dark:bg-neutral-900/50"
         >
           <span
             class="mb-2 block text-xs font-bold tracking-wider text-emerald-600 dark:text-emerald-400"
@@ -239,3 +230,71 @@ import { Icon } from "astro-icon/components";
     </div>
   </section>
 </HomeLayout>
+
+<script>
+  import { animate, createTimeline, stagger } from "animejs";
+
+  function initScrollAnimations() {
+    // Configuración del observador: Se dispara cuando el 15% de la sección es visible
+    const observerOptions = {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.15,
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach((entry) => {
+        // Solo animamos si el elemento está visible en la pantalla
+        if (entry.isIntersecting) {
+          // 1. Si el usuario scrollea hasta la sección principal de tarifas
+          if (entry.target.id === "pricing-section") {
+            const tl = createTimeline({
+              defaults: { ease: "outQuint", duration: 1000 },
+            });
+
+            tl.add("#services-header", { y: [30, 0], opacity: [0, 1] }, 0).add(
+              ".pricing-card",
+              { y: [40, 0], opacity: [0, 1], delay: stagger(150) },
+              "-=600"
+            );
+
+            // Dejamos de observar para que la animación no se repita al subir y bajar
+            observer.unobserve(entry.target);
+          }
+
+          // 2. Si el usuario scrollea hasta la sección de especialidades
+          if (entry.target.id === "specialties-section") {
+            animate("#specialties-header", {
+              y: [20, 0],
+              opacity: [0, 1],
+              ease: "outCubic",
+              duration: 800,
+            });
+
+            animate(".specialty-card", {
+              y: [30, 0],
+              opacity: [0, 1],
+              ease: "outElastic(1, .8)",
+              duration: 1200,
+              delay: stagger(100, { start: 300 }),
+            });
+
+            observer.unobserve(entry.target);
+          }
+        }
+      });
+    }, observerOptions);
+
+    // Seleccionamos las secciones y les aplicamos el observador
+    const pricingSection = document.getElementById("pricing-section");
+    const specialtiesSection = document.getElementById("specialties-section");
+
+    if (pricingSection) observer.observe(pricingSection);
+    if (specialtiesSection) observer.observe(specialtiesSection);
+  }
+
+  // Asegura la compatibilidad con el ClientRouter / ViewTransitions de Astro
+  document.addEventListener("astro:page-load", () => {
+    initScrollAnimations();
+  });
+</script>
