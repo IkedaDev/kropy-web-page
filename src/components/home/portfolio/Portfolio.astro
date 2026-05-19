@@ -1,5 +1,30 @@
 ---
+import type { PortfolioProject } from "@interfaces/portfolio-project";
 
+const projects: PortfolioProject[] = [
+  {
+    id: "anami-masoterapia",
+    title: "Anami Masoterapia",
+    category: "landings",
+    tags: ["Landing Page", "Masoterapia"],
+    description:
+      "Landing page corporativa para centro de masoterapia en la Araucanía. Desarrollada bajo un estándar purista de diseño adaptativo y código limpio. Implementa optimización avanzada de rendimiento para tiempos de carga mínimos y una estructura SEO enfocada al posicionamiento local geolocalizado, asegurando un flujo de contacto directo, estético y eficiente.",
+    demoUrl: "https://temucomasajes.cl/",
+    image:
+      "https://raw.githubusercontent.com/IkedaDev/anami-masoterapia-old/refs/heads/main/src/assets/images/p2-s2-1.jpeg",
+  },
+  {
+    id: "opticad-lux",
+    title: "Delivery Express",
+    category: "landings",
+    tags: ["Landing Page", "Optica"],
+    description:
+      "Plataforma web corporativa y muestrario digital desarrollado para la marca Óptica D'Lux. Implementa un diseño modular adaptativo optimizado para dispositivos móviles, estructurando las líneas de producto clínico y estético de manera fluida. Un desarrollo robusto enfocado en la experiencia del usuario que conecta de forma ágil la consulta online con la conversión comercial en tienda.",
+    demoUrl: "https://opticad-lux.cl/",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTEH4_mPWlWO3WbbQg-GOmQNiV23Cq0Bb-ng&s",
+  },
+];
 ---
 
 <section id="portfolio-section" class="bg-white py-20 transition-colors dark:bg-neutral-950">
@@ -9,113 +34,164 @@
         class="mb-4 block text-xs font-bold tracking-widest text-emerald-600 uppercase dark:text-emerald-400"
         >Trabajos</span
       >
-      <h1 class="text-4xl font-extrabold tracking-tight">Proyectos Realizados</h1>
+      <h1 class="text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white">
+        Proyectos Realizados
+      </h1>
     </div>
 
     <div id="portfolio-filters" class="mb-12 flex flex-wrap justify-center gap-4 opacity-0">
       <button
-        id="filter-todos"
+        data-filter="todos"
         class="filter-btn rounded-full bg-emerald-600 px-5 py-2.5 text-xs font-bold tracking-widest text-white uppercase shadow-md transition-all"
         >Todos</button
       >
       <button
-        id="filter-landings"
+        data-filter="landings"
         class="filter-btn rounded-full bg-slate-100 px-5 py-2.5 text-xs font-bold tracking-widest text-slate-600 uppercase transition-all hover:bg-slate-200 dark:bg-neutral-900 dark:text-neutral-400"
         >Landings</button
       >
       <button
-        id="filter-apps"
+        data-filter="apps"
         class="filter-btn rounded-full bg-slate-100 px-5 py-2.5 text-xs font-bold tracking-widest text-slate-600 uppercase transition-all hover:bg-slate-200 dark:bg-neutral-900 dark:text-neutral-400"
         >Apps Móviles</button
       >
       <button
-        id="filter-saas"
+        data-filter="saas"
         class="filter-btn rounded-full bg-slate-100 px-5 py-2.5 text-xs font-bold tracking-widest text-slate-600 uppercase transition-all hover:bg-slate-200 dark:bg-neutral-900 dark:text-neutral-400"
         >SaaS</button
       >
     </div>
 
     <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3" id="portfolio-grid">
-      <div
-        class="portfolio-item overflow-hidden rounded-3xl border border-slate-200 bg-white opacity-0 transition-all dark:border-neutral-800 dark:bg-neutral-950"
-        data-category="landings"
-      >
-        <div
-          class="flex aspect-video w-full items-center justify-center bg-slate-100 p-4 dark:bg-neutral-900"
-        >
-          <span
-            class="text-xs font-bold tracking-widest text-slate-400 uppercase dark:text-neutral-500"
-            >[Preview Landing SaaS]</span
+      {
+        projects.map((project) => (
+          <div
+            class="portfolio-item group cursor-pointer overflow-hidden rounded-3xl border border-slate-200 bg-white opacity-0 transition-all hover:border-emerald-500/50 dark:border-neutral-800 dark:bg-neutral-950 dark:hover:border-emerald-400/50"
+            data-category={project.category}
+            data-title={project.title}
+            data-description={project.description}
+            data-tags={project.tags.join(" | ")}
+            data-url={project.demoUrl}
           >
-        </div>
-        <div class="p-8">
-          <span
-            class="text-[10px] font-bold tracking-widest text-emerald-600 uppercase dark:text-emerald-400"
-            >Landing Page</span
-          >
-          <h4 class="mt-2 text-xl font-bold">Plataforma de Pagos</h4>
-        </div>
-      </div>
-      <div
-        class="portfolio-item overflow-hidden rounded-3xl border border-slate-200 bg-white opacity-0 transition-all dark:border-neutral-800 dark:bg-neutral-950"
-        data-category="apps"
-      >
-        <div
-          class="flex aspect-video w-full items-center justify-center bg-slate-100 p-4 dark:bg-neutral-900"
-        >
-          <span
-            class="text-xs font-bold tracking-widest text-slate-400 uppercase dark:text-neutral-500"
-            >[Preview App iOS/Android]</span
-          >
-        </div>
-        <div class="p-8">
-          <span
-            class="text-[10px] font-bold tracking-widest text-emerald-600 uppercase dark:text-emerald-400"
-            >App Móvil</span
-          >
-          <h4 class="mt-2 text-xl font-bold">Delivery Express</h4>
-        </div>
-      </div>
-      <div
-        class="portfolio-item overflow-hidden rounded-3xl border border-slate-200 bg-white opacity-0 transition-all dark:border-neutral-800 dark:bg-neutral-950"
-        data-category="saas"
-      >
-        <div
-          class="flex aspect-video w-full items-center justify-center bg-slate-100 p-4 dark:bg-neutral-900"
-        >
-          <span
-            class="text-xs font-bold tracking-widest text-slate-400 uppercase dark:text-neutral-500"
-            >[Preview SaaS Dashboard]</span
-          >
-        </div>
-        <div class="p-8">
-          <span
-            class="text-[10px] font-bold tracking-widest text-emerald-600 uppercase dark:text-emerald-400"
-            >SaaS</span
-          >
-          <h4 class="mt-2 text-xl font-bold">Sistema ERP Automotriz</h4>
-        </div>
-      </div>
+            <div class="relative flex aspect-video w-full items-center justify-center overflow-hidden bg-slate-100 dark:bg-neutral-900">
+              <img
+                src={project.image}
+                alt={`Miniatura de ${project.title}`}
+                class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                loading="lazy"
+              />
+            </div>
+
+            <div class="p-8">
+              <span class="text-[10px] font-bold tracking-widest text-emerald-600 uppercase dark:text-emerald-400">
+                {project.tags.join(" | ")}
+              </span>
+              <h4 class="mt-2 text-xl font-bold text-slate-900 dark:text-white">{project.title}</h4>
+            </div>
+          </div>
+        ))
+      }
     </div>
   </div>
 </section>
 
-<script>
-  import { animate, createTimeline } from "animejs";
+<div
+  id="portfolio-modal"
+  class="pointer-events-none fixed inset-0 z-50 flex items-center justify-center bg-slate-950/70 px-4 opacity-0 backdrop-blur-md transition-opacity duration-300 md:px-6"
+>
+  <div
+    id="modal-container"
+    class="relative flex h-[90vh] w-full max-w-6xl scale-95 flex-col overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-2xl transition-transform duration-300 md:h-[80vh] md:flex-row dark:border-neutral-800 dark:bg-neutral-950"
+  >
+    <button
+      id="close-modal-top"
+      class="absolute top-4 right-4 z-30 flex h-8 w-8 items-center justify-center rounded-full bg-slate-900/50 p-2 text-xs font-bold text-white backdrop-blur-sm md:hidden dark:bg-white/10"
+    >
+      ✕
+    </button>
 
-  function initPortfolioScripts() {
+    <div
+      class="relative h-[70%] w-full border-b border-slate-100 bg-slate-50 md:h-full md:w-[65%] md:border-r md:border-b-0 dark:border-neutral-900 dark:bg-neutral-900"
+    >
+      <div
+        id="modal-loader"
+        class="absolute inset-0 z-10 flex items-center justify-center bg-slate-50 transition-opacity duration-300 dark:bg-neutral-900"
+      >
+        <div
+          class="h-8 w-8 animate-spin rounded-full border-4 border-emerald-500/20 border-t-emerald-600"
+        >
+        </div>
+      </div>
+      <iframe id="modal-iframe" class="h-full w-full border-none" src="about:blank"></iframe>
+    </div>
+
+    <div
+      class="flex h-[30%] w-full flex-col justify-between bg-white p-6 md:h-full md:w-[35%] md:p-8 dark:bg-neutral-950"
+    >
+      <div class="space-y-4 overflow-y-auto pr-1">
+        <div class="hidden justify-end md:flex">
+          <button
+            id="close-modal-btn"
+            class="p-1 text-sm font-bold text-slate-400 transition-colors hover:text-slate-600 dark:text-neutral-500 dark:hover:text-neutral-300"
+          >
+            Cerrar ✕
+          </button>
+        </div>
+
+        <div>
+          <span
+            id="modal-tags"
+            class="text-[10px] font-bold tracking-widest text-emerald-600 uppercase dark:text-emerald-400"
+            >---</span
+          >
+          <h3 id="modal-title" class="mt-1 text-2xl font-extrabold text-slate-900 dark:text-white">
+            ---
+          </h3>
+        </div>
+
+        <hr class="border-slate-100 dark:border-neutral-900" />
+
+        <div>
+          <h5
+            class="mb-2 text-xs font-bold tracking-wider text-slate-400 uppercase dark:text-neutral-500"
+          >
+            Sobre el proyecto
+          </h5>
+          <p id="modal-desc" class="text-sm leading-relaxed text-slate-600 dark:text-neutral-400">
+            ---
+          </p>
+        </div>
+      </div>
+
+      <div class="mt-4 border-t border-slate-100 pt-4 dark:border-neutral-900">
+        <a
+          id="modal-external-btn"
+          href="#"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="flex w-full items-center justify-center rounded-xl bg-emerald-600 py-3 text-xs font-bold tracking-widest text-white uppercase shadow-md shadow-emerald-600/10 transition-colors hover:bg-emerald-700"
+        >
+          Visitar Web Completa
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  import { animate, createTimeline, stagger } from "animejs";
+
+  function initObservers() {
     const headerObserver = new IntersectionObserver(
       (entries, obs) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             const tl = createTimeline({ defaults: { ease: "outQuint", duration: 1000 } });
-
             tl.add("#portfolio-header", { y: [30, 0], opacity: [0, 1] }, 0).add(
               "#portfolio-filters",
               { y: [20, 0], opacity: [0, 1] },
               "-=800"
             );
-
             obs.unobserve(entry.target);
           }
         });
@@ -123,32 +199,43 @@
       { threshold: 0.1 }
     );
 
-    const itemObserver = new IntersectionObserver(
-      (entries, obs) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            animate(entry.target, {
-              y: [40, 0],
-              opacity: [0, 1],
-              ease: "outElastic(1, .8)",
-              duration: 1200,
-            });
-
-            obs.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.15 }
-    );
-
     const portfolioSection = document.getElementById("portfolio-section");
-    const portfolioItems = document.querySelectorAll(".portfolio-item");
-
     if (portfolioSection) headerObserver.observe(portfolioSection);
 
-    portfolioItems.forEach((item) => itemObserver.observe(item));
+    const items = document.querySelectorAll(".portfolio-item");
+    if (items.length > 0) {
+      const gridObserver = new IntersectionObserver(
+        (entries, obs) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              animate(".portfolio-item", {
+                y: [40, 0],
+                opacity: [0, 1],
+                scale: [0.95, 1],
+                ease: "outBack(1.2)",
+                duration: 600,
+                delay: stagger(80),
+              });
+              obs.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.1 }
+      );
 
+      if (portfolioSection) gridObserver.observe(portfolioSection);
+    }
+  }
+
+  document.addEventListener("astro:page-load", initObservers);
+</script>
+
+<script>
+  import { animate, stagger } from "animejs";
+
+  function initFilters() {
     const filterBtns = document.querySelectorAll(".filter-btn");
+    const portfolioItems = document.querySelectorAll(".portfolio-item");
 
     filterBtns.forEach((btn) => {
       btn.addEventListener("click", () => {
@@ -161,7 +248,6 @@
             "dark:text-neutral-400"
           );
         });
-
         btn.classList.add("bg-emerald-600", "text-white", "shadow-md");
         btn.classList.remove(
           "bg-slate-100",
@@ -170,43 +256,110 @@
           "dark:text-neutral-400"
         );
 
-        const category = btn.id.replace("filter-", "");
+        const category = btn.getAttribute("data-filter");
 
-        animate(".portfolio-item", {
-          opacity: 0,
-          scale: 0.95,
-          duration: 5500,
+        portfolioItems.forEach((item) => {
+          const el = item as HTMLElement;
+          const itemCat = el.getAttribute("data-category");
+
+          if (category === "todos" || itemCat === category) {
+            el.style.display = "block";
+            el.style.opacity = "0";
+            el.style.transform = "translateY(15px) scale(0.97)";
+          } else {
+            el.style.display = "none";
+            el.style.transform = "";
+          }
+        });
+
+        const visibleSelector = ".portfolio-item[style*='display: block']";
+        animate(visibleSelector, {
+          opacity: [0, 1],
+          y: [15, 0],
+          scale: [0.97, 1],
+          duration: 450,
           ease: "outQuad",
-          onComplete: () => {
-            let delayCount = 0;
-
-            portfolioItems.forEach((item) => {
-              const htmlItem = item as HTMLElement;
-              const itemCategory = htmlItem.getAttribute("data-category");
-
-              if (category === "todos" || itemCategory === category) {
-                htmlItem.style.display = "block";
-
-                animate(htmlItem, {
-                  opacity: [0, 1],
-                  scale: [0.95, 1],
-                  duration: 500,
-                  ease: "outBack(1.2)",
-                  delay: delayCount * 50,
-                });
-
-                delayCount++;
-              } else {
-                htmlItem.style.display = "none";
-              }
-            });
-          },
+          delay: stagger(60),
         });
       });
     });
   }
 
-  document.addEventListener("astro:page-load", () => {
-    initPortfolioScripts();
-  });
+  document.addEventListener("astro:page-load", initFilters);
+</script>
+
+<script>
+  function initPortfolioModal() {
+    const modal = document.getElementById("portfolio-modal");
+    const modalContainer = document.getElementById("modal-container");
+    const modalIframe = document.getElementById("modal-iframe") as HTMLIFrameElement;
+    const modalTitle = document.getElementById("modal-title");
+    const modalDesc = document.getElementById("modal-desc");
+    const modalTags = document.getElementById("modal-tags");
+    const modalExternalBtn = document.getElementById("modal-external-btn") as HTMLAnchorElement;
+    const closeModalBtn = document.getElementById("close-modal-btn");
+    const closeModalTop = document.getElementById("close-modal-top");
+    const modalLoader = document.getElementById("modal-loader");
+    const portfolioItems = document.querySelectorAll(".portfolio-item");
+
+    if (
+      !modal ||
+      !modalContainer ||
+      !modalIframe ||
+      !modalTitle ||
+      !modalDesc ||
+      !modalTags ||
+      !modalExternalBtn ||
+      !modalLoader
+    )
+      return;
+
+    portfolioItems.forEach((item) => {
+      item.addEventListener("click", () => {
+        const title = item.getAttribute("data-title") || "";
+        const description = item.getAttribute("data-description") || "";
+        const tags = item.getAttribute("data-tags") || "";
+        const url = item.getAttribute("data-url") || "#";
+
+        modalTitle.textContent = title;
+        modalDesc.textContent = description;
+        modalTags.textContent = tags;
+        modalExternalBtn.href = url;
+
+        modalLoader.style.opacity = "1";
+        modalLoader.style.pointerEvents = "auto";
+        modalIframe.src = url;
+
+        modal.classList.remove("pointer-events-none");
+        modal.classList.add("opacity-100");
+        modalContainer.classList.remove("scale-95");
+        modalContainer.classList.add("scale-100");
+      });
+    });
+
+    modalIframe.addEventListener("load", () => {
+      modalLoader.style.opacity = "0";
+      modalLoader.style.pointerEvents = "none";
+    });
+
+    function closeModal() {
+      if (!modal || !modalContainer || !modalIframe) return;
+      modal.classList.remove("opacity-100");
+      modal.classList.add("pointer-events-none");
+      modalContainer.classList.remove("scale-100");
+      modalContainer.classList.add("scale-95");
+
+      setTimeout(() => {
+        modalIframe.src = "about:blank";
+      }, 300);
+    }
+
+    if (closeModalBtn) closeModalBtn.addEventListener("click", closeModal);
+    if (closeModalTop) closeModalTop.addEventListener("click", closeModal);
+    modal.addEventListener("click", (e) => {
+      if (e.target === modal) closeModal();
+    });
+  }
+
+  document.addEventListener("astro:page-load", initPortfolioModal);
 </script>
