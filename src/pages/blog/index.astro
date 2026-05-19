@@ -14,7 +14,7 @@ const sortedPosts = allPosts.sort(
 
 <HomeLayout title="Blog | Kropy - Desarrollo Web">
   <main class="mx-auto max-w-6xl px-4 pt-20 pb-20">
-    <div class="mb-16 text-center">
+    <div id="blog-header" class="mb-16 text-center opacity-0">
       <span
         class="mb-4 block text-xs font-bold tracking-widest text-emerald-600 uppercase dark:text-emerald-400"
       >
@@ -38,9 +38,145 @@ const sortedPosts = allPosts.sort(
             description={post.data.description}
             image={post.data.image || ""}
             tags={post.data.tags}
+            classList="item-card opacity-0"
           />
         ))
       }
     </div>
   </main>
 </HomeLayout>
+
+<!-- Fade un desde abajo -->
+<script>
+  import { createTimeline } from "animejs";
+
+  function initScrollAnimations() {
+    const observerOptions = {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.15,
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          if (entry.target.id === "blog-header") {
+            const tl = createTimeline({
+              defaults: { ease: "outQuint", duration: 1000 },
+            });
+
+            tl.add("#blog-header", { y: [30, 0], opacity: [0, 1] }, 0);
+
+            observer.unobserve(entry.target);
+          }
+        }
+      });
+    }, observerOptions);
+
+    const section = document.getElementById("blog-header");
+    if (section) observer.observe(section);
+  }
+
+  document.addEventListener("astro:page-load", () => {
+    initScrollAnimations();
+  });
+</script>
+
+<!-- Animacion scroll galeria -->
+<script>
+  import { animate, stagger } from "animejs";
+
+  function initScrollAnimations() {
+    const observerOptions = {
+      root: null,
+      rootMargin: "0px 0px 50px 0px",
+      threshold: 0.1,
+    };
+
+    let batch: Element[] = [];
+    let timeoutId: NodeJS.Timeout | null = null;
+
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          batch.push(entry.target);
+          observer.unobserve(entry.target);
+
+          if (!timeoutId) {
+            timeoutId = setTimeout(() => {
+              // ✨ CONFIGURACIÓN FLUIDA DE VANGUARDIA ✨
+              animate(batch, {
+                opacity: [0, 1],
+                ease: "outQuart", // Una curva más suave que outCubic
+                duration: 800, // 👈 Elevado de 100ms a 800ms para notar la transición
+                delay: stagger(120), // Un escalonamiento más ágil y dinámico
+              });
+
+              batch = [];
+              timeoutId = null;
+            }, 50);
+          }
+        }
+      });
+    }, observerOptions);
+
+    const cards = document.querySelectorAll(".item-card");
+    cards.forEach((card) => {
+      observer.observe(card);
+    });
+  }
+
+  // Integración perfecta con el ciclo de vida de ClientRouter de Astro
+  document.addEventListener("astro:page-load", () => {
+    initScrollAnimations();
+  });
+</script>
+
+<script>
+  import { animate, stagger } from "animejs";
+
+  function initScrollAnimations() {
+    const observerOptions = {
+      root: null,
+      rootMargin: "0px 0px 50px 0px",
+      threshold: 0.1,
+    };
+
+    let batch: Element[] = [];
+    let timeoutId: NodeJS.Timeout | null = null;
+
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          batch.push(entry.target);
+          observer.unobserve(entry.target);
+
+          if (!timeoutId) {
+            timeoutId = setTimeout(() => {
+              // ✨ CONFIGURACIÓN FLUIDA DE VANGUARDIA ✨
+              animate(batch, {
+                opacity: [0, 1],
+                ease: "outQuart", // Una curva más suave que outCubic
+                duration: 800, // 👈 Elevado de 100ms a 800ms para notar la transición
+                delay: stagger(120), // Un escalonamiento más ágil y dinámico
+              });
+
+              batch = [];
+              timeoutId = null;
+            }, 50);
+          }
+        }
+      });
+    }, observerOptions);
+
+    const cards = document.querySelectorAll(".item-card");
+    cards.forEach((card) => {
+      observer.observe(card);
+    });
+  }
+
+  // Integración perfecta con el ciclo de vida de ClientRouter de Astro
+  document.addEventListener("astro:page-load", () => {
+    initScrollAnimations();
+  });
+</script>

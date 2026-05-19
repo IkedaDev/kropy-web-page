@@ -25,72 +25,71 @@ import { templates } from "../../../data/templates";
     </div>
 
     <div class="item-card-container grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-  {
-    templates.map((template) => (
-      <!-- AÑADIDA LA CLASE 'item-card' y 'opacity-0' AQUÍ -->
-      <div class="item-card opacity-0 group relative flex flex-col justify-between overflow-hidden rounded-2xl border border-slate-200 bg-slate-50 p-4 transition-all duration-300 hover:border-slate-300 dark:border-neutral-800 dark:bg-neutral-900/50 dark:hover:border-neutral-700">
-        <div>
-          <div class="relative aspect-[16/10] w-full overflow-hidden rounded-xl border border-slate-100 bg-neutral-950 dark:border-neutral-800">
-            <div
-              class={`absolute inset-0 bg-gradient-to-t ${template.accent} z-10 opacity-60 transition-opacity duration-300 group-hover:opacity-20`}
-            />
-            <img
-              src={template.image}
-              alt={template.name}
-              class="h-full w-full object-cover opacity-80 contrast-[1.05] saturate-[0.4] filter transition-all duration-500 group-hover:scale-105 group-hover:opacity-100 group-hover:saturate-100"
-              loading="lazy"
-            />
-            <span class="absolute top-3 left-3 z-20 rounded-md border border-slate-200/50 bg-white/90 px-2.5 py-1 text-[10px] font-bold tracking-wider text-slate-900 uppercase backdrop-blur-md dark:border-neutral-800 dark:bg-neutral-950/90 dark:text-neutral-200">
-              {template.industry}
-            </span>
-          </div>
+      {
+        templates.map((template) => (
+          <div class="item-card group relative flex flex-col justify-between overflow-hidden rounded-2xl border border-slate-200 bg-slate-50 p-4 opacity-0 transition-all duration-300 hover:border-slate-300 dark:border-neutral-800 dark:bg-neutral-900/50 dark:hover:border-neutral-700">
+            <div>
+              <div class="relative aspect-[16/10] w-full overflow-hidden rounded-xl border border-slate-100 bg-neutral-950 dark:border-neutral-800">
+                <div
+                  class={`absolute inset-0 bg-gradient-to-t ${template.accent} z-10 opacity-60 transition-opacity duration-300 group-hover:opacity-20`}
+                />
+                <img
+                  src={template.image}
+                  alt={template.name}
+                  class="h-full w-full object-cover opacity-80 contrast-[1.05] saturate-[0.4] filter transition-all duration-500 group-hover:scale-105 group-hover:opacity-100 group-hover:saturate-100"
+                  loading="lazy"
+                />
+                <span class="absolute top-3 left-3 z-20 rounded-md border border-slate-200/50 bg-white/90 px-2.5 py-1 text-[10px] font-bold tracking-wider text-slate-900 uppercase backdrop-blur-md dark:border-neutral-800 dark:bg-neutral-950/90 dark:text-neutral-200">
+                  {template.industry}
+                </span>
+              </div>
 
-          <div class="mt-5 px-2">
-            <h3 class="text-xl font-bold tracking-tight text-slate-900 transition-colors group-hover:text-emerald-600 dark:text-white dark:group-hover:text-emerald-400">
-              {template.name}
-            </h3>
-            <p class="mt-2 min-h-[48px] text-xs leading-relaxed font-light text-slate-500 dark:text-neutral-400">
-              {template.description}
-            </p>
-          </div>
-        </div>
+              <div class="mt-5 px-2">
+                <h3 class="text-xl font-bold tracking-tight text-slate-900 transition-colors group-hover:text-emerald-600 dark:text-white dark:group-hover:text-emerald-400">
+                  {template.name}
+                </h3>
+                <p class="mt-2 min-h-[48px] text-xs leading-relaxed font-light text-slate-500 dark:text-neutral-400">
+                  {template.description}
+                </p>
+              </div>
+            </div>
 
-        <div class="mt-6 px-2">
-          <div class="mb-5 flex flex-wrap gap-1.5">
-            {template.tags.map((tag) => (
-              <span class="rounded bg-slate-200/60 px-2 py-0.5 text-[9px] font-medium text-slate-700 dark:bg-neutral-800 dark:text-neutral-300">
-                #{tag}
-              </span>
-            ))}
-          </div>
+            <div class="mt-6 px-2">
+              <div class="mb-5 flex flex-wrap gap-1.5">
+                {template.tags.map((tag) => (
+                  <span class="rounded bg-slate-200/60 px-2 py-0.5 text-[9px] font-medium text-slate-700 dark:bg-neutral-800 dark:text-neutral-300">
+                    #{tag}
+                  </span>
+                ))}
+              </div>
 
-          <button
-            data-slug={template.slug}
-            data-name={template.name}
-            data-industry={template.industry}
-            data-desc={template.description}
-            class="open-preview-modal-btn inline-flex w-full items-center justify-center gap-2 rounded-xl border border-slate-300 bg-white px-4 py-3 text-xs font-bold tracking-wider text-slate-700 uppercase transition-all hover:border-transparent hover:bg-emerald-600 hover:text-white dark:border-neutral-800 dark:bg-neutral-950 dark:text-neutral-300 dark:hover:bg-emerald-500 dark:hover:text-neutral-950"
-          >
-            <span>Simular Sitio Vivo</span>
-            <svg
-              class="h-3.5 w-3.5 transition-transform group-hover:translate-x-1"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              stroke-width="2.5"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
-              />
-            </svg>
-          </button>
-        </div>
-      </div>
-    ))
-  }
-</div>
+              <button
+                data-slug={template.slug}
+                data-name={template.name}
+                data-industry={template.industry}
+                data-desc={template.description}
+                class="open-preview-modal-btn inline-flex w-full items-center justify-center gap-2 rounded-xl border border-slate-300 bg-white px-4 py-3 text-xs font-bold tracking-wider text-slate-700 uppercase transition-all hover:border-transparent hover:bg-emerald-600 hover:text-white dark:border-neutral-800 dark:bg-neutral-950 dark:text-neutral-300 dark:hover:bg-emerald-500 dark:hover:text-neutral-950"
+              >
+                <span>Simular Sitio Vivo</span>
+                <svg
+                  class="h-3.5 w-3.5 transition-transform group-hover:translate-x-1"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+        ))
+      }
+    </div>
   </div>
 </section>
 
@@ -198,13 +197,13 @@ import { templates } from "../../../data/templates";
     };
 
     let batch: Element[] = []; // Aquí guardaremos las tarjetas que entran al mismo tiempo
-    let timeoutId:NodeJS.Timeout | null = null;
+    let timeoutId: NodeJS.Timeout | null = null;
 
     const observer = new IntersectionObserver((entries, observer) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           batch.push(entry.target);
-          
+
           observer.unobserve(entry.target);
 
           if (!timeoutId) {
@@ -212,13 +211,13 @@ import { templates } from "../../../data/templates";
               animate(batch, {
                 opacity: [0, 1],
                 ease: "outCubic",
-                duration: 100, 
-                delay: stagger(175), 
+                duration: 100,
+                delay: stagger(175),
               });
 
               batch = [];
               timeoutId = null;
-            }, 50); 
+            }, 50);
           }
         }
       });
