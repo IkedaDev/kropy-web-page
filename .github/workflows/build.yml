@@ -37,6 +37,8 @@ jobs:
           tags: |
             ikedaharket/kropy-web-page:${{ steps.vars.outputs.sha_short }}
             ikedaharket/kropy-web-page:latest
+          build-args: |
+            PUBLIC_GA_ID=${{ secrets.PUBLIC_GA_ID }}
           platforms: linux/arm64
           cache-from: type=gha
           cache-to: type=gha,mode=max

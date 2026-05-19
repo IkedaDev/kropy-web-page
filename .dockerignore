@@ -1,0 +1,27 @@
+# Ignorar el motor de node local (Evita el error de symlinks de pnpm)
+node_modules
+.pnpm-store
+
+# Ignorar builds previos locales
+dist
+.astro
+
+# Ignorar históricos de Git y entornos locales
+.git
+.gitignore
+.env
+.env.*
+
+# Ignorar logs de errores
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Archivos de configuración del editor
+.vscode
+.idea
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
