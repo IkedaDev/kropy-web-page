@@ -1,99 +1,106 @@
 ---
-import InfoLayout from "../../layouts/InfoLayout.astro";
+import BackButton from "@components/BackButton.astro";
+import HomeLayout from "@layouts/HomeLayout.astro";
 ---
 
-<InfoLayout
+<HomeLayout
   title="Acuerdo de Servicios y Precios"
   description="Especificaciones de precios, entregables y metodologías de pago"
 >
-  <div class="space-y-4">
-    <span
-      class="mb-4 block text-xs font-bold tracking-widest text-emerald-600 uppercase dark:text-emerald-400"
-      >Tarifario de Servicios // Chile</span
-    >
-    <h1 class="mb-6 text-4xl font-extrabold tracking-tight md:text-5xl">
-      Acuerdo de Servicios y Precios
-    </h1>
-  </div>
-
-  <div
-    class="mt-8 space-y-6 text-sm leading-relaxed font-light text-slate-600 dark:text-neutral-400"
-  >
-    <p>
-      Este acuerdo complementario regula las tarifas, plazos y condiciones comerciales aplicables a
-      cada uno de los productos de software comercializados de manera estándar por <strong
-        >Kropy</strong
-      >.
-    </p>
-
-    <h2 class="mt-8 text-2xl font-bold text-slate-900 dark:text-white">
-      1. Tarifas y Estructura de Precios
-    </h2>
-    <div class="my-6 overflow-x-auto rounded-2xl border border-slate-200 dark:border-neutral-800">
-      <table class="w-full text-left text-sm">
-        <thead
-          class="border-b border-slate-200 bg-slate-50 text-slate-800 dark:border-neutral-800 dark:bg-neutral-900 dark:text-white"
-        >
-          <tr>
-            <th class="p-4 font-bold">Producto / Servicio</th>
-            <th class="p-4 font-bold">Inversión (CLP)</th>
-            <th class="p-4 font-bold">Plazo de Entrega</th>
-          </tr>
-        </thead>
-        <tbody class="divide-y divide-slate-100 dark:divide-neutral-800">
-          <tr>
-            <td class="p-4 font-semibold">Landing Page</td>
-            <td class="p-4 font-bold text-emerald-600 dark:text-emerald-400">120.000 CLP</td>
-            <td class="p-4">5 a 7 días hábiles</td>
-          </tr>
-          <tr>
-            <td class="p-4 font-semibold">E-commerce</td>
-            <td class="p-4 font-bold text-emerald-600 dark:text-emerald-400">400.000 CLP</td>
-            <td class="p-4">15 a 20 días hábiles</td>
-          </tr>
-          <tr>
-            <td class="p-4 font-semibold">Customs (Sistemas a Medida)</td>
-            <td class="p-4 font-bold text-emerald-600 dark:text-emerald-400">Desde 100.000 CLP</td>
-            <td class="p-4">Sujeto a requerimientos</td>
-          </tr>
-          <tr>
-            <td class="p-4 font-semibold">Menús QR para Restaurantes</td>
-            <td class="p-4 font-bold text-emerald-600 dark:text-emerald-400">40.000 CLP</td>
-            <td class="p-4">3 a 5 días hábiles</td>
-          </tr>
-          <tr>
-            <td class="p-4 font-semibold">Apps Móviles / APIs / Consultorías</td>
-            <td class="p-4 font-bold text-slate-500">Cotización Personalizada</td>
-            <td class="p-4">Variable</td>
-          </tr>
-        </tbody>
-      </table>
+  <div class="mx-auto my-10 max-w-3xl">
+    <div class="space-y-4">
+      <span
+        class="mb-4 block text-xs font-bold tracking-widest text-emerald-600 uppercase dark:text-emerald-400"
+        >Tarifario de Servicios // Chile</span
+      >
+      <h1 class="mb-6 text-4xl font-extrabold tracking-tight md:text-5xl">
+        Acuerdo de Servicios y Precios
+      </h1>
     </div>
 
-    <h2 class="mt-8 text-2xl font-bold text-slate-900 dark:text-white">2. Condiciones de Pago</h2>
-    <p>
-      Salvo acuerdo comercial por escrito que indique lo contrario, la modalidad estándar de pago
-      para el desarrollo de sitios web será:
-    </p>
-    <ul class="list-disc space-y-2 pl-6">
-      <li>
-        <strong>50% por concepto de anticipo</strong>, requerido para dar inicio a las etapas de
-        diseño estructural y prototipado.
-      </li>
-      <li>
-        <strong>50% contra entrega definitiva</strong>, pagadero una vez que el sitio haya sido
-        aprobado por el Cliente y previo al despliegue en el dominio final.
-      </li>
-    </ul>
+    <div
+      class="mt-8 space-y-6 text-sm leading-relaxed font-light text-slate-600 dark:text-neutral-400"
+    >
+      <p>
+        Este acuerdo complementario regula las tarifas, plazos y condiciones comerciales aplicables
+        a cada uno de los productos de software comercializados de manera estándar por <strong
+          >Kropy</strong
+        >.
+      </p>
 
-    <h2 class="mt-8 text-2xl font-bold text-slate-900 dark:text-white">
-      3. Modificaciones y Alcance
-    </h2>
-    <p>
-      Cada plan incluye hasta un número determinado de revisiones iterativas en la etapa de diseño.
-      Cualquier solicitud de cambio estructural que exceda el documento de requerimientos aprobado
-      inicialmente será cotizada como un requerimiento adicional bajo tarifas de desarrollo a
-      medida.
-    </p>
+      <h2 class="mt-8 text-2xl font-bold text-slate-900 dark:text-white">
+        1. Tarifas y Estructura de Precios
+      </h2>
+      <div class="my-6 overflow-x-auto rounded-2xl border border-slate-200 dark:border-neutral-800">
+        <table class="w-full text-left text-sm">
+          <thead
+            class="border-b border-slate-200 bg-slate-50 text-slate-800 dark:border-neutral-800 dark:bg-neutral-900 dark:text-white"
+          >
+            <tr>
+              <th class="p-4 font-bold">Producto / Servicio</th>
+              <th class="p-4 font-bold">Inversión (CLP)</th>
+              <th class="p-4 font-bold">Plazo de Entrega</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-100 dark:divide-neutral-800">
+            <tr>
+              <td class="p-4 font-semibold">Landing Page</td>
+              <td class="p-4 font-bold text-emerald-600 dark:text-emerald-400">120.000 CLP</td>
+              <td class="p-4">5 a 7 días hábiles</td>
+            </tr>
+            <tr>
+              <td class="p-4 font-semibold">E-commerce</td>
+              <td class="p-4 font-bold text-emerald-600 dark:text-emerald-400">400.000 CLP</td>
+              <td class="p-4">15 a 20 días hábiles</td>
+            </tr>
+            <tr>
+              <td class="p-4 font-semibold">Customs (Sistemas a Medida)</td>
+              <td class="p-4 font-bold text-emerald-600 dark:text-emerald-400">Desde 100.000 CLP</td
+              >
+              <td class="p-4">Sujeto a requerimientos</td>
+            </tr>
+            <tr>
+              <td class="p-4 font-semibold">Menús QR para Restaurantes</td>
+              <td class="p-4 font-bold text-emerald-600 dark:text-emerald-400">40.000 CLP</td>
+              <td class="p-4">3 a 5 días hábiles</td>
+            </tr>
+            <tr>
+              <td class="p-4 font-semibold">Apps Móviles / APIs / Consultorías</td>
+              <td class="p-4 font-bold text-slate-500">Cotización Personalizada</td>
+              <td class="p-4">Variable</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2 class="mt-8 text-2xl font-bold text-slate-900 dark:text-white">2. Condiciones de Pago</h2>
+      <p>
+        Salvo acuerdo comercial por escrito que indique lo contrario, la modalidad estándar de pago
+        para el desarrollo de sitios web será:
+      </p>
+      <ul class="list-disc space-y-2 pl-6">
+        <li>
+          <strong>50% por concepto de anticipo</strong>, requerido para dar inicio a las etapas de
+          diseño estructural y prototipado.
+        </li>
+        <li>
+          <strong>50% contra entrega definitiva</strong>, pagadero una vez que el sitio haya sido
+          aprobado por el Cliente y previo al despliegue en el dominio final.
+        </li>
+      </ul>
+
+      <h2 class="mt-8 text-2xl font-bold text-slate-900 dark:text-white">
+        3. Modificaciones y Alcance
+      </h2>
+      <p>
+        Cada plan incluye hasta un número determinado de revisiones iterativas en la etapa de
+        diseño. Cualquier solicitud de cambio estructural que exceda el documento de requerimientos
+        aprobado inicialmente será cotizada como un requerimiento adicional bajo tarifas de
+        desarrollo a medida.
+      </p>
+    </div>
+    <div class="mt-20 flex justify-end">
+      <BackButton href="/" label="Volver al Inicio" />
+    </div>
   </div>
-</InfoLayout>
+</HomeLayout>

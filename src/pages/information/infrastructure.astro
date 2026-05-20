@@ -1,68 +1,76 @@
 ---
-import InfoLayout from "../../layouts/InfoLayout.astro";
+import BackButton from "@components/BackButton.astro";
+import HomeLayout from "@layouts/HomeLayout.astro";
 ---
 
-<InfoLayout
+<HomeLayout
   title="Arquitectura e Infraestructura"
   description="Tecnología de última generación utilizada para construir tu sitio web"
 >
-  <div class="space-y-4">
-    <span
-      class="mb-4 block text-xs font-bold tracking-widest text-emerald-600 uppercase dark:text-emerald-400"
-      >Orquestación de alto rendimiento</span
-    >
-    <h1 class="mb-6 text-4xl font-extrabold tracking-tight md:text-5xl">
-      Infraestructura Tecnológica
-    </h1>
-  </div>
-
-  <div
-    class="mt-8 space-y-6 text-sm leading-relaxed font-light text-slate-600 dark:text-neutral-400"
-  >
-    <p>
-      Creemos que una web exitosa no solo debe verse bien, sino comportarse de forma excelente bajo
-      presión. Por ello, en <strong>Kropy</strong> desechamos los servidores compartidos lentos y construimos
-      sobre arquitecturas modulares modernas.
-    </p>
-
-    <h2 class="mt-8 text-2xl font-bold text-slate-900 dark:text-white">
-      1. Framework e Ingeniería Frontend
-    </h2>
-    <p>
-      Construimos principalmente sobre <strong>Astro</strong> y <strong>Tailwind CSS</strong>. Esto
-      nos permite generar sitios web estáticos (SSG) de peso pluma que despachan código HTML
-      pre-compilado puro al navegador, reduciendo el javascript dañino a cero. El resultado: tiempos
-      de carga de menos de un segundo y una experiencia móvil perfecta.
-    </p>
-
-    <h2 class="mt-8 text-2xl font-bold text-slate-900 dark:text-white">
-      2. Entrega Global a través de CDN (Edge Delivery)
-    </h2>
-    <p>
-      Tu página web no reside en un solo ordenador físico. Distribuimos los archivos compilados a lo
-      largo de una red CDN global en el "Edge". Esto significa que un usuario en Santiago de Chile
-      accederá al servidor más cercano geográficamente, asegurando latencias mínimas y un
-      comportamiento robusto ante picos masivos de tráfico.
-    </p>
-
-    <!-- Caja estética destacando rendimiento -->
-    <div class="my-8 rounded-2xl border border-emerald-500/20 bg-emerald-500/5 p-6 transition-all">
-      <h3 class="mb-2 text-lg font-bold text-emerald-600 dark:text-emerald-400">
-        Google Lighthouse: 100/100
-      </h3>
-      <p class="text-xs leading-relaxed font-light text-slate-500 dark:text-neutral-400">
-        Nuestras metodologías de carga nos permiten optimizar recursos para obtener puntuaciones
-        perfectas en las herramientas de medición de rendimiento de Google, impulsando de forma
-        orgánica el posicionamiento SEO de tu negocio.
-      </p>
+  <div class="mx-auto my-10 max-w-3xl">
+    <div class="space-y-4">
+      <span
+        class="mb-4 block text-xs font-bold tracking-widest text-emerald-600 uppercase dark:text-emerald-400"
+        >Orquestación de alto rendimiento</span
+      >
+      <h1 class="mb-6 text-4xl font-extrabold tracking-tight md:text-5xl">
+        Infraestructura Tecnológica
+      </h1>
     </div>
 
-    <h2 class="mt-8 text-2xl font-bold text-slate-900 dark:text-white">3. Seguridad Integrada</h2>
-    <p>
-      Todos nuestros despliegues integran de forma automática certificados de seguridad SSL de
-      última generación y protección activa contra ataques distribuidos de denegación de servicio
-      (DDoS), permitiendo que tanto el Cliente como sus usuarios transaccionen con total
-      tranquilidad.
-    </p>
+    <div
+      class="mt-8 space-y-6 text-sm leading-relaxed font-light text-slate-600 dark:text-neutral-400"
+    >
+      <p>
+        Creemos que una web exitosa no solo debe verse bien, sino comportarse de forma excelente
+        bajo presión. Por ello, en <strong>Kropy</strong> desechamos los servidores compartidos lentos
+        y construimos sobre arquitecturas modulares modernas.
+      </p>
+
+      <h2 class="mt-8 text-2xl font-bold text-slate-900 dark:text-white">
+        1. Framework e Ingeniería Frontend
+      </h2>
+      <p>
+        Construimos principalmente sobre <strong>Astro</strong> y <strong>Tailwind CSS</strong>.
+        Esto nos permite generar sitios web estáticos (SSG) de peso pluma que despachan código HTML
+        pre-compilado puro al navegador, reduciendo el javascript dañino a cero. El resultado:
+        tiempos de carga de menos de un segundo y una experiencia móvil perfecta.
+      </p>
+
+      <h2 class="mt-8 text-2xl font-bold text-slate-900 dark:text-white">
+        2. Entrega Global a través de CDN (Edge Delivery)
+      </h2>
+      <p>
+        Tu página web no reside en un solo ordenador físico. Distribuimos los archivos compilados a
+        lo largo de una red CDN global en el "Edge". Esto significa que un usuario en Santiago de
+        Chile accederá al servidor más cercano geográficamente, asegurando latencias mínimas y un
+        comportamiento robusto ante picos masivos de tráfico.
+      </p>
+
+      <!-- Caja estética destacando rendimiento -->
+      <div
+        class="my-8 rounded-2xl border border-emerald-500/20 bg-emerald-500/5 p-6 transition-all"
+      >
+        <h3 class="mb-2 text-lg font-bold text-emerald-600 dark:text-emerald-400">
+          Google Lighthouse: 100/100
+        </h3>
+        <p class="text-xs leading-relaxed font-light text-slate-500 dark:text-neutral-400">
+          Nuestras metodologías de carga nos permiten optimizar recursos para obtener puntuaciones
+          perfectas en las herramientas de medición de rendimiento de Google, impulsando de forma
+          orgánica el posicionamiento SEO de tu negocio.
+        </p>
+      </div>
+
+      <h2 class="mt-8 text-2xl font-bold text-slate-900 dark:text-white">3. Seguridad Integrada</h2>
+      <p>
+        Todos nuestros despliegues integran de forma automática certificados de seguridad SSL de
+        última generación y protección activa contra ataques distribuidos de denegación de servicio
+        (DDoS), permitiendo que tanto el Cliente como sus usuarios transaccionen con total
+        tranquilidad.
+      </p>
+    </div>
+    <div class="mt-20 flex justify-end">
+      <BackButton href="/" label="Volver al Inicio" />
+    </div>
   </div>
-</InfoLayout>
+</HomeLayout>

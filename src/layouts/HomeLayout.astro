@@ -14,7 +14,6 @@ import "../styles/global.css";
     <GoogleAnalitycs />
     <SeoHead title={title} description={description} />
 
-    <!-- Script de bloqueo en HEAD para evitar el flash blanco/oscuro -->
     <script is:inline>
       const getTheme = () => {
         if (typeof localStorage !== "undefined" && localStorage.getItem("theme")) {
@@ -36,7 +35,7 @@ import "../styles/global.css";
     class="flex min-h-screen flex-col bg-white text-slate-950 selection:bg-emerald-100 selection:text-emerald-700 dark:bg-neutral-950 dark:text-neutral-100 dark:selection:bg-emerald-950/50"
   >
     <Header />
-    <main class="flex-grow pt-28">
+    <main class="grow pt-15 xl:pt-28">
       <slot />
     </main>
     <Footer />

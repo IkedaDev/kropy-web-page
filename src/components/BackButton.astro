@@ -1,0 +1,18 @@
+---
+import { Icon } from "astro-icon/components";
+
+interface Props {
+  href: string;
+  label: string;
+}
+
+const { href = "/", label = "Volver" } = Astro.props;
+---
+
+<a
+  href={href}
+  class="group inline-flex items-center gap-2 text-xs font-bold tracking-widest text-slate-700 uppercase transition-colors hover:text-emerald-600 dark:text-slate-200 dark:hover:text-emerald-400"
+>
+  <Icon name="lucide:move-left" class="h-4 w-4 transition-transform group-hover:-translate-x-1" />
+  {label}
+</a>

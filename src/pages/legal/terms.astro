@@ -1,65 +1,73 @@
 ---
-import InfoLayout from "../../layouts/InfoLayout.astro";
+import BackButton from "@components/BackButton.astro";
+import HomeLayout from "@layouts/HomeLayout.astro";
 ---
 
-<InfoLayout
+<HomeLayout
   title="Términos y Condiciones"
   description="Términos de servicio generales para el uso y contratación de Kropy"
 >
-  <div class="space-y-4">
-    <span
-      class="mb-4 block text-xs font-bold tracking-widest text-emerald-600 uppercase dark:text-emerald-400"
-      >Última actualización: Mayo 2026</span
+  <div class="mx-auto my-10 max-w-3xl">
+    <div class="space-y-4">
+      <span
+        class="mb-4 block text-xs font-bold tracking-widest text-emerald-600 uppercase dark:text-emerald-400"
+        >Última actualización: Mayo 2026</span
+      >
+      <h1 class="mb-6 text-4xl font-extrabold tracking-tight md:text-5xl">
+        Términos y Condiciones
+      </h1>
+    </div>
+
+    <div
+      class="mt-8 space-y-6 text-sm leading-relaxed font-light text-slate-600 dark:text-neutral-400"
     >
-    <h1 class="mb-6 text-4xl font-extrabold tracking-tight md:text-5xl">Términos y Condiciones</h1>
+      <p>
+        El presente documento regula el acceso, contratación y uso de los servicios de diseño y
+        desarrollo de software provistos por <strong>Kropy</strong> (en adelante, "el Estudio") por parte
+        de sus clientes (en adelante, "el Cliente").
+      </p>
+
+      <h2 class="mt-8 text-2xl font-bold text-slate-900 dark:text-white">1. Objeto del Servicio</h2>
+      <p>
+        Kropy se compromete a proveer servicios profesionales de arquitectura digital, desarrollo
+        frontend/backend, creación de APIs, consultorías de software y diseño de experiencia de
+        usuario (UI/UX) bajo los estándares de calidad definidos en las propuestas comerciales
+        individuales.
+      </p>
+
+      <h2 class="mt-8 text-2xl font-bold text-slate-900 dark:text-white">
+        2. Propiedad Intelectual e Industrial
+      </h2>
+      <p>
+        Una vez completado el pago del 100% del presupuesto acordado para el proyecto, el Estudio
+        transfiere la titularidad exclusiva y derechos patrimoniales sobre el código fuente, diseños
+        en Figma y activos de software creados para dicho proyecto al Cliente. Kropy retiene el
+        derecho de mostrar capturas o maquetas del proyecto final en su portafolio con fines
+        exclusivamente demostrativos, salvo acuerdo de confidencialidad previo (NDA).
+      </p>
+
+      <h2 class="mt-8 text-2xl font-bold text-slate-900 dark:text-white">
+        3. Responsabilidad del Cliente
+      </h2>
+      <p>
+        El Cliente se obliga a facilitar de manera oportuna la información, accesos a servidores,
+        dominios, textos y activos gráficos necesarios para la correcta ejecución del desarrollo.
+        Los retrasos atribuibles a la no entrega de material por parte del Cliente eximen al Estudio
+        de los plazos de entrega iniciales.
+      </p>
+
+      <h2 class="mt-8 text-2xl font-bold text-slate-900 dark:text-white">
+        4. Limitación de Responsabilidad
+      </h2>
+      <p>
+        Kropy utiliza infraestructuras globales y tecnología de vanguardia para garantizar la mayor
+        estabilidad. Sin embargo, no se hace responsable por caídas de servicios causadas por
+        proveedores de terceros (como plataformas de hosting externas, registradores de dominios o
+        APIs externas integradas).
+      </p>
+    </div>
+    <div class="mt-20 flex justify-end">
+      <BackButton href="/" label="Volver al Inicio" />
+    </div>
   </div>
-
-  <div
-    class="mt-8 space-y-6 text-sm leading-relaxed font-light text-slate-600 dark:text-neutral-400"
-  >
-    <p>
-      El presente documento regula el acceso, contratación y uso de los servicios de diseño y
-      desarrollo de software provistos por <strong>Kropy</strong> (en adelante, "el Estudio") por parte
-      de sus clientes (en adelante, "el Cliente").
-    </p>
-
-    <h2 class="mt-8 text-2xl font-bold text-slate-900 dark:text-white">1. Objeto del Servicio</h2>
-    <p>
-      Kropy se compromete a proveer servicios profesionales de arquitectura digital, desarrollo
-      frontend/backend, creación de APIs, consultorías de software y diseño de experiencia de
-      usuario (UI/UX) bajo los estándares de calidad definidos en las propuestas comerciales
-      individuales.
-    </p>
-
-    <h2 class="mt-8 text-2xl font-bold text-slate-900 dark:text-white">
-      2. Propiedad Intelectual e Industrial
-    </h2>
-    <p>
-      Una vez completado el pago del 100% del presupuesto acordado para el proyecto, el Estudio
-      transfiere la titularidad exclusiva y derechos patrimoniales sobre el código fuente, diseños
-      en Figma y activos de software creados para dicho proyecto al Cliente. Kropy retiene el
-      derecho de mostrar capturas o maquetas del proyecto final en su portafolio con fines
-      exclusivamente demostrativos, salvo acuerdo de confidencialidad previo (NDA).
-    </p>
-
-    <h2 class="mt-8 text-2xl font-bold text-slate-900 dark:text-white">
-      3. Responsabilidad del Cliente
-    </h2>
-    <p>
-      El Cliente se obliga a facilitar de manera oportuna la información, accesos a servidores,
-      dominios, textos y activos gráficos necesarios para la correcta ejecución del desarrollo. Los
-      retrasos atribuibles a la no entrega de material por parte del Cliente eximen al Estudio de
-      los plazos de entrega iniciales.
-    </p>
-
-    <h2 class="mt-8 text-2xl font-bold text-slate-900 dark:text-white">
-      4. Limitación de Responsabilidad
-    </h2>
-    <p>
-      Kropy utiliza infraestructuras globales y tecnología de vanguardia para garantizar la mayor
-      estabilidad. Sin embargo, no se hace responsable por caídas de servicios causadas por
-      proveedores de terceros (como plataformas de hosting externas, registradores de dominios o
-      APIs externas integradas).
-    </p>
-  </div>
-</InfoLayout>
+</HomeLayout>
